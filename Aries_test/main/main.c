@@ -31,7 +31,7 @@
 //macro definitions 
 
 #define MOTOR_MIN_PULSE_WIDTH 1000        //microseconds
-#define MOTOR_MAX_PULSE_WIDTH 500
+#define MOTOR_MAX_PULSE_WIDTH 2000
 
 //macro definitions for five motors angles
 //Can change max angle ranges depending range of the motors
