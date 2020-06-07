@@ -380,10 +380,10 @@ static void pwm_init(void)
 {
    printf("Aries :::Configuring Initial Parameters of pwm......\n");
     mcpwm_config_t pwm_config;
-    pwm_config.frequency = 10;    //frequency = 10Hz, i.e. for every servo motor time period should be 20ms
+    pwm_config.frequency = 50;    //frequency = 50Hz, i.e. for every servo motor time period should be 20ms
     pwm_config.cmpr_a = 0;    //duty cycle of PWMxA = 0
     pwm_config.cmpr_b = 0;    //duty cycle of PWMxb = 0
-    pwm_config.counter_mode = MCPWM_UP_COUNTER;
+    pwm_config.counter_mode = MCPWM_UP_DOWN_COUNTER;
     pwm_config.duty_mode = MCPWM_DUTY_MODE_0;
     mcpwm_init(MCPWM_UNIT_0, MCPWM_TIMER_0, &pwm_config);   
     mcpwm_init(MCPWM_UNIT_1, MCPWM_TIMER_0, &pwm_config); 
