@@ -22,9 +22,11 @@ open the directory which you have copied .
 Type make menuconfig 
 select the phy you need mean WIFI/ETHERNET and flash the code using command ** make flash monitor ** 
 IP address will be generated ,Type the IP address on your browser..
-Added new ngrok function , to work this server globally mean not in the local n/w have to setup ngrok in your system and need to configure..
-comes to esp32 in the server start function uncomment the code (
-    //httpd_config_t config = HTTPD_DEFAULT_CONFIG_NGROK()) find the below snippet..
+Added ngrok function , to work this server globally mean not in the local n/w have to setup ngrok in your system and need to configure..
+comes to esp32 in the server start function uncomment the the below snippet..
+    httpd_config_t config = HTTPD_DEFAULT_CONFIG_NGROK();
+    and comment the below snippet
+   // httpd_config_t config = HTTPD_DEFAULT_CONFIG();
 
 static httpd_handle_t start_webserver(void)
 {
