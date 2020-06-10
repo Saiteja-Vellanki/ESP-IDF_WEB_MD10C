@@ -50,13 +50,15 @@
  #define MOTOR_ELBOW_JOINT_PWM_CONTROL_PIN      14
  #define MOTOR_SHOULDER_PWM_CONTROL_PIN         12
  #define MOTOR_BASE_PWM_CONTROL_PIN             4
-static const char *TAG = "Aries Robotic ARM";
+
+ static const char *TAG = "Aries Robotic ARM";
 
 
 static uint32_t motor_per_degree_cal_grip(uint32_t grip_rotation_deg)
 {
     uint32_t grip_pulse_width_cal = 0;
     grip_pulse_width_cal = (MOTOR_MIN_PULSE_WIDTH + (((MOTOR_MAX_PULSE_WIDTH - MOTOR_MIN_PULSE_WIDTH) * (grip_rotation_deg)) / (MOTOR_GRIPPER_MAX_ANGLE)));
+      printf("gripper value %f\n",grip_pulse_width_cal);
     return grip_pulse_width_cal;
 }
 
