@@ -28,12 +28,12 @@ comes to esp32 in the server start function uncomment the the below snippet..
     and comment the below snippet
    // httpd_config_t config = HTTPD_DEFAULT_CONFIG();
 
+     
 static httpd_handle_t start_webserver(void)
 {
     httpd_handle_t server = NULL;
     httpd_config_t config = HTTPD_DEFAULT_CONFIG();
     //httpd_config_t config = HTTPD_DEFAULT_CONFIG_NGROK();
-
     // Start the httpd server
     ESP_LOGI(TAG, "Starting server on port: '%d'", config.server_port);
     if (httpd_start(&server, &config) == ESP_OK) {
