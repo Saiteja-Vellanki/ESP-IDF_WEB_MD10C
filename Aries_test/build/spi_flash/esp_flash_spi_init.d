@@ -1,6 +1,6 @@
 esp_flash_spi_init.o: \
  /home/sai-vdeal/esp/esp-idf/components/spi_flash/esp_flash_spi_init.c \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/spi_flash/include/esp_flash.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_err.h \
  /home/sai-vdeal/esp/esp-idf/components/newlib/platform_include/assert.h \
@@ -93,7 +93,7 @@ esp_flash_spi_init.o: \
  /home/sai-vdeal/esp/esp-idf/components/soc/soc/esp32/include/soc/sens_struct.h \
  /home/sai-vdeal/esp/esp-idf/components/spi_flash/include/esp_flash_internal.h
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/spi_flash/include/esp_flash.h:
 

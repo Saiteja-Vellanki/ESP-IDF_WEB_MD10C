@@ -14,7 +14,7 @@ src/packet.o: \
  /home/sai-vdeal/esp/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
  /home/sai-vdeal/esp/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_gdbstub/esp32/gdbstub_target_config.h \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h
+ /home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h
 
 /home/sai-vdeal/esp/esp-idf/components/esp_gdbstub/private_include/esp_gdbstub_common.h:
 
@@ -44,5 +44,5 @@ src/packet.o: \
 
 /home/sai-vdeal/esp/esp-idf/components/esp_gdbstub/esp32/gdbstub_target_config.h:
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h:
 /home/sai-vdeal/esp/esp-idf/components/esp_gdbstub/src/packet.c:

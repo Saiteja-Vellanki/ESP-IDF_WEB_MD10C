@@ -1,6 +1,6 @@
 src/esp32/emac_hal.o: \
  /home/sai-vdeal/esp/esp-idf/components/soc/src/esp32/emac_hal.c \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/bootloader/../include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/bootloader/../include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/xtensa/include/esp_attr.h \
  /home/sai-vdeal/esp/esp-idf/components/soc/soc/include/soc/gpio_periph.h \
  /home/sai-vdeal/esp/esp-idf/components/soc/soc/esp32/include/soc/io_mux_reg.h \
@@ -28,7 +28,7 @@ src/esp32/emac_hal.o: \
  /home/sai-vdeal/esp/esp-idf/components/soc/soc/esp32/include/soc/emac_mac_struct.h \
  /home/sai-vdeal/esp/esp-idf/components/soc/soc/esp32/include/soc/emac_ext_struct.h
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/bootloader/../include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/bootloader/../include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/xtensa/include/esp_attr.h:
 

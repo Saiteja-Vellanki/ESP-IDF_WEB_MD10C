@@ -2,7 +2,7 @@ src/hal/soc_hal.o: \
  /home/sai-vdeal/esp/esp-idf/components/soc/src/hal/soc_hal.c \
  /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_err.h \
  /home/sai-vdeal/esp/esp-idf/components/newlib/platform_include/assert.h \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_compiler.h \
  /home/sai-vdeal/esp/esp-idf/components/soc/include/hal/soc_hal.h \
  /home/sai-vdeal/esp/esp-idf/components/soc/soc/esp32/include/soc/soc_caps.h \
@@ -31,7 +31,7 @@ src/hal/soc_hal.o: \
 
 /home/sai-vdeal/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_compiler.h:
 

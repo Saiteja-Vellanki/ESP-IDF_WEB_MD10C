@@ -1,6 +1,6 @@
 locks.o: /home/sai-vdeal/esp/esp-idf/components/newlib/locks.c \
  /home/sai-vdeal/esp/esp-idf/components/xtensa/include/esp_attr.h \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/soc/include/soc/cpu.h \
  /home/sai-vdeal/esp/esp-idf/components/xtensa/include/xtensa/corebits.h \
  /home/sai-vdeal/esp/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
@@ -53,7 +53,7 @@ locks.o: /home/sai-vdeal/esp/esp-idf/components/newlib/locks.c \
 
 /home/sai-vdeal/esp/esp-idf/components/xtensa/include/esp_attr.h:
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/soc/include/soc/cpu.h:
 

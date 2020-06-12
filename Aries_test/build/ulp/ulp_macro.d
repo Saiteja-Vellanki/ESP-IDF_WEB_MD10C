@@ -1,6 +1,6 @@
 ulp_macro.o: /home/sai-vdeal/esp/esp-idf/components/ulp/ulp_macro.c \
  /home/sai-vdeal/esp/esp-idf/components/xtensa/include/esp_attr.h \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_err.h \
  /home/sai-vdeal/esp/esp-idf/components/newlib/platform_include/assert.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_compiler.h \
@@ -19,7 +19,7 @@ ulp_macro.o: /home/sai-vdeal/esp/esp-idf/components/ulp/ulp_macro.c \
 
 /home/sai-vdeal/esp/esp-idf/components/xtensa/include/esp_attr.h:
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_err.h:
 

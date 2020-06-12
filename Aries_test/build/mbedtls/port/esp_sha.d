@@ -1,7 +1,7 @@
 port/esp_sha.o: \
  /home/sai-vdeal/esp/esp-idf/components/mbedtls/port/esp_sha.c \
  /home/sai-vdeal/esp/esp-idf/components/newlib/platform_include/assert.h \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_compiler.h \
  /home/sai-vdeal/esp/esp-idf/components/mbedtls/port/include/esp32/sha.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_rom/include/esp32/rom/sha.h \
@@ -20,7 +20,7 @@ port/esp_sha.o: \
 
 /home/sai-vdeal/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_compiler.h:
 

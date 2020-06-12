@@ -10,7 +10,7 @@ library/ssl_x509.o: \
  /home/sai-vdeal/esp/esp-idf/components/openssl/include/internal/ssl_methods.h \
  /home/sai-vdeal/esp/esp-idf/components/openssl/include/internal/ssl_dbg.h \
  /home/sai-vdeal/esp/esp-idf/components/openssl/include/platform/ssl_opt.h \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/openssl/include/platform/ssl_port.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_types.h \
  /home/sai-vdeal/esp/esp-idf/components/log/include/esp_log.h \
@@ -41,7 +41,7 @@ library/ssl_x509.o: \
 
 /home/sai-vdeal/esp/esp-idf/components/openssl/include/platform/ssl_opt.h:
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/openssl/include/platform/ssl_port.h:
 

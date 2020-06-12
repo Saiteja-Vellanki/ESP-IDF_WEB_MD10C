@@ -1,6 +1,6 @@
 can.o: /home/sai-vdeal/esp/esp-idf/components/driver/can.c \
  /home/sai-vdeal/esp/esp-idf/components/soc/soc/esp32/include/soc/soc_caps.h \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_compiler.h \
  /home/sai-vdeal/esp/esp-idf/components/freertos/xtensa/include/freertos/FreeRTOSConfig.h \
@@ -90,7 +90,7 @@ can.o: /home/sai-vdeal/esp/esp-idf/components/driver/can.c \
 
 /home/sai-vdeal/esp/esp-idf/components/soc/soc/esp32/include/soc/soc_caps.h:
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
 

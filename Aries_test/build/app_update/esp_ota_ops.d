@@ -1,7 +1,7 @@
 esp_ota_ops.o: \
  /home/sai-vdeal/esp/esp-idf/components/app_update/esp_ota_ops.c \
  /home/sai-vdeal/esp/esp-idf/components/newlib/platform_include/assert.h \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_compiler.h \
  /home/sai-vdeal/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /home/sai-vdeal/esp/esp-idf/components/freertos/xtensa/include/freertos/FreeRTOSConfig.h \
@@ -77,7 +77,7 @@ esp_ota_ops.o: \
 
 /home/sai-vdeal/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_compiler.h:
 

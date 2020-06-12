@@ -12,7 +12,7 @@ src/hal/spi_flash_hal.o: \
  /home/sai-vdeal/esp/esp-idf/components/soc/soc/esp32/include/soc/soc.h \
  /home/sai-vdeal/esp/esp-idf/components/soc/soc/esp32/include/soc/spi_struct.h \
  /home/sai-vdeal/esp/esp-idf/components/soc/soc/esp32/include/soc/gpio_sig_map.h \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/bootloader/../include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/bootloader/../include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/soc/include/hal/spi_types.h \
  /home/sai-vdeal/esp/esp-idf/components/soc/include/hal/spi_flash_types.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_types.h \
@@ -49,7 +49,7 @@ src/hal/spi_flash_hal.o: \
 
 /home/sai-vdeal/esp/esp-idf/components/soc/soc/esp32/include/soc/gpio_sig_map.h:
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/bootloader/../include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/bootloader/../include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/soc/include/hal/spi_types.h:
 

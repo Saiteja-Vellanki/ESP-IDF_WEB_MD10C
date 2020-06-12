@@ -1,7 +1,7 @@
 sdmmc_mmc.o: /home/sai-vdeal/esp/esp-idf/components/sdmmc/sdmmc_mmc.c \
  /home/sai-vdeal/esp/esp-idf/components/sdmmc/sdmmc_common.h \
  /home/sai-vdeal/esp/esp-idf/components/log/include/esp_log.h \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h \
  /home/sai-vdeal/esp/esp-idf/components/log/include/esp_log_internal.h \
  /home/sai-vdeal/esp/esp-idf/components/heap/include/esp_heap_caps.h \
@@ -58,7 +58,7 @@ sdmmc_mmc.o: /home/sai-vdeal/esp/esp-idf/components/sdmmc/sdmmc_mmc.c \
 
 /home/sai-vdeal/esp/esp-idf/components/log/include/esp_log.h:
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h:
 

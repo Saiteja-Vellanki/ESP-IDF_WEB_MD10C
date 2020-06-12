@@ -2,7 +2,7 @@ src/crypto/md5-internal.o: \
  /home/sai-vdeal/esp/esp-idf/components/wpa_supplicant/src/crypto/md5-internal.c \
  /home/sai-vdeal/esp/esp-idf/components/wpa_supplicant/src/utils/includes.h \
  /home/sai-vdeal/esp/esp-idf/components/wpa_supplicant/port/include/supplicant_opt.h \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h \
  /home/sai-vdeal/esp/esp-idf/components/wpa_supplicant/src/utils/common.h \
  /home/sai-vdeal/esp/esp-idf/components/wpa_supplicant/port/include/os.h \
@@ -26,7 +26,7 @@ src/crypto/md5-internal.o: \
 
 /home/sai-vdeal/esp/esp-idf/components/wpa_supplicant/port/include/supplicant_opt.h:
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h:
 

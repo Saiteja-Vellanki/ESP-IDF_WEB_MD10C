@@ -1,7 +1,7 @@
 src/esp_eth.o: \
  /home/sai-vdeal/esp/esp-idf/components/esp_eth/src/esp_eth.c \
  /home/sai-vdeal/esp/esp-idf/components/log/include/esp_log.h \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h \
  /home/sai-vdeal/esp/esp-idf/components/log/include/esp_log_internal.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_eth/include/esp_eth.h \
@@ -110,7 +110,7 @@ src/esp_eth.o: \
 
 /home/sai-vdeal/esp/esp-idf/components/log/include/esp_log.h:
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h:
 

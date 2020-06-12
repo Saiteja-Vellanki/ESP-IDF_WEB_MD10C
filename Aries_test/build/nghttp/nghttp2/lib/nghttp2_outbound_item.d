@@ -12,7 +12,7 @@ nghttp2/lib/nghttp2_outbound_item.o: \
  /home/sai-vdeal/esp/esp-idf/components/nghttp/nghttp2/lib/nghttp2_mem.h \
  /home/sai-vdeal/esp/esp-idf/components/nghttp/nghttp2/lib/nghttp2_rcbuf.h \
  /home/sai-vdeal/esp/esp-idf/components/newlib/platform_include/assert.h \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_compiler.h
 
 /home/sai-vdeal/esp/esp-idf/components/nghttp/nghttp2/lib/nghttp2_outbound_item.h:
@@ -39,7 +39,7 @@ nghttp2/lib/nghttp2_outbound_item.o: \
 
 /home/sai-vdeal/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_compiler.h:
 /home/sai-vdeal/esp/esp-idf/components/nghttp/nghttp2/lib/nghttp2_outbound_item.c:

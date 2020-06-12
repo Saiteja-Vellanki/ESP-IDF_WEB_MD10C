@@ -1,6 +1,6 @@
 pm_trace.o: /home/sai-vdeal/esp/esp-idf/components/esp32/pm_trace.c \
  /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_private/pm_trace.h \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/driver/include/driver/gpio.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_err.h \
  /home/sai-vdeal/esp/esp-idf/components/newlib/platform_include/assert.h \
@@ -32,7 +32,7 @@ pm_trace.o: /home/sai-vdeal/esp/esp-idf/components/esp32/pm_trace.c \
 
 /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_private/pm_trace.h:
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/driver/include/driver/gpio.h:
 

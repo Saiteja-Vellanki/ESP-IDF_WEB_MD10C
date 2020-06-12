@@ -2,7 +2,7 @@ common/esp_modbus_slave.o: \
  /home/sai-vdeal/esp/esp-idf/components/freemodbus/common/esp_modbus_slave.c \
  /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_err.h \
  /home/sai-vdeal/esp/esp-idf/components/newlib/platform_include/assert.h \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_compiler.h \
  /home/sai-vdeal/esp/esp-idf/components/freemodbus/common/mbc_slave.h \
  /home/sai-vdeal/esp/esp-idf/components/driver/include/driver/uart.h \
@@ -80,7 +80,7 @@ common/esp_modbus_slave.o: \
 
 /home/sai-vdeal/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_compiler.h:
 

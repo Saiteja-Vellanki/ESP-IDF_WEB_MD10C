@@ -1,6 +1,6 @@
 syscalls.o: /home/sai-vdeal/esp/esp-idf/components/newlib/syscalls.c \
  /home/sai-vdeal/esp/esp-idf/components/newlib/platform_include/errno.h \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_rom/include/esp32/rom/uart.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_types.h \
  /home/sai-vdeal/esp/esp-idf/components/xtensa/include/esp_attr.h \
@@ -20,7 +20,7 @@ syscalls.o: /home/sai-vdeal/esp/esp-idf/components/newlib/syscalls.c \
 
 /home/sai-vdeal/esp/esp-idf/components/newlib/platform_include/errno.h:
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/esp_rom/include/esp32/rom/uart.h:
 

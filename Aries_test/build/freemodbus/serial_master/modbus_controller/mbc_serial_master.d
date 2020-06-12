@@ -2,7 +2,7 @@ serial_master/modbus_controller/mbc_serial_master.o: \
  /home/sai-vdeal/esp/esp-idf/components/freemodbus/serial_master/modbus_controller/mbc_serial_master.c \
  /home/sai-vdeal/esp/esp-idf/components/newlib/platform_include/sys/time.h \
  /home/sai-vdeal/esp/esp-idf/components/log/include/esp_log.h \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h \
  /home/sai-vdeal/esp/esp-idf/components/log/include/esp_log_internal.h \
  /home/sai-vdeal/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
@@ -82,7 +82,7 @@ serial_master/modbus_controller/mbc_serial_master.o: \
 
 /home/sai-vdeal/esp/esp-idf/components/log/include/esp_log.h:
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h:
 

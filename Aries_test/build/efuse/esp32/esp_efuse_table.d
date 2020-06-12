@@ -1,6 +1,6 @@
 esp32/esp_efuse_table.o: \
  /home/sai-vdeal/esp/esp-idf/components/efuse/esp32/esp_efuse_table.c \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/efuse/include/esp_efuse.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_err.h \
  /home/sai-vdeal/esp/esp-idf/components/newlib/platform_include/assert.h \
@@ -11,7 +11,7 @@ esp32/esp_efuse_table.o: \
  /home/sai-vdeal/esp/esp-idf/components/efuse/include/esp32/esp_efuse.h \
  /home/sai-vdeal/esp/esp-idf/components/efuse/esp32/include/esp_efuse_table.h
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/efuse/include/esp_efuse.h:
 

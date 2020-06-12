@@ -10,7 +10,7 @@ soc/esp32/spi_periph.o: \
  /home/sai-vdeal/esp/esp-idf/components/soc/soc/esp32/include/soc/soc.h \
  /home/sai-vdeal/esp/esp-idf/components/soc/soc/esp32/include/soc/spi_struct.h \
  /home/sai-vdeal/esp/esp-idf/components/soc/soc/esp32/include/soc/gpio_sig_map.h \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/bootloader/../include/sdkconfig.h
+ /home/sai-vdeal/Aries/Aries_test/build/bootloader/../include/sdkconfig.h
 
 /home/sai-vdeal/esp/esp-idf/components/soc/soc/include/soc/spi_periph.h:
 
@@ -32,5 +32,5 @@ soc/esp32/spi_periph.o: \
 
 /home/sai-vdeal/esp/esp-idf/components/soc/soc/esp32/include/soc/gpio_sig_map.h:
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/bootloader/../include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/bootloader/../include/sdkconfig.h:
 /home/sai-vdeal/esp/esp-idf/components/soc/soc/esp32/spi_periph.c:

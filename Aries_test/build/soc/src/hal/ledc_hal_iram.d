@@ -1,7 +1,7 @@
 src/hal/ledc_hal_iram.o: \
  /home/sai-vdeal/esp/esp-idf/components/soc/src/hal/ledc_hal_iram.c \
  /home/sai-vdeal/esp/esp-idf/components/xtensa/include/esp_attr.h \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/soc/include/hal/ledc_hal.h \
  /home/sai-vdeal/esp/esp-idf/components/soc/src/esp32/include/hal/ledc_ll.h \
  /home/sai-vdeal/esp/esp-idf/components/soc/include/hal/ledc_types.h \
@@ -17,7 +17,7 @@ src/hal/ledc_hal_iram.o: \
 
 /home/sai-vdeal/esp/esp-idf/components/xtensa/include/esp_attr.h:
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/soc/include/hal/ledc_hal.h:
 

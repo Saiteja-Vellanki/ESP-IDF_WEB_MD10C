@@ -1,6 +1,6 @@
 src/core_dump_common.o: \
  /home/sai-vdeal/esp/esp-idf/components/espcoredump/src/core_dump_common.c \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/espcoredump/include_core_dump/esp_core_dump_priv.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_err.h \
  /home/sai-vdeal/esp/esp-idf/components/newlib/platform_include/assert.h \
@@ -55,7 +55,7 @@ src/core_dump_common.o: \
  /home/sai-vdeal/esp/esp-idf/components/bootloader_support/include/esp_app_format.h \
  /home/sai-vdeal/esp/esp-idf/components/espcoredump/include_core_dump/core_dump_elf.h
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/espcoredump/include_core_dump/esp_core_dump_priv.h:
 

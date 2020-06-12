@@ -1,6 +1,6 @@
 src/mac_addr.o: \
  /home/sai-vdeal/esp/esp-idf/components/esp_common/src/mac_addr.c \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_system/include/esp_system.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_err.h \
  /home/sai-vdeal/esp/esp-idf/components/newlib/platform_include/assert.h \
@@ -16,7 +16,7 @@ src/mac_addr.o: \
  /home/sai-vdeal/esp/esp-idf/components/efuse/esp32/include/esp_efuse_table.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_rom/include/esp32/rom/efuse.h
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/esp_system/include/esp_system.h:
 

@@ -2,7 +2,7 @@ port/portevent_m.o: \
  /home/sai-vdeal/esp/esp-idf/components/freemodbus/port/portevent_m.c \
  /home/sai-vdeal/esp/esp-idf/components/freemodbus/modbus/include/mb_m.h \
  /home/sai-vdeal/esp/esp-idf/components/freemodbus/modbus/include/mbconfig.h \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/freemodbus/port/port.h \
  /home/sai-vdeal/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_compiler.h \
@@ -83,7 +83,7 @@ port/portevent_m.o: \
 
 /home/sai-vdeal/esp/esp-idf/components/freemodbus/modbus/include/mbconfig.h:
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/freemodbus/port/port.h:
 

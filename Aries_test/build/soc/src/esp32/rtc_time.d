@@ -1,7 +1,7 @@
 src/esp32/rtc_time.o: \
  /home/sai-vdeal/esp/esp-idf/components/soc/src/esp32/rtc_time.c \
  /home/sai-vdeal/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/soc/soc/esp32/include/soc/rtc.h \
  /home/sai-vdeal/esp/esp-idf/components/soc/soc/esp32/include/soc/soc.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_assert.h \
@@ -28,7 +28,7 @@ src/esp32/rtc_time.o: \
 
 /home/sai-vdeal/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h:
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/soc/soc/esp32/include/soc/rtc.h:
 

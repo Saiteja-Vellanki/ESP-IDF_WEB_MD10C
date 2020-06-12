@@ -1,7 +1,7 @@
 src/esp32/rtc_clk.o: \
  /home/sai-vdeal/esp/esp-idf/components/soc/src/esp32/rtc_clk.c \
  /home/sai-vdeal/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/bootloader/../include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/bootloader/../include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_rom/include/esp32/rom/rtc.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h \
  /home/sai-vdeal/esp/esp-idf/components/soc/soc/esp32/include/soc/soc.h \
@@ -59,7 +59,7 @@ src/esp32/rtc_clk.o: \
 
 /home/sai-vdeal/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h:
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/bootloader/../include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/bootloader/../include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/esp_rom/include/esp32/rom/rtc.h:
 

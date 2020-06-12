@@ -14,7 +14,7 @@ src/esp32/touch_sensor_hal.o: \
  /home/sai-vdeal/esp/esp-idf/components/soc/soc/esp32/include/soc/sens_struct.h \
  /home/sai-vdeal/esp/esp-idf/components/soc/soc/esp32/include/soc/rtc_io_struct.h \
  /home/sai-vdeal/esp/esp-idf/components/soc/include/hal/touch_sensor_types.h \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/bootloader/../include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/bootloader/../include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/xtensa/include/esp_attr.h \
  /home/sai-vdeal/esp/esp-idf/components/soc/include/hal/touch_sensor_hal.h
 
@@ -46,7 +46,7 @@ src/esp32/touch_sensor_hal.o: \
 
 /home/sai-vdeal/esp/esp-idf/components/soc/include/hal/touch_sensor_types.h:
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/bootloader/../include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/bootloader/../include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/xtensa/include/esp_attr.h:
 

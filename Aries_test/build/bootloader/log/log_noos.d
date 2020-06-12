@@ -14,7 +14,7 @@ log_noos.o: /home/sai-vdeal/esp/esp-idf/components/log/log_noos.c \
  /home/sai-vdeal/esp/esp-idf/components/soc/include/hal/cpu_types.h \
  /home/sai-vdeal/esp/esp-idf/components/soc/src/esp32/include/hal/cpu_ll.h \
  /home/sai-vdeal/esp/esp-idf/components/xtensa/include/esp_attr.h \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/bootloader/../include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/bootloader/../include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/soc/soc/esp32/include/soc/cpu_caps.h \
  /home/sai-vdeal/esp/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_bit_defs.h
@@ -49,7 +49,7 @@ log_noos.o: /home/sai-vdeal/esp/esp-idf/components/log/log_noos.c \
 
 /home/sai-vdeal/esp/esp-idf/components/xtensa/include/esp_attr.h:
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/bootloader/../include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/bootloader/../include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/soc/soc/esp32/include/soc/cpu_caps.h:
 

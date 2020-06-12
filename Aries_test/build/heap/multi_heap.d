@@ -1,6 +1,6 @@
 multi_heap.o: /home/sai-vdeal/esp/esp-idf/components/heap/multi_heap.c \
  /home/sai-vdeal/esp/esp-idf/components/newlib/platform_include/assert.h \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_compiler.h \
  /home/sai-vdeal/esp/esp-idf/components/heap/include/multi_heap.h \
  /home/sai-vdeal/esp/esp-idf/components/heap/multi_heap_internal.h \
@@ -51,7 +51,7 @@ multi_heap.o: /home/sai-vdeal/esp/esp-idf/components/heap/multi_heap.c \
 
 /home/sai-vdeal/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_compiler.h:
 

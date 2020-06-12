@@ -1,6 +1,6 @@
 src/esp_efuse_fields.o: \
  /home/sai-vdeal/esp/esp-idf/components/efuse/src/esp_efuse_fields.c \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/efuse/include/esp_efuse.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_err.h \
  /home/sai-vdeal/esp/esp-idf/components/newlib/platform_include/assert.h \
@@ -22,7 +22,7 @@ src/esp_efuse_fields.o: \
  /home/sai-vdeal/esp/esp-idf/components/soc/soc/esp32/include/soc/apb_ctrl_reg.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_rom/include/esp32/rom/efuse.h
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/efuse/include/esp_efuse.h:
 

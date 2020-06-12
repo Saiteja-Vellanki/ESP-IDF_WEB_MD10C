@@ -1,7 +1,7 @@
 port/esp32/vfs_lwip.o: \
  /home/sai-vdeal/esp/esp-idf/components/lwip/port/esp32/vfs_lwip.c \
  /home/sai-vdeal/esp/esp-idf/components/xtensa/include/esp_attr.h \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/vfs/include/esp_vfs.h \
  /home/sai-vdeal/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_compiler.h \
@@ -88,7 +88,7 @@ port/esp32/vfs_lwip.o: \
 
 /home/sai-vdeal/esp/esp-idf/components/xtensa/include/esp_attr.h:
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/vfs/include/esp_vfs.h:
 

@@ -11,7 +11,7 @@ src/bootloader_mem.o: \
  /home/sai-vdeal/esp/esp-idf/components/soc/include/hal/cpu_types.h \
  /home/sai-vdeal/esp/esp-idf/components/soc/src/esp32/include/hal/cpu_ll.h \
  /home/sai-vdeal/esp/esp-idf/components/xtensa/include/esp_attr.h \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/bootloader/../include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/bootloader/../include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/soc/soc/esp32/include/soc/cpu_caps.h \
  /home/sai-vdeal/esp/esp-idf/components/xtensa/include/xt_instr_macros.h \
  /home/sai-vdeal/esp/esp-idf/components/xtensa/esp32/include/xtensa/config/specreg.h \
@@ -45,7 +45,7 @@ src/bootloader_mem.o: \
 
 /home/sai-vdeal/esp/esp-idf/components/xtensa/include/esp_attr.h:
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/bootloader/../include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/bootloader/../include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/soc/soc/esp32/include/soc/cpu_caps.h:
 

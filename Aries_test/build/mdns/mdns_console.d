@@ -1,7 +1,7 @@
 mdns_console.o: \
  /home/sai-vdeal/esp/esp-idf/components/mdns/mdns_console.c \
  /home/sai-vdeal/esp/esp-idf/components/console/esp_console.h \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_err.h \
  /home/sai-vdeal/esp/esp-idf/components/newlib/platform_include/assert.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_compiler.h \
@@ -109,7 +109,7 @@ mdns_console.o: \
 
 /home/sai-vdeal/esp/esp-idf/components/console/esp_console.h:
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_err.h:
 

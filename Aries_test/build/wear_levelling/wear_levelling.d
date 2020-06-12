@@ -2,7 +2,7 @@ wear_levelling.o: \
  /home/sai-vdeal/esp/esp-idf/components/wear_levelling/wear_levelling.cpp \
  /home/sai-vdeal/esp/esp-idf/components/wear_levelling/include/wear_levelling.h \
  /home/sai-vdeal/esp/esp-idf/components/log/include/esp_log.h \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h \
  /home/sai-vdeal/esp/esp-idf/components/log/include/esp_log_internal.h \
  /home/sai-vdeal/esp/esp-idf/components/spi_flash/include/esp_partition.h \
@@ -32,7 +32,7 @@ wear_levelling.o: \
 
 /home/sai-vdeal/esp/esp-idf/components/log/include/esp_log.h:
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h:
 

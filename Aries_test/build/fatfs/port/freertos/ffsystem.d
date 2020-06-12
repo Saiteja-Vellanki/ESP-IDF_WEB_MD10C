@@ -2,7 +2,7 @@ port/freertos/ffsystem.o: \
  /home/sai-vdeal/esp/esp-idf/components/fatfs/port/freertos/ffsystem.c \
  /home/sai-vdeal/esp/esp-idf/components/fatfs/src/ff.h \
  /home/sai-vdeal/esp/esp-idf/components/fatfs/src/ffconf.h \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_compiler.h \
  /home/sai-vdeal/esp/esp-idf/components/freertos/xtensa/include/freertos/FreeRTOSConfig.h \
@@ -55,7 +55,7 @@ port/freertos/ffsystem.o: \
 
 /home/sai-vdeal/esp/esp-idf/components/fatfs/src/ffconf.h:
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
 

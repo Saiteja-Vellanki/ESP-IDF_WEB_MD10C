@@ -1,6 +1,6 @@
 src/bootloader_random.o: \
  /home/sai-vdeal/esp/esp-idf/components/bootloader_support/src/bootloader_random.c \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/bootloader_support/include/bootloader_random.h \
  /home/sai-vdeal/esp/esp-idf/components/soc/include/soc/cpu.h \
  /home/sai-vdeal/esp/esp-idf/components/xtensa/include/xtensa/corebits.h \
@@ -61,7 +61,7 @@ src/bootloader_random.o: \
  /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_idf_version.h \
  /home/sai-vdeal/esp/esp-idf/components/driver/include/driver/periph_ctrl.h
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/bootloader_support/include/bootloader_random.h:
 

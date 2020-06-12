@@ -1,7 +1,7 @@
 port/esp_bignum.o: \
  /home/sai-vdeal/esp/esp-idf/components/mbedtls/port/esp_bignum.c \
  /home/sai-vdeal/esp/esp-idf/components/newlib/platform_include/assert.h \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_compiler.h \
  /home/sai-vdeal/esp/esp-idf/components/soc/soc/include/soc/hwcrypto_periph.h \
  /home/sai-vdeal/esp/esp-idf/components/soc/soc/esp32/include/soc/dport_reg.h \
@@ -40,7 +40,7 @@ port/esp_bignum.o: \
 
 /home/sai-vdeal/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_compiler.h:
 

@@ -2,7 +2,7 @@ src/hal/spi_slave_hal.o: \
  /home/sai-vdeal/esp/esp-idf/components/soc/src/hal/spi_slave_hal.c \
  /home/sai-vdeal/esp/esp-idf/components/soc/include/hal/spi_slave_hal.h \
  /home/sai-vdeal/esp/esp-idf/components/soc/include/soc/lldesc.h \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/bootloader/../include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/bootloader/../include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_rom/include/esp32/rom/lldesc.h \
  /home/sai-vdeal/esp/esp-idf/components/soc/soc/esp32/include/soc/spi_struct.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_types.h \
@@ -25,7 +25,7 @@ src/hal/spi_slave_hal.o: \
 
 /home/sai-vdeal/esp/esp-idf/components/soc/include/soc/lldesc.h:
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/bootloader/../include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/bootloader/../include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/esp_rom/include/esp32/rom/lldesc.h:
 

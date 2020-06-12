@@ -3,7 +3,7 @@ src/esp_eth_mac_esp32.o: \
  /home/sai-vdeal/esp/esp-idf/components/driver/include/driver/periph_ctrl.h \
  /home/sai-vdeal/esp/esp-idf/components/soc/soc/esp32/include/soc/periph_defs.h \
  /home/sai-vdeal/esp/esp-idf/components/driver/include/driver/gpio.h \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_err.h \
  /home/sai-vdeal/esp/esp-idf/components/newlib/platform_include/assert.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_compiler.h \
@@ -104,7 +104,7 @@ src/esp_eth_mac_esp32.o: \
 
 /home/sai-vdeal/esp/esp-idf/components/driver/include/driver/gpio.h:
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_err.h:
 

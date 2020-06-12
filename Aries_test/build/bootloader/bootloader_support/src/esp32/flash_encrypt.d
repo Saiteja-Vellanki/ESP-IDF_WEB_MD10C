@@ -3,7 +3,7 @@ src/esp32/flash_encrypt.o: \
  /home/sai-vdeal/esp/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_err.h \
  /home/sai-vdeal/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/bootloader/../include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/bootloader/../include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/bootloader_support/include/esp_image_format.h \
  /home/sai-vdeal/esp/esp-idf/components/bootloader_support/include/esp_flash_partitions.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_types.h \
@@ -55,7 +55,7 @@ src/esp32/flash_encrypt.o: \
 
 /home/sai-vdeal/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h:
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/bootloader/../include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/bootloader/../include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/bootloader_support/include/esp_image_format.h:
 

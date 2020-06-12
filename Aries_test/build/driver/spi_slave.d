@@ -1,5 +1,5 @@
 spi_slave.o: /home/sai-vdeal/esp/esp-idf/components/driver/spi_slave.c \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/soc/src/esp32/include/hal/spi_ll.h \
  /home/sai-vdeal/esp/esp-idf/components/soc/include/hal/hal_defs.h \
  /home/sai-vdeal/esp/esp-idf/components/log/include/esp_log.h \
@@ -91,7 +91,7 @@ spi_slave.o: /home/sai-vdeal/esp/esp-idf/components/driver/spi_slave.c \
  /home/sai-vdeal/esp/esp-idf/components/soc/include/hal/gpio_types.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_rom/include/esp32/rom/gpio.h
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/soc/src/esp32/include/hal/spi_ll.h:
 

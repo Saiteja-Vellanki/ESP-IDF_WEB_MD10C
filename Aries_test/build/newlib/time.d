@@ -3,7 +3,7 @@ time.o: /home/sai-vdeal/esp/esp-idf/components/newlib/time.c \
  /home/sai-vdeal/esp/esp-idf/components/newlib/platform_include/time.h \
  /home/sai-vdeal/esp/esp-idf/components/newlib/platform_include/sys/time.h \
  /home/sai-vdeal/esp/esp-idf/components/xtensa/include/esp_attr.h \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/esp32/include/esp_intr_alloc.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_err.h \
  /home/sai-vdeal/esp/esp-idf/components/newlib/platform_include/assert.h \
@@ -77,7 +77,7 @@ time.o: /home/sai-vdeal/esp/esp-idf/components/newlib/time.c \
 
 /home/sai-vdeal/esp/esp-idf/components/xtensa/include/esp_attr.h:
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/esp32/include/esp_intr_alloc.h:
 

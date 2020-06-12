@@ -1,7 +1,7 @@
 esp32/esp_adapter.o: \
  /home/sai-vdeal/esp/esp-idf/components/esp_wifi/esp32/esp_adapter.c \
  /home/sai-vdeal/esp/esp-idf/components/newlib/platform_include/assert.h \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_compiler.h \
  /home/sai-vdeal/esp/esp-idf/components/newlib/platform_include/pthread.h \
  /home/sai-vdeal/esp/esp-idf/components/newlib/platform_include/sys/time.h \
@@ -136,7 +136,7 @@ esp32/esp_adapter.o: \
 
 /home/sai-vdeal/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_compiler.h:
 

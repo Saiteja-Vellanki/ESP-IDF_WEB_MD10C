@@ -1,7 +1,7 @@
 mbedtls/library/pkcs5.o: \
  /home/sai-vdeal/esp/esp-idf/components/mbedtls/mbedtls/library/pkcs5.c \
  /home/sai-vdeal/esp/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/config.h \
  /home/sai-vdeal/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h \
  /home/sai-vdeal/esp/esp-idf/components/mbedtls/port/include/esp_mem.h \
@@ -26,7 +26,7 @@ mbedtls/library/pkcs5.o: \
 
 /home/sai-vdeal/esp/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h:
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/config.h:
 

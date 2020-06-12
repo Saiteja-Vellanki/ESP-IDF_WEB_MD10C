@@ -2,7 +2,7 @@ src/eap_peer/eap.o: \
  /home/sai-vdeal/esp/esp-idf/components/wpa_supplicant/src/eap_peer/eap.c \
  /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_err.h \
  /home/sai-vdeal/esp/esp-idf/components/newlib/platform_include/assert.h \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_compiler.h \
  /home/sai-vdeal/esp/esp-idf/components/wpa_supplicant/src/utils/includes.h \
  /home/sai-vdeal/esp/esp-idf/components/wpa_supplicant/port/include/supplicant_opt.h \
@@ -150,7 +150,7 @@ src/eap_peer/eap.o: \
 
 /home/sai-vdeal/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_compiler.h:
 

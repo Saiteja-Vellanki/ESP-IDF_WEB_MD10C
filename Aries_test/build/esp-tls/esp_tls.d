@@ -7,7 +7,7 @@ esp_tls.o: /home/sai-vdeal/esp/esp-idf/components/esp-tls/esp_tls.c \
  /home/sai-vdeal/esp/esp-idf/components/newlib/platform_include/sys/time.h \
  /home/sai-vdeal/esp/esp-idf/components/newlib/platform_include/sys/ioctl.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_task.h \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/freertos/xtensa/include/freertos/FreeRTOSConfig.h \
  /home/sai-vdeal/esp/esp-idf/components/freertos/xtensa/include/freertos/xtensa_config.h \
  /home/sai-vdeal/esp/esp-idf/components/xtensa/include/xtensa/hal.h \
@@ -149,7 +149,7 @@ esp_tls.o: /home/sai-vdeal/esp/esp-idf/components/esp-tls/esp_tls.c \
 
 /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_task.h:
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/freertos/xtensa/include/freertos/FreeRTOSConfig.h:
 

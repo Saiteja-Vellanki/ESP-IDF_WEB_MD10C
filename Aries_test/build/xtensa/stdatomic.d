@@ -1,5 +1,5 @@
 stdatomic.o: /home/sai-vdeal/esp/esp-idf/components/xtensa/stdatomic.c \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
  /home/sai-vdeal/esp/esp-idf/components/xtensa/include/xtensa/xtruntime.h \
  /home/sai-vdeal/esp/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
@@ -12,7 +12,7 @@ stdatomic.o: /home/sai-vdeal/esp/esp-idf/components/xtensa/stdatomic.c \
  /home/sai-vdeal/esp/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h \
  /home/sai-vdeal/esp/esp-idf/components/xtensa/include/xtensa/xtruntime-frames.h
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h:
 

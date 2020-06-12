@@ -13,7 +13,7 @@ src/hal/mcpwm_hal.o: \
  /home/sai-vdeal/esp/esp-idf/components/soc/soc/esp32/include/soc/mcpwm_caps.h \
  /home/sai-vdeal/esp/esp-idf/components/soc/include/hal/hal_defs.h \
  /home/sai-vdeal/esp/esp-idf/components/log/include/esp_log.h \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/bootloader/../include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/bootloader/../include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h \
  /home/sai-vdeal/esp/esp-idf/components/log/include/esp_log_internal.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_types.h
@@ -44,7 +44,7 @@ src/hal/mcpwm_hal.o: \
 
 /home/sai-vdeal/esp/esp-idf/components/log/include/esp_log.h:
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/bootloader/../include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/bootloader/../include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h:
 

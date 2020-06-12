@@ -1,5 +1,5 @@
 tasks.o: /home/sai-vdeal/esp/esp-idf/components/freertos/tasks.c \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/newlib/platform_include/esp_newlib.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_compiler.h \
  /home/sai-vdeal/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
@@ -56,7 +56,7 @@ tasks.o: /home/sai-vdeal/esp/esp-idf/components/freertos/tasks.c \
  /home/sai-vdeal/esp/esp-idf/components/freertos/include/freertos/semphr.h \
  /home/sai-vdeal/esp/esp-idf/components/freertos/include/freertos/queue.h
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/newlib/platform_include/esp_newlib.h:
 

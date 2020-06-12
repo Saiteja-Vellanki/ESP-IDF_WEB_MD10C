@@ -1,7 +1,7 @@
 src/hal/timer_hal.o: \
  /home/sai-vdeal/esp/esp-idf/components/soc/src/hal/timer_hal.c \
  /home/sai-vdeal/esp/esp-idf/components/xtensa/include/esp_attr.h \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/soc/include/hal/timer_hal.h \
  /home/sai-vdeal/esp/esp-idf/components/soc/src/esp32/include/hal/timer_ll.h \
  /home/sai-vdeal/esp/esp-idf/components/soc/include/hal/timer_types.h \
@@ -17,7 +17,7 @@ src/hal/timer_hal.o: \
 
 /home/sai-vdeal/esp/esp-idf/components/xtensa/include/esp_attr.h:
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/soc/include/hal/timer_hal.h:
 

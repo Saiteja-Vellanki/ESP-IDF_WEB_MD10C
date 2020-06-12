@@ -1,7 +1,7 @@
 esp_netif_handlers.o: \
  /home/sai-vdeal/esp/esp-idf/components/esp_netif/esp_netif_handlers.c \
  /home/sai-vdeal/esp/esp-idf/components/esp_netif/include/esp_netif.h \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_wifi/include/esp_wifi_types.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_wifi/include/esp_private/esp_wifi_types_private.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_err.h \
@@ -109,7 +109,7 @@ esp_netif_handlers.o: \
 
 /home/sai-vdeal/esp/esp-idf/components/esp_netif/include/esp_netif.h:
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/include/esp_wifi_types.h:
 

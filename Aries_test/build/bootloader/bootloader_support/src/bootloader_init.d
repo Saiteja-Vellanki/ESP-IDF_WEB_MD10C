@@ -1,6 +1,6 @@
 src/bootloader_init.o: \
  /home/sai-vdeal/esp/esp-idf/components/bootloader_support/src/bootloader_init.c \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/bootloader/../include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/bootloader/../include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/log/include/esp_log.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h \
  /home/sai-vdeal/esp/esp-idf/components/log/include/esp_log_internal.h \
@@ -61,7 +61,7 @@ src/bootloader_init.o: \
  /home/sai-vdeal/esp/esp-idf/components/soc/src/esp32/include/hal/rwdt_ll.h \
  /home/sai-vdeal/esp/esp-idf/components/soc/soc/include/soc/rtc_cntl_periph.h
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/bootloader/../include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/bootloader/../include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/log/include/esp_log.h:
 

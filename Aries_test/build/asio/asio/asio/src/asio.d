@@ -3,7 +3,7 @@ asio/asio/src/asio.o: \
  /home/sai-vdeal/esp/esp-idf/components/asio/asio/asio/include/asio/impl/src.hpp \
  /home/sai-vdeal/esp/esp-idf/components/asio/asio/asio/include/asio/detail/config.hpp \
  /home/sai-vdeal/esp/esp-idf/components/asio/port/include/esp_asio_config.h \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/asio/asio/asio/include/asio/impl/error.ipp \
  /home/sai-vdeal/esp/esp-idf/components/asio/asio/asio/include/asio/error.hpp \
  /home/sai-vdeal/esp/esp-idf/components/asio/asio/asio/include/asio/error_code.hpp \
@@ -315,7 +315,7 @@ asio/asio/src/asio.o: \
 
 /home/sai-vdeal/esp/esp-idf/components/asio/port/include/esp_asio_config.h:
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/asio/asio/asio/include/asio/impl/error.ipp:
 

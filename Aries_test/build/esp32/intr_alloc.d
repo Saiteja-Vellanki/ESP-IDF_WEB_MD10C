@@ -1,5 +1,5 @@
 intr_alloc.o: /home/sai-vdeal/esp/esp-idf/components/esp32/intr_alloc.c \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_compiler.h \
  /home/sai-vdeal/esp/esp-idf/components/freertos/xtensa/include/freertos/FreeRTOSConfig.h \
@@ -54,7 +54,7 @@ intr_alloc.o: /home/sai-vdeal/esp/esp-idf/components/esp32/intr_alloc.c \
  /home/sai-vdeal/esp/esp-idf/components/freertos/xtensa/include/freertos/xtensa_api.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_ipc.h
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
 

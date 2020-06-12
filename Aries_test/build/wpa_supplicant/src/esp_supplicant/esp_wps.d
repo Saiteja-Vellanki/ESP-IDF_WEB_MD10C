@@ -2,7 +2,7 @@ src/esp_supplicant/esp_wps.o: \
  /home/sai-vdeal/esp/esp-idf/components/wpa_supplicant/src/esp_supplicant/esp_wps.c \
  /home/sai-vdeal/esp/esp-idf/components/wpa_supplicant/src/utils/includes.h \
  /home/sai-vdeal/esp/esp-idf/components/wpa_supplicant/port/include/supplicant_opt.h \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h \
  /home/sai-vdeal/esp/esp-idf/components/wpa_supplicant/src/rsn_supp/wpa.h \
  /home/sai-vdeal/esp/esp-idf/components/wpa_supplicant/src/utils/common.h \
@@ -147,7 +147,7 @@ src/esp_supplicant/esp_wps.o: \
 
 /home/sai-vdeal/esp/esp-idf/components/wpa_supplicant/port/include/supplicant_opt.h:
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h:
 

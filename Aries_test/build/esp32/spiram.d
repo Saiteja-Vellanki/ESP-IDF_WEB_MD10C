@@ -1,5 +1,5 @@
 spiram.o: /home/sai-vdeal/esp/esp-idf/components/esp32/spiram.c \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/xtensa/include/esp_attr.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_err.h \
  /home/sai-vdeal/esp/esp-idf/components/newlib/platform_include/assert.h \
@@ -66,7 +66,7 @@ spiram.o: /home/sai-vdeal/esp/esp-idf/components/esp32/spiram.c \
  /home/sai-vdeal/esp/esp-idf/components/esp_rom/include/esp32/rom/cache.h \
  /home/sai-vdeal/esp/esp-idf/components/soc/soc/esp32/include/soc/dport_access.h
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/xtensa/include/esp_attr.h:
 

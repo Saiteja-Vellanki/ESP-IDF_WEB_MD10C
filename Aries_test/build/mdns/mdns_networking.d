@@ -3,7 +3,7 @@ mdns_networking.o: \
  /home/sai-vdeal/esp/esp-idf/components/mdns/private_include/mdns_networking.h \
  /home/sai-vdeal/esp/esp-idf/components/mdns/include/mdns.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_netif/include/esp_netif.h \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_wifi/include/esp_wifi_types.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_wifi/include/esp_private/esp_wifi_types_private.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_err.h \
@@ -145,7 +145,7 @@ mdns_networking.o: \
 
 /home/sai-vdeal/esp/esp-idf/components/esp_netif/include/esp_netif.h:
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/include/esp_wifi_types.h:
 

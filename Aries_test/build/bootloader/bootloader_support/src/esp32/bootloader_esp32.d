@@ -1,6 +1,6 @@
 src/esp32/bootloader_esp32.o: \
  /home/sai-vdeal/esp/esp-idf/components/bootloader_support/src/esp32/bootloader_esp32.c \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/bootloader/../include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/bootloader/../include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/xtensa/include/esp_attr.h \
  /home/sai-vdeal/esp/esp-idf/components/log/include/esp_log.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h \
@@ -76,7 +76,7 @@ src/esp32/bootloader_esp32.o: \
  /home/sai-vdeal/esp/esp-idf/components/soc/soc/esp32/include/soc/uart_struct.h \
  /home/sai-vdeal/esp/esp-idf/components/soc/soc/esp32/include/soc/uart_caps.h
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/bootloader/../include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/bootloader/../include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/xtensa/include/esp_attr.h:
 

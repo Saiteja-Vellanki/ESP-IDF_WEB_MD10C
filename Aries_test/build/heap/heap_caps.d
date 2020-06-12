@@ -1,6 +1,6 @@
 heap_caps.o: /home/sai-vdeal/esp/esp-idf/components/heap/heap_caps.c \
  /home/sai-vdeal/esp/esp-idf/components/newlib/platform_include/assert.h \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_compiler.h \
  /home/sai-vdeal/esp/esp-idf/components/xtensa/include/esp_attr.h \
  /home/sai-vdeal/esp/esp-idf/components/heap/include/esp_heap_caps.h \
@@ -52,7 +52,7 @@ heap_caps.o: /home/sai-vdeal/esp/esp-idf/components/heap/heap_caps.c \
 
 /home/sai-vdeal/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_compiler.h:
 

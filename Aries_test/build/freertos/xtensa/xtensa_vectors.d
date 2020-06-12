@@ -13,7 +13,7 @@ xtensa/xtensa_vectors.o: \
  /home/sai-vdeal/esp/esp-idf/components/xtensa/include/xtensa/corebits.h \
  /home/sai-vdeal/esp/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h \
  /home/sai-vdeal/esp/esp-idf/components/freertos/xtensa/include/freertos/FreeRTOSConfig.h \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/freertos/xtensa/include/freertos/xtensa_config.h \
  /home/sai-vdeal/esp/esp-idf/components/freertos/xtensa/include/freertos/xtensa_context.h \
  /home/sai-vdeal/esp/esp-idf/components/xtensa/include/xtensa/xtruntime-frames.h \
@@ -49,7 +49,7 @@ xtensa/xtensa_vectors.o: \
 
 /home/sai-vdeal/esp/esp-idf/components/freertos/xtensa/include/freertos/FreeRTOSConfig.h:
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/freertos/xtensa/include/freertos/xtensa_config.h:
 

@@ -1,6 +1,6 @@
 debug_helpers.o: \
  /home/sai-vdeal/esp/esp-idf/components/xtensa/debug_helpers.c \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_types.h \
  /home/sai-vdeal/esp/esp-idf/components/xtensa/include/esp_attr.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_err.h \
@@ -27,7 +27,7 @@ debug_helpers.o: \
  /home/sai-vdeal/esp/esp-idf/components/xtensa/esp32/include/xtensa/config/extreg.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_types.h:
 

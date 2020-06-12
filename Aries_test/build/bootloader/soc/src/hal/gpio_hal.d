@@ -17,7 +17,7 @@ src/hal/gpio_hal.o: \
  /home/sai-vdeal/esp/esp-idf/components/soc/include/hal/gpio_types.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_rom/include/esp32/rom/gpio.h \
  /home/sai-vdeal/esp/esp-idf/components/xtensa/include/esp_attr.h \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/bootloader/../include/sdkconfig.h
+ /home/sai-vdeal/Aries/Aries_test/build/bootloader/../include/sdkconfig.h
 
 /home/sai-vdeal/esp/esp-idf/components/soc/soc/esp32/include/soc/soc.h:
 
@@ -53,5 +53,5 @@ src/hal/gpio_hal.o: \
 
 /home/sai-vdeal/esp/esp-idf/components/xtensa/include/esp_attr.h:
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/bootloader/../include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/bootloader/../include/sdkconfig.h:
 /home/sai-vdeal/esp/esp-idf/components/soc/src/hal/gpio_hal.c:

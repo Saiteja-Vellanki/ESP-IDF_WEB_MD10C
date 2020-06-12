@@ -2,7 +2,7 @@ esp-mqtt/lib/mqtt_msg.o: \
  /home/sai-vdeal/esp/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c \
  /home/sai-vdeal/esp/esp-idf/components/mqtt/esp-mqtt/lib/include/mqtt_msg.h \
  /home/sai-vdeal/esp/esp-idf/components/mqtt/esp-mqtt/include/mqtt_config.h \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/mqtt/esp-mqtt/include/mqtt_client.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_err.h \
  /home/sai-vdeal/esp/esp-idf/components/newlib/platform_include/assert.h \
@@ -135,7 +135,7 @@ esp-mqtt/lib/mqtt_msg.o: \
 
 /home/sai-vdeal/esp/esp-idf/components/mqtt/esp-mqtt/include/mqtt_config.h:
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/mqtt/esp-mqtt/include/mqtt_client.h:
 

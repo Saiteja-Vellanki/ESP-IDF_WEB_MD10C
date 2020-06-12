@@ -13,7 +13,7 @@ xtensa/gdbstub_xtensa.o: \
  /home/sai-vdeal/esp/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_gdbstub/esp32/gdbstub_target_config.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_gdbstub/private_include/esp_gdbstub_common.h \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/soc/include/soc/cpu.h \
  /home/sai-vdeal/esp/esp-idf/components/xtensa/esp32/include/xtensa/config/specreg.h \
  /home/sai-vdeal/esp/esp-idf/components/xtensa/include/xt_instr_macros.h \
@@ -57,7 +57,7 @@ xtensa/gdbstub_xtensa.o: \
 
 /home/sai-vdeal/esp/esp-idf/components/esp_gdbstub/private_include/esp_gdbstub_common.h:
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/soc/include/soc/cpu.h:
 

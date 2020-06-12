@@ -11,7 +11,7 @@ src/hal/wdt_hal_iram.o: \
  /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_bit_defs.h \
  /home/sai-vdeal/esp/esp-idf/components/soc/soc/esp32/include/soc/timer_group_struct.h \
  /home/sai-vdeal/esp/esp-idf/components/xtensa/include/esp_attr.h \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/bootloader/../include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/bootloader/../include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/soc/src/esp32/include/hal/rwdt_ll.h \
  /home/sai-vdeal/esp/esp-idf/components/soc/soc/include/soc/rtc_cntl_periph.h \
  /home/sai-vdeal/esp/esp-idf/components/soc/soc/esp32/include/soc/rtc_cntl_reg.h \
@@ -39,7 +39,7 @@ src/hal/wdt_hal_iram.o: \
 
 /home/sai-vdeal/esp/esp-idf/components/xtensa/include/esp_attr.h:
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/bootloader/../include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/bootloader/../include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/soc/src/esp32/include/hal/rwdt_ll.h:
 

@@ -2,7 +2,7 @@ esp_spiffs.o: /home/sai-vdeal/esp/esp-idf/components/spiffs/esp_spiffs.c \
  /home/sai-vdeal/esp/esp-idf/components/spiffs/include/esp_spiffs.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_err.h \
  /home/sai-vdeal/esp/esp-idf/components/newlib/platform_include/assert.h \
- /home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h \
+ /home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_compiler.h \
  /home/sai-vdeal/esp/esp-idf/components/spiffs/spiffs/src/spiffs.h \
  /home/sai-vdeal/esp/esp-idf/components/spiffs/include/spiffs_config.h \
@@ -77,7 +77,7 @@ esp_spiffs.o: /home/sai-vdeal/esp/esp-idf/components/spiffs/esp_spiffs.c \
 
 /home/sai-vdeal/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/home/sai-vdeal/esp/esp-idf/examples/Aries_test/build/include/sdkconfig.h:
+/home/sai-vdeal/Aries/Aries_test/build/include/sdkconfig.h:
 
 /home/sai-vdeal/esp/esp-idf/components/esp_common/include/esp_compiler.h:
 
