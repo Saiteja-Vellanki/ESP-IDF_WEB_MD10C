@@ -24,6 +24,10 @@
 #include "driver/mcpwm.h"
 #include "soc/mcpwm_periph.h"
 #include <esp_http_server.h>
+#include <sys/unistd.h>
+#include <sys/stat.h>
+#include "esp_spiffs.h"
+
 
 /* A simple example that demonstrates how to create GET and POST
  * handlers for the web server.
@@ -52,6 +56,24 @@
  #define MOTOR_BASE_PWM_CONTROL_PIN             4
 
  static const char *TAG = "Aries Robotic ARM";
+
+extern const uint8_t jquery_3_5_1_min_js_start[] asm("_binary_jquery_3_5_1_min_js_start");
+extern const uint8_t jquery_3_5_1_min_js_end[]   asm("_binary_jquery_3_5_1_min_js_end");
+
+
+
+
+esp_err_t jquery_3_5_1_min_js_handler(httpd_req_t *req)
+{
+	printf("Aries set : sending request to js--><\r\n");
+
+	httpd_resp_set_type(req, "application/javascript");
+
+	httpd_resp_send(req, (const char *)jquery_3_5_1_min_js_start, (jquery_3_5_1_min_js_end-1) - jquery_3_5_1_min_js_start);
+
+
+	return ESP_OK;
+}
 
 
 static uint32_t motor_per_degree_cal_grip(uint32_t grip_rotation_deg)
@@ -91,7 +113,39 @@ static uint32_t motor_per_degree_cal_base(uint32_t base_rotation_deg)
 }
 
 
+static esp_err_t init_spiffs(void)
+{
+    ESP_LOGI(TAG, "Initializing SPIFFS");
 
+    esp_vfs_spiffs_conf_t conf = {
+      .base_path = "/spiffs",
+      .partition_label = NULL,
+      .max_files = 5,   // This decides the maximum number of files that can be created on the storage
+      .format_if_mount_failed = true
+    };
+
+    esp_err_t ret = esp_vfs_spiffs_register(&conf);
+    if (ret != ESP_OK) {
+        if (ret == ESP_FAIL) {
+            ESP_LOGE(TAG, "Failed to mount or format filesystem");
+        } else if (ret == ESP_ERR_NOT_FOUND) {
+            ESP_LOGE(TAG, "Failed to find SPIFFS partition");
+        } else {
+            ESP_LOGE(TAG, "Failed to initialize SPIFFS (%s)", esp_err_to_name(ret));
+        }
+        return ESP_FAIL;
+    }
+
+    size_t total = 0, used = 0;
+    ret = esp_spiffs_info(NULL, &total, &used);
+    if (ret != ESP_OK) {
+        ESP_LOGE(TAG, "Failed to get SPIFFS partition information (%s)", esp_err_to_name(ret));
+        return ESP_FAIL;
+    }
+
+    ESP_LOGI(TAG, "Partition size: total: %d, used: %d", total, used);
+    return ESP_OK;
+}
 
 /* An HTTP GET handler */
 static esp_err_t hello_get_handler(httpd_req_t *req)
@@ -101,6 +155,8 @@ static esp_err_t hello_get_handler(httpd_req_t *req)
 
     /* Get header value string length and allocate memory for length + 1,
      * extra byte for null termination */
+
+  
     buf_len = httpd_req_get_hdr_value_len(req, "Host") + 1;
     if (buf_len > 1) {
         buf = malloc(buf_len);
@@ -208,8 +264,19 @@ static const httpd_uri_t hello = {
     .uri       = "/",
     .method    = HTTP_GET,
     .handler   = hello_get_handler,
-    .user_ctx  = "<!DOCTYPE html>\r\n<title> Aries <\/title><html>\r\n  <head><fieldset ><center><h1 style=\"color:green;\">Aries Solutions<\/h1>\r\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\r\n  <link rel=\"icon\" href=\"data:,\">\r\n  <style>\r\n    body {\r\n      text-align: center;\r\n      font-family: \"Trebuchet MS\", Arial;\r\n      margin-left:auto;\r\n      margin-right:auto;\r\n    }\r\n    .slider {\r\n      width: 300px;\r\n    }\r\n  <\/style>\r\n  <script src=\"https:\/\/ajax.googleapis.com\/ajax\/libs\/jquery\/3.3.1\/jquery.min.js\"><\/script>\r\n<\/head>\r\n<body>\r\n  <h1 style=\"color:red;\">Robotic ARM Control<\/h1>\r\n  <p style=\"color:green;\">GRIPPER: <span id=\"GRIPP\"><\/span><\/p>\r\n  <input type=\"range\" min=\"0\" max=\"360\" value =\"0\" class=\"slider\" id=\"GRIPPER\" oninput=\"grip(this.value)\"\/><br\/>\r\n  <p style=\"color:green;\">WRIST: <span id=\"WRIST\"><\/span><\/p>\r\n  <input type=\"range\" min=\"0\" max=\"180\" value =\"0\" class=\"slider\" id=\"WRIST JOINT\" oninput=\"wrist(this.value)\"\/><br\/>\r\n  <p style=\"color:green;\">ELBOW: <span id=\"ELBOW\"><\/span><\/p>\r\n  <input type=\"range\" min=\"0\" max=\"180\" value =\"0\" class=\"slider\" id=\"ELBOW JOINT\" oninput=\"elbow(this.value)\"\/><br\/>\r\n  <p style=\"color:green;\">SHOULDER: <span id=\"SHOULDE\"><\/span><\/p>\r\n  <input type=\"range\" min=\"0\" max=\"180\" value =\"0\" class=\"slider\" id=\"SHOULDER\" oninput=\"shoulder(this.value)\"\/><br\/>\r\n  <p style=\"color:green;\">BASE: <span id=\"BAS\"><\/span><\/p>\r\n  <input type=\"range\" min=\"0\" max=\"360\" value =\"0\" class=\"slider\" id=\"BASE\" oninput=\"base(this.value)\"\/><br\/>\r\n  <script>\r\n   \r\n    var slider1 = document.getElementById(\"GRIPPER\");\r\n    var servoP1 = document.getElementById(\"GRIPP\");\r\n    servoP1.innerHTML = slider1.value;\r\n    slider1.onchange = function() {\r\n      slider1.value = this.value;\r\n      servoP1.innerHTML = this.value;\r\n    }\r\n    function grip(pos) {\r\n      $.get(\"\/?grip=\" + pos + \"&\");\r\n      {Connection: close};\r\n    }\r\n\r\n    var slider2 = document.getElementById(\"WRIST JOINT\");\r\n    var servoP2 = document.getElementById(\"WRIST\") ;\r\n    servoP2.innerHTML = slider2.value;\r\n    slider2.onchange = function() {\r\n      slider2.value = this.value;\r\n      servoP2.innerHTML = this.value;\r\n    }\r\n    function wrist(pos) {\r\n      $.get(\"\/?wrist=\" + pos + \"&\");\r\n      {Connection: close};\r\n    }\r\n    \r\n    var slider3 = document.getElementById(\"ELBOW JOINT\");\r\n    var servoP3 = document.getElementById(\"ELBOW\");\r\n    servoP3.innerHTML = slider3.value;\r\n    slider3.onchange = function() {\r\n      slider3.value = this.value;\r\n      servoP3.innerHTML = this.value;\r\n    }\r\n       function elbow(pos) {\r\n      $.get(\"\/?elbow=\" + pos + \"&\");\r\n      {Connection: close};\r\n    }\r\n   \r\n    var slider4 = document.getElementById(\"SHOULDER\");\r\n    var servoP4 = document.getElementById(\"SHOULDE\");\r\n    servoP4.innerHTML = slider4.value;\r\n    slider4.onchange = function() {\r\n      slider4.value = this.value;\r\n      servoP4.innerHTML = this.value;\r\n    }\r\n     function shoulder(pos) {\r\n      $.get(\"\/?shoulder=\" + pos + \"&\");\r\n      {Connection: close};\r\n    }\r\n    \r\n     var slider5 = document.getElementById(\"BASE\");\r\n    var servoP5 = document.getElementById(\"BAS\");\r\n    servoP5.innerHTML = slider5.value;\r\n    slider5.onchange = function() {\r\n      slider5.value = this.value;\r\n      servoP5.innerHTML = this.value;\r\n    }\r\n    function base(pos) {\r\n      $.get(\"\/?base=\" + pos + \"&\");\r\n      {Connection: close};\r\n    }\r\n  <\/script>\r\n<\/body>\r\n<\/html>"
+    .user_ctx  = "<!DOCTYPE html>\r\n<title> Aries <\/title><html>\r\n  <head><fieldset ><center><h1 style=\"color:green;\">Aries Solutions<\/h1>\r\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\r\n  <link rel=\"icon\" href=\"data:,\">\r\n  <style>\r\n    body {\r\n      text-align: center;\r\n      font-family: \"Trebuchet MS\", Arial;\r\n      margin-left:auto;\r\n      margin-right:auto;\r\n    }\r\n    .slider {\r\n      width: 300px;\r\n    }\r\n  <\/style>\r\n  <script src=\"jquery-3.5.1.min.js\"><\/script>\r\n<\/head>\r\n<body>\r\n  <h1 style=\"color:red;\">Robotic ARM Control<\/h1>\r\n  <p style=\"color:green;\">GRIPPER: <span id=\"GRIPP\"><\/span><\/p>\r\n  <input type=\"range\" min=\"0\" max=\"360\" value =\"0\" class=\"slider\" id=\"GRIPPER\" oninput=\"grip(this.value)\"\/><br\/>\r\n  <p style=\"color:green;\">WRIST: <span id=\"WRIST\"><\/span><\/p>\r\n  <input type=\"range\" min=\"0\" max=\"180\" value =\"0\" class=\"slider\" id=\"WRIST JOINT\" oninput=\"wrist(this.value)\"\/><br\/>\r\n  <p style=\"color:green;\">ELBOW: <span id=\"ELBOW\"><\/span><\/p>\r\n  <input type=\"range\" min=\"0\" max=\"180\" value =\"0\" class=\"slider\" id=\"ELBOW JOINT\" oninput=\"elbow(this.value)\"\/><br\/>\r\n  <p style=\"color:green;\">SHOULDER: <span id=\"SHOULDE\"><\/span><\/p>\r\n  <input type=\"range\" min=\"0\" max=\"180\" value =\"0\" class=\"slider\" id=\"SHOULDER\" oninput=\"shoulder(this.value)\"\/><br\/>\r\n  <p style=\"color:green;\">BASE: <span id=\"BAS\"><\/span><\/p>\r\n  <input type=\"range\" min=\"0\" max=\"360\" value =\"0\" class=\"slider\" id=\"BASE\" oninput=\"base(this.value)\"\/><br\/>\r\n  <script>\r\n   \r\n    var slider1 = document.getElementById(\"GRIPPER\");\r\n    var servoP1 = document.getElementById(\"GRIPP\");\r\n    servoP1.innerHTML = slider1.value;\r\n    slider1.onchange = function() {\r\n      slider1.value = this.value;\r\n      servoP1.innerHTML = this.value;\r\n    }\r\n    function grip(pos) {\r\n      $.get(\"\/?grip=\" + pos + \"&\");\r\n      {Connection: close};\r\n    }\r\n\r\n    var slider2 = document.getElementById(\"WRIST JOINT\");\r\n    var servoP2 = document.getElementById(\"WRIST\") ;\r\n    servoP2.innerHTML = slider2.value;\r\n    slider2.onchange = function() {\r\n      slider2.value = this.value;\r\n      servoP2.innerHTML = this.value;\r\n    }\r\n    function wrist(pos) {\r\n      $.get(\"\/?wrist=\" + pos + \"&\");\r\n      {Connection: close};\r\n    }\r\n    \r\n    var slider3 = document.getElementById(\"ELBOW JOINT\");\r\n    var servoP3 = document.getElementById(\"ELBOW\");\r\n    servoP3.innerHTML = slider3.value;\r\n    slider3.onchange = function() {\r\n      slider3.value = this.value;\r\n      servoP3.innerHTML = this.value;\r\n    }\r\n       function elbow(pos) {\r\n      $.get(\"\/?elbow=\" + pos + \"&\");\r\n      {Connection: close};\r\n    }\r\n   \r\n    var slider4 = document.getElementById(\"SHOULDER\");\r\n    var servoP4 = document.getElementById(\"SHOULDE\");\r\n    servoP4.innerHTML = slider4.value;\r\n    slider4.onchange = function() {\r\n      slider4.value = this.value;\r\n      servoP4.innerHTML = this.value;\r\n    }\r\n     function shoulder(pos) {\r\n      $.get(\"\/?shoulder=\" + pos + \"&\");\r\n      {Connection: close};\r\n    }\r\n    \r\n     var slider5 = document.getElementById(\"BASE\");\r\n    var servoP5 = document.getElementById(\"BAS\");\r\n    servoP5.innerHTML = slider5.value;\r\n    slider5.onchange = function() {\r\n      slider5.value = this.value;\r\n      servoP5.innerHTML = this.value;\r\n    }\r\n    function base(pos) {\r\n      $.get(\"\/?base=\" + pos + \"&\");\r\n      {Connection: close};\r\n    }\r\n  <\/script>\r\n<\/body>\r\n<\/html>"
 };
+
+httpd_uri_t jquery_3_5_1_min_js = {
+	.uri = "/jquery-3.5.1.min.js",
+	.method = HTTP_GET,
+	.handler = jquery_3_5_1_min_js_handler,
+	.user_ctx = NULL
+};
+
+
+
+
 
 /* An HTTP POST handler */
 static esp_err_t echo_post_handler(httpd_req_t *req)
@@ -332,6 +399,7 @@ static httpd_handle_t start_webserver(void)
         // Set URI handlers
         ESP_LOGI(TAG, "Registering URI handlers");
         httpd_register_uri_handler(server, &hello);
+        httpd_register_uri_handler(server, &jquery_3_5_1_min_js);
         httpd_register_uri_handler(server, &echo);
         httpd_register_uri_handler(server, &ctrl);
         return server;
@@ -400,6 +468,8 @@ void app_main(void)
     static httpd_handle_t server = NULL;
 
     ESP_ERROR_CHECK(nvs_flash_init());
+   init_spiffs();
+    
     //ESP_ERROR_CHECK(esp_netif_init());
      tcpip_adapter_init();
     ESP_ERROR_CHECK(esp_event_loop_create_default());
