@@ -23,26 +23,7 @@ Type make menuconfig
 select the phy you need mean WIFI/ETHERNET and flash the code using command ** make flash monitor ** 
 IP address will be generated ,Type the IP address on your browser..
 Added ngrok function , to work this server globally mean not in the local n/w have to setup ngrok in your system and need to configure..
-comes to esp32 in the server start function uncomment the the below snippet..
-    httpd_config_t config = HTTPD_DEFAULT_CONFIG_NGROK();
-    and comment the below snippet
-   // httpd_config_t config = HTTPD_DEFAULT_CONFIG();
-   
-static httpd_handle_t start_webserver(void)
-{
-    httpd_handle_t server = NULL;
-    httpd_config_t config = HTTPD_DEFAULT_CONFIG();
-    //httpd_config_t config = HTTPD_DEFAULT_CONFIG_NGROK();
-    // Start the httpd server
-     
 
-    ESP_LOGI(TAG, "Starting server on port: '%d'", config.server_port);
-    if (httpd_start(&server, &config) == ESP_OK) {
-        // Set URI handlers
-        ESP_LOGI(TAG, "Registering URI handlers");
-        httpd_register_uri_handler(server, &hello);
-        httpd_register_uri_handler(server, &echo);
-        httpd_register_uri_handler(server, &ctrl);
-        return server;
-    }
+***********works with out internet connection***********
+  
 
