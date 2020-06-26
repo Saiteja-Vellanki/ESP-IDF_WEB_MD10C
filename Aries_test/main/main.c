@@ -26,7 +26,7 @@
 #include <esp_http_server.h>
 #include <sys/unistd.h>
 #include <sys/stat.h>
-#include "esp_spiffs.h"
+
 
 
 /* A simple example that demonstrates how to create GET and POST
@@ -110,41 +110,6 @@ static uint32_t motor_per_degree_cal_base(uint32_t base_rotation_deg)
     uint32_t base_pulse_width_cal = 0;
     base_pulse_width_cal = (MOTOR_MIN_PULSE_WIDTH + (((MOTOR_MAX_PULSE_WIDTH - MOTOR_MIN_PULSE_WIDTH) * (base_rotation_deg)) / (MOTOR_BASE_MAX_ANGLE)));
     return base_pulse_width_cal;
-}
-
-
-static esp_err_t init_spiffs(void)
-{
-    ESP_LOGI(TAG, "Initializing SPIFFS");
-
-    esp_vfs_spiffs_conf_t conf = {
-      .base_path = "/spiffs",
-      .partition_label = NULL,
-      .max_files = 5,   // This decides the maximum number of files that can be created on the storage
-      .format_if_mount_failed = true
-    };
-
-    esp_err_t ret = esp_vfs_spiffs_register(&conf);
-    if (ret != ESP_OK) {
-        if (ret == ESP_FAIL) {
-            ESP_LOGE(TAG, "Failed to mount or format filesystem");
-        } else if (ret == ESP_ERR_NOT_FOUND) {
-            ESP_LOGE(TAG, "Failed to find SPIFFS partition");
-        } else {
-            ESP_LOGE(TAG, "Failed to initialize SPIFFS (%s)", esp_err_to_name(ret));
-        }
-        return ESP_FAIL;
-    }
-
-    size_t total = 0, used = 0;
-    ret = esp_spiffs_info(NULL, &total, &used);
-    if (ret != ESP_OK) {
-        ESP_LOGE(TAG, "Failed to get SPIFFS partition information (%s)", esp_err_to_name(ret));
-        return ESP_FAIL;
-    }
-
-    ESP_LOGI(TAG, "Partition size: total: %d, used: %d", total, used);
-    return ESP_OK;
 }
 
 /* An HTTP GET handler */
@@ -470,7 +435,7 @@ void app_main(void)
     static httpd_handle_t server = NULL;
 
     ESP_ERROR_CHECK(nvs_flash_init());
-   init_spiffs();
+  // init_spiffs();
     
     //ESP_ERROR_CHECK(esp_netif_init());
      tcpip_adapter_init();

@@ -138,8 +138,7 @@ main.o: /home/sai-vdeal/Aries/Aries_test/main/main.c \
  /home/sai-vdeal/esp/esp-idf/components/soc/soc/esp32/include/soc/mcpwm_reg.h \
  /home/sai-vdeal/esp/esp-idf/components/soc/soc/esp32/include/soc/mcpwm_struct.h \
  /home/sai-vdeal/esp/esp-idf/components/esp_http_server/include/esp_http_server.h \
- /home/sai-vdeal/esp/esp-idf/components/nghttp/port/include/http_parser.h \
- /home/sai-vdeal/esp/esp-idf/components/spiffs/include/esp_spiffs.h
+ /home/sai-vdeal/esp/esp-idf/components/nghttp/port/include/http_parser.h
 
 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/include/esp_wifi.h:
 
@@ -420,6 +419,4 @@ main.o: /home/sai-vdeal/Aries/Aries_test/main/main.c \
 /home/sai-vdeal/esp/esp-idf/components/esp_http_server/include/esp_http_server.h:
 
 /home/sai-vdeal/esp/esp-idf/components/nghttp/port/include/http_parser.h:
-
-/home/sai-vdeal/esp/esp-idf/components/spiffs/include/esp_spiffs.h:
 /home/sai-vdeal/Aries/Aries_test/main/./main.c:
