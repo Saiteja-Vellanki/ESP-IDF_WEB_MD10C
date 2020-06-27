@@ -24,6 +24,6 @@ select the phy you need mean WIFI/ETHERNET and flash the code using command ** m
 IP address will be generated ,Type the IP address on your browser..
 Added ngrok function , to work this server globally mean not in the local n/w have to setup ngrok in your system and need to configure..
 
-***********works with out internet connection***********
+***********works with out internet connection***********(local n/w))
   
 
