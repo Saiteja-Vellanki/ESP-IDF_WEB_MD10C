@@ -27,3 +27,16 @@ Added ngrok function , to work this server globally mean not in the local n/w ha
 ***********works with out internet connection***********(local n/w))
   
 
+ETHERNET CONNECTIONS :::::
+
+ESP32 BOARD :      ETHMODULE :
+
+GPIO21              TX-EN
+GPIO19              TX0 
+GPIO22              TX1
+GPIO25              RX0
+GPIO26              RX1
+GPIO27              CRS_DV
+3.3V                VCC
+GND                 GND
+
