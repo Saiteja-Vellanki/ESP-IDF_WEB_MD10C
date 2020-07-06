@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<title> Aries </title><html>
+  <head><fieldset ><center><h1 style="color:green;">Aries Solutions</h1>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:,">
+  <style>
+    body {
+      text-align: center;
+      font-family: "Trebuchet MS", Arial;
+      margin-left:auto;
+      margin-right:auto;
+    }
+    .slider {
+      width: 300px;
+    }
+  </style>
+  <script src="jquery-3.5.1.min.js"></script>
+</head>
+<body>
+  <h1 style="color:red;">Robotic ARM Control</h1>
+  <p style="color:green;">GRIPPER: <span id="GRIPP"></span></p>
+  <input type="range" min="0" max="360" value ="0" class="slider" id="GRIPPER" oninput="grip(this.value)"/><br/>
+  <p style="color:green;">WRIST: <span id="WRIST"></span></p>
+  <input type="range" min="0" max="180" value ="0" class="slider" id="WRIST JOINT" oninput="wrist(this.value)"/><br/>
+  <p style="color:green;">ELBOW: <span id="ELBOW"></span></p>
+  <input type="range" min="0" max="180" value ="0" class="slider" id="ELBOW JOINT" oninput="elbow(this.value)"/><br/>
+  <p style="color:green;">SHOULDER: <span id="SHOULDE"></span></p>
+  <input type="range" min="0" max="180" value ="0" class="slider" id="SHOULDER" oninput="shoulder(this.value)"/><br/>
+  <p style="color:green;">BASE: <span id="BAS"></span></p>
+  <input type="range" min="0" max="360" value ="0" class="slider" id="BASE" oninput="base(this.value)"/><br/>
+  <script>
+   
+    var slider1 = document.getElementById("GRIPPER");
+    var servoP1 = document.getElementById("GRIPP");
+    servoP1.innerHTML = slider1.value;
+    slider1.onchange = function() {
+      slider1.value = this.value;
+      servoP1.innerHTML = this.value;
+    }
+    function grip(pos) {
+      $.get("/?grip=" + pos + "&");
+      {Connection: close};
+    }
+
+    var slider2 = document.getElementById("WRIST JOINT");
+    var servoP2 = document.getElementById("WRIST") ;
+    servoP2.innerHTML = slider2.value;
+    slider2.onchange = function() {
+      slider2.value = this.value;
+      servoP2.innerHTML = this.value;
+    }
+    function wrist(pos) {
+      $.get("/?wrist=" + pos + "&");
+      {Connection: close};
+    }
+    
+    var slider3 = document.getElementById("ELBOW JOINT");
+    var servoP3 = document.getElementById("ELBOW");
+    servoP3.innerHTML = slider3.value;
+    slider3.onchange = function() {
+      slider3.value = this.value;
+      servoP3.innerHTML = this.value;
+    }
+       function elbow(pos) {
+      $.get("/?elbow=" + pos + "&");
+      {Connection: close};
+    }
+   
+    var slider4 = document.getElementById("SHOULDER");
+    var servoP4 = document.getElementById("SHOULDE");
+    servoP4.innerHTML = slider4.value;
+    slider4.onchange = function() {
+      slider4.value = this.value;
+      servoP4.innerHTML = this.value;
+    }
+     function shoulder(pos) {
+      $.get("/?shoulder=" + pos + "&");
+      {Connection: close};
+    }
+    
+     var slider5 = document.getElementById("BASE");
+    var servoP5 = document.getElementById("BAS");
+    servoP5.innerHTML = slider5.value;
+    slider5.onchange = function() {
+      slider5.value = this.value;
+      servoP5.innerHTML = this.value;
+    }
+    function base(pos) {
+      $.get("/?base=" + pos + "&");
+      {Connection: close};
+    }
+  </script>
+</body>
+</html>
