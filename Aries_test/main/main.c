@@ -98,13 +98,19 @@ esp_err_t on_png_handler(httpd_req_t *req)
 esp_err_t on_weight_handler(httpd_req_t *req)
 {
 
-     const char* data="10";
-           
+        int data=1;
+        
+           for(int i=0; i<10; i++){
+
+                 data++;
+}
+          char strng[6];
+        itoa(data,strng,10);
 	printf("!!!weight data sending to the client on web!!!\r\n");
 
 	httpd_resp_set_type(req, "text/plain");
 
-	 httpd_resp_send(req, data, strlen(data));
+	 httpd_resp_send(req, strng, strlen(strng));
 	return ESP_OK;
 }
 
