@@ -29,33 +29,11 @@
 
 
 
-/* A simple example that demonstrates how to create GET and POST
- * handlers for the web server.
- */
+#define GPIO_PWM0A_OUT  15   
+#define GPIO_CONFIG_DIR 16   
 
-//macro definitions 
 
-#define MOTOR_MIN_PULSE_WIDTH 1000        //microseconds
-#define MOTOR_MAX_PULSE_WIDTH 2000
-
-//macro definitions for five motors angles
-//Can change max angle ranges depending range of the motors
-
-#define MOTOR_GRIPPER_MAX_ANGLE      360
-#define MOTOR_WRIST_JOINT_MAX_ANGLE  180 
-#define MOTOR_ELBOW_JOINT_MAX_ANGLE  180 
-#define MOTOR_SHOULDER_MAX_ANGLE     180 
-#define MOTOR_BASE_MAX_ANGLE         360 
-
-//macro definitions for PINS to control the PWM signal of the motor
-
- #define MOTOR_GRIPPER_PWM_CONTROL_PIN          32 
- #define MOTOR_WRIST_JOINT_PWM_CONTROL_PIN      33 
- #define MOTOR_ELBOW_JOINT_PWM_CONTROL_PIN      14
- #define MOTOR_SHOULDER_PWM_CONTROL_PIN         12
- #define MOTOR_BASE_PWM_CONTROL_PIN             4
-
- static const char *TAG = "Aries Robotic ARM";
+static const char *TAG = "Aries Robotic ARM";
 
 extern const uint8_t jquery_3_5_1_min_js_start[] asm("_binary_jquery_3_5_1_min_js_start");
 extern const uint8_t jquery_3_5_1_min_js_end[]   asm("_binary_jquery_3_5_1_min_js_end");
@@ -144,41 +122,6 @@ esp_err_t on_feedback_handler(httpd_req_t *req)
 
 
 
-static uint32_t motor_per_degree_cal_grip(uint32_t grip_rotation_deg)
-{
-    uint32_t grip_pulse_width_cal = 0;
-    grip_pulse_width_cal = (MOTOR_MIN_PULSE_WIDTH + (((MOTOR_MAX_PULSE_WIDTH - MOTOR_MIN_PULSE_WIDTH) * (grip_rotation_deg)) / (MOTOR_GRIPPER_MAX_ANGLE)));
-      printf("gripper value %d\n",grip_pulse_width_cal);
-    return grip_pulse_width_cal;
-}
-
-static uint32_t motor_per_degree_cal_wrist(uint32_t wrist_rotation_deg)
-{
-    uint32_t wrist_pulse_width_cal = 0;
-    wrist_pulse_width_cal = (MOTOR_MIN_PULSE_WIDTH + (((MOTOR_MAX_PULSE_WIDTH - MOTOR_MIN_PULSE_WIDTH) * (wrist_rotation_deg)) / (MOTOR_WRIST_JOINT_MAX_ANGLE)));
-    return wrist_pulse_width_cal;
-}
-
-static uint32_t motor_per_degree_cal_elbow(uint32_t elbow_rotation_deg)
-{
-    uint32_t elbow_pulse_width_cal = 0;
-    elbow_pulse_width_cal = (MOTOR_MIN_PULSE_WIDTH + (((MOTOR_MAX_PULSE_WIDTH - MOTOR_MIN_PULSE_WIDTH) * (elbow_rotation_deg)) / (MOTOR_ELBOW_JOINT_MAX_ANGLE)));
-    return elbow_pulse_width_cal;
-}
-
-static uint32_t motor_per_degree_cal_shoulder(uint32_t shoulder_rotation_deg)
-{
-    uint32_t shoulder_pulse_width_cal = 0;
-    shoulder_pulse_width_cal = (MOTOR_MIN_PULSE_WIDTH + (((MOTOR_MAX_PULSE_WIDTH - MOTOR_MIN_PULSE_WIDTH) * (shoulder_rotation_deg)) / (MOTOR_SHOULDER_MAX_ANGLE)));
-    return shoulder_pulse_width_cal;
-}
-
-static uint32_t motor_per_degree_cal_base(uint32_t base_rotation_deg)
-{
-    uint32_t base_pulse_width_cal = 0;
-    base_pulse_width_cal = (MOTOR_MIN_PULSE_WIDTH + (((MOTOR_MAX_PULSE_WIDTH - MOTOR_MIN_PULSE_WIDTH) * (base_rotation_deg)) / (MOTOR_BASE_MAX_ANGLE)));
-    return base_pulse_width_cal;
-}
 
 /* An HTTP GET handler */
 static esp_err_t hello_get_handler(httpd_req_t *req)
@@ -231,50 +174,49 @@ static esp_err_t hello_get_handler(httpd_req_t *req)
                 ESP_LOGI(TAG, "Found URL query parameter => GRIPPER=%s", param);
                 int gripangle=0;
                 int gripcount = atoi(param);
-                gripangle = motor_per_degree_cal_grip(gripcount);
-                printf("gripper value %d\n",gripcount);
-                mcpwm_set_duty_in_us(MCPWM_UNIT_0, MCPWM_TIMER_0, MCPWM_OPR_A, gripangle);
-                
+                 if(gripcount<=50){
+                gpio_set_level(GPIO_CONFIG_DIR, 0);
+                 printf("GPIO SET TO DIR LOW");
+                  }
+             else if(gripcount>50)
+            {
+
+                gpio_set_level(GPIO_CONFIG_DIR, 1);
+                 printf("GPIO SET TO DIR HIGH");
             }
+}
             if (httpd_query_key_value(buf, "wrist", param, sizeof(param)) == ESP_OK) {
                 ESP_LOGI(TAG, "Found URL query parameter => WRIST_JOINT=%s", param);
                 int wristangle=0;
                 int wristcount = atoi(param);
-                wristangle = motor_per_degree_cal_wrist(wristcount);
-                printf("wrist value %d\n",wristcount);
-                mcpwm_set_duty_in_us(MCPWM_UNIT_0, MCPWM_TIMER_0, MCPWM_OPR_B, wristangle);
+                
             }
             if (httpd_query_key_value(buf, "elbow", param, sizeof(param)) == ESP_OK) {
                 ESP_LOGI(TAG, "Found URL query parameter => ELBOW_JOINT=%s", param);
                 int elbowangle=0;
                 int elbowcount = atoi(param);
-                elbowangle = motor_per_degree_cal_elbow(elbowcount);
-                printf("elbow value %d\n",elbowcount);
-                mcpwm_set_duty_in_us(MCPWM_UNIT_1, MCPWM_TIMER_0, MCPWM_OPR_A, elbowangle);
+                
             }  
             if (httpd_query_key_value(buf, "shoulder", param, sizeof(param)) == ESP_OK) {
    
                 ESP_LOGI(TAG, "Found URL query parameter => SHOULDER=%s", param);
                 int shoulderangle=0;
                 int shouldercount = atoi(param);
-                shoulderangle = motor_per_degree_cal_shoulder(shouldercount);
-                printf("shoulder value %d\n",shouldercount);
-                mcpwm_set_duty_in_us(MCPWM_UNIT_1, MCPWM_TIMER_0, MCPWM_OPR_B, shoulderangle);
+                
             }
 
             if (httpd_query_key_value(buf, "base", param, sizeof(param)) == ESP_OK) {
                 ESP_LOGI(TAG, "Found URL query parameter => BASE=%s", param);
                 int baseangle=0;
                 int basecount = atoi(param);
-                baseangle = motor_per_degree_cal_base(basecount);
-                printf("base value %d\n",basecount);
-                mcpwm_set_duty_in_us(MCPWM_UNIT_1, MCPWM_TIMER_0, MCPWM_OPR_A, baseangle);
+               
             }
              
 
         }
         free(buf);
     }
+
 
     /* Set some custom headers */
     httpd_resp_set_hdr(req, "Custom-Header-1", "Custom-Value-1");
@@ -346,7 +288,7 @@ static const httpd_uri_t hello = {
     .uri       = "/",
     .method    = HTTP_GET,
     .handler   = hello_get_handler,
-    .user_ctx  = "<!DOCTYPE html>\r\n<title> Aries <\/title><html>\r\n  <head><fieldset ><center>\r\n<img src=\"Aries.png\"><\/head>\r\n<body>\r\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\r\n  <link rel=\"icon\" href=\"data:,\">\r\n  <style>\r\n    body {\r\n      text-align: center;\r\n      font-family: \"Trebuchet MS\", Arial;\r\n      margin-left:auto;\r\n      margin-right:auto;\r\n    }\r\n    .slider {\r\n      width: 300px;\r\n    }\r\n  <\/style>\r\n  <script src=\"jquery-3.5.1.min.js\"><\/script>\r\n<\/head>\r\n<body>\r\n  <h1 style=\"color:red;\">Robotic ARM Control<\/h1>\r\n  <p style=\"color:green;\">GRIPPER: <span id=\"GRIPP\"><\/span><\/p>\r\n  <input type=\"range\" min=\"0\" max=\"360\" value =\"0\" class=\"slider\" id=\"GRIPPER\" oninput=\"grip(this.value)\"\/><br\/>\r\n  <p style=\"color:green;\">WRIST: <span id=\"WRIST\"><\/span><\/p>\r\n  <input type=\"range\" min=\"0\" max=\"180\" value =\"0\" class=\"slider\" id=\"WRIST JOINT\" oninput=\"wrist(this.value)\"\/><br\/>\r\n  <p style=\"color:green;\">ELBOW: <span id=\"ELBOW\"><\/span><\/p>\r\n  <input type=\"range\" min=\"0\" max=\"180\" value =\"0\" class=\"slider\" id=\"ELBOW JOINT\" oninput=\"elbow(this.value)\"\/><br\/>\r\n  <p style=\"color:green;\">SHOULDER: <span id=\"SHOULDE\"><\/span><\/p>\r\n  <input type=\"range\" min=\"0\" max=\"180\" value =\"0\" class=\"slider\" id=\"SHOULDER\" oninput=\"shoulder(this.value)\"\/><br\/>\r\n  <p style=\"color:green;\">BASE: <span id=\"BAS\"><\/span><\/p>\r\n  <input type=\"range\" min=\"0\" max=\"360\" value =\"0\" class=\"slider\" id=\"BASE\" oninput=\"base(this.value)\"\/><br\/>\r\n\r\n <div class = \"displayobject\">\r\n       <h4>Weight: <span id=\"weight\">0<\/span>kg<\/h4>\r\n       <h4>Pressure: <span id=\"pressure\">0<\/span>hpa<\/h4>\r\n       <h4>Feedback pos: <span id=\"feedback\">0<\/span>&deg<\/h4><br>\r\n     <\/div>\r\n \r\n  <script>\r\n   \r\n    var slider1 = document.getElementById(\"GRIPPER\");\r\n    var servoP1 = document.getElementById(\"GRIPP\");\r\n    servoP1.innerHTML = slider1.value;\r\n    slider1.onchange = function() {\r\n      slider1.value = this.value;\r\n      servoP1.innerHTML = this.value;\r\n    }\r\n    function grip(pos) {\r\n      $.get(\"\/?grip=\" + pos + \"&\");\r\n      {Connection: close};\r\n    }\r\n\r\n    var slider2 = document.getElementById(\"WRIST JOINT\");\r\n    var servoP2 = document.getElementById(\"WRIST\") ;\r\n    servoP2.innerHTML = slider2.value;\r\n    slider2.onchange = function() {\r\n      slider2.value = this.value;\r\n      servoP2.innerHTML = this.value;\r\n    }\r\n    function wrist(pos) {\r\n      $.get(\"\/?wrist=\" + pos + \"&\");\r\n      {Connection: close};\r\n    }\r\n    \r\n    var slider3 = document.getElementById(\"ELBOW JOINT\");\r\n    var servoP3 = document.getElementById(\"ELBOW\");\r\n    servoP3.innerHTML = slider3.value;\r\n    slider3.onchange = function() {\r\n      slider3.value = this.value;\r\n      servoP3.innerHTML = this.value;\r\n    }\r\n       function elbow(pos) {\r\n      $.get(\"\/?elbow=\" + pos + \"&\");\r\n      {Connection: close};\r\n    }\r\n   \r\n    var slider4 = document.getElementById(\"SHOULDER\");\r\n    var servoP4 = document.getElementById(\"SHOULDE\");\r\n    servoP4.innerHTML = slider4.value;\r\n    slider4.onchange = function() {\r\n      slider4.value = this.value;\r\n      servoP4.innerHTML = this.value;\r\n    }\r\n     function shoulder(pos) {\r\n      $.get(\"\/?shoulder=\" + pos + \"&\");\r\n      {Connection: close};\r\n    }\r\n    \r\n     var slider5 = document.getElementById(\"BASE\");\r\n    var servoP5 = document.getElementById(\"BAS\");\r\n    servoP5.innerHTML = slider5.value;\r\n    slider5.onchange = function() {\r\n      slider5.value = this.value;\r\n      servoP5.innerHTML = this.value;\r\n    }\r\n    function base(pos) {\r\n      $.get(\"\/?base=\" + pos + \"&\");\r\n      {Connection: close};\r\n    }\r\n  <\/script>\r\n<script>\r\n       setInterval(function() {getSensorData();}, 1000);  \r\n  \r\n       function getSensorData() {\r\n          var xhttp = new XMLHttpRequest();\r\n          xhttp.onreadystatechange = function() {\r\n          if (this.readyState == 4 && this.status == 200) {\r\n            document.getElementById(\"weight\").innerHTML = this.responseText;\r\n          }\r\n        };\r\n        xhttp.open(\"GET\", \"weightread\", true);\r\n        xhttp.send();\r\n       \r\n        var xhttp = new XMLHttpRequest();\r\n        xhttp.onreadystatechange = function() {\r\n          if (this.readyState == 4 && this.status == 200) {\r\n            document.getElementById(\"pressure\").innerHTML = this.responseText;\r\n          }\r\n        };\r\n        xhttp.open(\"GET\", \"pressureread\", true);\r\n        xhttp.send();\r\n        \r\n        var xhttp = new XMLHttpRequest();\r\n        xhttp.onreadystatechange = function() {\r\n          if (this.readyState == 4 && this.status == 200) {\r\n            document.getElementById(\"feedback\").innerHTML = this.responseText;}\r\n        };  \r\n        xhttp.open(\"GET\", \"feedbackread\", true);\r\n        xhttp.send(); \r\n      }\r\n    <\/script>\r\n<\/body>\r\n<\/html>\"\r\n\r\n\r\n\r\n"
+    .user_ctx  = "<!DOCTYPE html>\r\n<title> Aries <\/title><html>\r\n  <head><fieldset ><center>\r\n<img src=\"Aries.png\"><\/head>\r\n<body>\r\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\r\n  <link rel=\"icon\" href=\"data:,\">\r\n  <style>\r\n    body {\r\n      text-align: center;\r\n      font-family: \"Trebuchet MS\", Arial;\r\n      margin-left:auto;\r\n      margin-right:auto;\r\n    }\r\n    .slider {\r\n      width: 300px;\r\n    }\r\n  <\/style>\r\n  <script src=\"jquery-3.5.1.min.js\"><\/script>\r\n<\/head>\r\n<body>\r\n  <h1 style=\"color:red;\">Robotic ARM Control<\/h1>\r\n  <p style=\"color:green;\">GRIPPER: <span id=\"GRIPP\"><\/span><\/p>\r\n  <input type=\"range\" min=\"0\" max=\"100\" value =\"0\" class=\"slider\" id=\"GRIPPER\" oninput=\"grip(this.value)\"\/><br\/>\r\n  <p style=\"color:green;\">WRIST: <span id=\"WRIST\"><\/span><\/p>\r\n  <input type=\"range\" min=\"0\" max=\"180\" value =\"0\" class=\"slider\" id=\"WRIST JOINT\" oninput=\"wrist(this.value)\"\/><br\/>\r\n  <p style=\"color:green;\">ELBOW: <span id=\"ELBOW\"><\/span><\/p>\r\n  <input type=\"range\" min=\"0\" max=\"180\" value =\"0\" class=\"slider\" id=\"ELBOW JOINT\" oninput=\"elbow(this.value)\"\/><br\/>\r\n  <p style=\"color:green;\">SHOULDER: <span id=\"SHOULDE\"><\/span><\/p>\r\n  <input type=\"range\" min=\"0\" max=\"180\" value =\"0\" class=\"slider\" id=\"SHOULDER\" oninput=\"shoulder(this.value)\"\/><br\/>\r\n  <p style=\"color:green;\">BASE: <span id=\"BAS\"><\/span><\/p>\r\n  <input type=\"range\" min=\"0\" max=\"360\" value =\"0\" class=\"slider\" id=\"BASE\" oninput=\"base(this.value)\"\/><br\/>\r\n\r\n <div class = \"displayobject\">\r\n       <h4>Weight: <span id=\"weight\">0<\/span>kg<\/h4>\r\n       <h4>Pressure: <span id=\"pressure\">0<\/span>hpa<\/h4>\r\n       <h4>Feedback pos: <span id=\"feedback\">0<\/span>&deg<\/h4><br>\r\n     <\/div>\r\n \r\n  <script>\r\n   \r\n    var slider1 = document.getElementById(\"GRIPPER\");\r\n    var servoP1 = document.getElementById(\"GRIPP\");\r\n    servoP1.innerHTML = slider1.value;\r\n    slider1.onchange = function() {\r\n      slider1.value = this.value;\r\n      servoP1.innerHTML = this.value;\r\n    }\r\n    function grip(pos) {\r\n      $.get(\"\/?grip=\" + pos + \"&\");\r\n      {Connection: close};\r\n    }\r\n\r\n    var slider2 = document.getElementById(\"WRIST JOINT\");\r\n    var servoP2 = document.getElementById(\"WRIST\") ;\r\n    servoP2.innerHTML = slider2.value;\r\n    slider2.onchange = function() {\r\n      slider2.value = this.value;\r\n      servoP2.innerHTML = this.value;\r\n    }\r\n    function wrist(pos) {\r\n      $.get(\"\/?wrist=\" + pos + \"&\");\r\n      {Connection: close};\r\n    }\r\n    \r\n    var slider3 = document.getElementById(\"ELBOW JOINT\");\r\n    var servoP3 = document.getElementById(\"ELBOW\");\r\n    servoP3.innerHTML = slider3.value;\r\n    slider3.onchange = function() {\r\n      slider3.value = this.value;\r\n      servoP3.innerHTML = this.value;\r\n    }\r\n       function elbow(pos) {\r\n      $.get(\"\/?elbow=\" + pos + \"&\");\r\n      {Connection: close};\r\n    }\r\n   \r\n    var slider4 = document.getElementById(\"SHOULDER\");\r\n    var servoP4 = document.getElementById(\"SHOULDE\");\r\n    servoP4.innerHTML = slider4.value;\r\n    slider4.onchange = function() {\r\n      slider4.value = this.value;\r\n      servoP4.innerHTML = this.value;\r\n    }\r\n     function shoulder(pos) {\r\n      $.get(\"\/?shoulder=\" + pos + \"&\");\r\n      {Connection: close};\r\n    }\r\n    \r\n     var slider5 = document.getElementById(\"BASE\");\r\n    var servoP5 = document.getElementById(\"BAS\");\r\n    servoP5.innerHTML = slider5.value;\r\n    slider5.onchange = function() {\r\n      slider5.value = this.value;\r\n      servoP5.innerHTML = this.value;\r\n    }\r\n    function base(pos) {\r\n      $.get(\"\/?base=\" + pos + \"&\");\r\n      {Connection: close};\r\n    }\r\n  <\/script>\r\n<script>\r\n       setInterval(function() {getSensorData();}, 1000);  \r\n  \r\n       function getSensorData() {\r\n          var xhttp = new XMLHttpRequest();\r\n          xhttp.onreadystatechange = function() {\r\n          if (this.readyState == 4 && this.status == 200) {\r\n            document.getElementById(\"weight\").innerHTML = this.responseText;\r\n          }\r\n        };\r\n        xhttp.open(\"GET\", \"weightread\", true);\r\n        xhttp.send();\r\n       \r\n        var xhttp = new XMLHttpRequest();\r\n        xhttp.onreadystatechange = function() {\r\n          if (this.readyState == 4 && this.status == 200) {\r\n            document.getElementById(\"pressure\").innerHTML = this.responseText;\r\n          }\r\n        };\r\n        xhttp.open(\"GET\", \"pressureread\", true);\r\n        xhttp.send();\r\n        \r\n        var xhttp = new XMLHttpRequest();\r\n        xhttp.onreadystatechange = function() {\r\n          if (this.readyState == 4 && this.status == 200) {\r\n            document.getElementById(\"feedback\").innerHTML = this.responseText;}\r\n        };  \r\n        xhttp.open(\"GET\", \"feedbackread\", true);\r\n        xhttp.send(); \r\n      }\r\n    <\/script>\r\n<\/body>\r\n<\/html>\"\r\n\r\n\r\n\r\n"
 };
 
 
@@ -516,45 +458,46 @@ static void connect_handler(void* arg, esp_event_base_t event_base,
     }
 }
 
-static void servo_gpio_init(void)
-{
-    printf("Aries :::initializing GPIO pins for the motors:::\n");
-    mcpwm_gpio_init(MCPWM_UNIT_0, MCPWM0A, MOTOR_GRIPPER_PWM_CONTROL_PIN);    //Set GPIO  as PWM0A/B, to which servo is connected
-    mcpwm_gpio_init(MCPWM_UNIT_0, MCPWM0B, MOTOR_WRIST_JOINT_PWM_CONTROL_PIN); 
-    mcpwm_gpio_init(MCPWM_UNIT_1, MCPWM1A, MOTOR_ELBOW_JOINT_PWM_CONTROL_PIN); 
-    mcpwm_gpio_init(MCPWM_UNIT_1, MCPWM1B, MOTOR_SHOULDER_PWM_CONTROL_PIN); 
-    mcpwm_gpio_init(MCPWM_UNIT_1, MCPWM2A, MOTOR_BASE_PWM_CONTROL_PIN); 
+ 
    
+static void mcpwm_gpio_initialize(void)
+{
+    printf("initializing mcpwm gpio...\n");
+    mcpwm_gpio_init(MCPWM_UNIT_0, MCPWM0A, GPIO_PWM0A_OUT);
+    gpio_pad_select_gpio(GPIO_CONFIG_DIR);
+    gpio_set_direction(GPIO_CONFIG_DIR, GPIO_MODE_OUTPUT);
+    
 }
 
-static void pwm_init(void)
+void mcpwm_control(void)
 {
-   printf("Aries :::Configuring Initial Parameters of pwm......\n");
+  
+    //1. mcpwm gpio initialization
+    mcpwm_gpio_initialize();
+
+    //2. initial mcpwm configuration
+    printf("Configuring Initial Parameters of mcpwm......\n");
     mcpwm_config_t pwm_config;
     pwm_config.frequency = 50;    //frequency = 50Hz, i.e. for every servo motor time period should be 20ms
     pwm_config.cmpr_a = 0;    //duty cycle of PWMxA = 0
     pwm_config.cmpr_b = 0;    //duty cycle of PWMxb = 0
     pwm_config.counter_mode = MCPWM_UP_COUNTER;
     pwm_config.duty_mode = MCPWM_DUTY_MODE_0;
-    mcpwm_init(MCPWM_UNIT_0, MCPWM_TIMER_0, &pwm_config);   
-    mcpwm_init(MCPWM_UNIT_1, MCPWM_TIMER_0, &pwm_config); 
-   // mcpwm_init(MCPWM_UNIT_1, MCPWM_TIMER_0, &pwm_config); 
-
+    mcpwm_init(MCPWM_UNIT_0, MCPWM_TIMER_0, &pwm_config);    
 }
-
-
 void app_main(void)
 {
     static httpd_handle_t server = NULL;
 
     ESP_ERROR_CHECK(nvs_flash_init());
   // init_spiffs();
-    
+    mcpwm_control();
     //ESP_ERROR_CHECK(esp_netif_init());
+    
      tcpip_adapter_init();
     ESP_ERROR_CHECK(esp_event_loop_create_default());
-    servo_gpio_init();
-    pwm_init();
+     
+    
     /* This helper function configures Wi-Fi or Ethernet, as selected in menuconfig.
      * Read "Establishing Wi-Fi or Ethernet Connection" section in
      * examples/protocols/README.md for more information about this function.
