@@ -29,9 +29,11 @@
 
 
 
-#define GPIO_PWM0A_OUT  15   
-#define GPIO_CONFIG_DIR 16  
+#define GPIO_OUT_MOTOR_1  15   
+#define GPIO_CONFIG_DIR_1 16  
 
+#define GPIO_OUT_MOTOR_2  32   
+#define GPIO_CONFIG_DIR_2 33  
 
 static const char *TAG = "Aries Robotic ARM";
 
@@ -176,13 +178,13 @@ static esp_err_t hello_get_handler(httpd_req_t *req)
                 int gripcount = atoi(param);
                
                 if(gripcount<50){
-                gpio_set_level(GPIO_CONFIG_DIR, 0);
+                gpio_set_level(GPIO_CONFIG_DIR_1 , 0);
                   printf("GPIO SET TO DIR LOW");
                   vTaskDelay(10/portTICK_PERIOD_MS);
                  
         }
               else if(gripcount>50){
-                 gpio_set_level(GPIO_CONFIG_DIR, 1);
+                 gpio_set_level(GPIO_CONFIG_DIR_1 , 1);
                    printf("GPIO SET TO DIR HIGH");
                    vTaskDelay(10/portTICK_PERIOD_MS);
                   
@@ -193,6 +195,19 @@ static esp_err_t hello_get_handler(httpd_req_t *req)
                 ESP_LOGI(TAG, "Found URL query parameter => WRIST_JOINT=%s", param);
                 int wristangle=0;
                 int wristcount = atoi(param);
+                  if(wristcount<50){
+                gpio_set_level(GPIO_CONFIG_DIR_2 , 0);
+                  printf("GPIO SET TO DIR LOW");
+                  vTaskDelay(10/portTICK_PERIOD_MS);
+                 
+        }
+              else if(wristcount>50){
+                 gpio_set_level(GPIO_CONFIG_DIR_2 , 1);
+                   printf("GPIO SET TO DIR HIGH");
+                   vTaskDelay(10/portTICK_PERIOD_MS);
+                  
+                 
+                 }
                 
             }
             if (httpd_query_key_value(buf, "elbow", param, sizeof(param)) == ESP_OK) {
@@ -292,7 +307,7 @@ static const httpd_uri_t hello = {
     .uri       = "/",
     .method    = HTTP_GET,
     .handler   = hello_get_handler,
-    .user_ctx  = "<!DOCTYPE html>\r\n<title> Aries <\/title><html>\r\n  <head><fieldset ><center>\r\n<img src=\"Aries.png\"><\/head>\r\n<body>\r\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\r\n  <link rel=\"icon\" href=\"data:,\">\r\n  <style>\r\n    body {\r\n      text-align: center;\r\n      font-family: \"Trebuchet MS\", Arial;\r\n      margin-left:auto;\r\n      margin-right:auto;\r\n    }\r\n    .slider {\r\n      width: 300px;\r\n    }\r\n  <\/style>\r\n  <script src=\"jquery-3.5.1.min.js\"><\/script>\r\n<\/head>\r\n<body>\r\n  <h1 style=\"color:red;\">Robotic ARM Control<\/h1>\r\n  <p style=\"color:green;\">GRIPPER: <span id=\"GRIPP\"><\/span><\/p>\r\n  <input type=\"range\" min=\"0\" max=\"100\" value =\"50\" class=\"slider\" id=\"GRIPPER\" oninput=\"grip(this.value)\"\/><br\/>\r\n  <p style=\"color:green;\">WRIST: <span id=\"WRIST\"><\/span><\/p>\r\n  <input type=\"range\" min=\"0\" max=\"180\" value =\"0\" class=\"slider\" id=\"WRIST JOINT\" oninput=\"wrist(this.value)\"\/><br\/>\r\n  <p style=\"color:green;\">ELBOW: <span id=\"ELBOW\"><\/span><\/p>\r\n  <input type=\"range\" min=\"0\" max=\"180\" value =\"0\" class=\"slider\" id=\"ELBOW JOINT\" oninput=\"elbow(this.value)\"\/><br\/>\r\n  <p style=\"color:green;\">SHOULDER: <span id=\"SHOULDE\"><\/span><\/p>\r\n  <input type=\"range\" min=\"0\" max=\"180\" value =\"0\" class=\"slider\" id=\"SHOULDER\" oninput=\"shoulder(this.value)\"\/><br\/>\r\n  <p style=\"color:green;\">BASE: <span id=\"BAS\"><\/span><\/p>\r\n  <input type=\"range\" min=\"0\" max=\"360\" value =\"0\" class=\"slider\" id=\"BASE\" oninput=\"base(this.value)\"\/><br\/>\r\n\r\n <div class = \"displayobject\">\r\n       <h4>Weight: <span id=\"weight\">0<\/span>kg<\/h4>\r\n       <h4>Pressure: <span id=\"pressure\">0<\/span>hpa<\/h4>\r\n       <h4>Feedback pos: <span id=\"feedback\">0<\/span>&deg<\/h4><br>\r\n     <\/div>\r\n \r\n  <script>\r\n   \r\n    var slider1 = document.getElementById(\"GRIPPER\");\r\n    var servoP1 = document.getElementById(\"GRIPP\");\r\n    servoP1.innerHTML = slider1.value;\r\n    slider1.onchange = function() {\r\n      slider1.value = this.value;\r\n      servoP1.innerHTML = this.value;\r\n    }\r\n    function grip(pos) {\r\n      $.get(\"\/?grip=\" + pos + \"&\");\r\n      {Connection: close};\r\n    }\r\n\r\n    var slider2 = document.getElementById(\"WRIST JOINT\");\r\n    var servoP2 = document.getElementById(\"WRIST\") ;\r\n    servoP2.innerHTML = slider2.value;\r\n    slider2.onchange = function() {\r\n      slider2.value = this.value;\r\n      servoP2.innerHTML = this.value;\r\n    }\r\n    function wrist(pos) {\r\n      $.get(\"\/?wrist=\" + pos + \"&\");\r\n      {Connection: close};\r\n    }\r\n    \r\n    var slider3 = document.getElementById(\"ELBOW JOINT\");\r\n    var servoP3 = document.getElementById(\"ELBOW\");\r\n    servoP3.innerHTML = slider3.value;\r\n    slider3.onchange = function() {\r\n      slider3.value = this.value;\r\n      servoP3.innerHTML = this.value;\r\n    }\r\n       function elbow(pos) {\r\n      $.get(\"\/?elbow=\" + pos + \"&\");\r\n      {Connection: close};\r\n    }\r\n   \r\n    var slider4 = document.getElementById(\"SHOULDER\");\r\n    var servoP4 = document.getElementById(\"SHOULDE\");\r\n    servoP4.innerHTML = slider4.value;\r\n    slider4.onchange = function() {\r\n      slider4.value = this.value;\r\n      servoP4.innerHTML = this.value;\r\n    }\r\n     function shoulder(pos) {\r\n      $.get(\"\/?shoulder=\" + pos + \"&\");\r\n      {Connection: close};\r\n    }\r\n    \r\n     var slider5 = document.getElementById(\"BASE\");\r\n    var servoP5 = document.getElementById(\"BAS\");\r\n    servoP5.innerHTML = slider5.value;\r\n    slider5.onchange = function() {\r\n      slider5.value = this.value;\r\n      servoP5.innerHTML = this.value;\r\n    }\r\n    function base(pos) {\r\n      $.get(\"\/?base=\" + pos + \"&\");\r\n      {Connection: close};\r\n    }\r\n  <\/script>\r\n<script>\r\n       setInterval(function() {getSensorData();}, 1000);  \r\n  \r\n       function getSensorData() {\r\n          var xhttp = new XMLHttpRequest();\r\n          xhttp.onreadystatechange = function() {\r\n          if (this.readyState == 4 && this.status == 200) {\r\n            document.getElementById(\"weight\").innerHTML = this.responseText;\r\n          }\r\n        };\r\n        xhttp.open(\"GET\", \"weightread\", true);\r\n        xhttp.send();\r\n       \r\n        var xhttp = new XMLHttpRequest();\r\n        xhttp.onreadystatechange = function() {\r\n          if (this.readyState == 4 && this.status == 200) {\r\n            document.getElementById(\"pressure\").innerHTML = this.responseText;\r\n          }\r\n        };\r\n        xhttp.open(\"GET\", \"pressureread\", true);\r\n        xhttp.send();\r\n        \r\n        var xhttp = new XMLHttpRequest();\r\n        xhttp.onreadystatechange = function() {\r\n          if (this.readyState == 4 && this.status == 200) {\r\n            document.getElementById(\"feedback\").innerHTML = this.responseText;}\r\n        };  \r\n        xhttp.open(\"GET\", \"feedbackread\", true);\r\n        xhttp.send(); \r\n      }\r\n    <\/script>\r\n<\/body>\r\n<\/html>\"\r\n\r\n\r\n\r\n"
+    .user_ctx  = "<!DOCTYPE html>\r\n<title> Aries <\/title><html>\r\n  <head><fieldset ><center>\r\n<img src=\"Aries.png\"><\/head>\r\n<body>\r\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\r\n  <link rel=\"icon\" href=\"data:,\">\r\n  <style>\r\n    body {\r\n      text-align: center;\r\n      font-family: \"Trebuchet MS\", Arial;\r\n      margin-left:auto;\r\n      margin-right:auto;\r\n    }\r\n    .slider {\r\n      width: 300px;\r\n    }\r\n  <\/style>\r\n  <script src=\"jquery-3.5.1.min.js\"><\/script>\r\n<\/head>\r\n<body>\r\n  <h1 style=\"color:red;\">Robotic ARM Control<\/h1>\r\n  <p style=\"color:green;\">GRIPPER: <span id=\"GRIPP\"><\/span><\/p>\r\n  <input type=\"range\" min=\"0\" max=\"100\" value =\"50\" class=\"slider\" id=\"GRIPPER\" oninput=\"grip(this.value)\"\/><br\/>\r\n  <p style=\"color:green;\">WRIST: <span id=\"WRIST\"><\/span><\/p>\r\n  <input type=\"range\" min=\"0\" max=\"100\" value =\"50\" class=\"slider\" id=\"WRIST JOINT\" oninput=\"wrist(this.value)\"\/><br\/>\r\n  <p style=\"color:green;\">ELBOW: <span id=\"ELBOW\"><\/span><\/p>\r\n  <input type=\"range\" min=\"0\" max=\"180\" value =\"0\" class=\"slider\" id=\"ELBOW JOINT\" oninput=\"elbow(this.value)\"\/><br\/>\r\n  <p style=\"color:green;\">SHOULDER: <span id=\"SHOULDE\"><\/span><\/p>\r\n  <input type=\"range\" min=\"0\" max=\"180\" value =\"0\" class=\"slider\" id=\"SHOULDER\" oninput=\"shoulder(this.value)\"\/><br\/>\r\n  <p style=\"color:green;\">BASE: <span id=\"BAS\"><\/span><\/p>\r\n  <input type=\"range\" min=\"0\" max=\"360\" value =\"0\" class=\"slider\" id=\"BASE\" oninput=\"base(this.value)\"\/><br\/>\r\n\r\n <div class = \"displayobject\">\r\n       <h4>Weight: <span id=\"weight\">0<\/span>kg<\/h4>\r\n       <h4>Pressure: <span id=\"pressure\">0<\/span>hpa<\/h4>\r\n       <h4>Feedback pos: <span id=\"feedback\">0<\/span>&deg<\/h4><br>\r\n     <\/div>\r\n \r\n  <script>\r\n   \r\n    var slider1 = document.getElementById(\"GRIPPER\");\r\n    var servoP1 = document.getElementById(\"GRIPP\");\r\n    servoP1.innerHTML = slider1.value;\r\n    slider1.onchange = function() {\r\n      slider1.value = this.value;\r\n      servoP1.innerHTML = this.value;\r\n    }\r\n    function grip(pos) {\r\n      $.get(\"\/?grip=\" + pos + \"&\");\r\n      {Connection: close};\r\n    }\r\n\r\n    var slider2 = document.getElementById(\"WRIST JOINT\");\r\n    var servoP2 = document.getElementById(\"WRIST\") ;\r\n    servoP2.innerHTML = slider2.value;\r\n    slider2.onchange = function() {\r\n      slider2.value = this.value;\r\n      servoP2.innerHTML = this.value;\r\n    }\r\n    function wrist(pos) {\r\n      $.get(\"\/?wrist=\" + pos + \"&\");\r\n      {Connection: close};\r\n    }\r\n    \r\n    var slider3 = document.getElementById(\"ELBOW JOINT\");\r\n    var servoP3 = document.getElementById(\"ELBOW\");\r\n    servoP3.innerHTML = slider3.value;\r\n    slider3.onchange = function() {\r\n      slider3.value = this.value;\r\n      servoP3.innerHTML = this.value;\r\n    }\r\n       function elbow(pos) {\r\n      $.get(\"\/?elbow=\" + pos + \"&\");\r\n      {Connection: close};\r\n    }\r\n   \r\n    var slider4 = document.getElementById(\"SHOULDER\");\r\n    var servoP4 = document.getElementById(\"SHOULDE\");\r\n    servoP4.innerHTML = slider4.value;\r\n    slider4.onchange = function() {\r\n      slider4.value = this.value;\r\n      servoP4.innerHTML = this.value;\r\n    }\r\n     function shoulder(pos) {\r\n      $.get(\"\/?shoulder=\" + pos + \"&\");\r\n      {Connection: close};\r\n    }\r\n    \r\n     var slider5 = document.getElementById(\"BASE\");\r\n    var servoP5 = document.getElementById(\"BAS\");\r\n    servoP5.innerHTML = slider5.value;\r\n    slider5.onchange = function() {\r\n      slider5.value = this.value;\r\n      servoP5.innerHTML = this.value;\r\n    }\r\n    function base(pos) {\r\n      $.get(\"\/?base=\" + pos + \"&\");\r\n      {Connection: close};\r\n    }\r\n  <\/script>\r\n<script>\r\n       setInterval(function() {getSensorData();}, 1000);  \r\n  \r\n       function getSensorData() {\r\n          var xhttp = new XMLHttpRequest();\r\n          xhttp.onreadystatechange = function() {\r\n          if (this.readyState == 4 && this.status == 200) {\r\n            document.getElementById(\"weight\").innerHTML = this.responseText;\r\n          }\r\n        };\r\n        xhttp.open(\"GET\", \"weightread\", true);\r\n        xhttp.send();\r\n       \r\n        var xhttp = new XMLHttpRequest();\r\n        xhttp.onreadystatechange = function() {\r\n          if (this.readyState == 4 && this.status == 200) {\r\n            document.getElementById(\"pressure\").innerHTML = this.responseText;\r\n          }\r\n        };\r\n        xhttp.open(\"GET\", \"pressureread\", true);\r\n        xhttp.send();\r\n        \r\n        var xhttp = new XMLHttpRequest();\r\n        xhttp.onreadystatechange = function() {\r\n          if (this.readyState == 4 && this.status == 200) {\r\n            document.getElementById(\"feedback\").innerHTML = this.responseText;}\r\n        };  \r\n        xhttp.open(\"GET\", \"feedbackread\", true);\r\n        xhttp.send(); \r\n      }\r\n    <\/script>\r\n<\/body>\r\n<\/html>\"\r\n\r\n\r\n\r\n"
 };
 
 
@@ -475,12 +490,16 @@ static void brushed_motor_pwm_set(mcpwm_unit_t mcpwm_num, mcpwm_timer_t timer_nu
     mcpwm_set_duty_type(mcpwm_num, timer_num, MCPWM_OPR_A, MCPWM_DUTY_MODE_0);  
 }   
 
+
 static void mcpwm_gpio_initialize(void)
 {
     printf("initializing mcpwm gpio...\n");
-    mcpwm_gpio_init(MCPWM_UNIT_0, MCPWM0A, GPIO_PWM0A_OUT);
-    gpio_pad_select_gpio(GPIO_CONFIG_DIR);
-    gpio_set_direction(GPIO_CONFIG_DIR, GPIO_MODE_OUTPUT);
+    mcpwm_gpio_init(MCPWM_UNIT_0, MCPWM0A, GPIO_OUT_MOTOR_1);
+    gpio_pad_select_gpio(GPIO_CONFIG_DIR_1 );
+    gpio_set_direction(GPIO_CONFIG_DIR_1 , GPIO_MODE_OUTPUT);
+    mcpwm_gpio_init(MCPWM_UNIT_0, MCPWM0A, GPIO_OUT_MOTOR_2);
+    gpio_pad_select_gpio(GPIO_CONFIG_DIR_2 );
+    gpio_set_direction(GPIO_CONFIG_DIR_2 , GPIO_MODE_OUTPUT);
     
 }
 
@@ -499,7 +518,8 @@ void mcpwm_control(void)
     pwm_config.counter_mode = MCPWM_UP_COUNTER;
     pwm_config.duty_mode = MCPWM_DUTY_MODE_0;
     mcpwm_init(MCPWM_UNIT_0, MCPWM_TIMER_0, &pwm_config); 
-    brushed_motor_pwm_set(MCPWM_UNIT_0, MCPWM_TIMER_0, 50.0);   
+    brushed_motor_pwm_set(MCPWM_UNIT_0, MCPWM_TIMER_0, 5.0); 
+    
 }
 
 
