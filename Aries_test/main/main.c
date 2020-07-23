@@ -29,11 +29,13 @@
 
 
 
-#define GPIO_OUT_MOTOR_1  15   
+#define PWM_PIN_HIGH      15   
+
+
 #define GPIO_CONFIG_DIR_1 16  
 
-#define GPIO_OUT_MOTOR_2  32   
-#define GPIO_CONFIG_DIR_2 33  
+ 
+//#define GPIO_CONFIG_DIR_2 33  
 
 static const char *TAG = "Aries Robotic ARM";
 
@@ -121,6 +123,13 @@ esp_err_t on_feedback_handler(httpd_req_t *req)
 }
 
 
+static void brushed_motor_forward_backward(mcpwm_unit_t mcpwm_num, mcpwm_timer_t timer_num , float duty_cycle)
+{
+    mcpwm_set_signal_low(mcpwm_num, timer_num, MCPWM_OPR_B);
+    mcpwm_set_duty(mcpwm_num, timer_num, MCPWM_OPR_A, duty_cycle);
+    mcpwm_set_duty_type(mcpwm_num, timer_num, MCPWM_OPR_A, MCPWM_DUTY_MODE_0);
+}
+
 
 
 
@@ -172,42 +181,28 @@ static esp_err_t hello_get_handler(httpd_req_t *req)
             //ESP_LOGI(TAG, "Found URL query => %s", buf);
             char param[32];
             /* Get value of expected key from query string */
-             if (httpd_query_key_value(buf, "grip", param, sizeof(param)) == ESP_OK) {
+             if (httpd_query_key_value(buf, "grip",param, sizeof(param)) == ESP_OK) {
                 ESP_LOGI(TAG, "Found URL query parameter => GRIPPER=%s", param);
                 int gripangle=0;
                 int gripcount = atoi(param);
-               
-                if(gripcount<50){
-                gpio_set_level(GPIO_CONFIG_DIR_1 , 0);
-                  printf("GPIO SET TO DIR LOW");
-                  vTaskDelay(10/portTICK_PERIOD_MS);
+              if( gripcount == 50){
+                   gpio_set_level( PWM_PIN_HIGH , 0);
+                    ESP_LOGI(TAG, "MOTOR STOP CONDITION\n ");
+                    vTaskDelay(500 / portTICK_RATE_MS);
+
+                 }else{
+                        ESP_LOGI(TAG, "MOTOR START CONDITION\n ");
+                     gpio_set_level( PWM_PIN_HIGH , 1);
+                  brushed_motor_forward_backward(MCPWM_UNIT_0, MCPWM_TIMER_0, gripcount);
                  
-        }
-              else if(gripcount>50){
-                 gpio_set_level(GPIO_CONFIG_DIR_1 , 1);
-                   printf("GPIO SET TO DIR HIGH");
-                   vTaskDelay(10/portTICK_PERIOD_MS);
-                  
-                 
-                 }
+                    vTaskDelay(100 / portTICK_RATE_MS);
+}
 }
             if (httpd_query_key_value(buf, "wrist", param, sizeof(param)) == ESP_OK) {
                 ESP_LOGI(TAG, "Found URL query parameter => WRIST_JOINT=%s", param);
                 int wristangle=0;
                 int wristcount = atoi(param);
-                  if(wristcount<50){
-                gpio_set_level(GPIO_CONFIG_DIR_2 , 0);
-                  printf("GPIO SET TO DIR LOW");
-                  vTaskDelay(10/portTICK_PERIOD_MS);
-                 
-        }
-              else if(wristcount>50){
-                 gpio_set_level(GPIO_CONFIG_DIR_2 , 1);
-                   printf("GPIO SET TO DIR HIGH");
-                   vTaskDelay(10/portTICK_PERIOD_MS);
                   
-                 
-                 }
                 
             }
             if (httpd_query_key_value(buf, "elbow", param, sizeof(param)) == ESP_OK) {
@@ -460,7 +455,6 @@ static void stop_webserver(httpd_handle_t server)
     // Stop the httpd server
     httpd_stop(server);
 }
-
 static void disconnect_handler(void* arg, esp_event_base_t event_base, 
                                int32_t event_id, void* event_data)
 {
@@ -483,23 +477,15 @@ static void connect_handler(void* arg, esp_event_base_t event_base,
 }
 
  
-static void brushed_motor_pwm_set(mcpwm_unit_t mcpwm_num, mcpwm_timer_t timer_num , float duty_cycle)
-{
-    mcpwm_set_signal_low(mcpwm_num, timer_num, MCPWM_OPR_B);
-    mcpwm_set_duty(mcpwm_num, timer_num, MCPWM_OPR_A, duty_cycle);
-    mcpwm_set_duty_type(mcpwm_num, timer_num, MCPWM_OPR_A, MCPWM_DUTY_MODE_0);  
-}   
 
 
 static void mcpwm_gpio_initialize(void)
 {
     printf("initializing mcpwm gpio...\n");
-    mcpwm_gpio_init(MCPWM_UNIT_0, MCPWM0A, GPIO_OUT_MOTOR_1);
-    gpio_pad_select_gpio(GPIO_CONFIG_DIR_1 );
-    gpio_set_direction(GPIO_CONFIG_DIR_1 , GPIO_MODE_OUTPUT);
-    mcpwm_gpio_init(MCPWM_UNIT_0, MCPWM0A, GPIO_OUT_MOTOR_2);
-    gpio_pad_select_gpio(GPIO_CONFIG_DIR_2 );
-    gpio_set_direction(GPIO_CONFIG_DIR_2 , GPIO_MODE_OUTPUT);
+    mcpwm_gpio_init(MCPWM_UNIT_0, MCPWM0A, GPIO_CONFIG_DIR_1);
+      gpio_pad_select_gpio(PWM_PIN_HIGH);
+    gpio_set_direction(PWM_PIN_HIGH, GPIO_MODE_OUTPUT);
+    gpio_set_level( PWM_PIN_HIGH , 0);
     
 }
 
@@ -510,15 +496,14 @@ void mcpwm_control(void)
     mcpwm_gpio_initialize();
 
     //2. initial mcpwm configuration
-    printf("Configuring Initial Parameters of mcpwm......\n");
+    printf("Configuring Initial Parameters of mcpwm...\n");
     mcpwm_config_t pwm_config;
-    pwm_config.frequency = 50;    //frequency = 50Hz, i.e. for every servo motor time period should be 20ms
+    pwm_config.frequency = 1000;    //frequency = 500Hz,
     pwm_config.cmpr_a = 0;    //duty cycle of PWMxA = 0
     pwm_config.cmpr_b = 0;    //duty cycle of PWMxb = 0
     pwm_config.counter_mode = MCPWM_UP_COUNTER;
     pwm_config.duty_mode = MCPWM_DUTY_MODE_0;
     mcpwm_init(MCPWM_UNIT_0, MCPWM_TIMER_0, &pwm_config); 
-    brushed_motor_pwm_set(MCPWM_UNIT_0, MCPWM_TIMER_0, 5.0); 
     
 }
 
