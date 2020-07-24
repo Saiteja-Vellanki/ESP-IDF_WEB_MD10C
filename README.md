@@ -1,7 +1,7 @@
 # Aries_Solutions
 committed to Aries
 Brief Introdction
-control servo motor at desired angle using http server either wifi/ethernet
+control servo motor at desired angle using http servGPIO23. MDC. 9. GPIO18. MDIOer either wifi/ethernet
 connect servo motors : to this pins 
 On esp32 board :----------------------> GIPO 32 (D32)
                                      -> GPIO 33 (D33)
@@ -37,6 +37,8 @@ GPIO22:              TX1,
 GPIO25:              RX0,
 GPIO26:              RX1,
 GPIO27:              CRS_DV,
+GPIO23:              MDC,
+GPIO18:              MDIO,
 3.3V  :              VCC,
-GND   :             GND.
+GND   :              GND.
 
