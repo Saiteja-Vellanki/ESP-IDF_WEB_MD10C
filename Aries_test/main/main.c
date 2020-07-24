@@ -28,7 +28,6 @@
 #include <sys/stat.h>
 
 
-
 #define PWM_PIN_HIGH      15   
 
 
@@ -125,7 +124,7 @@ esp_err_t on_feedback_handler(httpd_req_t *req)
 
 static void brushed_motor_forward_backward(mcpwm_unit_t mcpwm_num, mcpwm_timer_t timer_num , float duty_cycle)
 {
-    mcpwm_set_signal_low(mcpwm_num, timer_num, MCPWM_OPR_B);
+   mcpwm_set_signal_high(mcpwm_num, timer_num, MCPWM_OPR_B);
     mcpwm_set_duty(mcpwm_num, timer_num, MCPWM_OPR_A, duty_cycle);
     mcpwm_set_duty_type(mcpwm_num, timer_num, MCPWM_OPR_A, MCPWM_DUTY_MODE_0);
 }
@@ -184,20 +183,24 @@ static esp_err_t hello_get_handler(httpd_req_t *req)
              if (httpd_query_key_value(buf, "grip",param, sizeof(param)) == ESP_OK) {
                 ESP_LOGI(TAG, "Found URL query parameter => GRIPPER=%s", param);
                 int gripangle=0;
+                
+    
+    
+               
                 int gripcount = atoi(param);
-             
             
-              if( gripcount == 50){
+             if( gripcount == 50){
                    gpio_set_level( PWM_PIN_HIGH , 0);
                     ESP_LOGI(TAG, "MOTOR STOP CONDITION\n ");
-                    vTaskDelay(500 / portTICK_RATE_MS);
+                   vTaskDelay(500 / portTICK_RATE_MS);
                   }
-                        ESP_LOGI(TAG, "MOTOR START CONDITION\n ");
-                     gpio_set_level( PWM_PIN_HIGH , 1);
+                        
                   brushed_motor_forward_backward(MCPWM_UNIT_0, MCPWM_TIMER_0, gripcount);
-                 
-                    vTaskDelay(10 / portTICK_RATE_MS);
-                   gpio_set_level( PWM_PIN_HIGH , 0);
+                  gpio_set_level( PWM_PIN_HIGH , 1);
+                   ESP_LOGI(TAG, "MOTOR START CONDITION\n ");
+                    vTaskDelay(20 / portTICK_RATE_MS);
+                   
+             
 
 }
 
@@ -231,6 +234,7 @@ static esp_err_t hello_get_handler(httpd_req_t *req)
              
 
         }
+         
         free(buf);
     }
 
@@ -248,6 +252,8 @@ static esp_err_t hello_get_handler(httpd_req_t *req)
      * headers are lost. Check if HTTP request headers can be read now. */
     if (httpd_req_get_hdr_value_len(req, "Host") == 0) {
         ESP_LOGI(TAG, "Request headers lost");
+          vTaskDelay(10 / portTICK_RATE_MS);
+         gpio_set_level( PWM_PIN_HIGH , 0);
     }
     return ESP_OK;
 }
@@ -486,9 +492,8 @@ static void mcpwm_gpio_initialize(void)
 {
     printf("initializing mcpwm gpio...\n");
     mcpwm_gpio_init(MCPWM_UNIT_0, MCPWM0A, GPIO_CONFIG_DIR_1);
-      gpio_pad_select_gpio(PWM_PIN_HIGH);
-    gpio_set_direction(PWM_PIN_HIGH, GPIO_MODE_OUTPUT);
-    gpio_set_level( PWM_PIN_HIGH , 0);
+    gpio_pad_select_gpio(PWM_PIN_HIGH);
+   gpio_set_direction(PWM_PIN_HIGH, GPIO_MODE_OUTPUT);
     
 }
 
@@ -501,7 +506,7 @@ void mcpwm_control(void)
     //2. initial mcpwm configuration
     printf("Configuring Initial Parameters of mcpwm...\n");
     mcpwm_config_t pwm_config;
-    pwm_config.frequency = 2000;    //frequency = 2kHz,
+    pwm_config.frequency = 4000;    //frequency = 4kHz,
     pwm_config.cmpr_a = 0;    //duty cycle of PWMxA = 0
     pwm_config.cmpr_b = 0;    //duty cycle of PWMxb = 0
     pwm_config.counter_mode = MCPWM_UP_COUNTER;
