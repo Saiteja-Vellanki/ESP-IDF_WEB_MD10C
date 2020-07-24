@@ -185,19 +185,22 @@ static esp_err_t hello_get_handler(httpd_req_t *req)
                 ESP_LOGI(TAG, "Found URL query parameter => GRIPPER=%s", param);
                 int gripangle=0;
                 int gripcount = atoi(param);
+             
+            
               if( gripcount == 50){
                    gpio_set_level( PWM_PIN_HIGH , 0);
                     ESP_LOGI(TAG, "MOTOR STOP CONDITION\n ");
                     vTaskDelay(500 / portTICK_RATE_MS);
-
-                 }else{
+                  }
                         ESP_LOGI(TAG, "MOTOR START CONDITION\n ");
                      gpio_set_level( PWM_PIN_HIGH , 1);
                   brushed_motor_forward_backward(MCPWM_UNIT_0, MCPWM_TIMER_0, gripcount);
                  
-                    vTaskDelay(100 / portTICK_RATE_MS);
+                    vTaskDelay(10 / portTICK_RATE_MS);
+                   gpio_set_level( PWM_PIN_HIGH , 0);
+
 }
-}
+
             if (httpd_query_key_value(buf, "wrist", param, sizeof(param)) == ESP_OK) {
                 ESP_LOGI(TAG, "Found URL query parameter => WRIST_JOINT=%s", param);
                 int wristangle=0;
