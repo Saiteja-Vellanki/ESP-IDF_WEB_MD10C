@@ -37,6 +37,8 @@ GPIO22:              TX1,
 GPIO25:              RX0,
 GPIO26:              RX1,
 GPIO27:              CRS_DV,
+GPIO23:              MDC
+GPIO18:              MDIO
 3.3V  :              VCC,
-GND   :             GND.
+GND   :              GND.
 
