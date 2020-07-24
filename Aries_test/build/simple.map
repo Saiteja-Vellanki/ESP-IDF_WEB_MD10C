@@ -19031,6 +19031,9 @@ END GROUP
  .literal.vRingbufferReturnItem
                 0x00000000400809bc        0x4 /home/sai-vdeal/Aries/Aries_test/build/esp_ringbuf/libesp_ringbuf.a(ringbuf.o)
                                          0x28 (size before relaxing)
+ .literal.esp_system_abort
+                0x00000000400809c0        0x0 /home/sai-vdeal/Aries/Aries_test/build/esp_system/libesp_system.a(system_api.o)
+                                          0x4 (size before relaxing)
  .literal.get_reset_reason
                 0x00000000400809c0        0x4 /home/sai-vdeal/Aries/Aries_test/build/esp_system/libesp_system.a(reset_reason.o)
  .literal.esp_reset_reason_clear_hint
@@ -19103,68 +19106,65 @@ END GROUP
  .literal.panic_abort
                 0x0000000040080ab8        0x0 /home/sai-vdeal/Aries/Aries_test/build/esp_system/libesp_system.a(panic.o)
                                           0x8 (size before relaxing)
- .literal.esp_system_abort
-                0x0000000040080ab8        0x0 /home/sai-vdeal/Aries/Aries_test/build/esp_system/libesp_system.a(system_api.o)
-                                          0x4 (size before relaxing)
- .literal.spi_flash_chip_issi_probe
-                0x0000000040080ab8        0x4 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_issi.o)
-                                          0x8 (size before relaxing)
- .literal.spi_flash_chip_issi_set_io_mode
-                0x0000000040080abc        0x8 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_issi.o)
-                                          0xc (size before relaxing)
- .literal.spi_flash_chip_issi_get_io_mode
-                0x0000000040080ac4        0x0 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_issi.o)
-                                          0x4 (size before relaxing)
- .literal.memspi_host_read_id_hs
-                0x0000000040080ac4       0x10 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(memspi_host_driver.o)
-                                         0x18 (size before relaxing)
- .literal.memspi_host_flush_cache
-                0x0000000040080ad4        0x4 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(memspi_host_driver.o)
-                                          0x8 (size before relaxing)
  .literal.spi_flash_chip_generic_detect_size
-                0x0000000040080ad8        0x4 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
+                0x0000000040080ab8        0x4 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
                                           0x8 (size before relaxing)
  .literal.spi_flash_chip_generic_erase_chip
-                0x0000000040080adc        0x4 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
+                0x0000000040080abc        0x4 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
  .literal.spi_flash_chip_generic_write_encrypted
-                0x0000000040080ae0        0x0 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
+                0x0000000040080ac0        0x0 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
                                           0x4 (size before relaxing)
  .literal.spi_flash_common_read_status_16b_rdsr_rdsr2
-                0x0000000040080ae0        0x0 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
+                0x0000000040080ac0        0x0 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
                                           0x8 (size before relaxing)
  .literal.spi_flash_common_write_status_16b_wrsr
-                0x0000000040080ae0        0x0 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
+                0x0000000040080ac0        0x0 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
                                           0x4 (size before relaxing)
  .literal.spi_flash_chip_generic_get_write_protect
-                0x0000000040080ae0        0xc /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
+                0x0000000040080ac0        0xc /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
                                          0x10 (size before relaxing)
  .literal.spi_flash_chip_generic_wait_idle
-                0x0000000040080aec        0x0 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
+                0x0000000040080acc        0x0 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
                                           0x4 (size before relaxing)
  .literal.spi_flash_chip_generic_config_host_io_mode
-                0x0000000040080aec        0x4 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
+                0x0000000040080acc        0x4 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
                                           0x8 (size before relaxing)
  .literal.spi_flash_chip_generic_read
-                0x0000000040080af0        0x8 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
+                0x0000000040080ad0        0x8 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
                                          0x14 (size before relaxing)
  .literal.spi_flash_common_read_status_8b_rdsr2
-                0x0000000040080af8        0x0 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
+                0x0000000040080ad8        0x0 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
                                           0x4 (size before relaxing)
  .literal.spi_flash_chip_generic_get_io_mode
-                0x0000000040080af8        0x0 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
+                0x0000000040080ad8        0x0 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
                                           0x4 (size before relaxing)
  .literal.spi_flash_common_read_status_8b_rdsr
-                0x0000000040080af8        0x0 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
+                0x0000000040080ad8        0x0 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
                                           0x4 (size before relaxing)
  .literal.spi_flash_common_write_status_8b_wrsr
-                0x0000000040080af8        0x0 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
+                0x0000000040080ad8        0x0 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
                                           0x4 (size before relaxing)
  .literal.spi_flash_common_write_status_8b_wrsr2
-                0x0000000040080af8        0x0 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
+                0x0000000040080ad8        0x0 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
                                           0x4 (size before relaxing)
  .literal.spi_flash_chip_generic_set_io_mode
-                0x0000000040080af8        0x8 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
+                0x0000000040080ad8        0x8 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
                                           0xc (size before relaxing)
+ .literal.spi_flash_chip_issi_probe
+                0x0000000040080ae0        0x4 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_issi.o)
+                                          0x8 (size before relaxing)
+ .literal.spi_flash_chip_issi_set_io_mode
+                0x0000000040080ae4        0x8 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_issi.o)
+                                          0xc (size before relaxing)
+ .literal.spi_flash_chip_issi_get_io_mode
+                0x0000000040080aec        0x0 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_issi.o)
+                                          0x4 (size before relaxing)
+ .literal.memspi_host_read_id_hs
+                0x0000000040080aec       0x10 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(memspi_host_driver.o)
+                                         0x18 (size before relaxing)
+ .literal.memspi_host_flush_cache
+                0x0000000040080afc        0x4 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(memspi_host_driver.o)
+                                          0x8 (size before relaxing)
  .literal.spi_flash_chip_gd_probe
                 0x0000000040080b00        0x4 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_gd.o)
  .literal.spi_flash_chip_gd_set_io_mode
@@ -19484,23 +19484,23 @@ END GROUP
  .literal.multi_heap_get_info_impl
                 0x0000000040080ddc        0x0 /home/sai-vdeal/Aries/Aries_test/build/heap/libheap.a(multi_heap.o)
                                          0x2c (size before relaxing)
- .literal.esp_log_impl_lock_timeout
-                0x0000000040080ddc        0x4 /home/sai-vdeal/Aries/Aries_test/build/log/liblog.a(log_freertos.o)
-                                          0xc (size before relaxing)
- .literal.esp_log_timestamp
-                0x0000000040080de0        0x4 /home/sai-vdeal/Aries/Aries_test/build/log/liblog.a(log_freertos.o)
-                                         0x1c (size before relaxing)
  .literal.esp_log_impl_unlock
-                0x0000000040080de4        0x0 /home/sai-vdeal/Aries/Aries_test/build/log/liblog.a(log_freertos.o)
+                0x0000000040080ddc        0x4 /home/sai-vdeal/Aries/Aries_test/build/log/liblog.a(log_freertos.o)
                                           0x8 (size before relaxing)
+ .literal.esp_log_impl_lock_timeout
+                0x0000000040080de0        0x0 /home/sai-vdeal/Aries/Aries_test/build/log/liblog.a(log_freertos.o)
+                                          0xc (size before relaxing)
  .literal.esp_log_early_timestamp
-                0x0000000040080de4        0x0 /home/sai-vdeal/Aries/Aries_test/build/log/liblog.a(log_freertos.o)
+                0x0000000040080de0        0x0 /home/sai-vdeal/Aries/Aries_test/build/log/liblog.a(log_freertos.o)
                                           0x4 (size before relaxing)
  .literal.esp_log_write
-                0x0000000040080de4        0x4 /home/sai-vdeal/Aries/Aries_test/build/log/liblog.a(log.o)
+                0x0000000040080de0        0x4 /home/sai-vdeal/Aries/Aries_test/build/log/liblog.a(log.o)
  .literal.esp_log_impl_lock
-                0x0000000040080de8        0x0 /home/sai-vdeal/Aries/Aries_test/build/log/liblog.a(log_freertos.o)
+                0x0000000040080de4        0x0 /home/sai-vdeal/Aries/Aries_test/build/log/liblog.a(log_freertos.o)
                                           0xc (size before relaxing)
+ .literal.esp_log_timestamp
+                0x0000000040080de4        0x4 /home/sai-vdeal/Aries/Aries_test/build/log/liblog.a(log_freertos.o)
+                                         0x1c (size before relaxing)
  .literal.malloc
                 0x0000000040080de8        0x0 /home/sai-vdeal/Aries/Aries_test/build/newlib/libnewlib.a(heap.o)
                                           0x4 (size before relaxing)
@@ -19527,135 +19527,135 @@ END GROUP
  .literal.abort
                 0x0000000040080dec       0x10 /home/sai-vdeal/Aries/Aries_test/build/newlib/libnewlib.a(abort.o)
                                          0x24 (size before relaxing)
- .literal.rtc_clk_32k_enable_common
-                0x0000000040080dfc       0x18 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
- .literal.rtc_clk_bbpll_disable
-                0x0000000040080e14        0xc /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
-                                         0x10 (size before relaxing)
- .literal.rtc_clk_bbpll_enable
-                0x0000000040080e20        0x8 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
-                                         0x1c (size before relaxing)
- .literal.rtc_clk_32k_enable
-                0x0000000040080e28        0x8 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
-                                         0x10 (size before relaxing)
- .literal.rtc_clk_32k_enable_external
-                0x0000000040080e30        0x0 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
-                                          0x4 (size before relaxing)
- .literal.rtc_clk_8m_enable
-                0x0000000040080e30        0xc /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
-                                         0x10 (size before relaxing)
- .literal.rtc_clk_slow_freq_set
-                0x0000000040080e3c        0x0 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
-                                          0xc (size before relaxing)
- .literal.rtc_clk_slow_freq_get
-                0x0000000040080e3c        0x0 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
-                                          0x4 (size before relaxing)
- .literal.rtc_clk_slow_freq_get_hz
-                0x0000000040080e3c        0xc /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
-                                         0x10 (size before relaxing)
- .literal.rtc_clk_fast_freq_set
-                0x0000000040080e48        0x8 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
-                                         0x10 (size before relaxing)
- .literal.rtc_clk_bbpll_configure
-                0x0000000040080e50       0x10 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
-                                         0x40 (size before relaxing)
- .literal.rtc_clk_xtal_freq_get
-                0x0000000040080e60        0x8 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
- .literal.rtc_clk_cpu_freq_mhz_to_config
-                0x0000000040080e68        0x0 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
-                                          0x4 (size before relaxing)
- .literal.rtc_clk_cpu_freq_get_config
-                0x0000000040080e68       0x10 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
-                                         0x34 (size before relaxing)
- .literal.rtc_clk_apb_freq_update
-                0x0000000040080e78        0x4 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
- .literal.rtc_clk_cpu_freq_to_xtal
-                0x0000000040080e7c        0x8 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
-                                         0x2c (size before relaxing)
- .literal.rtc_clk_cpu_freq_set_xtal
-                0x0000000040080e84        0x0 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
-                                         0x10 (size before relaxing)
- .literal.rtc_clk_cpu_freq_to_pll_mhz
-                0x0000000040080e84        0xc /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
-                                         0x44 (size before relaxing)
- .literal.rtc_clk_cpu_freq_to_8m
-                0x0000000040080e90        0x4 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
-                                         0x28 (size before relaxing)
- .literal.rtc_clk_cpu_freq_set_config
-                0x0000000040080e94        0x0 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
-                                         0x30 (size before relaxing)
  .literal.spi_flash_hal_configure_host_io_mode
-                0x0000000040080e94       0x28 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(spi_flash_hal_iram.o)
+                0x0000000040080dfc       0x2c /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(spi_flash_hal_iram.o)
                                          0x4c (size before relaxing)
  .literal.spi_flash_hal_common_command
-                0x0000000040080ebc        0x0 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(spi_flash_hal_iram.o)
+                0x0000000040080e28        0x4 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(spi_flash_hal_iram.o)
                                          0x24 (size before relaxing)
  .literal.spi_flash_hal_read
-                0x0000000040080ebc        0x0 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(spi_flash_hal_iram.o)
+                0x0000000040080e2c        0x0 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(spi_flash_hal_iram.o)
                                          0x18 (size before relaxing)
  .literal.spi_flash_hal_erase_chip
-                0x0000000040080ebc        0x0 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(spi_flash_hal_iram.o)
+                0x0000000040080e2c        0x0 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(spi_flash_hal_iram.o)
                                           0x4 (size before relaxing)
  .literal.spi_flash_hal_erase_sector
-                0x0000000040080ebc        0x4 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(spi_flash_hal_iram.o)
+                0x0000000040080e2c        0x4 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(spi_flash_hal_iram.o)
                                          0x14 (size before relaxing)
  .literal.spi_flash_hal_erase_block
-                0x0000000040080ec0        0x0 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(spi_flash_hal_iram.o)
+                0x0000000040080e30        0x0 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(spi_flash_hal_iram.o)
                                          0x14 (size before relaxing)
  .literal.spi_flash_hal_program_page
-                0x0000000040080ec0        0x0 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(spi_flash_hal_iram.o)
+                0x0000000040080e30        0x0 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(spi_flash_hal_iram.o)
                                          0x1c (size before relaxing)
  .literal.spi_flash_hal_set_write_protect
-                0x0000000040080ec0        0x0 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(spi_flash_hal_iram.o)
+                0x0000000040080e30        0x4 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(spi_flash_hal_iram.o)
                                           0x8 (size before relaxing)
  .literal.spi_flash_hal_host_idle
-                0x0000000040080ec0        0x4 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(spi_flash_hal_iram.o)
+                0x0000000040080e34        0x4 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(spi_flash_hal_iram.o)
                                           0x8 (size before relaxing)
  .literal.soc_hal_stall_core
-                0x0000000040080ec4       0x10 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(soc_hal.o)
+                0x0000000040080e38       0x10 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(soc_hal.o)
                                          0x14 (size before relaxing)
  .literal.soc_hal_unstall_core
-                0x0000000040080ed4        0x0 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(soc_hal.o)
+                0x0000000040080e48        0x0 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(soc_hal.o)
                                          0x10 (size before relaxing)
  .literal.rtc_init
-                0x0000000040080ed4       0x6c /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_init.o)
+                0x0000000040080e48       0x88 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_init.o)
                                          0xe0 (size before relaxing)
- .literal.rtc_clk_cal_internal
-                0x0000000040080f40       0x30 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_time.o)
-                                         0x70 (size before relaxing)
- .literal.rtc_clk_cal
-                0x0000000040080f70        0x0 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_time.o)
-                                          0xc (size before relaxing)
- .literal.rtc_time_get
-                0x0000000040080f70       0x10 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_time.o)
-                                         0x18 (size before relaxing)
- .literal.rtc_clk_wait_for_slow_cycle
-                0x0000000040080f80        0x8 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_time.o)
-                                         0x20 (size before relaxing)
  .literal.wdt_hal_init
-                0x0000000040080f88       0x38 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(wdt_hal_iram.o)
+                0x0000000040080ed0       0x40 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(wdt_hal_iram.o)
                                          0x54 (size before relaxing)
  .literal.wdt_hal_config_stage
-                0x0000000040080fc0        0x0 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(wdt_hal_iram.o)
+                0x0000000040080f10        0x0 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(wdt_hal_iram.o)
                                          0x24 (size before relaxing)
  .literal.wdt_hal_write_protect_disable
-                0x0000000040080fc0        0x0 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(wdt_hal_iram.o)
+                0x0000000040080f10        0x0 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(wdt_hal_iram.o)
                                           0x4 (size before relaxing)
  .literal.wdt_hal_enable
-                0x0000000040080fc0        0x0 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(wdt_hal_iram.o)
+                0x0000000040080f10        0x0 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(wdt_hal_iram.o)
                                           0x4 (size before relaxing)
  .literal.wdt_hal_disable
-                0x0000000040080fc0        0x0 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(wdt_hal_iram.o)
+                0x0000000040080f10        0x0 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(wdt_hal_iram.o)
                                           0x4 (size before relaxing)
  .literal.wdt_hal_handle_intr
-                0x0000000040080fc0        0x0 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(wdt_hal_iram.o)
+                0x0000000040080f10        0x0 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(wdt_hal_iram.o)
                                           0x4 (size before relaxing)
  .literal.wdt_hal_feed
-                0x0000000040080fc0        0x0 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(wdt_hal_iram.o)
+                0x0000000040080f10        0x0 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(wdt_hal_iram.o)
                                           0x4 (size before relaxing)
  .literal.wdt_hal_set_flashboot_en
-                0x0000000040080fc0        0x0 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(wdt_hal_iram.o)
+                0x0000000040080f10        0x0 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(wdt_hal_iram.o)
                                           0x4 (size before relaxing)
+ .literal.rtc_clk_32k_enable_common
+                0x0000000040080f10       0x18 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
+ .literal.rtc_clk_bbpll_disable
+                0x0000000040080f28        0x4 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
+                                         0x10 (size before relaxing)
+ .literal.rtc_clk_bbpll_enable
+                0x0000000040080f2c        0x8 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
+                                         0x1c (size before relaxing)
+ .literal.rtc_clk_32k_enable
+                0x0000000040080f34        0x4 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
+                                         0x10 (size before relaxing)
+ .literal.rtc_clk_32k_enable_external
+                0x0000000040080f38        0x0 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
+                                          0x4 (size before relaxing)
+ .literal.rtc_clk_8m_enable
+                0x0000000040080f38        0x0 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
+                                         0x10 (size before relaxing)
+ .literal.rtc_clk_slow_freq_set
+                0x0000000040080f38        0x0 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
+                                          0xc (size before relaxing)
+ .literal.rtc_clk_slow_freq_get
+                0x0000000040080f38        0x0 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
+                                          0x4 (size before relaxing)
+ .literal.rtc_clk_slow_freq_get_hz
+                0x0000000040080f38        0xc /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
+                                         0x10 (size before relaxing)
+ .literal.rtc_clk_fast_freq_set
+                0x0000000040080f44        0x0 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
+                                         0x10 (size before relaxing)
+ .literal.rtc_clk_bbpll_configure
+                0x0000000040080f44        0x8 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
+                                         0x40 (size before relaxing)
+ .literal.rtc_clk_xtal_freq_get
+                0x0000000040080f4c        0x8 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
+ .literal.rtc_clk_cpu_freq_mhz_to_config
+                0x0000000040080f54        0x0 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
+                                          0x4 (size before relaxing)
+ .literal.rtc_clk_cpu_freq_get_config
+                0x0000000040080f54       0x10 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
+                                         0x34 (size before relaxing)
+ .literal.rtc_clk_apb_freq_update
+                0x0000000040080f64        0x4 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
+ .literal.rtc_clk_cpu_freq_to_xtal
+                0x0000000040080f68        0x4 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
+                                         0x2c (size before relaxing)
+ .literal.rtc_clk_cpu_freq_set_xtal
+                0x0000000040080f6c        0x0 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
+                                         0x10 (size before relaxing)
+ .literal.rtc_clk_cpu_freq_to_pll_mhz
+                0x0000000040080f6c        0x8 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
+                                         0x44 (size before relaxing)
+ .literal.rtc_clk_cpu_freq_to_8m
+                0x0000000040080f74        0x4 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
+                                         0x28 (size before relaxing)
+ .literal.rtc_clk_cpu_freq_set_config
+                0x0000000040080f78        0x0 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
+                                         0x30 (size before relaxing)
+ .literal.rtc_clk_cal_internal
+                0x0000000040080f78       0x30 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_time.o)
+                                         0x70 (size before relaxing)
+ .literal.rtc_clk_cal
+                0x0000000040080fa8        0x0 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_time.o)
+                                          0xc (size before relaxing)
+ .literal.rtc_time_get
+                0x0000000040080fa8       0x10 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_time.o)
+                                         0x18 (size before relaxing)
+ .literal.rtc_clk_wait_for_slow_cycle
+                0x0000000040080fb8        0x8 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_time.o)
+                                         0x20 (size before relaxing)
  .literal       0x0000000040080fc0        0x0 /home/sai-vdeal/esp/esp-idf/components/xtensa/esp32/libhal.a(windowspill_asm.o)
                                           0x4 (size before relaxing)
  .iram1.1       0x0000000040080fc0       0xb2 /home/sai-vdeal/Aries/Aries_test/build/app_update/libapp_update.a(esp_app_desc.o)
@@ -20361,26 +20361,26 @@ END GROUP
  *fill*         0x000000004008682b        0x0 
  *fill*         0x000000004008682b        0x0 
  *fill*         0x000000004008682b        0x0 
- *libapp_trace.a:SEGGER_SYSVIEW_Config_FreeRTOS.*(.literal .literal.* .text .text.*)
- *libapp_trace.a:app_trace_util.*(.literal .literal.* .text .text.*)
- *libapp_trace.a:SEGGER_SYSVIEW_FreeRTOS.*(.literal .literal.* .text .text.*)
- *libapp_trace.a:app_trace.*(.literal .literal.* .text .text.*)
- *libapp_trace.a:SEGGER_RTT_esp32.*(.literal .literal.* .text .text.*)
  *libapp_trace.a:SEGGER_SYSVIEW.*(.literal .literal.* .text .text.*)
- *libgcc.a:lib2funcs.*(.literal .literal.* .text .text.*)
- *fill*         0x000000004008682b        0x1 
- .text          0x000000004008682c       0x68 /home/sai-vdeal/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(lib2funcs.o)
-                0x000000004008682c                __xtensa_libgcc_window_spill
-                0x000000004008684c                __xtensa_nonlocal_goto
-                0x000000004008688c                __xtensa_sync_caches
+ *libapp_trace.a:app_trace_util.*(.literal .literal.* .text .text.*)
+ *libapp_trace.a:SEGGER_RTT_esp32.*(.literal .literal.* .text .text.*)
+ *libapp_trace.a:SEGGER_SYSVIEW_FreeRTOS.*(.literal .literal.* .text .text.*)
+ *libapp_trace.a:SEGGER_SYSVIEW_Config_FreeRTOS.*(.literal .literal.* .text .text.*)
+ *libapp_trace.a:app_trace.*(.literal .literal.* .text .text.*)
  *libgcc.a:_divsf3.*(.literal .literal.* .text .text.*)
- .text          0x0000000040086894       0x59 /home/sai-vdeal/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_divsf3.o)
-                0x0000000040086894                __divsf3
+ *fill*         0x000000004008682b        0x1 
+ .text          0x000000004008682c       0x59 /home/sai-vdeal/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_divsf3.o)
+                0x000000004008682c                __divsf3
+ *libgcc.a:lib2funcs.*(.literal .literal.* .text .text.*)
+ *fill*         0x0000000040086885        0x3 
+ .text          0x0000000040086888       0x68 /home/sai-vdeal/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(lib2funcs.o)
+                0x0000000040086888                __xtensa_libgcc_window_spill
+                0x00000000400868a8                __xtensa_nonlocal_goto
+                0x00000000400868e8                __xtensa_sync_caches
  *libgcov.a:(.literal .literal.* .text .text.*)
- *libesp_event.a:default_event_loop.*(.literal.esp_event_isr_post .text.esp_event_isr_post)
  *libesp_event.a:esp_event.*(.literal.esp_event_isr_post_to .text.esp_event_isr_post_to)
+ *libesp_event.a:default_event_loop.*(.literal.esp_event_isr_post .text.esp_event_isr_post)
  *libesp_ringbuf.a:(.literal .literal.* .text .text.*)
- *fill*         0x00000000400868ed        0x3 
  .text.prvGetFreeSize
                 0x00000000400868f0       0x3a /home/sai-vdeal/Aries/Aries_test/build/esp_ringbuf/libesp_ringbuf.a(ringbuf.o)
                                          0x3e (size before relaxing)
@@ -20407,136 +20407,135 @@ END GROUP
  *fill*         0x0000000040086c48        0x0 
  *fill*         0x0000000040086c48        0x0 
  *fill*         0x0000000040086c48        0x0 
+ *libesp_system.a:system_api.*(.literal.esp_system_abort .text.esp_system_abort)
+ .text.esp_system_abort
+                0x0000000040086c48        0x8 /home/sai-vdeal/Aries/Aries_test/build/esp_system/libesp_system.a(system_api.o)
+                                          0xc (size before relaxing)
+                0x0000000040086c48                esp_system_abort
+ *fill*         0x0000000040086c50        0x0 
  *libesp_system.a:reset_reason.*(.literal .literal.* .text .text.*)
  .text.get_reset_reason
-                0x0000000040086c48       0x6f /home/sai-vdeal/Aries/Aries_test/build/esp_system/libesp_system.a(reset_reason.o)
- *fill*         0x0000000040086cb7        0x1 
+                0x0000000040086c50       0x6f /home/sai-vdeal/Aries/Aries_test/build/esp_system/libesp_system.a(reset_reason.o)
+ *fill*         0x0000000040086cbf        0x1 
  .text.esp_reset_reason_clear_hint
-                0x0000000040086cb8        0xf /home/sai-vdeal/Aries/Aries_test/build/esp_system/libesp_system.a(reset_reason.o)
- *fill*         0x0000000040086cc7        0x1 
+                0x0000000040086cc0        0xf /home/sai-vdeal/Aries/Aries_test/build/esp_system/libesp_system.a(reset_reason.o)
+ *fill*         0x0000000040086ccf        0x1 
  .text.esp_reset_reason
-                0x0000000040086cc8        0xa /home/sai-vdeal/Aries/Aries_test/build/esp_system/libesp_system.a(reset_reason.o)
-                0x0000000040086cc8                esp_reset_reason
- *fill*         0x0000000040086cd2        0x2 
+                0x0000000040086cd0        0xa /home/sai-vdeal/Aries/Aries_test/build/esp_system/libesp_system.a(reset_reason.o)
+                0x0000000040086cd0                esp_reset_reason
+ *fill*         0x0000000040086cda        0x2 
  .text.esp_reset_reason_init
-                0x0000000040086cd4       0x23 /home/sai-vdeal/Aries/Aries_test/build/esp_system/libesp_system.a(reset_reason.o)
+                0x0000000040086cdc       0x23 /home/sai-vdeal/Aries/Aries_test/build/esp_system/libesp_system.a(reset_reason.o)
                                          0x2b (size before relaxing)
- *fill*         0x0000000040086cf7        0x0 
- *fill*         0x0000000040086cf7        0x0 
- *fill*         0x0000000040086cf7        0x0 
- *fill*         0x0000000040086cf7        0x0 
+ *fill*         0x0000000040086cff        0x0 
+ *fill*         0x0000000040086cff        0x0 
+ *fill*         0x0000000040086cff        0x0 
  *libesp_system.a:panic_handler.*(.literal .literal.* .text .text.*)
- *fill*         0x0000000040086cf7        0x1 
+ *fill*         0x0000000040086cff        0x1 
  .text.frame_to_panic_info
-                0x0000000040086cf8       0xa5 /home/sai-vdeal/Aries/Aries_test/build/esp_system/libesp_system.a(panic_handler.o)
+                0x0000000040086d00       0xa5 /home/sai-vdeal/Aries/Aries_test/build/esp_system/libesp_system.a(panic_handler.o)
                                          0xa9 (size before relaxing)
- *fill*         0x0000000040086d9d        0x3 
+ *fill*         0x0000000040086da5        0x3 
  .text.print_debug_exception_details
-                0x0000000040086da0       0x50 /home/sai-vdeal/Aries/Aries_test/build/esp_system/libesp_system.a(panic_handler.o)
+                0x0000000040086da8       0x50 /home/sai-vdeal/Aries/Aries_test/build/esp_system/libesp_system.a(panic_handler.o)
                                          0x68 (size before relaxing)
  .text.panic_handler
-                0x0000000040086df0       0xa0 /home/sai-vdeal/Aries/Aries_test/build/esp_system/libesp_system.a(panic_handler.o)
+                0x0000000040086df8       0xa0 /home/sai-vdeal/Aries/Aries_test/build/esp_system/libesp_system.a(panic_handler.o)
                                          0xc0 (size before relaxing)
  .text.print_backtrace_entry
-                0x0000000040086e90       0x1b /home/sai-vdeal/Aries/Aries_test/build/esp_system/libesp_system.a(panic_handler.o)
+                0x0000000040086e98       0x1b /home/sai-vdeal/Aries/Aries_test/build/esp_system/libesp_system.a(panic_handler.o)
                                          0x27 (size before relaxing)
- *fill*         0x0000000040086eab        0x1 
+ *fill*         0x0000000040086eb3        0x1 
  .text.print_illegal_instruction_details
-                0x0000000040086eac       0x52 /home/sai-vdeal/Aries/Aries_test/build/esp_system/libesp_system.a(panic_handler.o)
+                0x0000000040086eb4       0x52 /home/sai-vdeal/Aries/Aries_test/build/esp_system/libesp_system.a(panic_handler.o)
                                          0x6a (size before relaxing)
- *fill*         0x0000000040086efe        0x2 
+ *fill*         0x0000000040086f06        0x2 
  .text.print_registers
-                0x0000000040086f00       0xd7 /home/sai-vdeal/Aries/Aries_test/build/esp_system/libesp_system.a(panic_handler.o)
+                0x0000000040086f08       0xd7 /home/sai-vdeal/Aries/Aries_test/build/esp_system/libesp_system.a(panic_handler.o)
                                         0x113 (size before relaxing)
- *fill*         0x0000000040086fd7        0x1 
+ *fill*         0x0000000040086fdf        0x1 
  .text.print_backtrace
-                0x0000000040086fd8      0x11c /home/sai-vdeal/Aries/Aries_test/build/esp_system/libesp_system.a(panic_handler.o)
+                0x0000000040086fe0      0x11c /home/sai-vdeal/Aries/Aries_test/build/esp_system/libesp_system.a(panic_handler.o)
                                         0x12f (size before relaxing)
- *fill*         0x00000000400870f4        0x0 
+ *fill*         0x00000000400870fc        0x0 
  .text.print_state_for_core
-                0x00000000400870f4       0x26 /home/sai-vdeal/Aries/Aries_test/build/esp_system/libesp_system.a(panic_handler.o)
+                0x00000000400870fc       0x26 /home/sai-vdeal/Aries/Aries_test/build/esp_system/libesp_system.a(panic_handler.o)
                                          0x2a (size before relaxing)
- *fill*         0x000000004008711a        0x2 
+ *fill*         0x0000000040087122        0x2 
  .text.print_state
-                0x000000004008711c       0x4c /home/sai-vdeal/Aries/Aries_test/build/esp_system/libesp_system.a(panic_handler.o)
+                0x0000000040087124       0x4c /home/sai-vdeal/Aries/Aries_test/build/esp_system/libesp_system.a(panic_handler.o)
                                          0x54 (size before relaxing)
  .text.esp_digital_reset
-                0x0000000040087168       0x32 /home/sai-vdeal/Aries/Aries_test/build/esp_system/libesp_system.a(panic_handler.o)
+                0x0000000040087170       0x32 /home/sai-vdeal/Aries/Aries_test/build/esp_system/libesp_system.a(panic_handler.o)
                                          0x36 (size before relaxing)
- *fill*         0x000000004008719a        0x2 
+ *fill*         0x00000000400871a2        0x2 
  .text.panicHandler
-                0x000000004008719c        0xf /home/sai-vdeal/Aries/Aries_test/build/esp_system/libesp_system.a(panic_handler.o)
-                0x000000004008719c                panicHandler
- *fill*         0x00000000400871ab        0x1 
+                0x00000000400871a4        0xf /home/sai-vdeal/Aries/Aries_test/build/esp_system/libesp_system.a(panic_handler.o)
+                0x00000000400871a4                panicHandler
+ *fill*         0x00000000400871b3        0x1 
  .text.xt_unhandled_exception
-                0x00000000400871ac        0xf /home/sai-vdeal/Aries/Aries_test/build/esp_system/libesp_system.a(panic_handler.o)
-                0x00000000400871ac                xt_unhandled_exception
- *fill*         0x00000000400871bb        0x1 
+                0x00000000400871b4        0xf /home/sai-vdeal/Aries/Aries_test/build/esp_system/libesp_system.a(panic_handler.o)
+                0x00000000400871b4                xt_unhandled_exception
+ *fill*         0x00000000400871c3        0x1 
  .text.panic_restart
-                0x00000000400871bc       0x15 /home/sai-vdeal/Aries/Aries_test/build/esp_system/libesp_system.a(panic_handler.o)
+                0x00000000400871c4       0x15 /home/sai-vdeal/Aries/Aries_test/build/esp_system/libesp_system.a(panic_handler.o)
                                          0x21 (size before relaxing)
-                0x00000000400871bc                panic_restart
- *fill*         0x00000000400871d1        0x0 
- *fill*         0x00000000400871d1        0x0 
- *fill*         0x00000000400871d1        0x0 
- *fill*         0x00000000400871d1        0x0 
- *fill*         0x00000000400871d1        0x0 
- *fill*         0x00000000400871d1        0x0 
- *fill*         0x00000000400871d1        0x0 
- *fill*         0x00000000400871d1        0x0 
- *fill*         0x00000000400871d1        0x0 
- *fill*         0x00000000400871d1        0x0 
+                0x00000000400871c4                panic_restart
+ *fill*         0x00000000400871d9        0x0 
+ *fill*         0x00000000400871d9        0x0 
+ *fill*         0x00000000400871d9        0x0 
+ *fill*         0x00000000400871d9        0x0 
+ *fill*         0x00000000400871d9        0x0 
+ *fill*         0x00000000400871d9        0x0 
+ *fill*         0x00000000400871d9        0x0 
+ *fill*         0x00000000400871d9        0x0 
+ *fill*         0x00000000400871d9        0x0 
+ *fill*         0x00000000400871d9        0x0 
  *libesp_system.a:panic.*(.literal .literal.* .text .text.*)
- *fill*         0x00000000400871d1        0x3 
+ *fill*         0x00000000400871d9        0x3 
  .text.reconfigure_all_wdts
-                0x00000000400871d4       0x42 /home/sai-vdeal/Aries/Aries_test/build/esp_system/libesp_system.a(panic.o)
+                0x00000000400871dc       0x42 /home/sai-vdeal/Aries/Aries_test/build/esp_system/libesp_system.a(panic.o)
                                          0x5a (size before relaxing)
- *fill*         0x0000000040087216        0x2 
+ *fill*         0x000000004008721e        0x2 
  .text.panic_print_char
-                0x0000000040087218       0x2e /home/sai-vdeal/Aries/Aries_test/build/esp_system/libesp_system.a(panic.o)
-                0x0000000040087218                panic_print_char
- *fill*         0x0000000040087246        0x2 
+                0x0000000040087220       0x2e /home/sai-vdeal/Aries/Aries_test/build/esp_system/libesp_system.a(panic.o)
+                0x0000000040087220                panic_print_char
+ *fill*         0x000000004008724e        0x2 
  .text.panic_print_str
-                0x0000000040087248       0x1a /home/sai-vdeal/Aries/Aries_test/build/esp_system/libesp_system.a(panic.o)
-                0x0000000040087248                panic_print_str
- *fill*         0x0000000040087262        0x2 
+                0x0000000040087250       0x1a /home/sai-vdeal/Aries/Aries_test/build/esp_system/libesp_system.a(panic.o)
+                0x0000000040087250                panic_print_str
+ *fill*         0x000000004008726a        0x2 
  .text.print_abort_details
-                0x0000000040087264        0xd /home/sai-vdeal/Aries/Aries_test/build/esp_system/libesp_system.a(panic.o)
+                0x000000004008726c        0xd /home/sai-vdeal/Aries/Aries_test/build/esp_system/libesp_system.a(panic.o)
                                          0x10 (size before relaxing)
- *fill*         0x0000000040087271        0x3 
+ *fill*         0x0000000040087279        0x3 
  .text.panic_print_hex
-                0x0000000040087274       0x2c /home/sai-vdeal/Aries/Aries_test/build/esp_system/libesp_system.a(panic.o)
+                0x000000004008727c       0x2c /home/sai-vdeal/Aries/Aries_test/build/esp_system/libesp_system.a(panic.o)
                                          0x2f (size before relaxing)
-                0x0000000040087274                panic_print_hex
- *fill*         0x00000000400872a0        0x0 
+                0x000000004008727c                panic_print_hex
+ *fill*         0x00000000400872a8        0x0 
  .text.panic_print_dec
-                0x00000000400872a0       0x40 /home/sai-vdeal/Aries/Aries_test/build/esp_system/libesp_system.a(panic.o)
+                0x00000000400872a8       0x40 /home/sai-vdeal/Aries/Aries_test/build/esp_system/libesp_system.a(panic.o)
                                          0x46 (size before relaxing)
-                0x00000000400872a0                panic_print_dec
- *fill*         0x00000000400872e0        0x0 
+                0x00000000400872a8                panic_print_dec
+ *fill*         0x00000000400872e8        0x0 
  .text.esp_panic_handler
-                0x00000000400872e0      0x16a /home/sai-vdeal/Aries/Aries_test/build/esp_system/libesp_system.a(panic.o)
+                0x00000000400872e8      0x16a /home/sai-vdeal/Aries/Aries_test/build/esp_system/libesp_system.a(panic.o)
                                         0x1eb (size before relaxing)
-                0x00000000400872e0                esp_panic_handler
- *fill*         0x000000004008744a        0x2 
+                0x00000000400872e8                esp_panic_handler
+ *fill*         0x0000000040087452        0x2 
  .text.panic_abort
-                0x000000004008744c       0x17 /home/sai-vdeal/Aries/Aries_test/build/esp_system/libesp_system.a(panic.o)
-                0x000000004008744c                panic_abort
- *fill*         0x0000000040087463        0x0 
- *fill*         0x0000000040087463        0x0 
- *fill*         0x0000000040087463        0x0 
- *fill*         0x0000000040087463        0x0 
- *fill*         0x0000000040087463        0x0 
- *fill*         0x0000000040087463        0x0 
- *fill*         0x0000000040087463        0x0 
- *libesp_system.a:system_api.*(.literal.esp_system_abort .text.esp_system_abort)
- *fill*         0x0000000040087463        0x1 
- .text.esp_system_abort
-                0x0000000040087464        0x8 /home/sai-vdeal/Aries/Aries_test/build/esp_system/libesp_system.a(system_api.o)
-                                          0xc (size before relaxing)
-                0x0000000040087464                esp_system_abort
- *fill*         0x000000004008746c        0x0 
+                0x0000000040087454       0x17 /home/sai-vdeal/Aries/Aries_test/build/esp_system/libesp_system.a(panic.o)
+                0x0000000040087454                panic_abort
+ *fill*         0x000000004008746b        0x0 
+ *fill*         0x000000004008746b        0x0 
+ *fill*         0x000000004008746b        0x0 
+ *fill*         0x000000004008746b        0x0 
+ *fill*         0x000000004008746b        0x0 
+ *fill*         0x000000004008746b        0x0 
+ *fill*         0x000000004008746b        0x0 
  *librtc.a:(.literal .literal.* .text .text.*)
+ *fill*         0x000000004008746b        0x1 
  .text.coex_bt_high_prio
                 0x000000004008746c      0x127 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/librtc.a(bt_bb.o)
                                         0x137 (size before relaxing)
@@ -20547,375 +20546,375 @@ END GROUP
                                          0xe1 (size before relaxing)
                 0x00000000400875a4                temprature_sens_read
  *fill*         0x0000000040087651        0x0 
- *libpp.a:(.wifirxiram .wifirxiram.*)
- *fill*         0x0000000040087651        0x3 
- .wifirxiram.3  0x0000000040087654      0x348 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(esf_buf.o)
-                                        0x36c (size before relaxing)
-                0x0000000040087678                esf_buf_alloc
- .wifirxiram.4  0x000000004008799c       0xe0 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(esf_buf.o)
-                                         0xfc (size before relaxing)
-                0x00000000400879a4                esf_buf_recycle
- .wifirxiram.4  0x0000000040087a7c       0x66 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(pm.o)
-                                         0x6e (size before relaxing)
- *fill*         0x0000000040087ae2        0x2 
- .wifirxiram.3  0x0000000040087ae4       0x2a /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(pm.o)
-                                         0x32 (size before relaxing)
-                0x0000000040087ae8                pm_sleep_for
- *fill*         0x0000000040087b0e        0x2 
- .wifirxiram.5  0x0000000040087b10       0xfb /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(pm.o)
-                                        0x107 (size before relaxing)
-                0x0000000040087b20                pm_dream
- *fill*         0x0000000040087c0b        0x1 
- .wifirxiram.6  0x0000000040087c0c       0x25 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(pm.o)
-                                         0x30 (size before relaxing)
-                0x0000000040087c0c                pm_check_state
- *fill*         0x0000000040087c31        0x3 
- .wifirxiram.7  0x0000000040087c34       0x8b /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(pm.o)
-                                         0x9e (size before relaxing)
-                0x0000000040087c38                pm_rx_data_process
- *fill*         0x0000000040087cbf        0x1 
- .wifirxiram.8  0x0000000040087cc0       0x2b /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(pm.o)
-                                         0x3f (size before relaxing)
-                0x0000000040087cc0                pm_on_data_rx
- *fill*         0x0000000040087ceb        0x1 
- .wifirxiram.5  0x0000000040087cec       0x32 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(pp.o)
-                                         0x36 (size before relaxing)
-                0x0000000040087cf0                ppProcessRxPktHdr
- *fill*         0x0000000040087d1e        0x2 
- .wifirxiram.11
-                0x0000000040087d20      0x10a /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(pp.o)
-                                        0x122 (size before relaxing)
-                0x0000000040087d30                ppRxProtoProc
- *fill*         0x0000000040087e2a        0x2 
- .wifirxiram.20
-                0x0000000040087e2c       0x37 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(pp.o)
-                                         0x3f (size before relaxing)
-                0x0000000040087e2c                ppEnqueueRxq
- *fill*         0x0000000040087e63        0x1 
- .wifirxiram.21
-                0x0000000040087e64       0x54 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(pp.o)
-                                         0x64 (size before relaxing)
-                0x0000000040087e64                ppDequeueRxq_Locked
- .wifirxiram.13
-                0x0000000040087eb8      0x83d /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(pp.o)
-                                        0x915 (size before relaxing)
-                0x0000000040087ed8                ppRxPkt
- *fill*         0x00000000400886f5        0x3 
- .wifirxiram.7  0x00000000400886f8       0x60 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(trc.o)
-                                         0x64 (size before relaxing)
-                0x0000000040088700                rc_get_trc
- .wifirxiram.13
-                0x0000000040088758      0x281 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(wdev.o)
-                                        0x2c1 (size before relaxing)
-                0x0000000040088780                wDev_Rxbuf_Init
- *fill*         0x00000000400889d9        0x3 
- .wifirxiram.21
-                0x00000000400889dc      0x1a8 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(wdev.o)
-                                        0x1d8 (size before relaxing)
-                0x00000000400889fc                wDev_AppendRxBlocks
- .wifirxiram.12
-                0x0000000040088b84      0xf3a /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(wdev.o)
-                                       0x103e (size before relaxing)
-                0x0000000040088bd0                wdevProcessRxSucDataAll
- *fill*         0x0000000040089abe        0x2 
- .wifirxiram.22
-                0x0000000040089ac0       0x80 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(wdev.o)
-                                         0x98 (size before relaxing)
-                0x0000000040089acc                wDevCheckBlockError
- *fill*         0x0000000040089b40        0x0 
- *fill*         0x0000000040089b40        0x0 
- *fill*         0x0000000040089b40        0x0 
- *fill*         0x0000000040089b40        0x0 
- *fill*         0x0000000040089b40        0x0 
- *fill*         0x0000000040089b40        0x0 
- *fill*         0x0000000040089b40        0x0 
- *fill*         0x0000000040089b40        0x0 
- *fill*         0x0000000040089b40        0x0 
- *fill*         0x0000000040089b40        0x0 
- *fill*         0x0000000040089b40        0x0 
- *fill*         0x0000000040089b40        0x0 
+ *fill*         0x0000000040087651        0x0 
  *libpp.a:(.wifi0iram .wifi0iram.*)
- .wifi0iram.12  0x0000000040089b40       0x78 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(lmac.o)
+ *fill*         0x0000000040087651        0x3 
+ .wifi0iram.12  0x0000000040087654       0x78 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(lmac.o)
                                          0x97 (size before relaxing)
- *fill*         0x0000000040089bb8        0x0 
- .wifi0iram.2   0x0000000040089bb8       0x11 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(lmac.o)
+ *fill*         0x00000000400876cc        0x0 
+ .wifi0iram.2   0x00000000400876cc       0x11 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(lmac.o)
                                          0x15 (size before relaxing)
-                0x0000000040089bb8                GetAccess
- *fill*         0x0000000040089bc9        0x3 
- .wifi0iram.3   0x0000000040089bcc       0x94 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(lmac.o)
+                0x00000000400876cc                GetAccess
+ *fill*         0x00000000400876dd        0x3 
+ .wifi0iram.3   0x00000000400876e0       0x94 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(lmac.o)
                                          0xc8 (size before relaxing)
-                0x0000000040089bcc                lmacRecycleMPDU
- .wifi0iram.9   0x0000000040089c60       0x5d /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(lmac.o)
+                0x00000000400876e0                lmacRecycleMPDU
+ .wifi0iram.9   0x0000000040087774       0x5d /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(lmac.o)
                                          0x6d (size before relaxing)
-                0x0000000040089c60                lmacMSDUAged
- *fill*         0x0000000040089cbd        0x3 
- .wifi0iram.11  0x0000000040089cc0      0x1eb /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(lmac.o)
+                0x0000000040087774                lmacMSDUAged
+ *fill*         0x00000000400877d1        0x3 
+ .wifi0iram.11  0x00000000400877d4      0x1eb /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(lmac.o)
                                         0x21b (size before relaxing)
-                0x0000000040089cd4                lmacTxFrame
- *fill*         0x0000000040089eab        0x1 
- .wifi0iram.4   0x0000000040089eac      0x2d6 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(lmac.o)
+                0x00000000400877e8                lmacTxFrame
+ *fill*         0x00000000400879bf        0x1 
+ .wifi0iram.4   0x00000000400879c0      0x2d6 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(lmac.o)
                                         0x30e (size before relaxing)
- *fill*         0x000000004008a182        0x2 
- .wifi0iram.13  0x000000004008a184       0x1c /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(lmac.o)
+ *fill*         0x0000000040087c96        0x2 
+ .wifi0iram.13  0x0000000040087c98       0x1c /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(lmac.o)
                                          0x20 (size before relaxing)
-                0x000000004008a184                is_lmac_idle
- .wifi0iram.7   0x000000004008a1a0       0xb7 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(pp.o)
+                0x0000000040087c98                is_lmac_idle
+ .wifi0iram.7   0x0000000040087cb4       0xb7 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(pp.o)
                                          0xc3 (size before relaxing)
-                0x000000004008a1a0                ppTxProtoProc
- *fill*         0x000000004008a257        0x1 
- .wifi0iram.23  0x000000004008a258      0x19d /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(pp.o)
+                0x0000000040087cb4                ppTxProtoProc
+ *fill*         0x0000000040087d6b        0x1 
+ .wifi0iram.23  0x0000000040087d6c      0x1a1 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(pp.o)
                                         0x1a5 (size before relaxing)
-                0x000000004008a258                ppSearchTxQueue
- *fill*         0x000000004008a3f5        0x3 
- .wifi0iram.22  0x000000004008a3f8      0x120 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(pp.o)
+                0x0000000040087d70                ppSearchTxQueue
+ *fill*         0x0000000040087f0d        0x3 
+ .wifi0iram.22  0x0000000040087f10      0x120 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(pp.o)
                                         0x134 (size before relaxing)
-                0x000000004008a400                ppSearchTxframe
- .wifi0iram.24  0x000000004008a518      0x1de /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(pp.o)
+                0x0000000040087f18                ppSearchTxframe
+ .wifi0iram.24  0x0000000040088030      0x1e2 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(pp.o)
                                         0x206 (size before relaxing)
-                0x000000004008a520                ppMapTxQueue
- *fill*         0x000000004008a6f6        0x2 
- .wifi0iram.26  0x000000004008a6f8      0x12c /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(pp.o)
+                0x000000004008803c                ppMapTxQueue
+ *fill*         0x0000000040088212        0x2 
+ .wifi0iram.26  0x0000000040088214      0x138 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(pp.o)
                                         0x158 (size before relaxing)
-                0x000000004008a704                ppProcTxSecFrame
- .wifi0iram.27  0x000000004008a824       0x68 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(pp.o)
+                0x000000004008822c                ppProcTxSecFrame
+ .wifi0iram.27  0x000000004008834c       0x68 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(pp.o)
                                          0x6c (size before relaxing)
-                0x000000004008a830                ppCalFrameTimes
- .wifi0iram.18  0x000000004008a88c      0x5e1 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(pp.o)
+                0x0000000040088358                ppCalFrameTimes
+ .wifi0iram.18  0x00000000400883b4      0x5e5 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(pp.o)
                                         0x629 (size before relaxing)
-                0x000000004008a89c                ppCalTxAMPDULength
- *fill*         0x000000004008ae6d        0x3 
- .wifi0iram.10  0x000000004008ae70      0x232 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(pp.o)
+                0x00000000400883c8                ppCalTxAMPDULength
+ *fill*         0x0000000040088999        0x3 
+ .wifi0iram.10  0x000000004008899c      0x232 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(pp.o)
                                         0x276 (size before relaxing)
-                0x000000004008ae7c                ppProcessTxQ
- *fill*         0x000000004008b0a2        0x2 
- .wifi0iram.9   0x000000004008b0a4       0x42 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(pp.o)
+                0x00000000400889a8                ppProcessTxQ
+ *fill*         0x0000000040088bce        0x2 
+ .wifi0iram.9   0x0000000040088bd0       0x42 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(pp.o)
                                          0x46 (size before relaxing)
-                0x000000004008b0ac                ppProcessAllTxQ
- *fill*         0x000000004008b0e6        0x2 
- .wifi0iram.19  0x000000004008b0e8      0x587 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(pp.o)
+                0x0000000040088bd8                ppProcessAllTxQ
+ *fill*         0x0000000040088c12        0x2 
+ .wifi0iram.19  0x0000000040088c14      0x587 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(pp.o)
                                         0x606 (size before relaxing)
-                0x000000004008b0f4                ppResortTxAMPDU
- *fill*         0x000000004008b66f        0x1 
- .wifi0iram.6   0x000000004008b670      0x272 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(pp.o)
+                0x0000000040088c20                ppResortTxAMPDU
+ *fill*         0x000000004008919b        0x1 
+ .wifi0iram.6   0x000000004008919c      0x272 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(pp.o)
                                         0x2ba (size before relaxing)
-                0x000000004008b6a8                ppTask
- *fill*         0x000000004008b8e2        0x2 
- .wifi0iram.8   0x000000004008b8e4      0x27e /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(pp.o)
+                0x00000000400891d4                ppTask
+ *fill*         0x000000004008940e        0x2 
+ .wifi0iram.8   0x0000000040089410      0x27e /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(pp.o)
                                         0x2ee (size before relaxing)
-                0x000000004008b8f0                ppTxPkt
- *fill*         0x000000004008bb62        0x2 
- .wifi0iram.2   0x000000004008bb64       0xd6 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(trc.o)
+                0x000000004008941c                ppTxPkt
+ *fill*         0x000000004008968e        0x2 
+ .wifi0iram.2   0x0000000040089690       0xd6 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(trc.o)
                                          0xe2 (size before relaxing)
-                0x000000004008bb68                rcUpdateTxDone
- *fill*         0x000000004008bc3a        0x2 
- .wifi0iram.3   0x000000004008bc3c      0x90a /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(trc.o)
+                0x0000000040089694                rcUpdateTxDone
+ *fill*         0x0000000040089766        0x2 
+ .wifi0iram.3   0x0000000040089768      0x90a /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(trc.o)
                                         0x982 (size before relaxing)
-                0x000000004008bc6c                rcUpdateTxDoneAmpdu2
- *fill*         0x000000004008c546        0x2 
- .wifi0iram.4   0x000000004008c548      0x45b /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(trc.o)
+                0x0000000040089798                rcUpdateTxDoneAmpdu2
+ *fill*         0x000000004008a072        0x2 
+ .wifi0iram.4   0x000000004008a074      0x45b /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(trc.o)
                                         0x477 (size before relaxing)
-                0x000000004008c57c                rcGetSched
- *fill*         0x000000004008c9a3        0x0 
- *fill*         0x000000004008c9a3        0x0 
- *fill*         0x000000004008c9a3        0x0 
- *fill*         0x000000004008c9a3        0x0 
- *fill*         0x000000004008c9a3        0x0 
- *fill*         0x000000004008c9a3        0x0 
- *fill*         0x000000004008c9a3        0x0 
- *fill*         0x000000004008c9a3        0x0 
- *fill*         0x000000004008c9a3        0x0 
- *fill*         0x000000004008c9a3        0x0 
- *fill*         0x000000004008c9a3        0x0 
- *fill*         0x000000004008c9a3        0x0 
- *fill*         0x000000004008c9a3        0x0 
- *fill*         0x000000004008c9a3        0x0 
- *fill*         0x000000004008c9a3        0x0 
- *fill*         0x000000004008c9a3        0x0 
- *fill*         0x000000004008c9a3        0x1 
- .wifi0iram.5   0x000000004008c9a4       0x12 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(trc.o)
-                0x000000004008c9a4                trc_isTxAmpduOperational
- *fill*         0x000000004008c9b6        0x2 
- .wifi0iram.6   0x000000004008c9b8       0x17 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(trc.o)
-                0x000000004008c9b8                trc_tid_isTxAmpduOperational
- *libnet80211.a:(.wifirxiram .wifirxiram.*)
- *fill*         0x000000004008c9cf        0x1 
- .wifirxiram.2  0x000000004008c9d0       0x6c /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libnet80211.a(ieee80211_ht.o)
-                                         0x78 (size before relaxing)
- .wifirxiram.4  0x000000004008ca3c       0xee /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libnet80211.a(ieee80211_ht.o)
-                                        0x10e (size before relaxing)
- *fill*         0x000000004008cb2a        0x2 
- .wifirxiram.5  0x000000004008cb2c      0x179 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libnet80211.a(ieee80211_ht.o)
-                                        0x199 (size before relaxing)
- *fill*         0x000000004008cca5        0x3 
- .wifirxiram.6  0x000000004008cca8      0x364 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libnet80211.a(ieee80211_ht.o)
-                                        0x39c (size before relaxing)
-                0x000000004008ccd0                ieee80211_ampdu_reorder
- .wifirxiram.2  0x000000004008d00c     0x1836 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libnet80211.a(ieee80211_sta.o)
-                                       0x1952 (size before relaxing)
-                0x000000004008d154                sta_input
- *fill*         0x000000004008e842        0x2 
- .wifirxiram.3  0x000000004008e844       0x18 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libnet80211.a(ieee80211_sta.o)
-                                         0x20 (size before relaxing)
-                0x000000004008e844                sta_rx_cb
- *fill*         0x000000004008e85c        0x0 
- *fill*         0x000000004008e85c        0x0 
- *fill*         0x000000004008e85c        0x0 
- *fill*         0x000000004008e85c        0x0 
- *libnet80211.a:(.wifi0iram .wifi0iram.*)
- .wifi0iram.2   0x000000004008e85c      0xd27 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libnet80211.a(ieee80211_output.o)
-                                        0xdf3 (size before relaxing)
-                0x000000004008e8b4                ieee80211_output_process
- *fill*         0x000000004008f583        0x1 
- .wifi0iram.2   0x000000004008f584       0x1a /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libnet80211.a(wl_chm.o)
-                                         0x1e (size before relaxing)
-                0x000000004008f584                chm_is_at_home_channel
- *fill*         0x000000004008f59e        0x2 
- .wifi0iram.3   0x000000004008f5a0       0x88 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libnet80211.a(wl_cnx.o)
+                0x000000004008a0a8                rcGetSched
+ *fill*         0x000000004008a4cf        0x0 
+ *fill*         0x000000004008a4cf        0x0 
+ *fill*         0x000000004008a4cf        0x0 
+ *fill*         0x000000004008a4cf        0x0 
+ *fill*         0x000000004008a4cf        0x0 
+ *fill*         0x000000004008a4cf        0x0 
+ *fill*         0x000000004008a4cf        0x0 
+ *fill*         0x000000004008a4cf        0x0 
+ *fill*         0x000000004008a4cf        0x0 
+ *fill*         0x000000004008a4cf        0x0 
+ *fill*         0x000000004008a4cf        0x0 
+ *fill*         0x000000004008a4cf        0x0 
+ *fill*         0x000000004008a4cf        0x0 
+ *fill*         0x000000004008a4cf        0x0 
+ *fill*         0x000000004008a4cf        0x0 
+ *fill*         0x000000004008a4cf        0x0 
+ *fill*         0x000000004008a4cf        0x0 
+ *fill*         0x000000004008a4cf        0x1 
+ .wifi0iram.5   0x000000004008a4d0       0x12 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(trc.o)
+                0x000000004008a4d0                trc_isTxAmpduOperational
+ *fill*         0x000000004008a4e2        0x2 
+ .wifi0iram.6   0x000000004008a4e4       0x17 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(trc.o)
+                0x000000004008a4e4                trc_tid_isTxAmpduOperational
+ *libpp.a:(.wifirxiram .wifirxiram.*)
+ *fill*         0x000000004008a4fb        0x1 
+ .wifirxiram.3  0x000000004008a4fc      0x344 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(esf_buf.o)
+                                        0x36c (size before relaxing)
+                0x000000004008a51c                esf_buf_alloc
+ .wifirxiram.4  0x000000004008a840       0xe0 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(esf_buf.o)
+                                         0xfc (size before relaxing)
+                0x000000004008a848                esf_buf_recycle
+ .wifirxiram.4  0x000000004008a920       0x66 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(pm.o)
+                                         0x6e (size before relaxing)
+ *fill*         0x000000004008a986        0x2 
+ .wifirxiram.3  0x000000004008a988       0x2a /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(pm.o)
+                                         0x32 (size before relaxing)
+                0x000000004008a98c                pm_sleep_for
+ *fill*         0x000000004008a9b2        0x2 
+ .wifirxiram.5  0x000000004008a9b4       0xfb /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(pm.o)
+                                        0x107 (size before relaxing)
+                0x000000004008a9c4                pm_dream
+ *fill*         0x000000004008aaaf        0x1 
+ .wifirxiram.6  0x000000004008aab0       0x25 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(pm.o)
+                                         0x30 (size before relaxing)
+                0x000000004008aab0                pm_check_state
+ *fill*         0x000000004008aad5        0x3 
+ .wifirxiram.7  0x000000004008aad8       0x8b /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(pm.o)
+                                         0x9e (size before relaxing)
+                0x000000004008aadc                pm_rx_data_process
+ *fill*         0x000000004008ab63        0x1 
+ .wifirxiram.8  0x000000004008ab64       0x2b /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(pm.o)
+                                         0x3f (size before relaxing)
+                0x000000004008ab64                pm_on_data_rx
+ *fill*         0x000000004008ab8f        0x1 
+ .wifirxiram.5  0x000000004008ab90       0x2e /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(pp.o)
+                                         0x36 (size before relaxing)
+                0x000000004008ab90                ppProcessRxPktHdr
+ *fill*         0x000000004008abbe        0x2 
+ .wifirxiram.11
+                0x000000004008abc0      0x10a /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(pp.o)
+                                        0x122 (size before relaxing)
+                0x000000004008abd0                ppRxProtoProc
+ *fill*         0x000000004008acca        0x2 
+ .wifirxiram.20
+                0x000000004008accc       0x37 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(pp.o)
+                                         0x3f (size before relaxing)
+                0x000000004008accc                ppEnqueueRxq
+ *fill*         0x000000004008ad03        0x1 
+ .wifirxiram.21
+                0x000000004008ad04       0x54 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(pp.o)
+                                         0x64 (size before relaxing)
+                0x000000004008ad04                ppDequeueRxq_Locked
+ .wifirxiram.13
+                0x000000004008ad58      0x835 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(pp.o)
+                                        0x915 (size before relaxing)
+                0x000000004008ad70                ppRxPkt
+ *fill*         0x000000004008b58d        0x3 
+ .wifirxiram.7  0x000000004008b590       0x60 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(trc.o)
+                                         0x64 (size before relaxing)
+                0x000000004008b598                rc_get_trc
+ .wifirxiram.13
+                0x000000004008b5f0      0x27d /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(wdev.o)
+                                        0x2c1 (size before relaxing)
+                0x000000004008b614                wDev_Rxbuf_Init
+ *fill*         0x000000004008b86d        0x3 
+ .wifirxiram.21
+                0x000000004008b870      0x1a8 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(wdev.o)
+                                        0x1d8 (size before relaxing)
+                0x000000004008b890                wDev_AppendRxBlocks
+ .wifirxiram.12
+                0x000000004008ba18      0xf36 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(wdev.o)
+                                       0x103e (size before relaxing)
+                0x000000004008ba60                wdevProcessRxSucDataAll
+ *fill*         0x000000004008c94e        0x2 
+ .wifirxiram.22
+                0x000000004008c950       0x80 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libpp.a(wdev.o)
                                          0x98 (size before relaxing)
-                0x000000004008f5b0                cnx_node_search
- .wifi0iram.4   0x000000004008f628       0x59 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libnet80211.a(wl_cnx.o)
+                0x000000004008c95c                wDevCheckBlockError
+ *fill*         0x000000004008c9d0        0x0 
+ *fill*         0x000000004008c9d0        0x0 
+ *fill*         0x000000004008c9d0        0x0 
+ *fill*         0x000000004008c9d0        0x0 
+ *fill*         0x000000004008c9d0        0x0 
+ *fill*         0x000000004008c9d0        0x0 
+ *fill*         0x000000004008c9d0        0x0 
+ *fill*         0x000000004008c9d0        0x0 
+ *fill*         0x000000004008c9d0        0x0 
+ *fill*         0x000000004008c9d0        0x0 
+ *fill*         0x000000004008c9d0        0x0 
+ *fill*         0x000000004008c9d0        0x0 
+ *libnet80211.a:(.wifi0iram .wifi0iram.*)
+ .wifi0iram.2   0x000000004008c9d0      0xd33 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libnet80211.a(ieee80211_output.o)
+                                        0xdf3 (size before relaxing)
+                0x000000004008ca34                ieee80211_output_process
+ *fill*         0x000000004008d703        0x1 
+ .wifi0iram.2   0x000000004008d704       0x1e /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libnet80211.a(wl_chm.o)
+                0x000000004008d708                chm_is_at_home_channel
+ *fill*         0x000000004008d722        0x2 
+ .wifi0iram.3   0x000000004008d724       0x88 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libnet80211.a(wl_cnx.o)
+                                         0x98 (size before relaxing)
+                0x000000004008d734                cnx_node_search
+ .wifi0iram.4   0x000000004008d7ac       0x59 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libnet80211.a(wl_cnx.o)
                                          0x71 (size before relaxing)
-                0x000000004008f62c                cnx_node_is_existing
- *fill*         0x000000004008f681        0x0 
- *fill*         0x000000004008f681        0x0 
+                0x000000004008d7b0                cnx_node_is_existing
+ *fill*         0x000000004008d805        0x0 
+ *fill*         0x000000004008d805        0x0 
+ *libnet80211.a:(.wifirxiram .wifirxiram.*)
+ *fill*         0x000000004008d805        0x3 
+ .wifirxiram.2  0x000000004008d808       0x68 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libnet80211.a(ieee80211_ht.o)
+                                         0x78 (size before relaxing)
+ .wifirxiram.4  0x000000004008d870       0xee /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libnet80211.a(ieee80211_ht.o)
+                                        0x10e (size before relaxing)
+ *fill*         0x000000004008d95e        0x2 
+ .wifirxiram.5  0x000000004008d960      0x179 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libnet80211.a(ieee80211_ht.o)
+                                        0x199 (size before relaxing)
+ *fill*         0x000000004008dad9        0x3 
+ .wifirxiram.6  0x000000004008dadc      0x360 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libnet80211.a(ieee80211_ht.o)
+                                        0x39c (size before relaxing)
+                0x000000004008db00                ieee80211_ampdu_reorder
+ .wifirxiram.2  0x000000004008de3c     0x182e /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libnet80211.a(ieee80211_sta.o)
+                                       0x1952 (size before relaxing)
+                0x000000004008df7c                sta_input
+ *fill*         0x000000004008f66a        0x2 
+ .wifirxiram.3  0x000000004008f66c       0x18 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libnet80211.a(ieee80211_sta.o)
+                                         0x20 (size before relaxing)
+                0x000000004008f66c                sta_rx_cb
+ *fill*         0x000000004008f684        0x0 
+ *fill*         0x000000004008f684        0x0 
+ *fill*         0x000000004008f684        0x0 
+ *fill*         0x000000004008f684        0x0 
+ *libspi_flash.a:spi_flash_chip_generic.*(.literal .literal.* .text .text.*)
+ .text.spi_flash_chip_generic_detect_size
+                0x000000004008f684       0x25 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
+                0x000000004008f684                spi_flash_chip_generic_detect_size
+ *fill*         0x000000004008f6a9        0x3 
+ .text.spi_flash_chip_generic_erase_chip
+                0x000000004008f6ac       0x48 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
+                0x000000004008f6ac                spi_flash_chip_generic_erase_chip
+ .text.spi_flash_chip_generic_write_encrypted
+                0x000000004008f6f4        0x8 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
+                0x000000004008f6f4                spi_flash_chip_generic_write_encrypted
+ .text.spi_flash_common_read_status_16b_rdsr_rdsr2
+                0x000000004008f6fc       0x34 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
+                                         0x38 (size before relaxing)
+                0x000000004008f6fc                spi_flash_common_read_status_16b_rdsr_rdsr2
+ .text.spi_flash_common_write_status_16b_wrsr
+                0x000000004008f730       0x15 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
+                0x000000004008f730                spi_flash_common_write_status_16b_wrsr
+ *fill*         0x000000004008f745        0x3 
+ .text.spi_flash_chip_generic_get_write_protect
+                0x000000004008f748       0x38 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
+                0x000000004008f748                spi_flash_chip_generic_get_write_protect
+ .text.spi_flash_chip_generic_wait_idle
+                0x000000004008f780       0x58 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
+                                         0x5c (size before relaxing)
+                0x000000004008f780                spi_flash_chip_generic_wait_idle
+ .text.spi_flash_chip_generic_config_host_io_mode
+                0x000000004008f7d8       0x5e /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
+                0x000000004008f7d8                spi_flash_chip_generic_config_host_io_mode
+ *fill*         0x000000004008f836        0x2 
+ .text.spi_flash_chip_generic_read
+                0x000000004008f838       0x5d /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
+                                         0x65 (size before relaxing)
+                0x000000004008f838                spi_flash_chip_generic_read
+ *fill*         0x000000004008f895        0x3 
+ .text.spi_flash_common_read_status_8b_rdsr2
+                0x000000004008f898       0x15 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
+                0x000000004008f898                spi_flash_common_read_status_8b_rdsr2
+ *fill*         0x000000004008f8ad        0x3 
+ .text.spi_flash_chip_generic_get_io_mode
+                0x000000004008f8b0       0x1c /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
+                                         0x20 (size before relaxing)
+                0x000000004008f8b0                spi_flash_chip_generic_get_io_mode
+ .text.spi_flash_common_read_status_8b_rdsr
+                0x000000004008f8cc       0x15 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
+                0x000000004008f8cc                spi_flash_common_read_status_8b_rdsr
+ *fill*         0x000000004008f8e1        0x3 
+ .text.spi_flash_common_write_status_8b_wrsr
+                0x000000004008f8e4       0x15 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
+                0x000000004008f8e4                spi_flash_common_write_status_8b_wrsr
+ *fill*         0x000000004008f8f9        0x3 
+ .text.spi_flash_common_write_status_8b_wrsr2
+                0x000000004008f8fc       0x15 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
+                0x000000004008f8fc                spi_flash_common_write_status_8b_wrsr2
+ *fill*         0x000000004008f911        0x3 
+ .text.spi_flash_chip_generic_set_io_mode
+                0x000000004008f914       0x18 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
+                0x000000004008f914                spi_flash_chip_generic_set_io_mode
+ .text.spi_flash_chip_generic_probe
+                0x000000004008f92c        0x7 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
+                0x000000004008f92c                spi_flash_chip_generic_probe
+ *fill*         0x000000004008f933        0x1 
+ .text.spi_flash_chip_generic_reset
+                0x000000004008f934       0x4c /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
+                0x000000004008f934                spi_flash_chip_generic_reset
+ *fill*         0x000000004008f980        0x0 
+ .text.spi_flash_chip_generic_erase_sector
+                0x000000004008f980       0x4c /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
+                0x000000004008f980                spi_flash_chip_generic_erase_sector
+ .text.spi_flash_chip_generic_erase_block
+                0x000000004008f9cc       0x4c /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
+                0x000000004008f9cc                spi_flash_chip_generic_erase_block
+ .text.spi_flash_chip_generic_page_program
+                0x000000004008fa18       0x31 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
+                0x000000004008fa18                spi_flash_chip_generic_page_program
+ *fill*         0x000000004008fa49        0x3 
+ .text.spi_flash_chip_generic_write
+                0x000000004008fa4c       0x7a /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
+                0x000000004008fa4c                spi_flash_chip_generic_write
+ *fill*         0x000000004008fac6        0x2 
+ .text.spi_flash_chip_generic_set_write_protect
+                0x000000004008fac8       0x3b /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
+                0x000000004008fac8                spi_flash_chip_generic_set_write_protect
+ *fill*         0x000000004008fb03        0x1 
+ .text.spi_flash_common_read_qe_sr
+                0x000000004008fb04       0x29 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
+ *fill*         0x000000004008fb2d        0x3 
+ .text.spi_flash_common_write_qe_sr
+                0x000000004008fb30       0x31 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
+ *fill*         0x000000004008fb61        0x0 
+ *fill*         0x000000004008fb61        0x3 
+ .text.spi_flash_generic_wait_host_idle
+                0x000000004008fb64       0x3a /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
+                0x000000004008fb64                spi_flash_generic_wait_host_idle
+ *fill*         0x000000004008fb9e        0x0 
+ *fill*         0x000000004008fb9e        0x0 
+ *fill*         0x000000004008fb9e        0x0 
+ *fill*         0x000000004008fb9e        0x0 
+ *fill*         0x000000004008fb9e        0x0 
+ *fill*         0x000000004008fb9e        0x0 
+ *fill*         0x000000004008fb9e        0x2 
+ .text.spi_flash_common_set_io_mode
+                0x000000004008fba0       0x78 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
+                0x000000004008fba0                spi_flash_common_set_io_mode
  *libspi_flash.a:spi_flash_rom_patch.*(.literal .literal.* .text .text.*)
  *libspi_flash.a:spi_flash_chip_issi.*(.literal .literal.* .text .text.*)
- *fill*         0x000000004008f681        0x3 
  .text.spi_flash_chip_issi_probe
-                0x000000004008f684       0x29 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_issi.o)
-                0x000000004008f684                spi_flash_chip_issi_probe
- *fill*         0x000000004008f6ad        0x3 
+                0x000000004008fc18       0x29 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_issi.o)
+                0x000000004008fc18                spi_flash_chip_issi_probe
+ *fill*         0x000000004008fc41        0x3 
  .text.spi_flash_chip_issi_set_io_mode
-                0x000000004008f6b0       0x14 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_issi.o)
+                0x000000004008fc44       0x14 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_issi.o)
                                          0x18 (size before relaxing)
-                0x000000004008f6b0                spi_flash_chip_issi_set_io_mode
+                0x000000004008fc44                spi_flash_chip_issi_set_io_mode
  .text.spi_flash_chip_issi_get_io_mode
-                0x000000004008f6c4       0x1c /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_issi.o)
+                0x000000004008fc58       0x1c /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_issi.o)
                                          0x20 (size before relaxing)
-                0x000000004008f6c4                spi_flash_chip_issi_get_io_mode
- *fill*         0x000000004008f6e0        0x0 
- *fill*         0x000000004008f6e0        0x0 
+                0x000000004008fc58                spi_flash_chip_issi_get_io_mode
+ *fill*         0x000000004008fc74        0x0 
  *libspi_flash.a:memspi_host_driver.*(.literal .literal.* .text .text.*)
  .text.memspi_host_read_id_hs
-                0x000000004008f6e0       0x79 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(memspi_host_driver.o)
+                0x000000004008fc74       0x79 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(memspi_host_driver.o)
                                          0x7d (size before relaxing)
-                0x000000004008f6e0                memspi_host_read_id_hs
- *fill*         0x000000004008f759        0x3 
+                0x000000004008fc74                memspi_host_read_id_hs
+ *fill*         0x000000004008fced        0x3 
  .text.memspi_host_flush_cache
-                0x000000004008f75c       0x18 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(memspi_host_driver.o)
+                0x000000004008fcf0       0x18 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(memspi_host_driver.o)
                                          0x1c (size before relaxing)
-                0x000000004008f75c                memspi_host_flush_cache
+                0x000000004008fcf0                memspi_host_flush_cache
  .text.memspi_host_read_status_hs
-                0x000000004008f774       0x2d /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(memspi_host_driver.o)
-                0x000000004008f774                memspi_host_read_status_hs
- *fill*         0x000000004008f7a1        0x0 
- *fill*         0x000000004008f7a1        0x0 
- *libspi_flash.a:spi_flash_chip_generic.*(.literal .literal.* .text .text.*)
- *fill*         0x000000004008f7a1        0x3 
- .text.spi_flash_chip_generic_detect_size
-                0x000000004008f7a4       0x25 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
-                0x000000004008f7a4                spi_flash_chip_generic_detect_size
- *fill*         0x000000004008f7c9        0x3 
- .text.spi_flash_chip_generic_erase_chip
-                0x000000004008f7cc       0x48 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
-                0x000000004008f7cc                spi_flash_chip_generic_erase_chip
- .text.spi_flash_chip_generic_write_encrypted
-                0x000000004008f814        0x8 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
-                0x000000004008f814                spi_flash_chip_generic_write_encrypted
- .text.spi_flash_common_read_status_16b_rdsr_rdsr2
-                0x000000004008f81c       0x34 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
-                                         0x38 (size before relaxing)
-                0x000000004008f81c                spi_flash_common_read_status_16b_rdsr_rdsr2
- .text.spi_flash_common_write_status_16b_wrsr
-                0x000000004008f850       0x15 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
-                0x000000004008f850                spi_flash_common_write_status_16b_wrsr
- *fill*         0x000000004008f865        0x3 
- .text.spi_flash_chip_generic_get_write_protect
-                0x000000004008f868       0x38 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
-                0x000000004008f868                spi_flash_chip_generic_get_write_protect
- .text.spi_flash_chip_generic_wait_idle
-                0x000000004008f8a0       0x58 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
-                                         0x5c (size before relaxing)
-                0x000000004008f8a0                spi_flash_chip_generic_wait_idle
- .text.spi_flash_chip_generic_config_host_io_mode
-                0x000000004008f8f8       0x5e /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
-                0x000000004008f8f8                spi_flash_chip_generic_config_host_io_mode
- *fill*         0x000000004008f956        0x2 
- .text.spi_flash_chip_generic_read
-                0x000000004008f958       0x5d /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
-                                         0x65 (size before relaxing)
-                0x000000004008f958                spi_flash_chip_generic_read
- *fill*         0x000000004008f9b5        0x3 
- .text.spi_flash_common_read_status_8b_rdsr2
-                0x000000004008f9b8       0x15 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
-                0x000000004008f9b8                spi_flash_common_read_status_8b_rdsr2
- *fill*         0x000000004008f9cd        0x3 
- .text.spi_flash_chip_generic_get_io_mode
-                0x000000004008f9d0       0x1c /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
-                                         0x20 (size before relaxing)
-                0x000000004008f9d0                spi_flash_chip_generic_get_io_mode
- .text.spi_flash_common_read_status_8b_rdsr
-                0x000000004008f9ec       0x15 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
-                0x000000004008f9ec                spi_flash_common_read_status_8b_rdsr
- *fill*         0x000000004008fa01        0x3 
- .text.spi_flash_common_write_status_8b_wrsr
-                0x000000004008fa04       0x15 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
-                0x000000004008fa04                spi_flash_common_write_status_8b_wrsr
- *fill*         0x000000004008fa19        0x3 
- .text.spi_flash_common_write_status_8b_wrsr2
-                0x000000004008fa1c       0x15 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
-                0x000000004008fa1c                spi_flash_common_write_status_8b_wrsr2
- *fill*         0x000000004008fa31        0x3 
- .text.spi_flash_chip_generic_set_io_mode
-                0x000000004008fa34       0x18 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
-                0x000000004008fa34                spi_flash_chip_generic_set_io_mode
- .text.spi_flash_chip_generic_probe
-                0x000000004008fa4c        0x7 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
-                0x000000004008fa4c                spi_flash_chip_generic_probe
- *fill*         0x000000004008fa53        0x1 
- .text.spi_flash_chip_generic_reset
-                0x000000004008fa54       0x4c /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
-                0x000000004008fa54                spi_flash_chip_generic_reset
- *fill*         0x000000004008faa0        0x0 
- .text.spi_flash_chip_generic_erase_sector
-                0x000000004008faa0       0x4c /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
-                0x000000004008faa0                spi_flash_chip_generic_erase_sector
- .text.spi_flash_chip_generic_erase_block
-                0x000000004008faec       0x4c /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
-                0x000000004008faec                spi_flash_chip_generic_erase_block
- .text.spi_flash_chip_generic_page_program
-                0x000000004008fb38       0x31 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
-                0x000000004008fb38                spi_flash_chip_generic_page_program
- *fill*         0x000000004008fb69        0x3 
- .text.spi_flash_chip_generic_write
-                0x000000004008fb6c       0x7a /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
-                0x000000004008fb6c                spi_flash_chip_generic_write
- *fill*         0x000000004008fbe6        0x2 
- .text.spi_flash_chip_generic_set_write_protect
-                0x000000004008fbe8       0x3b /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
-                0x000000004008fbe8                spi_flash_chip_generic_set_write_protect
- *fill*         0x000000004008fc23        0x1 
- .text.spi_flash_common_read_qe_sr
-                0x000000004008fc24       0x29 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
- *fill*         0x000000004008fc4d        0x3 
- .text.spi_flash_common_write_qe_sr
-                0x000000004008fc50       0x31 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
- *fill*         0x000000004008fc81        0x0 
- *fill*         0x000000004008fc81        0x3 
- .text.spi_flash_generic_wait_host_idle
-                0x000000004008fc84       0x3a /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
-                0x000000004008fc84                spi_flash_generic_wait_host_idle
- *fill*         0x000000004008fcbe        0x0 
- *fill*         0x000000004008fcbe        0x0 
- *fill*         0x000000004008fcbe        0x0 
- *fill*         0x000000004008fcbe        0x0 
- *fill*         0x000000004008fcbe        0x0 
- *fill*         0x000000004008fcbe        0x0 
- *fill*         0x000000004008fcbe        0x2 
- .text.spi_flash_common_set_io_mode
-                0x000000004008fcc0       0x78 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
-                0x000000004008fcc0                spi_flash_common_set_io_mode
+                0x000000004008fd08       0x2d /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(memspi_host_driver.o)
+                0x000000004008fd08                memspi_host_read_status_hs
+ *fill*         0x000000004008fd35        0x0 
+ *fill*         0x000000004008fd35        0x0 
  *libspi_flash.a:spi_flash_chip_gd.*(.literal .literal.* .text .text.*)
+ *fill*         0x000000004008fd35        0x3 
  .text.spi_flash_chip_gd_probe
                 0x000000004008fd38       0x41 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_gd.o)
                 0x000000004008fd38                spi_flash_chip_gd_probe
@@ -21519,46 +21518,45 @@ END GROUP
                 0x000000004009387c                multi_heap_free_size_impl
                 0x000000004009387c                multi_heap_free_size
  *fill*         0x000000004009388a        0x0 
- *liblog.a:log_freertos.*(.literal.esp_log_impl_lock_timeout .text.esp_log_impl_lock_timeout)
- *fill*         0x000000004009388a        0x2 
- .text.esp_log_impl_lock_timeout
-                0x000000004009388c       0x31 /home/sai-vdeal/Aries/Aries_test/build/log/liblog.a(log_freertos.o)
-                                         0x35 (size before relaxing)
-                0x000000004009388c                esp_log_impl_lock_timeout
- *fill*         0x00000000400938bd        0x0 
- *liblog.a:log_freertos.*(.literal.esp_log_timestamp .text.esp_log_timestamp)
- *fill*         0x00000000400938bd        0x3 
- .text.esp_log_timestamp
-                0x00000000400938c0       0x4f /home/sai-vdeal/Aries/Aries_test/build/log/liblog.a(log_freertos.o)
-                                         0x5b (size before relaxing)
-                0x00000000400938c0                esp_log_timestamp
- *fill*         0x000000004009390f        0x0 
  *liblog.a:log_freertos.*(.literal.esp_log_impl_unlock .text.esp_log_impl_unlock)
- *fill*         0x000000004009390f        0x1 
+ *fill*         0x000000004009388a        0x2 
  .text.esp_log_impl_unlock
-                0x0000000040093910       0x16 /home/sai-vdeal/Aries/Aries_test/build/log/liblog.a(log_freertos.o)
-                0x0000000040093910                esp_log_impl_unlock
- *fill*         0x0000000040093926        0x0 
+                0x000000004009388c       0x16 /home/sai-vdeal/Aries/Aries_test/build/log/liblog.a(log_freertos.o)
+                0x000000004009388c                esp_log_impl_unlock
+ *fill*         0x00000000400938a2        0x0 
+ *liblog.a:log_freertos.*(.literal.esp_log_impl_lock_timeout .text.esp_log_impl_lock_timeout)
+ *fill*         0x00000000400938a2        0x2 
+ .text.esp_log_impl_lock_timeout
+                0x00000000400938a4       0x31 /home/sai-vdeal/Aries/Aries_test/build/log/liblog.a(log_freertos.o)
+                                         0x35 (size before relaxing)
+                0x00000000400938a4                esp_log_impl_lock_timeout
+ *fill*         0x00000000400938d5        0x0 
  *liblog.a:log_freertos.*(.literal.esp_log_early_timestamp .text.esp_log_early_timestamp)
- *fill*         0x0000000040093926        0x2 
+ *fill*         0x00000000400938d5        0x3 
  .text.esp_log_early_timestamp
-                0x0000000040093928       0x1e /home/sai-vdeal/Aries/Aries_test/build/log/liblog.a(log_freertos.o)
-                0x0000000040093928                esp_log_early_timestamp
- *fill*         0x0000000040093946        0x0 
+                0x00000000400938d8       0x1e /home/sai-vdeal/Aries/Aries_test/build/log/liblog.a(log_freertos.o)
+                0x00000000400938d8                esp_log_early_timestamp
+ *fill*         0x00000000400938f6        0x0 
  *liblog.a:log.*(.literal.esp_log_write .text.esp_log_write)
- *fill*         0x0000000040093946        0x2 
+ *fill*         0x00000000400938f6        0x2 
  .text.esp_log_write
-                0x0000000040093948       0x26 /home/sai-vdeal/Aries/Aries_test/build/log/liblog.a(log.o)
-                0x0000000040093948                esp_log_write
- *fill*         0x000000004009396e        0x0 
+                0x00000000400938f8       0x26 /home/sai-vdeal/Aries/Aries_test/build/log/liblog.a(log.o)
+                0x00000000400938f8                esp_log_write
+ *fill*         0x000000004009391e        0x0 
  *liblog.a:log_freertos.*(.literal.esp_log_impl_lock .text.esp_log_impl_lock)
- *fill*         0x000000004009396e        0x2 
+ *fill*         0x000000004009391e        0x2 
  .text.esp_log_impl_lock
-                0x0000000040093970       0x28 /home/sai-vdeal/Aries/Aries_test/build/log/liblog.a(log_freertos.o)
+                0x0000000040093920       0x28 /home/sai-vdeal/Aries/Aries_test/build/log/liblog.a(log_freertos.o)
                                          0x2c (size before relaxing)
-                0x0000000040093970                esp_log_impl_lock
- *fill*         0x0000000040093998        0x0 
+                0x0000000040093920                esp_log_impl_lock
+ *fill*         0x0000000040093948        0x0 
+ *liblog.a:log_freertos.*(.literal.esp_log_timestamp .text.esp_log_timestamp)
+ .text.esp_log_timestamp
+                0x0000000040093948       0x4f /home/sai-vdeal/Aries/Aries_test/build/log/liblog.a(log_freertos.o)
+                                         0x5b (size before relaxing)
+                0x0000000040093948                esp_log_timestamp
  *libnewlib.a:heap.*(.literal .literal.* .text .text.*)
+ *fill*         0x0000000040093997        0x1 
  .text.malloc   0x0000000040093998        0xc /home/sai-vdeal/Aries/Aries_test/build/newlib/libnewlib.a(heap.o)
                                          0x10 (size before relaxing)
                 0x0000000040093998                malloc
@@ -21595,6 +21593,7 @@ END GROUP
  *fill*         0x0000000040093a30        0x0 
  *fill*         0x0000000040093a30        0x0 
  *fill*         0x0000000040093a30        0x0 
+ *fill*         0x0000000040093a30        0x0 
  .text.newlib_include_heap_impl
                 0x0000000040093a30        0x5 /home/sai-vdeal/Aries/Aries_test/build/newlib/libnewlib.a(heap.o)
                 0x0000000040093a30                newlib_include_heap_impl
@@ -21603,248 +21602,248 @@ END GROUP
  .text.abort    0x0000000040093a38       0x8d /home/sai-vdeal/Aries/Aries_test/build/newlib/libnewlib.a(abort.o)
                 0x0000000040093a38                abort
  *fill*         0x0000000040093ac5        0x0 
+ *libsoc.a:spi_hal_iram.*(.literal .literal.* .text .text.*)
  *libsoc.a:rtc_clk_init.*(.literal .literal.* .text .text.*)
- *libsoc.a:rtc_clk.*(.literal .literal.* .text .text.*)
- *fill*         0x0000000040093ac5        0x3 
- .text.rtc_clk_32k_enable_common
-                0x0000000040093ac8       0x88 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
- .text.rtc_clk_bbpll_disable
-                0x0000000040093b50       0x3e /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
- *fill*         0x0000000040093b8e        0x2 
- .text.rtc_clk_bbpll_enable
-                0x0000000040093b90       0x66 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
- *fill*         0x0000000040093bf6        0x2 
- .text.rtc_clk_32k_enable
-                0x0000000040093bf8       0x3d /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
-                0x0000000040093bf8                rtc_clk_32k_enable
- *fill*         0x0000000040093c35        0x3 
- .text.rtc_clk_32k_enable_external
-                0x0000000040093c38        0xe /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
-                                         0x12 (size before relaxing)
-                0x0000000040093c38                rtc_clk_32k_enable_external
- *fill*         0x0000000040093c46        0x2 
- .text.rtc_clk_8m_enable
-                0x0000000040093c48       0x9c /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
-                0x0000000040093c48                rtc_clk_8m_enable
- .text.rtc_clk_slow_freq_set
-                0x0000000040093ce4       0x48 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
-                0x0000000040093ce4                rtc_clk_slow_freq_set
- .text.rtc_clk_slow_freq_get
-                0x0000000040093d2c       0x10 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
-                0x0000000040093d2c                rtc_clk_slow_freq_get
- .text.rtc_clk_slow_freq_get_hz
-                0x0000000040093d3c       0x29 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
-                                         0x2d (size before relaxing)
-                0x0000000040093d3c                rtc_clk_slow_freq_get_hz
- *fill*         0x0000000040093d65        0x3 
- .text.rtc_clk_fast_freq_set
-                0x0000000040093d68       0x2c /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
-                0x0000000040093d68                rtc_clk_fast_freq_set
- .text.rtc_clk_bbpll_configure
-                0x0000000040093d94      0x19d /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
-                                        0x1a1 (size before relaxing)
-                0x0000000040093d94                rtc_clk_bbpll_configure
- *fill*         0x0000000040093f31        0x3 
- .text.rtc_clk_xtal_freq_get
-                0x0000000040093f34       0x36 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
-                0x0000000040093f34                rtc_get_xtal
-                0x0000000040093f34                rtc_clk_xtal_freq_get
- *fill*         0x0000000040093f6a        0x2 
- .text.rtc_clk_cpu_freq_mhz_to_config
-                0x0000000040093f6c       0x64 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
-                0x0000000040093f6c                rtc_clk_cpu_freq_mhz_to_config
- .text.rtc_clk_cpu_freq_get_config
-                0x0000000040093fd0       0xa6 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
-                                         0xb6 (size before relaxing)
-                0x0000000040093fd0                rtc_clk_cpu_freq_get_config
- *fill*         0x0000000040094076        0x2 
- .text.rtc_clk_apb_freq_update
-                0x0000000040094078       0x19 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
-                0x0000000040094078                rtc_clk_apb_freq_update
- *fill*         0x0000000040094091        0x3 
- .text.rtc_clk_cpu_freq_to_xtal
-                0x0000000040094094       0x87 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
-                                         0x8b (size before relaxing)
-                0x0000000040094094                rtc_clk_cpu_freq_to_xtal
- *fill*         0x000000004009411b        0x1 
- .text.rtc_clk_cpu_freq_set_xtal
-                0x000000004009411c       0x13 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
-                                         0x1f (size before relaxing)
-                0x000000004009411c                rtc_clk_cpu_freq_set_xtal
- *fill*         0x000000004009412f        0x1 
- .text.rtc_clk_cpu_freq_to_pll_mhz
-                0x0000000040094130       0x9c /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
-                                         0xa8 (size before relaxing)
- .text.rtc_clk_cpu_freq_to_8m
-                0x00000000400941cc       0x58 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
-                                         0x5c (size before relaxing)
- .text.rtc_clk_cpu_freq_set_config
-                0x0000000040094224       0x5c /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
-                                         0x77 (size before relaxing)
-                0x0000000040094224                rtc_clk_cpu_freq_set_config
- *fill*         0x0000000040094280        0x0 
- *fill*         0x0000000040094280        0x0 
- *fill*         0x0000000040094280        0x0 
- *fill*         0x0000000040094280        0x0 
- *fill*         0x0000000040094280        0x0 
- *fill*         0x0000000040094280        0x0 
- *fill*         0x0000000040094280        0x0 
- *fill*         0x0000000040094280        0x0 
- *fill*         0x0000000040094280        0x0 
- *fill*         0x0000000040094280        0x0 
- *fill*         0x0000000040094280        0x0 
- *fill*         0x0000000040094280        0x0 
  *libsoc.a:rtc_pm.*(.literal .literal.* .text .text.*)
  *libsoc.a:spi_flash_hal_iram.*(.literal .literal.* .text .text.*)
- *fill*         0x0000000040094280        0x0 
+ *fill*         0x0000000040093ac5        0x3 
  .text.spi_flash_hal_configure_host_io_mode
-                0x0000000040094280      0x1b4 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(spi_flash_hal_iram.o)
-                0x0000000040094280                spi_flash_hal_configure_host_io_mode
+                0x0000000040093ac8      0x1b4 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(spi_flash_hal_iram.o)
+                0x0000000040093ac8                spi_flash_hal_configure_host_io_mode
  .text.spi_flash_hal_common_command
-                0x0000000040094434      0x1c3 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(spi_flash_hal_iram.o)
-                0x0000000040094434                spi_flash_hal_common_command
- *fill*         0x00000000400945f7        0x1 
+                0x0000000040093c7c      0x1c3 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(spi_flash_hal_iram.o)
+                0x0000000040093c7c                spi_flash_hal_common_command
+ *fill*         0x0000000040093e3f        0x1 
  .text.spi_flash_hal_read
-                0x00000000400945f8       0xf3 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(spi_flash_hal_iram.o)
-                0x00000000400945f8                spi_flash_hal_read
- *fill*         0x00000000400946eb        0x1 
+                0x0000000040093e40       0xf3 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(spi_flash_hal_iram.o)
+                0x0000000040093e40                spi_flash_hal_read
+ *fill*         0x0000000040093f33        0x1 
  .text.spi_flash_hal_erase_chip
-                0x00000000400946ec       0x22 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(spi_flash_hal_iram.o)
-                0x00000000400946ec                spi_flash_hal_erase_chip
- *fill*         0x000000004009470e        0x2 
+                0x0000000040093f34       0x22 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(spi_flash_hal_iram.o)
+                0x0000000040093f34                spi_flash_hal_erase_chip
+ *fill*         0x0000000040093f56        0x2 
  .text.spi_flash_hal_erase_sector
-                0x0000000040094710       0x5a /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(spi_flash_hal_iram.o)
-                0x0000000040094710                spi_flash_hal_erase_sector
- *fill*         0x000000004009476a        0x2 
+                0x0000000040093f58       0x5a /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(spi_flash_hal_iram.o)
+                0x0000000040093f58                spi_flash_hal_erase_sector
+ *fill*         0x0000000040093fb2        0x2 
  .text.spi_flash_hal_erase_block
-                0x000000004009476c       0x52 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(spi_flash_hal_iram.o)
-                0x000000004009476c                spi_flash_hal_erase_block
- *fill*         0x00000000400947be        0x2 
+                0x0000000040093fb4       0x52 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(spi_flash_hal_iram.o)
+                0x0000000040093fb4                spi_flash_hal_erase_block
+ *fill*         0x0000000040094006        0x2 
  .text.spi_flash_hal_program_page
-                0x00000000400947c0       0xa7 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(spi_flash_hal_iram.o)
-                0x00000000400947c0                spi_flash_hal_program_page
- *fill*         0x0000000040094867        0x1 
+                0x0000000040094008       0xa7 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(spi_flash_hal_iram.o)
+                0x0000000040094008                spi_flash_hal_program_page
+ *fill*         0x00000000400940af        0x1 
  .text.spi_flash_hal_set_write_protect
-                0x0000000040094868       0x40 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(spi_flash_hal_iram.o)
-                0x0000000040094868                spi_flash_hal_set_write_protect
+                0x00000000400940b0       0x40 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(spi_flash_hal_iram.o)
+                0x00000000400940b0                spi_flash_hal_set_write_protect
  .text.spi_flash_hal_host_idle
-                0x00000000400948a8       0x3a /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(spi_flash_hal_iram.o)
-                0x00000000400948a8                spi_flash_hal_host_idle
- *fill*         0x00000000400948e2        0x2 
+                0x00000000400940f0       0x3a /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(spi_flash_hal_iram.o)
+                0x00000000400940f0                spi_flash_hal_host_idle
+ *fill*         0x000000004009412a        0x2 
  .text.spi_flash_hal_poll_cmd_done
-                0x00000000400948e4       0x11 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(spi_flash_hal_iram.o)
-                0x00000000400948e4                spi_flash_hal_poll_cmd_done
- *fill*         0x00000000400948f5        0x3 
+                0x000000004009412c       0x11 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(spi_flash_hal_iram.o)
+                0x000000004009412c                spi_flash_hal_poll_cmd_done
+ *fill*         0x000000004009413d        0x3 
  .text.spi_flash_hal_device_config
-                0x00000000400948f8       0x74 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(spi_flash_hal_iram.o)
-                0x00000000400948f8                spi_flash_hal_device_config
- *fill*         0x000000004009496c        0x0 
- *fill*         0x000000004009496c        0x0 
- *fill*         0x000000004009496c        0x0 
- *fill*         0x000000004009496c        0x0 
- *fill*         0x000000004009496c        0x0 
- *fill*         0x000000004009496c        0x0 
- *libsoc.a:i2c_hal_iram.*(.literal .literal.* .text .text.*)
+                0x0000000040094140       0x74 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(spi_flash_hal_iram.o)
+                0x0000000040094140                spi_flash_hal_device_config
+ *fill*         0x00000000400941b4        0x0 
+ *fill*         0x00000000400941b4        0x0 
+ *fill*         0x00000000400941b4        0x0 
+ *fill*         0x00000000400941b4        0x0 
+ *fill*         0x00000000400941b4        0x0 
+ *fill*         0x00000000400941b4        0x0 
+ *libsoc.a:ledc_hal_iram.*(.literal .literal.* .text .text.*)
+ *libsoc.a:rtc_wdt.*(.literal .literal.* .text .text.*)
+ *libsoc.a:spi_flash_hal_gpspi.*(.literal .literal.* .text .text.*)
  *libsoc.a:lldesc.*(.literal .literal.* .text .text.*)
  *libsoc.a:soc_hal.*(.literal .literal.* .text .text.*)
  .text.soc_hal_stall_core
-                0x000000004009496c       0x8e /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(soc_hal.o)
-                0x000000004009496c                soc_hal_stall_core
- *fill*         0x00000000400949fa        0x2 
+                0x00000000400941b4       0x8e /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(soc_hal.o)
+                0x00000000400941b4                soc_hal_stall_core
+ *fill*         0x0000000040094242        0x2 
  .text.soc_hal_unstall_core
-                0x00000000400949fc       0x4c /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(soc_hal.o)
-                0x00000000400949fc                soc_hal_unstall_core
- *fill*         0x0000000040094a48        0x0 
- *fill*         0x0000000040094a48        0x0 
- *libsoc.a:spi_flash_hal_gpspi.*(.literal .literal.* .text .text.*)
- *libsoc.a:rtc_sleep.*(.literal .literal.* .text .text.*)
+                0x0000000040094244       0x4c /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(soc_hal.o)
+                0x0000000040094244                soc_hal_unstall_core
+ *fill*         0x0000000040094290        0x0 
+ *fill*         0x0000000040094290        0x0 
  *libsoc.a:rtc_init.*(.literal .literal.* .text .text.*)
  .text.rtc_init
-                0x0000000040094a48      0x344 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_init.o)
+                0x0000000040094290      0x344 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_init.o)
                                         0x368 (size before relaxing)
-                0x0000000040094a48                rtc_init
+                0x0000000040094290                rtc_init
+ *libsoc.a:wdt_hal_iram.*(.literal .literal.* .text .text.*)
+ .text.wdt_hal_init
+                0x00000000400945d4      0x299 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(wdt_hal_iram.o)
+                0x00000000400945d4                wdt_hal_init
+ *fill*         0x000000004009486d        0x3 
+ .text.wdt_hal_config_stage
+                0x0000000040094870      0x169 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(wdt_hal_iram.o)
+                0x0000000040094870                wdt_hal_config_stage
+ *fill*         0x00000000400949d9        0x3 
+ .text.wdt_hal_write_protect_disable
+                0x00000000400949dc       0x22 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(wdt_hal_iram.o)
+                0x00000000400949dc                wdt_hal_write_protect_disable
+ *fill*         0x00000000400949fe        0x2 
+ .text.wdt_hal_enable
+                0x0000000040094a00       0x50 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(wdt_hal_iram.o)
+                0x0000000040094a00                wdt_hal_enable
+ .text.wdt_hal_disable
+                0x0000000040094a50       0x34 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(wdt_hal_iram.o)
+                0x0000000040094a50                wdt_hal_disable
+ .text.wdt_hal_handle_intr
+                0x0000000040094a84       0x50 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(wdt_hal_iram.o)
+                0x0000000040094a84                wdt_hal_handle_intr
+ .text.wdt_hal_feed
+                0x0000000040094ad4       0x2a /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(wdt_hal_iram.o)
+                0x0000000040094ad4                wdt_hal_feed
+ *fill*         0x0000000040094afe        0x2 
+ .text.wdt_hal_set_flashboot_en
+                0x0000000040094b00       0x4d /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(wdt_hal_iram.o)
+                0x0000000040094b00                wdt_hal_set_flashboot_en
+ *fill*         0x0000000040094b4d        0x0 
+ *fill*         0x0000000040094b4d        0x0 
+ *fill*         0x0000000040094b4d        0x3 
+ .text.wdt_hal_write_protect_enable
+                0x0000000040094b50       0x1e /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(wdt_hal_iram.o)
+                0x0000000040094b50                wdt_hal_write_protect_enable
+ *fill*         0x0000000040094b6e        0x0 
+ *fill*         0x0000000040094b6e        0x0 
+ *fill*         0x0000000040094b6e        0x2 
+ .text.wdt_hal_is_enabled
+                0x0000000040094b70       0x22 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(wdt_hal_iram.o)
+                0x0000000040094b70                wdt_hal_is_enabled
+ *libsoc.a:cpu_util.*(.literal .literal.* .text .text.*)
+ *libsoc.a:uart_hal_iram.*(.iram1 .iram1.*)
+ *libsoc.a:cpu_hal.*(.literal .literal.* .text .text.*)
+ *fill*         0x0000000040094b92        0x2 
+ .text.cpu_hal_set_breakpoint
+                0x0000000040094b94       0x22 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(cpu_hal.o)
+                0x0000000040094b94                cpu_hal_set_breakpoint
+ *fill*         0x0000000040094bb6        0x2 
+ .text.cpu_hal_set_vecbase
+                0x0000000040094bb8        0x8 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(cpu_hal.o)
+                0x0000000040094bb8                cpu_hal_set_vecbase
+ *libsoc.a:rtc_sleep.*(.literal .literal.* .text .text.*)
  *libsoc.a:spi_slave_hal_iram.*(.literal .literal.* .text .text.*)
+ *libsoc.a:rtc_clk.*(.literal .literal.* .text .text.*)
+ .text.rtc_clk_32k_enable_common
+                0x0000000040094bc0       0x88 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
+ .text.rtc_clk_bbpll_disable
+                0x0000000040094c48       0x3e /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
+ *fill*         0x0000000040094c86        0x2 
+ .text.rtc_clk_bbpll_enable
+                0x0000000040094c88       0x66 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
+ *fill*         0x0000000040094cee        0x2 
+ .text.rtc_clk_32k_enable
+                0x0000000040094cf0       0x3d /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
+                0x0000000040094cf0                rtc_clk_32k_enable
+ *fill*         0x0000000040094d2d        0x3 
+ .text.rtc_clk_32k_enable_external
+                0x0000000040094d30        0xe /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
+                                         0x12 (size before relaxing)
+                0x0000000040094d30                rtc_clk_32k_enable_external
+ *fill*         0x0000000040094d3e        0x2 
+ .text.rtc_clk_8m_enable
+                0x0000000040094d40       0x9c /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
+                0x0000000040094d40                rtc_clk_8m_enable
+ .text.rtc_clk_slow_freq_set
+                0x0000000040094ddc       0x48 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
+                0x0000000040094ddc                rtc_clk_slow_freq_set
+ .text.rtc_clk_slow_freq_get
+                0x0000000040094e24       0x10 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
+                0x0000000040094e24                rtc_clk_slow_freq_get
+ .text.rtc_clk_slow_freq_get_hz
+                0x0000000040094e34       0x29 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
+                                         0x2d (size before relaxing)
+                0x0000000040094e34                rtc_clk_slow_freq_get_hz
+ *fill*         0x0000000040094e5d        0x3 
+ .text.rtc_clk_fast_freq_set
+                0x0000000040094e60       0x2c /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
+                0x0000000040094e60                rtc_clk_fast_freq_set
+ .text.rtc_clk_bbpll_configure
+                0x0000000040094e8c      0x19d /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
+                                        0x1a1 (size before relaxing)
+                0x0000000040094e8c                rtc_clk_bbpll_configure
+ *fill*         0x0000000040095029        0x3 
+ .text.rtc_clk_xtal_freq_get
+                0x000000004009502c       0x36 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
+                0x000000004009502c                rtc_get_xtal
+                0x000000004009502c                rtc_clk_xtal_freq_get
+ *fill*         0x0000000040095062        0x2 
+ .text.rtc_clk_cpu_freq_mhz_to_config
+                0x0000000040095064       0x64 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
+                0x0000000040095064                rtc_clk_cpu_freq_mhz_to_config
+ .text.rtc_clk_cpu_freq_get_config
+                0x00000000400950c8       0xa6 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
+                                         0xb6 (size before relaxing)
+                0x00000000400950c8                rtc_clk_cpu_freq_get_config
+ *fill*         0x000000004009516e        0x2 
+ .text.rtc_clk_apb_freq_update
+                0x0000000040095170       0x19 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
+                0x0000000040095170                rtc_clk_apb_freq_update
+ *fill*         0x0000000040095189        0x3 
+ .text.rtc_clk_cpu_freq_to_xtal
+                0x000000004009518c       0x87 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
+                                         0x8b (size before relaxing)
+                0x000000004009518c                rtc_clk_cpu_freq_to_xtal
+ *fill*         0x0000000040095213        0x1 
+ .text.rtc_clk_cpu_freq_set_xtal
+                0x0000000040095214       0x13 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
+                                         0x1f (size before relaxing)
+                0x0000000040095214                rtc_clk_cpu_freq_set_xtal
+ *fill*         0x0000000040095227        0x1 
+ .text.rtc_clk_cpu_freq_to_pll_mhz
+                0x0000000040095228       0x9c /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
+                                         0xa8 (size before relaxing)
+ .text.rtc_clk_cpu_freq_to_8m
+                0x00000000400952c4       0x58 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
+                                         0x5c (size before relaxing)
+ .text.rtc_clk_cpu_freq_set_config
+                0x000000004009531c       0x5c /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
+                                         0x77 (size before relaxing)
+                0x000000004009531c                rtc_clk_cpu_freq_set_config
+ *fill*         0x0000000040095378        0x0 
+ *fill*         0x0000000040095378        0x0 
+ *fill*         0x0000000040095378        0x0 
+ *fill*         0x0000000040095378        0x0 
+ *fill*         0x0000000040095378        0x0 
+ *fill*         0x0000000040095378        0x0 
+ *fill*         0x0000000040095378        0x0 
+ *fill*         0x0000000040095378        0x0 
+ *fill*         0x0000000040095378        0x0 
+ *fill*         0x0000000040095378        0x0 
+ *fill*         0x0000000040095378        0x0 
+ *libsoc.a:i2c_hal_iram.*(.literal .literal.* .text .text.*)
  *libsoc.a:rtc_time.*(.literal .literal.* .text .text.*)
+ *fill*         0x0000000040095378        0x0 
  .text.rtc_clk_cal_internal
-                0x0000000040094d8c      0x1d4 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_time.o)
+                0x0000000040095378      0x1d4 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_time.o)
                                         0x1dc (size before relaxing)
  .text.rtc_clk_cal
-                0x0000000040094f60       0x4e /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_time.o)
+                0x000000004009554c       0x4e /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_time.o)
                                          0x52 (size before relaxing)
-                0x0000000040094f60                rtc_clk_cal
- *fill*         0x0000000040094fae        0x2 
+                0x000000004009554c                rtc_clk_cal
+ *fill*         0x000000004009559a        0x2 
  .text.rtc_time_get
-                0x0000000040094fb0       0x50 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_time.o)
-                0x0000000040094fb0                rtc_time_get
+                0x000000004009559c       0x50 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_time.o)
+                0x000000004009559c                rtc_time_get
  .text.rtc_clk_wait_for_slow_cycle
-                0x0000000040095000       0x79 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_time.o)
-                0x0000000040095000                rtc_clk_wait_for_slow_cycle
- *fill*         0x0000000040095079        0x0 
- *libsoc.a:ledc_hal_iram.*(.literal .literal.* .text .text.*)
+                0x00000000400955ec       0x79 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_time.o)
+                0x00000000400955ec                rtc_clk_wait_for_slow_cycle
+ *fill*         0x0000000040095665        0x0 
+ *fill*         0x0000000040095665        0x0 
  *libsoc.a:rtc_periph.*(.literal .literal.* .text .text.*)
- *libsoc.a:cpu_util.*(.literal .literal.* .text .text.*)
- *libsoc.a:wdt_hal_iram.*(.literal .literal.* .text .text.*)
- *fill*         0x0000000040095079        0x3 
- .text.wdt_hal_init
-                0x000000004009507c      0x299 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(wdt_hal_iram.o)
-                0x000000004009507c                wdt_hal_init
- *fill*         0x0000000040095315        0x3 
- .text.wdt_hal_config_stage
-                0x0000000040095318      0x169 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(wdt_hal_iram.o)
-                0x0000000040095318                wdt_hal_config_stage
- *fill*         0x0000000040095481        0x3 
- .text.wdt_hal_write_protect_disable
-                0x0000000040095484       0x22 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(wdt_hal_iram.o)
-                0x0000000040095484                wdt_hal_write_protect_disable
- *fill*         0x00000000400954a6        0x2 
- .text.wdt_hal_enable
-                0x00000000400954a8       0x50 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(wdt_hal_iram.o)
-                0x00000000400954a8                wdt_hal_enable
- .text.wdt_hal_disable
-                0x00000000400954f8       0x34 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(wdt_hal_iram.o)
-                0x00000000400954f8                wdt_hal_disable
- .text.wdt_hal_handle_intr
-                0x000000004009552c       0x50 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(wdt_hal_iram.o)
-                0x000000004009552c                wdt_hal_handle_intr
- .text.wdt_hal_feed
-                0x000000004009557c       0x2a /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(wdt_hal_iram.o)
-                0x000000004009557c                wdt_hal_feed
- *fill*         0x00000000400955a6        0x2 
- .text.wdt_hal_set_flashboot_en
-                0x00000000400955a8       0x4d /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(wdt_hal_iram.o)
-                0x00000000400955a8                wdt_hal_set_flashboot_en
- *fill*         0x00000000400955f5        0x0 
- *fill*         0x00000000400955f5        0x0 
- *fill*         0x00000000400955f5        0x0 
- *fill*         0x00000000400955f5        0x3 
- .text.wdt_hal_write_protect_enable
-                0x00000000400955f8       0x1e /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(wdt_hal_iram.o)
-                0x00000000400955f8                wdt_hal_write_protect_enable
- *fill*         0x0000000040095616        0x0 
- *fill*         0x0000000040095616        0x0 
- *fill*         0x0000000040095616        0x2 
- .text.wdt_hal_is_enabled
-                0x0000000040095618       0x22 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(wdt_hal_iram.o)
-                0x0000000040095618                wdt_hal_is_enabled
- *libsoc.a:rtc_wdt.*(.literal .literal.* .text .text.*)
- *libsoc.a:cpu_hal.*(.literal .literal.* .text .text.*)
- *fill*         0x000000004009563a        0x2 
- .text.cpu_hal_set_breakpoint
-                0x000000004009563c       0x22 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(cpu_hal.o)
-                0x000000004009563c                cpu_hal_set_breakpoint
- *fill*         0x000000004009565e        0x2 
- .text.cpu_hal_set_vecbase
-                0x0000000040095660        0x8 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(cpu_hal.o)
-                0x0000000040095660                cpu_hal_set_vecbase
- *libsoc.a:spi_hal_iram.*(.literal .literal.* .text .text.*)
- *libsoc.a:uart_hal_iram.*(.iram1 .iram1.*)
- *libxtensa.a:eri.*(.literal .literal.* .text .text.*)
  *libxtensa.a:stdatomic.*(.literal .literal.* .text .text.*)
+ *libxtensa.a:eri.*(.literal .literal.* .text .text.*)
  *libhal.a:(.literal .literal.* .text .text.*)
+ *fill*         0x0000000040095665        0x3 
  .text          0x0000000040095668      0x137 /home/sai-vdeal/esp/esp-idf/components/xtensa/esp32/libhal.a(windowspill_asm.o)
                 0x0000000040095668                xthal_spill_registers_into_stack_nw
                 0x0000000040095668                xthal_window_spill_nw
                 0x000000004009577c                xthal_window_spill
+ *fill*         0x000000004009579f        0x0 
  *fill*         0x000000004009579f        0x1 
  .text          0x00000000400957a0        0x8 /home/sai-vdeal/esp/esp-idf/components/xtensa/esp32/libhal.a(int_asm--set_intclear.o)
                 0x00000000400957a0                xthal_set_intclear
@@ -22626,16 +22625,17 @@ END GROUP
  .data.Rp$3945  0x000000003ffb28c0        0x8 /home/sai-vdeal/Aries/Aries_test/build/mbedtls/libmbedtls.a(ecp_curves.o)
  .data.Rp$3949  0x000000003ffb28c8        0x8 /home/sai-vdeal/Aries/Aries_test/build/mbedtls/libmbedtls.a(ecp_curves.o)
  .data.Rp$3953  0x000000003ffb28d0        0x8 /home/sai-vdeal/Aries/Aries_test/build/mbedtls/libmbedtls.a(ecp_curves.o)
- *libapp_trace.a:SEGGER_SYSVIEW_Config_FreeRTOS.*(.rodata .rodata.*)
- *libapp_trace.a:app_trace_util.*(.rodata .rodata.*)
- *libapp_trace.a:SEGGER_SYSVIEW_FreeRTOS.*(.rodata .rodata.*)
- *libapp_trace.a:app_trace.*(.rodata .rodata.*)
- *libapp_trace.a:SEGGER_RTT_esp32.*(.rodata .rodata.*)
  *libapp_trace.a:SEGGER_SYSVIEW.*(.rodata .rodata.*)
+ *libapp_trace.a:app_trace_util.*(.rodata .rodata.*)
+ *libapp_trace.a:SEGGER_RTT_esp32.*(.rodata .rodata.*)
+ *libapp_trace.a:SEGGER_SYSVIEW_FreeRTOS.*(.rodata .rodata.*)
+ *libapp_trace.a:SEGGER_SYSVIEW_Config_FreeRTOS.*(.rodata .rodata.*)
+ *libapp_trace.a:app_trace.*(.rodata .rodata.*)
  *libgcc.a:_divsf3.*(.rodata .rodata.*)
  *libgcov.a:(.rodata .rodata.*)
- *libesp_event.a:default_event_loop.*(.rodata.esp_event_isr_post)
  *libesp_event.a:esp_event.*(.rodata.esp_event_isr_post_to)
+ *libesp_event.a:default_event_loop.*(.rodata.esp_event_isr_post)
+ *libesp_system.a:system_api.*(.rodata.esp_system_abort)
  *libesp_system.a:reset_reason.*(.rodata .rodata.*)
  .rodata.get_reset_reason
                 0x000000003ffb28d8       0x44 /home/sai-vdeal/Aries/Aries_test/build/esp_system/libesp_system.a(reset_reason.o)
@@ -22680,7 +22680,6 @@ END GROUP
  .rodata.esp_panic_handler.str1.4
                 0x000000003ffb3044       0x83 /home/sai-vdeal/Aries/Aries_test/build/esp_system/libesp_system.a(panic.o)
                                          0x87 (size before relaxing)
- *libesp_system.a:system_api.*(.rodata.esp_system_abort)
  *libphy.a:(.rodata .rodata.*)
  *fill*         0x000000003ffb30c7        0x1 
  .rodata.str1.4
@@ -22723,39 +22722,39 @@ END GROUP
                 0x000000003ffb36a8        0x8 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libphy.a(phy_chip_v7_cal.o)
  .rodata.dco_gain_coarse$4685
                 0x000000003ffb36b0        0x6 /home/sai-vdeal/esp/esp-idf/components/esp_wifi/lib/esp32/libphy.a(phy_chip_v7_cal.o)
- *libspi_flash.a:spi_flash_chip_issi.*(.rodata .rodata.*)
- *fill*         0x000000003ffb36b6        0x2 
- .rodata.esp_flash_chip_issi
-                0x000000003ffb36b8       0x5c /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_issi.o)
-                0x000000003ffb36b8                esp_flash_chip_issi
- .rodata.chip_name
-                0x000000003ffb3714        0x5 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_issi.o)
- *libspi_flash.a:memspi_host_driver.*(.rodata .rodata.*)
- *fill*         0x000000003ffb3719        0x3 
- .rodata.memspi_host_read_id_hs.str1.4
-                0x000000003ffb371c       0x24 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(memspi_host_driver.o)
- .rodata.TAG    0x000000003ffb3740        0x7 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(memspi_host_driver.o)
  *libspi_flash.a:spi_flash_chip_generic.*(.rodata .rodata.*)
- *fill*         0x000000003ffb3747        0x1 
+ *fill*         0x000000003ffb36b6        0x2 
  .rodata.spi_flash_chip_generic_get_write_protect.str1.4
-                0x000000003ffb3748       0x62 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
- *fill*         0x000000003ffb37aa        0x2 
+                0x000000003ffb36b8       0x62 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
+ *fill*         0x000000003ffb371a        0x2 
  .rodata.spi_flash_chip_generic_config_host_io_mode
-                0x000000003ffb37ac       0x18 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
+                0x000000003ffb371c       0x18 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
  .rodata.spi_flash_chip_generic_read.str1.4
-                0x000000003ffb37c4       0x43 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
- *fill*         0x000000003ffb3807        0x1 
+                0x000000003ffb3734       0x43 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
+ *fill*         0x000000003ffb3777        0x1 
  .rodata.__func__$3634
-                0x000000003ffb3808       0x29 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
- *fill*         0x000000003ffb3831        0x3 
+                0x000000003ffb3778       0x29 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
+ *fill*         0x000000003ffb37a1        0x3 
  .rodata.esp_flash_chip_generic
-                0x000000003ffb3834       0x5c /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
-                0x000000003ffb3834                esp_flash_chip_generic
+                0x000000003ffb37a4       0x5c /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
+                0x000000003ffb37a4                esp_flash_chip_generic
  .rodata.chip_name
-                0x000000003ffb3890        0x8 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
- .rodata.TAG    0x000000003ffb3898        0xd /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
+                0x000000003ffb3800        0x8 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
+ .rodata.TAG    0x000000003ffb3808        0xd /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_generic.o)
+ *libspi_flash.a:spi_flash_chip_issi.*(.rodata .rodata.*)
+ *fill*         0x000000003ffb3815        0x3 
+ .rodata.esp_flash_chip_issi
+                0x000000003ffb3818       0x5c /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_issi.o)
+                0x000000003ffb3818                esp_flash_chip_issi
+ .rodata.chip_name
+                0x000000003ffb3874        0x5 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_issi.o)
+ *libspi_flash.a:memspi_host_driver.*(.rodata .rodata.*)
+ *fill*         0x000000003ffb3879        0x3 
+ .rodata.memspi_host_read_id_hs.str1.4
+                0x000000003ffb387c       0x24 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(memspi_host_driver.o)
+ .rodata.TAG    0x000000003ffb38a0        0x7 /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(memspi_host_driver.o)
  *libspi_flash.a:spi_flash_chip_gd.*(.rodata .rodata.*)
- *fill*         0x000000003ffb38a5        0x3 
+ *fill*         0x000000003ffb38a7        0x1 
  .rodata.esp_flash_chip_gd
                 0x000000003ffb38a8       0x5c /home/sai-vdeal/Aries/Aries_test/build/spi_flash/libspi_flash.a(spi_flash_chip_gd.o)
                 0x000000003ffb38a8                esp_flash_chip_gd
@@ -22788,44 +22787,44 @@ END GROUP
  *fill*         0x000000003ffb3a2f        0x1 
  .rodata.__func__$4800
                 0x000000003ffb3a30        0xf /home/sai-vdeal/Aries/Aries_test/build/heap/libheap.a(multi_heap.o)
- *liblog.a:log_freertos.*(.rodata.esp_log_impl_lock_timeout)
- *liblog.a:log_freertos.*(.rodata.esp_log_timestamp)
  *liblog.a:log_freertos.*(.rodata.esp_log_impl_unlock)
+ *liblog.a:log_freertos.*(.rodata.esp_log_impl_lock_timeout)
  *liblog.a:log_freertos.*(.rodata.esp_log_early_timestamp)
  *liblog.a:log.*(.rodata.esp_log_write)
  *liblog.a:log_freertos.*(.rodata.esp_log_impl_lock)
+ *liblog.a:log_freertos.*(.rodata.esp_log_timestamp)
  *libnewlib.a:heap.*(.rodata .rodata.*)
  *libnewlib.a:abort.*(.rodata .rodata.*)
  *fill*         0x000000003ffb3a3f        0x1 
  .rodata.abort.str1.4
                 0x000000003ffb3a40       0x26 /home/sai-vdeal/Aries/Aries_test/build/newlib/libnewlib.a(abort.o)
- *libsoc.a:rtc_clk.*(.rodata .rodata.*)
- *fill*         0x000000003ffb3a66        0x2 
- .rodata.rtc_clk_cpu_freq_to_config.str1.4
-                0x000000003ffb3a68       0x3c /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
- .rodata.rtc_clk_cpu_freq_get_config.str1.4
-                0x000000003ffb3aa4       0x3b /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
- *fill*         0x000000003ffb3adf        0x1 
- .rodata.rtc_clk_cpu_freq_to_pll_mhz.str1.4
-                0x000000003ffb3ae0       0x29 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
+ *libsoc.a:spi_hal_iram.*(.rodata .rodata.*)
  *libsoc.a:spi_flash_hal_iram.*(.rodata .rodata.*)
- *fill*         0x000000003ffb3b09        0x3 
+ *fill*         0x000000003ffb3a66        0x2 
  .rodata.spi_flash_hal_configure_host_io_mode
-                0x000000003ffb3b0c       0x18 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(spi_flash_hal_iram.o)
- *libsoc.a:i2c_hal_iram.*(.rodata .rodata.*)
+                0x000000003ffb3a68       0x18 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(spi_flash_hal_iram.o)
+ *libsoc.a:ledc_hal_iram.*(.rodata .rodata.*)
+ *libsoc.a:spi_flash_hal_gpspi.*(.rodata .rodata.*)
  *libsoc.a:lldesc.*(.rodata .rodata.*)
  *libsoc.a:soc_hal.*(.rodata .rodata.*)
- .rodata        0x000000003ffb3b24       0x18 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(soc_hal.o)
- *libsoc.a:spi_flash_hal_gpspi.*(.rodata .rodata.*)
- *libsoc.a:spi_slave_hal_iram.*(.rodata .rodata.*)
- *libsoc.a:ledc_hal_iram.*(.rodata .rodata.*)
+ .rodata        0x000000003ffb3a80       0x18 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(soc_hal.o)
  *libsoc.a:wdt_hal_iram.*(.rodata .rodata.*)
- *libsoc.a:cpu_hal.*(.rodata .rodata.*)
- *libsoc.a:spi_hal_iram.*(.rodata .rodata.*)
  *libsoc.a:uart_hal_iram.*(.data .data.* .dram1 .dram1.*)
+ *libsoc.a:cpu_hal.*(.rodata .rodata.*)
+ *libsoc.a:spi_slave_hal_iram.*(.rodata .rodata.*)
+ *libsoc.a:rtc_clk.*(.rodata .rodata.*)
+ .rodata.rtc_clk_cpu_freq_to_config.str1.4
+                0x000000003ffb3a98       0x3c /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
+ .rodata.rtc_clk_cpu_freq_get_config.str1.4
+                0x000000003ffb3ad4       0x3b /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
+ *fill*         0x000000003ffb3b0f        0x1 
+ .rodata.rtc_clk_cpu_freq_to_pll_mhz.str1.4
+                0x000000003ffb3b10       0x29 /home/sai-vdeal/Aries/Aries_test/build/soc/libsoc.a(rtc_clk.o)
+ *libsoc.a:i2c_hal_iram.*(.rodata .rodata.*)
  *libxtensa.a:stdatomic.*(.rodata .rodata.*)
-                0x000000003ffb3b3c                _data_end = ABSOLUTE (.)
+                0x000000003ffb3b39                _data_end = ABSOLUTE (.)
                 0x000000003ffb3b3c                . = ALIGN (0x4)
+ *fill*         0x000000003ffb3b39        0x3 
 
 .noinit         0x000000003ffb3b3c        0x0
                 0x000000003ffb3b3c                . = ALIGN (0x4)
@@ -23768,7 +23767,7 @@ END GROUP
  .rodata_desc   0x000000003f400020      0x100 /home/sai-vdeal/Aries/Aries_test/build/app_update/libapp_update.a(esp_app_desc.o)
                 0x000000003f400020                esp_app_desc
  *(.rodata_custom_desc .rodata_custom_desc.*)
- *(EXCLUDE_FILE(*libxtensa.a:stdatomic.* *libsoc.a:rtc_clk.* *libsoc.a:spi_flash_hal_iram.* *libsoc.a:i2c_hal_iram.* *libsoc.a:lldesc.* *libsoc.a:soc_hal.* *libsoc.a:spi_flash_hal_gpspi.* *libsoc.a:spi_slave_hal_iram.* *libsoc.a:ledc_hal_iram.* *libsoc.a:wdt_hal_iram.* *libsoc.a:cpu_hal.* *libsoc.a:spi_hal_iram.* *libsoc.a:uart_hal_iram.* *libnewlib.a:heap.* *libnewlib.a:abort.* *libheap.a:multi_heap_poisoning.* *libheap.a:multi_heap.* *libspi_flash.a:spi_flash_chip_issi.* *libspi_flash.a:memspi_host_driver.* *libspi_flash.a:spi_flash_chip_generic.* *libspi_flash.a:spi_flash_chip_gd.* *libphy.a *libesp_system.a:reset_reason.* *libesp_system.a:panic_handler.* *libesp_system.a:panic.* *libgcov.a *libgcc.a:_divsf3.* *libapp_trace.a:SEGGER_SYSVIEW_Config_FreeRTOS.* *libapp_trace.a:app_trace_util.* *libapp_trace.a:SEGGER_SYSVIEW_FreeRTOS.* *libapp_trace.a:app_trace.* *libapp_trace.a:SEGGER_RTT_esp32.* *libapp_trace.a:SEGGER_SYSVIEW.*) .rodata EXCLUDE_FILE(*libxtensa.a:stdatomic.* *libsoc.a:rtc_clk.* *libsoc.a:spi_flash_hal_iram.* *libsoc.a:i2c_hal_iram.* *libsoc.a:lldesc.* *libsoc.a:soc_hal.* *libsoc.a:spi_flash_hal_gpspi.* *libsoc.a:spi_slave_hal_iram.* *libsoc.a:ledc_hal_iram.* *libsoc.a:wdt_hal_iram.* *libsoc.a:cpu_hal.* *libsoc.a:spi_hal_iram.* *libsoc.a:uart_hal_iram.* *libnewlib.a:heap.* *libnewlib.a:abort.* *liblog.a:log_freertos.* *liblog.a:log.* *libheap.a:multi_heap_poisoning.* *libheap.a:multi_heap.* *libspi_flash.a:spi_flash_chip_issi.* *libspi_flash.a:memspi_host_driver.* *libspi_flash.a:spi_flash_chip_generic.* *libspi_flash.a:spi_flash_chip_gd.* *libphy.a *libesp_system.a:reset_reason.* *libesp_system.a:panic_handler.* *libesp_system.a:panic.* *libesp_system.a:system_api.* *libesp_event.a:default_event_loop.* *libesp_event.a:esp_event.* *libgcov.a *libgcc.a:_divsf3.* *libapp_trace.a:SEGGER_SYSVIEW_Config_FreeRTOS.* *libapp_trace.a:app_trace_util.* *libapp_trace.a:SEGGER_SYSVIEW_FreeRTOS.* *libapp_trace.a:app_trace.* *libapp_trace.a:SEGGER_RTT_esp32.* *libapp_trace.a:SEGGER_SYSVIEW.*) .rodata.*)
+ *(EXCLUDE_FILE(*libxtensa.a:stdatomic.* *libsoc.a:spi_hal_iram.* *libsoc.a:spi_flash_hal_iram.* *libsoc.a:ledc_hal_iram.* *libsoc.a:spi_flash_hal_gpspi.* *libsoc.a:lldesc.* *libsoc.a:soc_hal.* *libsoc.a:wdt_hal_iram.* *libsoc.a:uart_hal_iram.* *libsoc.a:cpu_hal.* *libsoc.a:spi_slave_hal_iram.* *libsoc.a:rtc_clk.* *libsoc.a:i2c_hal_iram.* *libnewlib.a:heap.* *libnewlib.a:abort.* *libheap.a:multi_heap_poisoning.* *libheap.a:multi_heap.* *libspi_flash.a:spi_flash_chip_generic.* *libspi_flash.a:spi_flash_chip_issi.* *libspi_flash.a:memspi_host_driver.* *libspi_flash.a:spi_flash_chip_gd.* *libphy.a *libesp_system.a:reset_reason.* *libesp_system.a:panic_handler.* *libesp_system.a:panic.* *libgcov.a *libgcc.a:_divsf3.* *libapp_trace.a:SEGGER_SYSVIEW.* *libapp_trace.a:app_trace_util.* *libapp_trace.a:SEGGER_RTT_esp32.* *libapp_trace.a:SEGGER_SYSVIEW_FreeRTOS.* *libapp_trace.a:SEGGER_SYSVIEW_Config_FreeRTOS.* *libapp_trace.a:app_trace.*) .rodata EXCLUDE_FILE(*libxtensa.a:stdatomic.* *libsoc.a:spi_hal_iram.* *libsoc.a:spi_flash_hal_iram.* *libsoc.a:ledc_hal_iram.* *libsoc.a:spi_flash_hal_gpspi.* *libsoc.a:lldesc.* *libsoc.a:soc_hal.* *libsoc.a:wdt_hal_iram.* *libsoc.a:uart_hal_iram.* *libsoc.a:cpu_hal.* *libsoc.a:spi_slave_hal_iram.* *libsoc.a:rtc_clk.* *libsoc.a:i2c_hal_iram.* *libnewlib.a:heap.* *libnewlib.a:abort.* *liblog.a:log_freertos.* *liblog.a:log.* *libheap.a:multi_heap_poisoning.* *libheap.a:multi_heap.* *libspi_flash.a:spi_flash_chip_generic.* *libspi_flash.a:spi_flash_chip_issi.* *libspi_flash.a:memspi_host_driver.* *libspi_flash.a:spi_flash_chip_gd.* *libphy.a *libesp_system.a:reset_reason.* *libesp_system.a:panic_handler.* *libesp_system.a:panic.* *libesp_system.a:system_api.* *libesp_event.a:esp_event.* *libesp_event.a:default_event_loop.* *libgcov.a *libgcc.a:_divsf3.* *libapp_trace.a:SEGGER_SYSVIEW.* *libapp_trace.a:app_trace_util.* *libapp_trace.a:SEGGER_RTT_esp32.* *libapp_trace.a:SEGGER_SYSVIEW_FreeRTOS.* *libapp_trace.a:SEGGER_SYSVIEW_Config_FreeRTOS.* *libapp_trace.a:app_trace.*) .rodata.*)
  .rodata.main_task.str1.4
                 0x000000003f400120       0xa9 /home/sai-vdeal/Aries/Aries_test/build/esp32/libesp32.a(cpu_start.o)
  *fill*         0x000000003f4001c9        0x3 
@@ -27008,52 +27007,52 @@ END GROUP
                 0x000000003f437fd0       0x18 /home/sai-vdeal/Aries/Aries_test/build/mbedtls/libmbedtls.a(ecp_curves.o)
  .rodata.secp192r1_p
                 0x000000003f437fe8       0x18 /home/sai-vdeal/Aries/Aries_test/build/mbedtls/libmbedtls.a(ecp_curves.o)
- *libesp_event.a:default_event_loop.*(.rodata.esp_event_loop_create_default.str1.4 .rodata.esp_event_send_to_default_loop)
- .rodata.esp_event_loop_create_default.str1.4
-                0x000000003f438000        0x8 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(default_event_loop.o)
  *libesp_event.a:esp_event.*(.rodata.handler_instances_add.str1.4 .rodata.base_node_add_handler.str1.4 .rodata.loop_node_add_handler.str1.4 .rodata.esp_event_loop_create.str1.4 .rodata.esp_event_loop_run.str1.4 .rodata.esp_event_loop_run_task.str1.4 .rodata.esp_event_handler_register_with_internal.str1.4 .rodata.esp_event_handler_unregister_with_internal.str1.4 .rodata.__func__$8908 .rodata.__func__$8895 .rodata.__func__$8862 .rodata.__func__$8830 .rodata.__func__$8805 .rodata.__func__$8764 .rodata.__func__$8755)
  .rodata.handler_instances_add.str1.4
-                0x000000003f438008       0x3f /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
+                0x000000003f438000       0x3f /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
                                          0x47 (size before relaxing)
- *fill*         0x000000003f438047        0x1 
+ *fill*         0x000000003f43803f        0x1 
  .rodata.base_node_add_handler.str1.4
-                0x000000003f438048       0x34 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
+                0x000000003f438040       0x34 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
  .rodata.loop_node_add_handler.str1.4
-                0x000000003f43807c       0x3e /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
- *fill*         0x000000003f4380ba        0x2 
+                0x000000003f438074       0x3e /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
+ *fill*         0x000000003f4380b2        0x2 
  .rodata.esp_event_loop_create.str1.4
-                0x000000003f4380bc      0x127 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
+                0x000000003f4380b4      0x127 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
                                         0x129 (size before relaxing)
- *fill*         0x000000003f4381e3        0x1 
+ *fill*         0x000000003f4381db        0x1 
  .rodata.esp_event_loop_run.str1.4
-                0x000000003f4381e4        0xb /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
- *fill*         0x000000003f4381ef        0x1 
+                0x000000003f4381dc        0xb /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
+ *fill*         0x000000003f4381e7        0x1 
  .rodata.esp_event_loop_run_task.str1.4
-                0x000000003f4381f0       0x32 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
- *fill*         0x000000003f438222        0x2 
+                0x000000003f4381e8       0x32 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
+ *fill*         0x000000003f43821a        0x2 
  .rodata.esp_event_handler_register_with_internal.str1.4
-                0x000000003f438224       0x9a /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
- *fill*         0x000000003f4382be        0x2 
+                0x000000003f43821c       0x9a /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
+ *fill*         0x000000003f4382b6        0x2 
  .rodata.esp_event_handler_unregister_with_internal.str1.4
-                0x000000003f4382c0       0x60 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
+                0x000000003f4382b8       0x60 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
  .rodata.__func__$8895
-                0x000000003f438320       0x12 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
- *fill*         0x000000003f438332        0x2 
+                0x000000003f438318       0x12 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
+ *fill*         0x000000003f43832a        0x2 
  .rodata.__func__$8862
-                0x000000003f438334       0x2b /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
- *fill*         0x000000003f43835f        0x1 
+                0x000000003f43832c       0x2b /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
+ *fill*         0x000000003f438357        0x1 
  .rodata.__func__$8830
-                0x000000003f438360       0x29 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
- *fill*         0x000000003f438389        0x3 
+                0x000000003f438358       0x29 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
+ *fill*         0x000000003f438381        0x3 
  .rodata.__func__$8764
-                0x000000003f43838c       0x13 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
- *fill*         0x000000003f43839f        0x1 
+                0x000000003f438384       0x13 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
+ *fill*         0x000000003f438397        0x1 
  .rodata.__func__$8755
-                0x000000003f4383a0       0x16 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
+                0x000000003f438398       0x16 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
+ *libesp_event.a:default_event_loop.*(.rodata.esp_event_loop_create_default.str1.4 .rodata.esp_event_send_to_default_loop)
+ *fill*         0x000000003f4383ae        0x2 
+ .rodata.esp_event_loop_create_default.str1.4
+                0x000000003f4383b0        0x8 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(default_event_loop.o)
  *libesp_system.a:system_api.*(.rodata.esp_get_idf_version.str1.4)
  *liblog.a:log_freertos.*(.rodata.esp_log_system_timestamp.str1.4)
  *liblog.a:log.*(.rodata.esp_log_level_set.str1.4 .rodata.__func__$3534 .rodata.__func__$3505)
- *fill*         0x000000003f4383b6        0x2 
  .rodata.esp_log_level_set.str1.4
                 0x000000003f4383b8       0x81 /home/sai-vdeal/Aries/Aries_test/build/log/liblog.a(log.o)
  *fill*         0x000000003f438439        0x3 
@@ -27156,7 +27155,7 @@ END GROUP
 .flash.text     0x00000000400d0020    0x79d50
                 0x00000000400d0020                _stext = .
                 0x00000000400d0020                _text_start = ABSOLUTE (.)
- *(EXCLUDE_FILE(*libhal.a *libxtensa.a:eri.* *libxtensa.a:stdatomic.* *libsoc.a:rtc_clk_init.* *libsoc.a:rtc_clk.* *libsoc.a:rtc_pm.* *libsoc.a:spi_flash_hal_iram.* *libsoc.a:i2c_hal_iram.* *libsoc.a:lldesc.* *libsoc.a:soc_hal.* *libsoc.a:spi_flash_hal_gpspi.* *libsoc.a:rtc_sleep.* *libsoc.a:rtc_init.* *libsoc.a:spi_slave_hal_iram.* *libsoc.a:rtc_time.* *libsoc.a:ledc_hal_iram.* *libsoc.a:rtc_periph.* *libsoc.a:cpu_util.* *libsoc.a:wdt_hal_iram.* *libsoc.a:rtc_wdt.* *libsoc.a:cpu_hal.* *libsoc.a:spi_hal_iram.* *libsoc.a:uart_hal_iram.* *libnewlib.a:heap.* *libnewlib.a:abort.* *libheap.a:multi_heap_poisoning.* *libheap.a:multi_heap.* *libfreertos.a *libspi_flash.a:spi_flash_rom_patch.* *libspi_flash.a:spi_flash_chip_issi.* *libspi_flash.a:memspi_host_driver.* *libspi_flash.a:spi_flash_chip_generic.* *libspi_flash.a:spi_flash_chip_gd.* *librtc.a *libesp_system.a:reset_reason.* *libesp_system.a:panic_handler.* *libesp_system.a:panic.* *libesp_ringbuf.a *libgcov.a *libgcc.a:lib2funcs.* *libgcc.a:_divsf3.* *libapp_trace.a:SEGGER_SYSVIEW_Config_FreeRTOS.* *libapp_trace.a:app_trace_util.* *libapp_trace.a:SEGGER_SYSVIEW_FreeRTOS.* *libapp_trace.a:app_trace.* *libapp_trace.a:SEGGER_RTT_esp32.* *libapp_trace.a:SEGGER_SYSVIEW.*) .literal EXCLUDE_FILE(*libhal.a *libxtensa.a:eri.* *libxtensa.a:stdatomic.* *libsoc.a:rtc_clk_init.* *libsoc.a:rtc_clk.* *libsoc.a:rtc_pm.* *libsoc.a:spi_flash_hal_iram.* *libsoc.a:i2c_hal_iram.* *libsoc.a:lldesc.* *libsoc.a:soc_hal.* *libsoc.a:spi_flash_hal_gpspi.* *libsoc.a:rtc_sleep.* *libsoc.a:rtc_init.* *libsoc.a:spi_slave_hal_iram.* *libsoc.a:rtc_time.* *libsoc.a:ledc_hal_iram.* *libsoc.a:rtc_periph.* *libsoc.a:cpu_util.* *libsoc.a:wdt_hal_iram.* *libsoc.a:rtc_wdt.* *libsoc.a:cpu_hal.* *libsoc.a:spi_hal_iram.* *libsoc.a:uart_hal_iram.* *libnewlib.a:heap.* *libnewlib.a:abort.* *liblog.a:log_freertos.* *liblog.a:log.* *libheap.a:multi_heap_poisoning.* *libheap.a:multi_heap.* *libfreertos.a *libspi_flash.a:spi_flash_rom_patch.* *libspi_flash.a:spi_flash_chip_issi.* *libspi_flash.a:memspi_host_driver.* *libspi_flash.a:spi_flash_chip_generic.* *libspi_flash.a:spi_flash_chip_gd.* *librtc.a *libesp_system.a:reset_reason.* *libesp_system.a:panic_handler.* *libesp_system.a:panic.* *libesp_system.a:system_api.* *libesp_ringbuf.a *libesp_event.a:default_event_loop.* *libesp_event.a:esp_event.* *libgcov.a *libgcc.a:lib2funcs.* *libgcc.a:_divsf3.* *libapp_trace.a:SEGGER_SYSVIEW_Config_FreeRTOS.* *libapp_trace.a:app_trace_util.* *libapp_trace.a:SEGGER_SYSVIEW_FreeRTOS.* *libapp_trace.a:app_trace.* *libapp_trace.a:SEGGER_RTT_esp32.* *libapp_trace.a:SEGGER_SYSVIEW.*) .literal.* EXCLUDE_FILE(*libhal.a *libxtensa.a:eri.* *libxtensa.a:stdatomic.* *libsoc.a:rtc_clk_init.* *libsoc.a:rtc_clk.* *libsoc.a:rtc_pm.* *libsoc.a:spi_flash_hal_iram.* *libsoc.a:i2c_hal_iram.* *libsoc.a:lldesc.* *libsoc.a:soc_hal.* *libsoc.a:spi_flash_hal_gpspi.* *libsoc.a:rtc_sleep.* *libsoc.a:rtc_init.* *libsoc.a:spi_slave_hal_iram.* *libsoc.a:rtc_time.* *libsoc.a:ledc_hal_iram.* *libsoc.a:rtc_periph.* *libsoc.a:cpu_util.* *libsoc.a:wdt_hal_iram.* *libsoc.a:rtc_wdt.* *libsoc.a:cpu_hal.* *libsoc.a:spi_hal_iram.* *libsoc.a:uart_hal_iram.* *libnewlib.a:heap.* *libnewlib.a:abort.* *libheap.a:multi_heap_poisoning.* *libheap.a:multi_heap.* *libfreertos.a *libspi_flash.a:spi_flash_rom_patch.* *libspi_flash.a:spi_flash_chip_issi.* *libspi_flash.a:memspi_host_driver.* *libspi_flash.a:spi_flash_chip_generic.* *libspi_flash.a:spi_flash_chip_gd.* *librtc.a *libesp_system.a:reset_reason.* *libesp_system.a:panic_handler.* *libesp_system.a:panic.* *libesp_ringbuf.a *libgcov.a *libgcc.a:lib2funcs.* *libgcc.a:_divsf3.* *libapp_trace.a:SEGGER_SYSVIEW_Config_FreeRTOS.* *libapp_trace.a:app_trace_util.* *libapp_trace.a:SEGGER_SYSVIEW_FreeRTOS.* *libapp_trace.a:app_trace.* *libapp_trace.a:SEGGER_RTT_esp32.* *libapp_trace.a:SEGGER_SYSVIEW.*) .text EXCLUDE_FILE(*libhal.a *libxtensa.a:eri.* *libxtensa.a:stdatomic.* *libsoc.a:rtc_clk_init.* *libsoc.a:rtc_clk.* *libsoc.a:rtc_pm.* *libsoc.a:spi_flash_hal_iram.* *libsoc.a:i2c_hal_iram.* *libsoc.a:lldesc.* *libsoc.a:soc_hal.* *libsoc.a:spi_flash_hal_gpspi.* *libsoc.a:rtc_sleep.* *libsoc.a:rtc_init.* *libsoc.a:spi_slave_hal_iram.* *libsoc.a:rtc_time.* *libsoc.a:ledc_hal_iram.* *libsoc.a:rtc_periph.* *libsoc.a:cpu_util.* *libsoc.a:wdt_hal_iram.* *libsoc.a:rtc_wdt.* *libsoc.a:cpu_hal.* *libsoc.a:spi_hal_iram.* *libsoc.a:uart_hal_iram.* *libnewlib.a:heap.* *libnewlib.a:abort.* *liblog.a:log_freertos.* *liblog.a:log.* *libheap.a:multi_heap_poisoning.* *libheap.a:multi_heap.* *libfreertos.a *libspi_flash.a:spi_flash_rom_patch.* *libspi_flash.a:spi_flash_chip_issi.* *libspi_flash.a:memspi_host_driver.* *libspi_flash.a:spi_flash_chip_generic.* *libspi_flash.a:spi_flash_chip_gd.* *librtc.a *libesp_system.a:reset_reason.* *libesp_system.a:panic_handler.* *libesp_system.a:panic.* *libesp_system.a:system_api.* *libesp_ringbuf.a *libesp_event.a:default_event_loop.* *libesp_event.a:esp_event.* *libgcov.a *libgcc.a:lib2funcs.* *libgcc.a:_divsf3.* *libapp_trace.a:SEGGER_SYSVIEW_Config_FreeRTOS.* *libapp_trace.a:app_trace_util.* *libapp_trace.a:SEGGER_SYSVIEW_FreeRTOS.* *libapp_trace.a:app_trace.* *libapp_trace.a:SEGGER_RTT_esp32.* *libapp_trace.a:SEGGER_SYSVIEW.*) .text.* EXCLUDE_FILE(*libsoc.a:uart_hal_iram.* *libnet80211.a *libpp.a) .wifi0iram EXCLUDE_FILE(*libsoc.a:uart_hal_iram.* *libnet80211.a *libpp.a) .wifi0iram.* EXCLUDE_FILE(*libsoc.a:uart_hal_iram.* *libnet80211.a *libpp.a) .wifirxiram EXCLUDE_FILE(*libsoc.a:uart_hal_iram.* *libnet80211.a *libpp.a) .wifirxiram.*)
+ *(EXCLUDE_FILE(*libhal.a *libxtensa.a:stdatomic.* *libxtensa.a:eri.* *libsoc.a:spi_hal_iram.* *libsoc.a:rtc_clk_init.* *libsoc.a:rtc_pm.* *libsoc.a:spi_flash_hal_iram.* *libsoc.a:ledc_hal_iram.* *libsoc.a:rtc_wdt.* *libsoc.a:spi_flash_hal_gpspi.* *libsoc.a:lldesc.* *libsoc.a:soc_hal.* *libsoc.a:rtc_init.* *libsoc.a:wdt_hal_iram.* *libsoc.a:cpu_util.* *libsoc.a:uart_hal_iram.* *libsoc.a:cpu_hal.* *libsoc.a:rtc_sleep.* *libsoc.a:spi_slave_hal_iram.* *libsoc.a:rtc_clk.* *libsoc.a:i2c_hal_iram.* *libsoc.a:rtc_time.* *libsoc.a:rtc_periph.* *libnewlib.a:heap.* *libnewlib.a:abort.* *libheap.a:multi_heap_poisoning.* *libheap.a:multi_heap.* *libfreertos.a *libspi_flash.a:spi_flash_chip_generic.* *libspi_flash.a:spi_flash_rom_patch.* *libspi_flash.a:spi_flash_chip_issi.* *libspi_flash.a:memspi_host_driver.* *libspi_flash.a:spi_flash_chip_gd.* *librtc.a *libesp_system.a:reset_reason.* *libesp_system.a:panic_handler.* *libesp_system.a:panic.* *libesp_ringbuf.a *libgcov.a *libgcc.a:_divsf3.* *libgcc.a:lib2funcs.* *libapp_trace.a:SEGGER_SYSVIEW.* *libapp_trace.a:app_trace_util.* *libapp_trace.a:SEGGER_RTT_esp32.* *libapp_trace.a:SEGGER_SYSVIEW_FreeRTOS.* *libapp_trace.a:SEGGER_SYSVIEW_Config_FreeRTOS.* *libapp_trace.a:app_trace.*) .literal EXCLUDE_FILE(*libhal.a *libxtensa.a:stdatomic.* *libxtensa.a:eri.* *libsoc.a:spi_hal_iram.* *libsoc.a:rtc_clk_init.* *libsoc.a:rtc_pm.* *libsoc.a:spi_flash_hal_iram.* *libsoc.a:ledc_hal_iram.* *libsoc.a:rtc_wdt.* *libsoc.a:spi_flash_hal_gpspi.* *libsoc.a:lldesc.* *libsoc.a:soc_hal.* *libsoc.a:rtc_init.* *libsoc.a:wdt_hal_iram.* *libsoc.a:cpu_util.* *libsoc.a:uart_hal_iram.* *libsoc.a:cpu_hal.* *libsoc.a:rtc_sleep.* *libsoc.a:spi_slave_hal_iram.* *libsoc.a:rtc_clk.* *libsoc.a:i2c_hal_iram.* *libsoc.a:rtc_time.* *libsoc.a:rtc_periph.* *libnewlib.a:heap.* *libnewlib.a:abort.* *liblog.a:log_freertos.* *liblog.a:log.* *libheap.a:multi_heap_poisoning.* *libheap.a:multi_heap.* *libfreertos.a *libspi_flash.a:spi_flash_chip_generic.* *libspi_flash.a:spi_flash_rom_patch.* *libspi_flash.a:spi_flash_chip_issi.* *libspi_flash.a:memspi_host_driver.* *libspi_flash.a:spi_flash_chip_gd.* *librtc.a *libesp_system.a:reset_reason.* *libesp_system.a:panic_handler.* *libesp_system.a:panic.* *libesp_system.a:system_api.* *libesp_ringbuf.a *libesp_event.a:esp_event.* *libesp_event.a:default_event_loop.* *libgcov.a *libgcc.a:_divsf3.* *libgcc.a:lib2funcs.* *libapp_trace.a:SEGGER_SYSVIEW.* *libapp_trace.a:app_trace_util.* *libapp_trace.a:SEGGER_RTT_esp32.* *libapp_trace.a:SEGGER_SYSVIEW_FreeRTOS.* *libapp_trace.a:SEGGER_SYSVIEW_Config_FreeRTOS.* *libapp_trace.a:app_trace.*) .literal.* EXCLUDE_FILE(*libhal.a *libxtensa.a:stdatomic.* *libxtensa.a:eri.* *libsoc.a:spi_hal_iram.* *libsoc.a:rtc_clk_init.* *libsoc.a:rtc_pm.* *libsoc.a:spi_flash_hal_iram.* *libsoc.a:ledc_hal_iram.* *libsoc.a:rtc_wdt.* *libsoc.a:spi_flash_hal_gpspi.* *libsoc.a:lldesc.* *libsoc.a:soc_hal.* *libsoc.a:rtc_init.* *libsoc.a:wdt_hal_iram.* *libsoc.a:cpu_util.* *libsoc.a:uart_hal_iram.* *libsoc.a:cpu_hal.* *libsoc.a:rtc_sleep.* *libsoc.a:spi_slave_hal_iram.* *libsoc.a:rtc_clk.* *libsoc.a:i2c_hal_iram.* *libsoc.a:rtc_time.* *libsoc.a:rtc_periph.* *libnewlib.a:heap.* *libnewlib.a:abort.* *libheap.a:multi_heap_poisoning.* *libheap.a:multi_heap.* *libfreertos.a *libspi_flash.a:spi_flash_chip_generic.* *libspi_flash.a:spi_flash_rom_patch.* *libspi_flash.a:spi_flash_chip_issi.* *libspi_flash.a:memspi_host_driver.* *libspi_flash.a:spi_flash_chip_gd.* *librtc.a *libesp_system.a:reset_reason.* *libesp_system.a:panic_handler.* *libesp_system.a:panic.* *libesp_ringbuf.a *libgcov.a *libgcc.a:_divsf3.* *libgcc.a:lib2funcs.* *libapp_trace.a:SEGGER_SYSVIEW.* *libapp_trace.a:app_trace_util.* *libapp_trace.a:SEGGER_RTT_esp32.* *libapp_trace.a:SEGGER_SYSVIEW_FreeRTOS.* *libapp_trace.a:SEGGER_SYSVIEW_Config_FreeRTOS.* *libapp_trace.a:app_trace.*) .text EXCLUDE_FILE(*libhal.a *libxtensa.a:stdatomic.* *libxtensa.a:eri.* *libsoc.a:spi_hal_iram.* *libsoc.a:rtc_clk_init.* *libsoc.a:rtc_pm.* *libsoc.a:spi_flash_hal_iram.* *libsoc.a:ledc_hal_iram.* *libsoc.a:rtc_wdt.* *libsoc.a:spi_flash_hal_gpspi.* *libsoc.a:lldesc.* *libsoc.a:soc_hal.* *libsoc.a:rtc_init.* *libsoc.a:wdt_hal_iram.* *libsoc.a:cpu_util.* *libsoc.a:uart_hal_iram.* *libsoc.a:cpu_hal.* *libsoc.a:rtc_sleep.* *libsoc.a:spi_slave_hal_iram.* *libsoc.a:rtc_clk.* *libsoc.a:i2c_hal_iram.* *libsoc.a:rtc_time.* *libsoc.a:rtc_periph.* *libnewlib.a:heap.* *libnewlib.a:abort.* *liblog.a:log_freertos.* *liblog.a:log.* *libheap.a:multi_heap_poisoning.* *libheap.a:multi_heap.* *libfreertos.a *libspi_flash.a:spi_flash_chip_generic.* *libspi_flash.a:spi_flash_rom_patch.* *libspi_flash.a:spi_flash_chip_issi.* *libspi_flash.a:memspi_host_driver.* *libspi_flash.a:spi_flash_chip_gd.* *librtc.a *libesp_system.a:reset_reason.* *libesp_system.a:panic_handler.* *libesp_system.a:panic.* *libesp_system.a:system_api.* *libesp_ringbuf.a *libesp_event.a:esp_event.* *libesp_event.a:default_event_loop.* *libgcov.a *libgcc.a:_divsf3.* *libgcc.a:lib2funcs.* *libapp_trace.a:SEGGER_SYSVIEW.* *libapp_trace.a:app_trace_util.* *libapp_trace.a:SEGGER_RTT_esp32.* *libapp_trace.a:SEGGER_SYSVIEW_FreeRTOS.* *libapp_trace.a:SEGGER_SYSVIEW_Config_FreeRTOS.* *libapp_trace.a:app_trace.*) .text.* EXCLUDE_FILE(*libsoc.a:uart_hal_iram.* *libnet80211.a *libpp.a) .wifi0iram EXCLUDE_FILE(*libsoc.a:uart_hal_iram.* *libnet80211.a *libpp.a) .wifi0iram.* EXCLUDE_FILE(*libsoc.a:uart_hal_iram.* *libnet80211.a *libpp.a) .wifirxiram EXCLUDE_FILE(*libsoc.a:uart_hal_iram.* *libnet80211.a *libpp.a) .wifirxiram.*)
  .literal.esp_ota_get_app_description
                 0x00000000400d0020        0x4 /home/sai-vdeal/Aries/Aries_test/build/app_update/libapp_update.a(esp_app_desc.o)
  .literal.esp_ota_init_app_elf_sha256
@@ -38381,60 +38380,60 @@ END GROUP
  .literal.parse_options
                 0x00000000401195b8        0x0 /home/sai-vdeal/Aries/Aries_test/build/lwip/liblwip.a(dhcpserver.o)
                                           0xc (size before relaxing)
- .literal.esp_event_handler_register
-                0x00000000401195b8        0x4 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(default_event_loop.o)
-                                          0x8 (size before relaxing)
- .literal.esp_event_handler_unregister
-                0x00000000401195bc        0x0 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(default_event_loop.o)
-                                          0x8 (size before relaxing)
- .literal.esp_event_post
-                0x00000000401195bc        0x0 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(default_event_loop.o)
-                                          0x8 (size before relaxing)
- .literal.esp_event_loop_create_default
-                0x00000000401195bc        0x4 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(default_event_loop.o)
-                                         0x10 (size before relaxing)
  .literal.handler_instances_add
-                0x00000000401195c0        0x8 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
+                0x00000000401195b8        0x8 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
                                          0x24 (size before relaxing)
  .literal.base_node_add_handler
-                0x00000000401195c8        0x4 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
+                0x00000000401195c0        0x4 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
                                          0x24 (size before relaxing)
  .literal.loop_node_add_handler
-                0x00000000401195cc        0x8 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
+                0x00000000401195c4        0x8 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
                                          0x28 (size before relaxing)
  .literal.handler_instances_remove
-                0x00000000401195d4        0x0 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
+                0x00000000401195cc        0x0 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
                                          0x10 (size before relaxing)
  .literal.base_node_remove_handler
-                0x00000000401195d4        0x0 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
+                0x00000000401195cc        0x0 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
                                           0xc (size before relaxing)
  .literal.loop_node_remove_handler
-                0x00000000401195d4        0x0 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
+                0x00000000401195cc        0x0 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
                                          0x10 (size before relaxing)
  .literal.esp_event_loop_create
-                0x00000000401195d4       0x28 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
+                0x00000000401195cc       0x28 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
                                          0x68 (size before relaxing)
  .literal.esp_event_loop_run
-                0x00000000401195fc       0x14 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
+                0x00000000401195f4       0x14 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
                                          0x3c (size before relaxing)
  .literal.esp_event_loop_run_task
-                0x0000000040119610        0x8 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
+                0x0000000040119608        0x8 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
                                          0x18 (size before relaxing)
  .literal.esp_event_handler_register_with_internal
-                0x0000000040119618       0x10 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
+                0x0000000040119610       0x10 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
                                          0x50 (size before relaxing)
  .literal.esp_event_handler_register_with
-                0x0000000040119628        0x0 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
+                0x0000000040119620        0x0 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
                                           0x4 (size before relaxing)
  .literal.esp_event_handler_unregister_with_internal
-                0x0000000040119628        0xc /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
+                0x0000000040119620        0xc /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
                                          0x3c (size before relaxing)
  .literal.esp_event_handler_unregister_with
-                0x0000000040119634        0x0 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
+                0x000000004011962c        0x0 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
                                           0x4 (size before relaxing)
  .literal.esp_event_post_to
-                0x0000000040119634        0x4 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
+                0x000000004011962c        0x4 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
                                          0x40 (size before relaxing)
+ .literal.esp_event_handler_register
+                0x0000000040119630        0x4 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(default_event_loop.o)
+                                          0x8 (size before relaxing)
+ .literal.esp_event_handler_unregister
+                0x0000000040119634        0x0 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(default_event_loop.o)
+                                          0x8 (size before relaxing)
+ .literal.esp_event_post
+                0x0000000040119634        0x0 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(default_event_loop.o)
+                                          0x8 (size before relaxing)
+ .literal.esp_event_loop_create_default
+                0x0000000040119634        0x4 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(default_event_loop.o)
+                                         0x10 (size before relaxing)
  .literal.esp_register_shutdown_handler
                 0x0000000040119638        0x4 /home/sai-vdeal/Aries/Aries_test/build/esp_system/libesp_system.a(system_api.o)
  .literal.esp_unregister_shutdown_handler
@@ -44926,85 +44925,85 @@ END GROUP
  *fill*         0x0000000040148e51        0x0 
  *fill*         0x0000000040148e51        0x0 
  *fill*         0x0000000040148e51        0x0 
- *libesp_event.a:default_event_loop.*(.literal.esp_event_handler_register .literal.esp_event_handler_instance_register .literal.esp_event_handler_unregister .literal.esp_event_handler_instance_unregister .literal.esp_event_post .literal.esp_event_loop_create_default .literal.esp_event_loop_delete_default .literal.esp_event_send_to_default_loop .text.esp_event_handler_register .text.esp_event_handler_instance_register .text.esp_event_handler_unregister .text.esp_event_handler_instance_unregister .text.esp_event_post .text.esp_event_loop_create_default .text.esp_event_loop_delete_default .text.esp_event_send_to_default_loop)
- *fill*         0x0000000040148e51        0x3 
- .text.esp_event_handler_register
-                0x0000000040148e54       0x22 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(default_event_loop.o)
-                0x0000000040148e54                esp_event_handler_register
- *fill*         0x0000000040148e76        0x2 
- .text.esp_event_handler_unregister
-                0x0000000040148e78       0x21 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(default_event_loop.o)
-                0x0000000040148e78                esp_event_handler_unregister
- *fill*         0x0000000040148e99        0x3 
- .text.esp_event_post
-                0x0000000040148e9c       0x25 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(default_event_loop.o)
-                0x0000000040148e9c                esp_event_post
- *fill*         0x0000000040148ec1        0x3 
- .text.esp_event_loop_create_default
-                0x0000000040148ec4       0x2a /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(default_event_loop.o)
-                                         0x2e (size before relaxing)
-                0x0000000040148ec4                esp_event_loop_create_default
- *fill*         0x0000000040148eee        0x0 
- *fill*         0x0000000040148eee        0x0 
- *fill*         0x0000000040148eee        0x0 
- *fill*         0x0000000040148eee        0x0 
  *libesp_event.a:esp_event.*(.literal.handler_instances_remove_all .literal.base_node_remove_all_handler .literal.loop_node_remove_all_handler .literal.handler_instances_add .literal.base_node_add_handler .literal.loop_node_add_handler .literal.handler_instances_remove .literal.base_node_remove_handler .literal.loop_node_remove_handler .literal.esp_event_loop_create .literal.esp_event_loop_run .literal.esp_event_loop_run_task .literal.esp_event_loop_delete .literal.esp_event_handler_register_with_internal .literal.esp_event_handler_register_with .literal.esp_event_handler_instance_register_with .literal.esp_event_handler_unregister_with_internal .literal.esp_event_handler_unregister_with .literal.esp_event_handler_instance_unregister_with .literal.esp_event_post_to .text.handler_execute .text.handler_instances_remove_all .text.base_node_remove_all_handler .text.loop_node_remove_all_handler .text.handler_instances_add .text.base_node_add_handler .text.loop_node_add_handler .text.handler_instances_remove .text.base_node_remove_handler .text.loop_node_remove_handler .text.esp_event_loop_create .text.esp_event_loop_run .text.esp_event_loop_run_task .text.esp_event_loop_delete .text.esp_event_handler_register_with_internal .text.esp_event_handler_register_with .text.esp_event_handler_instance_register_with .text.esp_event_handler_unregister_with_internal .text.esp_event_handler_unregister_with .text.esp_event_handler_instance_unregister_with .text.esp_event_post_to .text.esp_event_dump)
- *fill*         0x0000000040148eee        0x2 
+ *fill*         0x0000000040148e51        0x3 
  .text.handler_instances_add
-                0x0000000040148ef0       0xa6 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
- *fill*         0x0000000040148f96        0x2 
+                0x0000000040148e54       0xa6 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
+ *fill*         0x0000000040148efa        0x2 
  .text.base_node_add_handler
-                0x0000000040148f98       0xd2 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
- *fill*         0x000000004014906a        0x2 
+                0x0000000040148efc       0xd2 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
+ *fill*         0x0000000040148fce        0x2 
  .text.loop_node_add_handler
-                0x000000004014906c       0xf7 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
- *fill*         0x0000000040149163        0x1 
+                0x0000000040148fd0       0xf7 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
+ *fill*         0x00000000401490c7        0x1 
  .text.handler_instances_remove
-                0x0000000040149164       0x85 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
- *fill*         0x00000000401491e9        0x3 
+                0x00000000401490c8       0x85 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
+ *fill*         0x000000004014914d        0x3 
  .text.base_node_remove_handler
-                0x00000000401491ec       0x71 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
- *fill*         0x000000004014925d        0x3 
+                0x0000000040149150       0x71 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
+ *fill*         0x00000000401491c1        0x3 
  .text.loop_node_remove_handler
-                0x0000000040149260       0x7b /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
- *fill*         0x00000000401492db        0x1 
+                0x00000000401491c4       0x7b /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
+ *fill*         0x000000004014923f        0x1 
  .text.esp_event_loop_create
-                0x00000000401492dc      0x118 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
-                0x00000000401492dc                esp_event_loop_create
+                0x0000000040149240      0x118 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
+                0x0000000040149240                esp_event_loop_create
  .text.esp_event_loop_run
-                0x00000000401493f4      0x142 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
-                0x00000000401493f4                esp_event_loop_run
- *fill*         0x0000000040149536        0x2 
+                0x0000000040149358      0x142 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
+                0x0000000040149358                esp_event_loop_run
+ *fill*         0x000000004014949a        0x2 
  .text.esp_event_loop_run_task
-                0x0000000040149538       0x34 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
+                0x000000004014949c       0x34 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
  .text.esp_event_handler_register_with_internal
-                0x000000004014956c      0x13c /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
-                0x000000004014956c                esp_event_handler_register_with_internal
+                0x00000000401494d0      0x13c /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
+                0x00000000401494d0                esp_event_handler_register_with_internal
  .text.esp_event_handler_register_with
-                0x00000000401496a8       0x1d /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
-                0x00000000401496a8                esp_event_handler_register_with
- *fill*         0x00000000401496c5        0x3 
+                0x000000004014960c       0x1d /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
+                0x000000004014960c                esp_event_handler_register_with
+ *fill*         0x0000000040149629        0x3 
  .text.esp_event_handler_unregister_with_internal
-                0x00000000401496c8       0xde /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
-                0x00000000401496c8                esp_event_handler_unregister_with_internal
- *fill*         0x00000000401497a6        0x2 
+                0x000000004014962c       0xde /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
+                0x000000004014962c                esp_event_handler_unregister_with_internal
+ *fill*         0x000000004014970a        0x2 
  .text.esp_event_handler_unregister_with
-                0x00000000401497a8       0x1d /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
-                0x00000000401497a8                esp_event_handler_unregister_with
- *fill*         0x00000000401497c5        0x3 
+                0x000000004014970c       0x1d /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
+                0x000000004014970c                esp_event_handler_unregister_with
+ *fill*         0x0000000040149729        0x3 
  .text.esp_event_post_to
-                0x00000000401497c8      0x126 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
-                0x00000000401497c8                esp_event_post_to
- *fill*         0x00000000401498ee        0x2 
+                0x000000004014972c      0x126 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
+                0x000000004014972c                esp_event_post_to
+ *fill*         0x0000000040149852        0x2 
  .text.handler_execute
-                0x00000000401498f0       0x32 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
- *fill*         0x0000000040149922        0x0 
- *fill*         0x0000000040149922        0x0 
- *fill*         0x0000000040149922        0x0 
- *fill*         0x0000000040149922        0x0 
- *fill*         0x0000000040149922        0x0 
- *fill*         0x0000000040149922        0x0 
- *fill*         0x0000000040149922        0x0 
+                0x0000000040149854       0x32 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(esp_event.o)
+ *fill*         0x0000000040149886        0x0 
+ *fill*         0x0000000040149886        0x0 
+ *fill*         0x0000000040149886        0x0 
+ *fill*         0x0000000040149886        0x0 
+ *fill*         0x0000000040149886        0x0 
+ *fill*         0x0000000040149886        0x0 
+ *fill*         0x0000000040149886        0x0 
+ *fill*         0x0000000040149886        0x0 
+ *fill*         0x0000000040149886        0x0 
+ *fill*         0x0000000040149886        0x0 
+ *fill*         0x0000000040149886        0x0 
+ *libesp_event.a:default_event_loop.*(.literal.esp_event_handler_register .literal.esp_event_handler_instance_register .literal.esp_event_handler_unregister .literal.esp_event_handler_instance_unregister .literal.esp_event_post .literal.esp_event_loop_create_default .literal.esp_event_loop_delete_default .literal.esp_event_send_to_default_loop .text.esp_event_handler_register .text.esp_event_handler_instance_register .text.esp_event_handler_unregister .text.esp_event_handler_instance_unregister .text.esp_event_post .text.esp_event_loop_create_default .text.esp_event_loop_delete_default .text.esp_event_send_to_default_loop)
+ *fill*         0x0000000040149886        0x2 
+ .text.esp_event_handler_register
+                0x0000000040149888       0x22 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(default_event_loop.o)
+                0x0000000040149888                esp_event_handler_register
+ *fill*         0x00000000401498aa        0x2 
+ .text.esp_event_handler_unregister
+                0x00000000401498ac       0x21 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(default_event_loop.o)
+                0x00000000401498ac                esp_event_handler_unregister
+ *fill*         0x00000000401498cd        0x3 
+ .text.esp_event_post
+                0x00000000401498d0       0x25 /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(default_event_loop.o)
+                0x00000000401498d0                esp_event_post
+ *fill*         0x00000000401498f5        0x3 
+ .text.esp_event_loop_create_default
+                0x00000000401498f8       0x2a /home/sai-vdeal/Aries/Aries_test/build/esp_event/libesp_event.a(default_event_loop.o)
+                                         0x2e (size before relaxing)
+                0x00000000401498f8                esp_event_loop_create_default
  *fill*         0x0000000040149922        0x0 
  *fill*         0x0000000040149922        0x0 
  *fill*         0x0000000040149922        0x0 
