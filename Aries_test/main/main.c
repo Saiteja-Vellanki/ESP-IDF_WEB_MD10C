@@ -28,13 +28,23 @@
 #include <sys/stat.h>
 
 
-#define PWM_PIN_HIGH      15   
 
+//#define PWM_PIN_HIGH      15  
 
-#define GPIO_CONFIG_DIR_1 16  
+#define GPIO_CONFIG_DIR_1 4
+
+#define GPIO_CONFIG_DIR_2 12
+
+#define GPIO_CONFIG_DIR_3 14
+
+#define GPIO_CONFIG_DIR_4 16  
+
+#define GPIO_CONFIG_DIR_5 32  
+
+#define GPIO_CONFIG_DIR_6 33
+
 
  
-//#define GPIO_CONFIG_DIR_2 33  
 
 static const char *TAG = "Aries Robotic ARM";
 
@@ -122,12 +132,28 @@ esp_err_t on_feedback_handler(httpd_req_t *req)
 }
 
 
-static void brushed_motor_forward_backward(mcpwm_unit_t mcpwm_num, mcpwm_timer_t timer_num , float duty_cycle)
+static void brushed_motor_forward_backward_unit_1(mcpwm_unit_t mcpwm_num, mcpwm_timer_t timer_num , float duty_cycle)
 {
-   mcpwm_set_signal_high(mcpwm_num, timer_num, MCPWM_OPR_B);
+   mcpwm_set_signal_low(mcpwm_num, timer_num, MCPWM_OPR_B);
     mcpwm_set_duty(mcpwm_num, timer_num, MCPWM_OPR_A, duty_cycle);
     mcpwm_set_duty_type(mcpwm_num, timer_num, MCPWM_OPR_A, MCPWM_DUTY_MODE_0);
 }
+
+static void brushed_motor_forward_backward_unit_2(mcpwm_unit_t mcpwm_num, mcpwm_timer_t timer_num , float duty_cycle)
+{
+   mcpwm_set_signal_low(mcpwm_num, timer_num, MCPWM_OPR_B);
+    mcpwm_set_duty(mcpwm_num, timer_num, MCPWM_OPR_A, duty_cycle);
+    mcpwm_set_duty_type(mcpwm_num, timer_num, MCPWM_OPR_A, MCPWM_DUTY_MODE_0);
+}
+
+static void brushed_motor_forward_backward_unit_3(mcpwm_unit_t mcpwm_num, mcpwm_timer_t timer_num , float duty_cycle)
+{
+   mcpwm_set_signal_low(mcpwm_num, timer_num, MCPWM_OPR_B);
+    mcpwm_set_duty(mcpwm_num, timer_num, MCPWM_OPR_A, duty_cycle);
+    mcpwm_set_duty_type(mcpwm_num, timer_num, MCPWM_OPR_A, MCPWM_DUTY_MODE_0);
+}
+
+
 
 
 
@@ -183,38 +209,29 @@ static esp_err_t hello_get_handler(httpd_req_t *req)
              if (httpd_query_key_value(buf, "grip",param, sizeof(param)) == ESP_OK) {
                 ESP_LOGI(TAG, "Found URL query parameter => GRIPPER=%s", param);
                 int gripangle=0;
-                
-    
-    
-               
                 int gripcount = atoi(param);
-            
-             if( gripcount == 50){
-                   gpio_set_level( PWM_PIN_HIGH , 0);
-                    ESP_LOGI(TAG, "MOTOR STOP CONDITION\n ");
-                   vTaskDelay(500 / portTICK_RATE_MS);
-                  }
-                        
-                  brushed_motor_forward_backward(MCPWM_UNIT_0, MCPWM_TIMER_0, gripcount);
-                  gpio_set_level( PWM_PIN_HIGH , 1);
+                  
+                  brushed_motor_forward_backward_unit_1(MCPWM_UNIT_0, MCPWM_TIMER_0, gripcount);
+                
                    ESP_LOGI(TAG, "MOTOR START CONDITION\n ");
-                    vTaskDelay(20 / portTICK_RATE_MS);
-                   
+                 //   vTaskDelay(10 / portTICK_RATE_MS);
+    
+    
              
-
-}
+                   }
 
             if (httpd_query_key_value(buf, "wrist", param, sizeof(param)) == ESP_OK) {
                 ESP_LOGI(TAG, "Found URL query parameter => WRIST_JOINT=%s", param);
                 int wristangle=0;
                 int wristcount = atoi(param);
-                  
+                brushed_motor_forward_backward_unit_1(MCPWM_UNIT_0, MCPWM_TIMER_0, wristcount);
                 
             }
             if (httpd_query_key_value(buf, "elbow", param, sizeof(param)) == ESP_OK) {
                 ESP_LOGI(TAG, "Found URL query parameter => ELBOW_JOINT=%s", param);
                 int elbowangle=0;
                 int elbowcount = atoi(param);
+                  brushed_motor_forward_backward_unit_2(MCPWM_UNIT_1, MCPWM_TIMER_0, elbowcount);
                 
             }  
             if (httpd_query_key_value(buf, "shoulder", param, sizeof(param)) == ESP_OK) {
@@ -222,13 +239,14 @@ static esp_err_t hello_get_handler(httpd_req_t *req)
                 ESP_LOGI(TAG, "Found URL query parameter => SHOULDER=%s", param);
                 int shoulderangle=0;
                 int shouldercount = atoi(param);
-                
+                  brushed_motor_forward_backward_unit_2(MCPWM_UNIT_1, MCPWM_TIMER_0, shouldercount);
             }
 
             if (httpd_query_key_value(buf, "base", param, sizeof(param)) == ESP_OK) {
                 ESP_LOGI(TAG, "Found URL query parameter => BASE=%s", param);
                 int baseangle=0;
                 int basecount = atoi(param);
+                 brushed_motor_forward_backward_unit_3(MCPWM_UNIT_2, MCPWM_TIMER_0, baseangle);
                
             }
              
@@ -250,9 +268,9 @@ static esp_err_t hello_get_handler(httpd_req_t *req)
 
     /* After sending the HTTP response the old HTTP request
      * headers are lost. Check if HTTP request headers can be read now. */
-    if (httpd_req_get_hdr_value_len(req, "Host") == 0) {
+    if (httpd_req_get_hdr_value_len(req, "grip") == 0) {
         ESP_LOGI(TAG, "Request headers lost");
-          vTaskDelay(10 / portTICK_RATE_MS);
+         // vTaskDelay(10 / portTICK_RATE_MS);
          gpio_set_level( PWM_PIN_HIGH , 0);
     }
     return ESP_OK;
@@ -492,8 +510,8 @@ static void mcpwm_gpio_initialize(void)
 {
     printf("initializing mcpwm gpio...\n");
     mcpwm_gpio_init(MCPWM_UNIT_0, MCPWM0A, GPIO_CONFIG_DIR_1);
-    gpio_pad_select_gpio(PWM_PIN_HIGH);
-   gpio_set_direction(PWM_PIN_HIGH, GPIO_MODE_OUTPUT);
+   // gpio_pad_select_gpio(PWM_PIN_HIGH);
+   //gpio_set_direction(PWM_PIN_HIGH, GPIO_MODE_OUTPUT);
     
 }
 
@@ -512,6 +530,9 @@ void mcpwm_control(void)
     pwm_config.counter_mode = MCPWM_UP_COUNTER;
     pwm_config.duty_mode = MCPWM_DUTY_MODE_0;
     mcpwm_init(MCPWM_UNIT_0, MCPWM_TIMER_0, &pwm_config); 
+    mcpwm_init(MCPWM_UNIT_1, MCPWM_TIMER_0, &pwm_config); 
+    mcpwm_init(MCPWM_UNIT_2, MCPWM_TIMER_0, &pwm_config); 
+   
     
 }
 
