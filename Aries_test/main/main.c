@@ -210,7 +210,7 @@ static esp_err_t hello_get_handler(httpd_req_t *req)
                 ESP_LOGI(TAG, "Found URL query parameter => GRIPPER=%s", param);
                 int gripangle=0;
                 int gripcount = atoi(param);
-                  brushed_motor_forward_backward_unit_1(MCPWM_UNIT_0, MCPWM_UNIT_0, gripcount);
+                  brushed_motor_forward_backward_unit_1(MCPWM_UNIT_0, MCPWM_TIMER_0, gripcount);
                 
                    ESP_LOGI(TAG, "MOTOR START CONDITION\n ");
                  //   vTaskDelay(10 / portTICK_RATE_MS);
@@ -230,7 +230,7 @@ static esp_err_t hello_get_handler(httpd_req_t *req)
                 ESP_LOGI(TAG, "Found URL query parameter => ELBOW_JOINT=%s", param);
                 int elbowangle=0;
                 int elbowcount = atoi(param);
-                  brushed_motor_forward_backward_unit_2(MCPWM_UNIT_1, MCPWM_TIMER_0, elbowcount);
+                  brushed_motor_forward_backward_unit_2(MCPWM_UNIT_0, MCPWM_TIMER_1, elbowcount);
                 
             }  
             if (httpd_query_key_value(buf, "shoulder", param, sizeof(param)) == ESP_OK) {
@@ -238,14 +238,14 @@ static esp_err_t hello_get_handler(httpd_req_t *req)
                 ESP_LOGI(TAG, "Found URL query parameter => SHOULDER=%s", param);
                 int shoulderangle=0;
                 int shouldercount = atoi(param);
-                  brushed_motor_forward_backward_unit_2(MCPWM_UNIT_1, MCPWM_TIMER_0, shouldercount);
+                  brushed_motor_forward_backward_unit_2(MCPWM_UNIT_0, MCPWM_TIMER_1, shouldercount);
             }
 
             if (httpd_query_key_value(buf, "base", param, sizeof(param)) == ESP_OK) {
                 ESP_LOGI(TAG, "Found URL query parameter => BASE=%s", param);
                 int baseangle=0;
                 int basecount = atoi(param);
-                 brushed_motor_forward_backward_unit_3(MCPWM_UNIT_MAX, MCPWM_TIMER_0, basecount);
+                 brushed_motor_forward_backward_unit_3(MCPWM_UNIT_0, MCPWM_TIMER_2, basecount);
                
             }
              
@@ -510,9 +510,9 @@ static void mcpwm_gpio_initialize(void)
     printf("initializing mcpwm gpio...\n");
     mcpwm_gpio_init(MCPWM_UNIT_0, MCPWM0A, GPIO_CONFIG_DIR_1);
     mcpwm_gpio_init(MCPWM_UNIT_0, MCPWM0B, GPIO_CONFIG_DIR_2);
-    mcpwm_gpio_init(MCPWM_UNIT_1, MCPWM1A, GPIO_CONFIG_DIR_3);
-    mcpwm_gpio_init(MCPWM_UNIT_1, MCPWM1B, GPIO_CONFIG_DIR_4);
-    mcpwm_gpio_init(MCPWM_UNIT_MAX, MCPWM2A, GPIO_CONFIG_DIR_5);
+    mcpwm_gpio_init(MCPWM_UNIT_0, MCPWM1A, GPIO_CONFIG_DIR_3);
+    mcpwm_gpio_init(MCPWM_UNIT_0, MCPWM1B, GPIO_CONFIG_DIR_4);
+    mcpwm_gpio_init(MCPWM_UNIT_0, MCPWM2A, GPIO_CONFIG_DIR_5);
 
    // gpio_pad_select_gpio(PWM_PIN_HIGH);
    //gpio_set_direction(PWM_PIN_HIGH, GPIO_MODE_OUTPUT);
@@ -533,10 +533,10 @@ void mcpwm_control(void)
     pwm_config.cmpr_b = 0;    //duty cycle of PWMxb = 0
     pwm_config.counter_mode = MCPWM_UP_COUNTER;
     pwm_config.duty_mode = MCPWM_DUTY_MODE_0;
-    mcpwm_init(MCPWM_UNIT_0, MCPWM_TIMER_0, &pwm_config); 
-    mcpwm_init(MCPWM_UNIT_1, MCPWM_TIMER_0, &pwm_config); 
-    mcpwm_init(MCPWM_UNIT_MAX, MCPWM_TIMER_0, &pwm_config); 
-   
+    mcpwm_init(MCPWM_UNIT_0, MCPWM_TIMER_0, &pwm_config);    
+    mcpwm_init(MCPWM_UNIT_0, MCPWM_TIMER_1, &pwm_config);    
+    mcpwm_init(MCPWM_UNIT_0, MCPWM_TIMER_2, &pwm_config);  
+
     
 }
 
