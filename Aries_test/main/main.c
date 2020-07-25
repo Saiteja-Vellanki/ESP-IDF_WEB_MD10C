@@ -246,7 +246,7 @@ static esp_err_t hello_get_handler(httpd_req_t *req)
                 ESP_LOGI(TAG, "Found URL query parameter => BASE=%s", param);
                 int baseangle=0;
                 int basecount = atoi(param);
-                 brushed_motor_forward_backward_unit_3(MCPWM_UNIT_2, MCPWM_TIMER_0, baseangle);
+                 brushed_motor_forward_backward_unit_3(MCPWM_UNIT_MAX, MCPWM_TIMER_0, basecount);
                
             }
              
@@ -271,7 +271,7 @@ static esp_err_t hello_get_handler(httpd_req_t *req)
     if (httpd_req_get_hdr_value_len(req, "grip") == 0) {
         ESP_LOGI(TAG, "Request headers lost");
          // vTaskDelay(10 / portTICK_RATE_MS);
-         gpio_set_level( PWM_PIN_HIGH , 0);
+       //  gpio_set_level( PWM_PIN_HIGH , 0);
     }
     return ESP_OK;
 }
@@ -513,7 +513,7 @@ static void mcpwm_gpio_initialize(void)
     mcpwm_gpio_init(MCPWM_UNIT_0, MCPWM0B, GPIO_CONFIG_DIR_2);
     mcpwm_gpio_init(MCPWM_UNIT_1, MCPWM0A, GPIO_CONFIG_DIR_3);
     mcpwm_gpio_init(MCPWM_UNIT_1, MCPWM0B, GPIO_CONFIG_DIR_4);
-    mcpwm_gpio_init(MCPWM_UNIT_2, MCPWM0A, GPIO_CONFIG_DIR_5);
+    mcpwm_gpio_init(MCPWM_UNIT_MAX, MCPWM0A, GPIO_CONFIG_DIR_5);
 
    // gpio_pad_select_gpio(PWM_PIN_HIGH);
    //gpio_set_direction(PWM_PIN_HIGH, GPIO_MODE_OUTPUT);
@@ -536,7 +536,7 @@ void mcpwm_control(void)
     pwm_config.duty_mode = MCPWM_DUTY_MODE_0;
     mcpwm_init(MCPWM_UNIT_0, MCPWM_TIMER_0, &pwm_config); 
     mcpwm_init(MCPWM_UNIT_1, MCPWM_TIMER_0, &pwm_config); 
-    mcpwm_init(MCPWM_UNIT_2, MCPWM_TIMER_0, &pwm_config); 
+    mcpwm_init(MCPWM_UNIT_MAX, MCPWM_TIMER_0, &pwm_config); 
    
     
 }
