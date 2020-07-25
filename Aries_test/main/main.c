@@ -39,7 +39,7 @@
 
 #define GPIO_CONFIG_DIR_4 16  
 
-#define GPIO_CONFIG_DIR_5 32  
+#define GPIO_CONFIG_DIR_5 2  
 
 #define GPIO_CONFIG_DIR_6 33
 
@@ -511,9 +511,9 @@ static void mcpwm_gpio_initialize(void)
     printf("initializing mcpwm gpio...\n");
     mcpwm_gpio_init(MCPWM_UNIT_0, MCPWM0A, GPIO_CONFIG_DIR_1);
     mcpwm_gpio_init(MCPWM_UNIT_0, MCPWM0B, GPIO_CONFIG_DIR_2);
-    mcpwm_gpio_init(MCPWM_UNIT_1, MCPWM0A, GPIO_CONFIG_DIR_3);
-    mcpwm_gpio_init(MCPWM_UNIT_1, MCPWM0B, GPIO_CONFIG_DIR_4);
-    mcpwm_gpio_init(MCPWM_UNIT_MAX, MCPWM0A, GPIO_CONFIG_DIR_5);
+    mcpwm_gpio_init(MCPWM_UNIT_1, MCPWM1A, GPIO_CONFIG_DIR_3);
+    mcpwm_gpio_init(MCPWM_UNIT_1, MCPWM1B, GPIO_CONFIG_DIR_4);
+    mcpwm_gpio_init(MCPWM_UNIT_MAX, MCPWM2A, GPIO_CONFIG_DIR_5);
 
    // gpio_pad_select_gpio(PWM_PIN_HIGH);
    //gpio_set_direction(PWM_PIN_HIGH, GPIO_MODE_OUTPUT);
