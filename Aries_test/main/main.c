@@ -210,8 +210,14 @@ static esp_err_t hello_get_handler(httpd_req_t *req)
                 ESP_LOGI(TAG, "Found URL query parameter => GRIPPER=%s", param);
                 int gripangle=0;
                 int gripcount = atoi(param);
+
+                  if(gripcount==50){
                   
-                  brushed_motor_forward_backward_unit_1(MCPWM_UNIT_0, MCPWM_TIMER_0, gripcount);
+                 mcpwm_set_signal_low(MCPWM_UNIT_0, MCPWM_UNIT_0, MCPWM_OPR_B);
+
+}
+                  
+                  brushed_motor_forward_backward_unit_1(MCPWM_UNIT_0, MCPWM_UNIT_0, gripcount);
                 
                    ESP_LOGI(TAG, "MOTOR START CONDITION\n ");
                  //   vTaskDelay(10 / portTICK_RATE_MS);
