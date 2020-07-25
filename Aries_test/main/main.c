@@ -169,8 +169,14 @@ static void brushed_motor_forward_backward_unit_3(mcpwm_unit_t mcpwm_num, mcpwm_
     mcpwm_set_duty_type(mcpwm_num, timer_num, MCPWM_OPR_A, MCPWM_DUTY_MODE_0);
 }
 
-
-
+/*
+static void brushed_motor_forward_backward_unit_6(mcpwm_unit_t mcpwm_num, mcpwm_timer_t timer_num , float duty_cycle)
+{
+   mcpwm_set_signal_low(mcpwm_num, timer_num, MCPWM_OPR_A);
+    mcpwm_set_duty(mcpwm_num, timer_num, MCPWM_OPR_B, duty_cycle);
+    mcpwm_set_duty_type(mcpwm_num, timer_num, MCPWM_OPR_B, MCPWM_DUTY_MODE_0);
+}
+*/
 
 
 
@@ -227,13 +233,9 @@ static esp_err_t hello_get_handler(httpd_req_t *req)
                 int gripangle=0;
                 int gripcount = atoi(param);
                   brushed_motor_forward_backward_unit_1(MCPWM_UNIT_0, MCPWM_TIMER_0, gripcount);
-                
-                   ESP_LOGI(TAG, "MOTOR START CONDITION\n ");
-                 //   vTaskDelay(10 / portTICK_RATE_MS);
+        
+            }
     
-    
-             
-                   }
 
             if (httpd_query_key_value(buf, "wrist", param, sizeof(param)) == ESP_OK) {
                 ESP_LOGI(TAG, "Found URL query parameter => WRIST_JOINT=%s", param);
@@ -264,7 +266,16 @@ static esp_err_t hello_get_handler(httpd_req_t *req)
                  brushed_motor_forward_backward_unit_3(MCPWM_UNIT_0, MCPWM_TIMER_2, basecount);
                
             }
-             
+
+            /*
+             if (httpd_query_key_value(buf, "base", param, sizeof(param)) == ESP_OK) {
+                ESP_LOGI(TAG, "Found URL query parameter => BASE=%s", param);
+                int baseangle=0;
+                int basecount = atoi(param);
+                 brushed_motor_forward_backward_unit_6(MCPWM_UNIT_0, MCPWM_TIMER_2, basecount);
+               
+            }
+             */
 
         }
          
