@@ -135,7 +135,7 @@ esp_err_t on_feedback_handler(httpd_req_t *req)
 
 static void brushed_motor_forward_backward_unit_1(mcpwm_unit_t mcpwm_num, mcpwm_timer_t timer_num , float duty_cycle)
 {
-   mcpwm_set_signal_low(mcpwm_num, timer_num, MCPWM_OPR_B);
+   mcpwm_set_signal_low(mcpwm_num, timer_num, MCPWM_OPR_A);
     mcpwm_set_duty(mcpwm_num, timer_num, MCPWM_OPR_A, duty_cycle);
     mcpwm_set_duty_type(mcpwm_num, timer_num, MCPWM_OPR_A, MCPWM_DUTY_MODE_0);
 }
@@ -143,28 +143,28 @@ static void brushed_motor_forward_backward_unit_1(mcpwm_unit_t mcpwm_num, mcpwm_
 
 static void brushed_motor_forward_backward_unit_4(mcpwm_unit_t mcpwm_num, mcpwm_timer_t timer_num , float duty_cycle)
 {
-   mcpwm_set_signal_low(mcpwm_num, timer_num, MCPWM_OPR_A);
+   mcpwm_set_signal_low(mcpwm_num, timer_num, MCPWM_OPR_B);
     mcpwm_set_duty(mcpwm_num, timer_num, MCPWM_OPR_B, duty_cycle);
     mcpwm_set_duty_type(mcpwm_num, timer_num, MCPWM_OPR_B, MCPWM_DUTY_MODE_0);
 }
 
 static void brushed_motor_forward_backward_unit_2(mcpwm_unit_t mcpwm_num, mcpwm_timer_t timer_num , float duty_cycle)
 {
-   mcpwm_set_signal_low(mcpwm_num, timer_num, MCPWM_OPR_B);
+   mcpwm_set_signal_low(mcpwm_num, timer_num, MCPWM_OPR_A);
     mcpwm_set_duty(mcpwm_num, timer_num, MCPWM_OPR_A, duty_cycle);
     mcpwm_set_duty_type(mcpwm_num, timer_num, MCPWM_OPR_A, MCPWM_DUTY_MODE_0);
 }
 
 static void brushed_motor_forward_backward_unit_5(mcpwm_unit_t mcpwm_num, mcpwm_timer_t timer_num , float duty_cycle)
 {
-   mcpwm_set_signal_low(mcpwm_num, timer_num, MCPWM_OPR_A);
+   mcpwm_set_signal_low(mcpwm_num, timer_num, MCPWM_OPR_B);
     mcpwm_set_duty(mcpwm_num, timer_num, MCPWM_OPR_B, duty_cycle);
     mcpwm_set_duty_type(mcpwm_num, timer_num, MCPWM_OPR_B, MCPWM_DUTY_MODE_0);
 }
 
 static void brushed_motor_forward_backward_unit_3(mcpwm_unit_t mcpwm_num, mcpwm_timer_t timer_num , float duty_cycle)
 {
-   mcpwm_set_signal_low(mcpwm_num, timer_num, MCPWM_OPR_B);
+   mcpwm_set_signal_low(mcpwm_num, timer_num, MCPWM_OPR_A);
     mcpwm_set_duty(mcpwm_num, timer_num, MCPWM_OPR_A, duty_cycle);
     mcpwm_set_duty_type(mcpwm_num, timer_num, MCPWM_OPR_A, MCPWM_DUTY_MODE_0);
 }
