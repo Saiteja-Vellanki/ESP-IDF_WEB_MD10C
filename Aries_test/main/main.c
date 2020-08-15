@@ -556,8 +556,8 @@ void mcpwm_control(void)
     printf("Configuring Initial Parameters of mcpwm...\n");
     mcpwm_config_t pwm_config;
     pwm_config.frequency = 20000;    //frequency = 20kHz,
-    pwm_config.cmpr_a = 50;    //duty cycle of PWMxA = 0
-    pwm_config.cmpr_b = 50;    //duty cycle of PWMxb = 0
+    pwm_config.cmpr_a = 0;    //duty cycle of PWMxA = 0
+    pwm_config.cmpr_b = 0;    //duty cycle of PWMxb = 0
     pwm_config.counter_mode = MCPWM_UP_COUNTER;
     pwm_config.duty_mode = MCPWM_DUTY_MODE_0;
     mcpwm_init(MCPWM_UNIT_0, MCPWM_TIMER_0, &pwm_config);    
