@@ -32,7 +32,7 @@
 //#define PWM_PIN_HIGH      15  
 //4,12,14,16,32,33
 
-#define GPIO_CONFIG_DIR_1 4
+#define GPIO_CONFIG_DIR_1 2
 
 #define GPIO_CONFIG_DIR_2 12
 
@@ -559,7 +559,7 @@ void mcpwm_control(void)
     pwm_config.cmpr_a = 0;    //duty cycle of PWMxA = 0
     pwm_config.cmpr_b = 0;    //duty cycle of PWMxb = 0
     pwm_config.counter_mode = MCPWM_UP_COUNTER;
-    pwm_config.duty_mode = MCPWM_DUTY_MODE_0;
+    pwm_config.duty_mode =MCPWM_DUTY_MODE_1;
     mcpwm_init(MCPWM_UNIT_0, MCPWM_TIMER_0, &pwm_config);    
     mcpwm_init(MCPWM_UNIT_0, MCPWM_TIMER_1, &pwm_config);    
     mcpwm_init(MCPWM_UNIT_0, MCPWM_TIMER_2, &pwm_config);  
