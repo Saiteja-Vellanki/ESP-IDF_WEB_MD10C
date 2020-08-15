@@ -32,7 +32,7 @@
 //#define PWM_PIN_HIGH      15  
 //4,12,14,16,32,33
 
-#define GPIO_CONFIG_DIR_1 2
+#define GPIO_CONFIG_DIR_1 4
 
 #define GPIO_CONFIG_DIR_2 12
 
