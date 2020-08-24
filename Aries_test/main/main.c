@@ -257,7 +257,19 @@ static esp_err_t hello_get_handler(httpd_req_t *req)
                 ESP_LOGI(TAG, "Found URL query parameter => WRIST_YAW=%s", param);
                // int wristangle=0;
                 float wristcountyaw = atof(param);
-               brushed_motor_forward_backward_unit_6(MCPWM_UNIT_0, MCPWM_TIMER_2, wristcountyaw);
+                float wristcountanti;
+                      float val = 50.00;
+                      if(wristcountyaw<50.00){
+                       wristcountanti = val+10.0;
+                       brushed_motor_forward_backward_unit_6(MCPWM_UNIT_0, MCPWM_TIMER_2, wristcountanti);
+                      }
+                      if(wristcountyaw>50.00){
+                      wristcountanti = val-10.0;
+                       brushed_motor_forward_backward_unit_6(MCPWM_UNIT_0, MCPWM_TIMER_2, wristcountanti);
+                  }
+                    ESP_LOGI(TAG, "Found URL query parameter => WRIST_YAW=%f",  wristcountanti);
+               brushed_motor_forward_backward_unit_4(MCPWM_UNIT_0, MCPWM_TIMER_0, wristcountyaw);
+               
                 
             }
              
