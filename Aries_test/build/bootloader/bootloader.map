@@ -54,11 +54,11 @@ Archive member included to satisfy reference by file (symbol)
                               /home/sai-vdeal/Aries/Aries_test/build/bootloader/soc/libsoc.a(rtc_clk_init.o) (rtc_clk_32k_enable)
 /home/sai-vdeal/Aries/Aries_test/build/bootloader/soc/libsoc.a(gpio_periph.o)
                               /home/sai-vdeal/Aries/Aries_test/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o) (GPIO_PIN_MUX_REG)
-/home/sai-vdeal/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_bswapsi2.o)
+/home/sai-vdeal/.espressif/tools/xtensa-esp32-elf/esp-2019r2-8.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_bswapsi2.o)
                               /home/sai-vdeal/Aries/Aries_test/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o) (__bswapsi2)
-/home/sai-vdeal/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_divdi3.o)
+/home/sai-vdeal/.espressif/tools/xtensa-esp32-elf/esp-2019r2-8.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_divdi3.o)
                               /home/sai-vdeal/Aries/Aries_test/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o) (__divdi3)
-/home/sai-vdeal/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_udivdi3.o)
+/home/sai-vdeal/.espressif/tools/xtensa-esp32-elf/esp-2019r2-8.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_udivdi3.o)
                               /home/sai-vdeal/Aries/Aries_test/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o) (__udivdi3)
 
 Allocating common symbols
@@ -369,7 +369,7 @@ Discarded input sections
  .debug_aranges
                 0x0000000000000000       0x28 /home/sai-vdeal/Aries/Aries_test/build/bootloader/soc/libsoc.a(soc_hal.o)
  .debug_ranges  0x0000000000000000       0x18 /home/sai-vdeal/Aries/Aries_test/build/bootloader/soc/libsoc.a(soc_hal.o)
- .debug_line    0x0000000000000000      0x42c /home/sai-vdeal/Aries/Aries_test/build/bootloader/soc/libsoc.a(soc_hal.o)
+ .debug_line    0x0000000000000000      0x4e8 /home/sai-vdeal/Aries/Aries_test/build/bootloader/soc/libsoc.a(soc_hal.o)
  .debug_str     0x0000000000000000     0x1171 /home/sai-vdeal/Aries/Aries_test/build/bootloader/soc/libsoc.a(soc_hal.o)
  .comment       0x0000000000000000       0x26 /home/sai-vdeal/Aries/Aries_test/build/bootloader/soc/libsoc.a(soc_hal.o)
  .xt.lit        0x0000000000000000       0x10 /home/sai-vdeal/Aries/Aries_test/build/bootloader/soc/libsoc.a(soc_hal.o)
@@ -400,7 +400,7 @@ Discarded input sections
  .debug_aranges
                 0x0000000000000000       0x40 /home/sai-vdeal/Aries/Aries_test/build/bootloader/soc/libsoc.a(cpu_hal.o)
  .debug_ranges  0x0000000000000000       0xa8 /home/sai-vdeal/Aries/Aries_test/build/bootloader/soc/libsoc.a(cpu_hal.o)
- .debug_line    0x0000000000000000      0x6b3 /home/sai-vdeal/Aries/Aries_test/build/bootloader/soc/libsoc.a(cpu_hal.o)
+ .debug_line    0x0000000000000000      0x76f /home/sai-vdeal/Aries/Aries_test/build/bootloader/soc/libsoc.a(cpu_hal.o)
  .debug_str     0x0000000000000000     0x127f /home/sai-vdeal/Aries/Aries_test/build/bootloader/soc/libsoc.a(cpu_hal.o)
  .comment       0x0000000000000000       0x26 /home/sai-vdeal/Aries/Aries_test/build/bootloader/soc/libsoc.a(cpu_hal.o)
  .xt.lit        0x0000000000000000        0x8 /home/sai-vdeal/Aries/Aries_test/build/bootloader/soc/libsoc.a(cpu_hal.o)
@@ -488,29 +488,29 @@ Discarded input sections
  .debug_str     0x0000000000000000      0x43a /home/sai-vdeal/Aries/Aries_test/build/bootloader/soc/libsoc.a(gpio_periph.o)
  .comment       0x0000000000000000       0x26 /home/sai-vdeal/Aries/Aries_test/build/bootloader/soc/libsoc.a(gpio_periph.o)
  .xt.prop       0x0000000000000000       0x18 /home/sai-vdeal/Aries/Aries_test/build/bootloader/soc/libsoc.a(gpio_periph.o)
- .data          0x0000000000000000        0x0 /home/sai-vdeal/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_bswapsi2.o)
- .bss           0x0000000000000000        0x0 /home/sai-vdeal/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_bswapsi2.o)
- .xt.lit        0x0000000000000000        0x8 /home/sai-vdeal/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_bswapsi2.o)
- .xt.prop       0x0000000000000000       0x30 /home/sai-vdeal/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_bswapsi2.o)
- .text          0x0000000000000000      0x2aa /home/sai-vdeal/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_divdi3.o)
- .data          0x0000000000000000        0x0 /home/sai-vdeal/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_divdi3.o)
- .bss           0x0000000000000000        0x0 /home/sai-vdeal/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_divdi3.o)
- .debug_frame   0x0000000000000000       0x28 /home/sai-vdeal/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_divdi3.o)
- .eh_frame      0x0000000000000000       0x28 /home/sai-vdeal/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_divdi3.o)
- .debug_info    0x0000000000000000     0x114b /home/sai-vdeal/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_divdi3.o)
- .debug_abbrev  0x0000000000000000      0x28e /home/sai-vdeal/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_divdi3.o)
- .debug_loc     0x0000000000000000      0xac9 /home/sai-vdeal/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_divdi3.o)
+ .data          0x0000000000000000        0x0 /home/sai-vdeal/.espressif/tools/xtensa-esp32-elf/esp-2019r2-8.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_bswapsi2.o)
+ .bss           0x0000000000000000        0x0 /home/sai-vdeal/.espressif/tools/xtensa-esp32-elf/esp-2019r2-8.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_bswapsi2.o)
+ .xt.lit        0x0000000000000000        0x8 /home/sai-vdeal/.espressif/tools/xtensa-esp32-elf/esp-2019r2-8.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_bswapsi2.o)
+ .xt.prop       0x0000000000000000       0x30 /home/sai-vdeal/.espressif/tools/xtensa-esp32-elf/esp-2019r2-8.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_bswapsi2.o)
+ .text          0x0000000000000000      0x2aa /home/sai-vdeal/.espressif/tools/xtensa-esp32-elf/esp-2019r2-8.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_divdi3.o)
+ .data          0x0000000000000000        0x0 /home/sai-vdeal/.espressif/tools/xtensa-esp32-elf/esp-2019r2-8.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_divdi3.o)
+ .bss           0x0000000000000000        0x0 /home/sai-vdeal/.espressif/tools/xtensa-esp32-elf/esp-2019r2-8.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_divdi3.o)
+ .debug_frame   0x0000000000000000       0x28 /home/sai-vdeal/.espressif/tools/xtensa-esp32-elf/esp-2019r2-8.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_divdi3.o)
+ .eh_frame      0x0000000000000000       0x28 /home/sai-vdeal/.espressif/tools/xtensa-esp32-elf/esp-2019r2-8.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_divdi3.o)
+ .debug_info    0x0000000000000000     0x114b /home/sai-vdeal/.espressif/tools/xtensa-esp32-elf/esp-2019r2-8.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_divdi3.o)
+ .debug_abbrev  0x0000000000000000      0x28e /home/sai-vdeal/.espressif/tools/xtensa-esp32-elf/esp-2019r2-8.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_divdi3.o)
+ .debug_loc     0x0000000000000000      0xac9 /home/sai-vdeal/.espressif/tools/xtensa-esp32-elf/esp-2019r2-8.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_divdi3.o)
  .debug_aranges
-                0x0000000000000000       0x20 /home/sai-vdeal/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_divdi3.o)
- .debug_ranges  0x0000000000000000       0xa0 /home/sai-vdeal/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_divdi3.o)
- .debug_line    0x0000000000000000      0xaf6 /home/sai-vdeal/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_divdi3.o)
- .debug_str     0x0000000000000000      0x758 /home/sai-vdeal/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_divdi3.o)
- .comment       0x0000000000000000       0x26 /home/sai-vdeal/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_divdi3.o)
- .xt.prop       0x0000000000000000      0x234 /home/sai-vdeal/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_divdi3.o)
- .data          0x0000000000000000        0x0 /home/sai-vdeal/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_udivdi3.o)
- .bss           0x0000000000000000        0x0 /home/sai-vdeal/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_udivdi3.o)
- .eh_frame      0x0000000000000000       0x28 /home/sai-vdeal/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_udivdi3.o)
- .xt.prop       0x0000000000000000      0x21c /home/sai-vdeal/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_udivdi3.o)
+                0x0000000000000000       0x20 /home/sai-vdeal/.espressif/tools/xtensa-esp32-elf/esp-2019r2-8.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_divdi3.o)
+ .debug_ranges  0x0000000000000000       0xa0 /home/sai-vdeal/.espressif/tools/xtensa-esp32-elf/esp-2019r2-8.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_divdi3.o)
+ .debug_line    0x0000000000000000      0xaf6 /home/sai-vdeal/.espressif/tools/xtensa-esp32-elf/esp-2019r2-8.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_divdi3.o)
+ .debug_str     0x0000000000000000      0x758 /home/sai-vdeal/.espressif/tools/xtensa-esp32-elf/esp-2019r2-8.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_divdi3.o)
+ .comment       0x0000000000000000       0x26 /home/sai-vdeal/.espressif/tools/xtensa-esp32-elf/esp-2019r2-8.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_divdi3.o)
+ .xt.prop       0x0000000000000000      0x234 /home/sai-vdeal/.espressif/tools/xtensa-esp32-elf/esp-2019r2-8.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_divdi3.o)
+ .data          0x0000000000000000        0x0 /home/sai-vdeal/.espressif/tools/xtensa-esp32-elf/esp-2019r2-8.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_udivdi3.o)
+ .bss           0x0000000000000000        0x0 /home/sai-vdeal/.espressif/tools/xtensa-esp32-elf/esp-2019r2-8.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_udivdi3.o)
+ .eh_frame      0x0000000000000000       0x28 /home/sai-vdeal/.espressif/tools/xtensa-esp32-elf/esp-2019r2-8.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_udivdi3.o)
+ .xt.prop       0x0000000000000000      0x21c /home/sai-vdeal/.espressif/tools/xtensa-esp32-elf/esp-2019r2-8.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_udivdi3.o)
 
 Memory Configuration
 
@@ -530,9 +530,9 @@ LOAD /home/sai-vdeal/Aries/Aries_test/build/bootloader/micro-ecc/libmicro-ecc.a
 LOAD /home/sai-vdeal/Aries/Aries_test/build/bootloader/soc/libsoc.a
 LOAD /home/sai-vdeal/Aries/Aries_test/build/bootloader/main/libmain.a
 LOAD /home/sai-vdeal/Aries/Aries_test/build/bootloader/efuse/libefuse.a
-LOAD /home/sai-vdeal/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a
-LOAD /home/sai-vdeal/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib/no-rtti/libstdc++.a
-LOAD /home/sai-vdeal/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcov.a
+LOAD /home/sai-vdeal/.espressif/tools/xtensa-esp32-elf/esp-2019r2-8.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a
+LOAD /home/sai-vdeal/.espressif/tools/xtensa-esp32-elf/esp-2019r2-8.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/../../../../xtensa-esp32-elf/lib/no-rtti/libstdc++.a
+LOAD /home/sai-vdeal/.espressif/tools/xtensa-esp32-elf/esp-2019r2-8.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcov.a
 END GROUP
 
 .iram_loader.text
@@ -552,7 +552,7 @@ END GROUP
                 0x0000000040078070        0x4 /home/sai-vdeal/Aries/Aries_test/build/bootloader/soc/libsoc.a(cpu_util.o)
  .literal.esp_log_early_timestamp
                 0x0000000040078074        0x4 /home/sai-vdeal/Aries/Aries_test/build/bootloader/log/liblog.a(log_noos.o)
- .literal       0x0000000040078078        0x8 /home/sai-vdeal/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_bswapsi2.o)
+ .literal       0x0000000040078078        0x8 /home/sai-vdeal/.espressif/tools/xtensa-esp32-elf/esp-2019r2-8.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_bswapsi2.o)
  .literal.bootloader_clock_configure
                 0x0000000040078080       0x1c /home/sai-vdeal/Aries/Aries_test/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
                                          0x2c (size before relaxing)
@@ -786,11 +786,11 @@ END GROUP
  *fill*         0x0000000040078856        0x0 
  *libgcc.a:(.literal .text .literal.* .text.*)
  *fill*         0x0000000040078856        0x2 
- .text          0x0000000040078858       0x26 /home/sai-vdeal/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_bswapsi2.o)
+ .text          0x0000000040078858       0x26 /home/sai-vdeal/.espressif/tools/xtensa-esp32-elf/esp-2019r2-8.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_bswapsi2.o)
                 0x0000000040078858                __bswapsi2
  *fill*         0x000000004007887e        0x0 
  *fill*         0x000000004007887e        0x2 
- .text          0x0000000040078880      0x26a /home/sai-vdeal/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_udivdi3.o)
+ .text          0x0000000040078880      0x26a /home/sai-vdeal/.espressif/tools/xtensa-esp32-elf/esp-2019r2-8.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_udivdi3.o)
                 0x0000000040078880                __udivdi3
  *libbootloader_support.a:bootloader_clock.*(.literal .text .literal.* .text.*)
  *fill*         0x0000000040078aea        0x2 
@@ -3253,8 +3253,8 @@ OUTPUT(/home/sai-vdeal/Aries/Aries_test/build/bootloader/bootloader.elf elf32-xt
  .debug_frame   0x0000000000000cf0       0x40 /home/sai-vdeal/Aries/Aries_test/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
  .debug_frame   0x0000000000000d30       0xb8 /home/sai-vdeal/Aries/Aries_test/build/bootloader/soc/libsoc.a(rtc_time.o)
  .debug_frame   0x0000000000000de8      0x2b0 /home/sai-vdeal/Aries/Aries_test/build/bootloader/soc/libsoc.a(rtc_clk.o)
- .debug_frame   0x0000000000001098       0x28 /home/sai-vdeal/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_bswapsi2.o)
- .debug_frame   0x00000000000010c0       0x28 /home/sai-vdeal/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_udivdi3.o)
+ .debug_frame   0x0000000000001098       0x28 /home/sai-vdeal/.espressif/tools/xtensa-esp32-elf/esp-2019r2-8.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_bswapsi2.o)
+ .debug_frame   0x00000000000010c0       0x28 /home/sai-vdeal/.espressif/tools/xtensa-esp32-elf/esp-2019r2-8.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_udivdi3.o)
 
 .debug_info     0x0000000000000000    0x66375
  .debug_info    0x0000000000000000      0xeac /home/sai-vdeal/Aries/Aries_test/build/bootloader/main/libmain.a(bootloader_start.o)
@@ -3281,8 +3281,8 @@ OUTPUT(/home/sai-vdeal/Aries/Aries_test/build/bootloader/bootloader.elf elf32-xt
  .debug_info    0x0000000000050b5a     0x6ddd /home/sai-vdeal/Aries/Aries_test/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
  .debug_info    0x0000000000057937     0x5429 /home/sai-vdeal/Aries/Aries_test/build/bootloader/soc/libsoc.a(rtc_time.o)
  .debug_info    0x000000000005cd60     0x7a16 /home/sai-vdeal/Aries/Aries_test/build/bootloader/soc/libsoc.a(rtc_clk.o)
- .debug_info    0x0000000000064776      0xb02 /home/sai-vdeal/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_bswapsi2.o)
- .debug_info    0x0000000000065278     0x10fd /home/sai-vdeal/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_udivdi3.o)
+ .debug_info    0x0000000000064776      0xb02 /home/sai-vdeal/.espressif/tools/xtensa-esp32-elf/esp-2019r2-8.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_bswapsi2.o)
+ .debug_info    0x0000000000065278     0x10fd /home/sai-vdeal/.espressif/tools/xtensa-esp32-elf/esp-2019r2-8.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_udivdi3.o)
 
 .debug_abbrev   0x0000000000000000     0x5dc7
  .debug_abbrev  0x0000000000000000      0x2f7 /home/sai-vdeal/Aries/Aries_test/build/bootloader/main/libmain.a(bootloader_start.o)
@@ -3309,8 +3309,8 @@ OUTPUT(/home/sai-vdeal/Aries/Aries_test/build/bootloader/bootloader.elf elf32-xt
  .debug_abbrev  0x0000000000004ce4      0x3e1 /home/sai-vdeal/Aries/Aries_test/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
  .debug_abbrev  0x00000000000050c5      0x366 /home/sai-vdeal/Aries/Aries_test/build/bootloader/soc/libsoc.a(rtc_time.o)
  .debug_abbrev  0x000000000000542b      0x571 /home/sai-vdeal/Aries/Aries_test/build/bootloader/soc/libsoc.a(rtc_clk.o)
- .debug_abbrev  0x000000000000599c      0x1b1 /home/sai-vdeal/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_bswapsi2.o)
- .debug_abbrev  0x0000000000005b4d      0x27a /home/sai-vdeal/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_udivdi3.o)
+ .debug_abbrev  0x000000000000599c      0x1b1 /home/sai-vdeal/.espressif/tools/xtensa-esp32-elf/esp-2019r2-8.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_bswapsi2.o)
+ .debug_abbrev  0x0000000000005b4d      0x27a /home/sai-vdeal/.espressif/tools/xtensa-esp32-elf/esp-2019r2-8.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_udivdi3.o)
 
 .debug_loc      0x0000000000000000     0x81c4
  .debug_loc     0x0000000000000000       0xed /home/sai-vdeal/Aries/Aries_test/build/bootloader/main/libmain.a(bootloader_start.o)
@@ -3337,8 +3337,8 @@ OUTPUT(/home/sai-vdeal/Aries/Aries_test/build/bootloader/bootloader.elf elf32-xt
  .debug_loc     0x0000000000006770      0x274 /home/sai-vdeal/Aries/Aries_test/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
  .debug_loc     0x00000000000069e4      0x334 /home/sai-vdeal/Aries/Aries_test/build/bootloader/soc/libsoc.a(rtc_time.o)
  .debug_loc     0x0000000000006d18      0xa75 /home/sai-vdeal/Aries/Aries_test/build/bootloader/soc/libsoc.a(rtc_clk.o)
- .debug_loc     0x000000000000778d       0x25 /home/sai-vdeal/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_bswapsi2.o)
- .debug_loc     0x00000000000077b2      0xa12 /home/sai-vdeal/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_udivdi3.o)
+ .debug_loc     0x000000000000778d       0x25 /home/sai-vdeal/.espressif/tools/xtensa-esp32-elf/esp-2019r2-8.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_bswapsi2.o)
+ .debug_loc     0x00000000000077b2      0xa12 /home/sai-vdeal/.espressif/tools/xtensa-esp32-elf/esp-2019r2-8.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_udivdi3.o)
 
 .debug_aranges  0x0000000000000000      0x788
  .debug_aranges
@@ -3390,9 +3390,9 @@ OUTPUT(/home/sai-vdeal/Aries/Aries_test/build/bootloader/bootloader.elf elf32-xt
  .debug_aranges
                 0x0000000000000650       0xf8 /home/sai-vdeal/Aries/Aries_test/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .debug_aranges
-                0x0000000000000748       0x20 /home/sai-vdeal/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_bswapsi2.o)
+                0x0000000000000748       0x20 /home/sai-vdeal/.espressif/tools/xtensa-esp32-elf/esp-2019r2-8.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_bswapsi2.o)
  .debug_aranges
-                0x0000000000000768       0x20 /home/sai-vdeal/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_udivdi3.o)
+                0x0000000000000768       0x20 /home/sai-vdeal/.espressif/tools/xtensa-esp32-elf/esp-2019r2-8.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_udivdi3.o)
 
 .debug_ranges   0x0000000000000000     0x1208
  .debug_ranges  0x0000000000000000       0x30 /home/sai-vdeal/Aries/Aries_test/build/bootloader/main/libmain.a(bootloader_start.o)
@@ -3419,35 +3419,35 @@ OUTPUT(/home/sai-vdeal/Aries/Aries_test/build/bootloader/bootloader.elf elf32-xt
  .debug_ranges  0x0000000000000f78       0x18 /home/sai-vdeal/Aries/Aries_test/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
  .debug_ranges  0x0000000000000f90       0x40 /home/sai-vdeal/Aries/Aries_test/build/bootloader/soc/libsoc.a(rtc_time.o)
  .debug_ranges  0x0000000000000fd0      0x198 /home/sai-vdeal/Aries/Aries_test/build/bootloader/soc/libsoc.a(rtc_clk.o)
- .debug_ranges  0x0000000000001168       0xa0 /home/sai-vdeal/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_udivdi3.o)
+ .debug_ranges  0x0000000000001168       0xa0 /home/sai-vdeal/.espressif/tools/xtensa-esp32-elf/esp-2019r2-8.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_udivdi3.o)
 
-.debug_line     0x0000000000000000    0x131bd
- .debug_line    0x0000000000000000      0x4f8 /home/sai-vdeal/Aries/Aries_test/build/bootloader/main/libmain.a(bootloader_start.o)
- .debug_line    0x00000000000004f8     0x1e09 /home/sai-vdeal/Aries/Aries_test/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
- .debug_line    0x0000000000002301     0x1231 /home/sai-vdeal/Aries/Aries_test/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
- .debug_line    0x0000000000003532      0x69a /home/sai-vdeal/Aries/Aries_test/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
- .debug_line    0x0000000000003bcc     0x1f56 /home/sai-vdeal/Aries/Aries_test/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .debug_line    0x0000000000005b22      0x827 /home/sai-vdeal/Aries/Aries_test/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
- .debug_line    0x0000000000006349      0x70d /home/sai-vdeal/Aries/Aries_test/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
- .debug_line    0x0000000000006a56     0x15d1 /home/sai-vdeal/Aries/Aries_test/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_esp32.o)
- .debug_line    0x0000000000008027      0x36b /home/sai-vdeal/Aries/Aries_test/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_efuse_esp32.o)
- .debug_line    0x0000000000008392      0x390 /home/sai-vdeal/Aries/Aries_test/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_mem.o)
- .debug_line    0x0000000000008722     0x103e /home/sai-vdeal/Aries/Aries_test/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- .debug_line    0x0000000000009760      0x8b7 /home/sai-vdeal/Aries/Aries_test/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
- .debug_line    0x000000000000a017      0x594 /home/sai-vdeal/Aries/Aries_test/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
- .debug_line    0x000000000000a5ab      0x7e4 /home/sai-vdeal/Aries/Aries_test/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash_config_esp32.o)
- .debug_line    0x000000000000ad8f      0xb48 /home/sai-vdeal/Aries/Aries_test/build/bootloader/bootloader_support/libbootloader_support.a(flash_qio_mode.o)
- .debug_line    0x000000000000b8d7      0x396 /home/sai-vdeal/Aries/Aries_test/build/bootloader/log/liblog.a(log_noos.o)
- .debug_line    0x000000000000bc6d     0x173b /home/sai-vdeal/Aries/Aries_test/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
- .debug_line    0x000000000000d3a8      0x60a /home/sai-vdeal/Aries/Aries_test/build/bootloader/soc/libsoc.a(cpu_util.o)
- .debug_line    0x000000000000d9b2     0x1404 /home/sai-vdeal/Aries/Aries_test/build/bootloader/soc/libsoc.a(wdt_hal_iram.o)
- .debug_line    0x000000000000edb6      0x33b /home/sai-vdeal/Aries/Aries_test/build/bootloader/soc/libsoc.a(mpu_hal.o)
- .debug_line    0x000000000000f0f1      0x927 /home/sai-vdeal/Aries/Aries_test/build/bootloader/soc/libsoc.a(rtc_init.o)
- .debug_line    0x000000000000fa18      0x982 /home/sai-vdeal/Aries/Aries_test/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
- .debug_line    0x000000000001039a      0x894 /home/sai-vdeal/Aries/Aries_test/build/bootloader/soc/libsoc.a(rtc_time.o)
- .debug_line    0x0000000000010c2e     0x1882 /home/sai-vdeal/Aries/Aries_test/build/bootloader/soc/libsoc.a(rtc_clk.o)
- .debug_line    0x00000000000124b0      0x2e2 /home/sai-vdeal/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_bswapsi2.o)
- .debug_line    0x0000000000012792      0xa2b /home/sai-vdeal/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_udivdi3.o)
+.debug_line     0x0000000000000000    0x141e5
+ .debug_line    0x0000000000000000      0x5b4 /home/sai-vdeal/Aries/Aries_test/build/bootloader/main/libmain.a(bootloader_start.o)
+ .debug_line    0x00000000000005b4     0x1ec5 /home/sai-vdeal/Aries/Aries_test/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+ .debug_line    0x0000000000002479     0x12ed /home/sai-vdeal/Aries/Aries_test/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+ .debug_line    0x0000000000003766      0x756 /home/sai-vdeal/Aries/Aries_test/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+ .debug_line    0x0000000000003ebc     0x2012 /home/sai-vdeal/Aries/Aries_test/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .debug_line    0x0000000000005ece      0x8e3 /home/sai-vdeal/Aries/Aries_test/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ .debug_line    0x00000000000067b1      0x7c9 /home/sai-vdeal/Aries/Aries_test/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ .debug_line    0x0000000000006f7a     0x168d /home/sai-vdeal/Aries/Aries_test/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_esp32.o)
+ .debug_line    0x0000000000008607      0x427 /home/sai-vdeal/Aries/Aries_test/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_efuse_esp32.o)
+ .debug_line    0x0000000000008a2e      0x41d /home/sai-vdeal/Aries/Aries_test/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_mem.o)
+ .debug_line    0x0000000000008e4b     0x10fa /home/sai-vdeal/Aries/Aries_test/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .debug_line    0x0000000000009f45      0x973 /home/sai-vdeal/Aries/Aries_test/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+ .debug_line    0x000000000000a8b8      0x650 /home/sai-vdeal/Aries/Aries_test/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
+ .debug_line    0x000000000000af08      0x8a0 /home/sai-vdeal/Aries/Aries_test/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash_config_esp32.o)
+ .debug_line    0x000000000000b7a8      0xc04 /home/sai-vdeal/Aries/Aries_test/build/bootloader/bootloader_support/libbootloader_support.a(flash_qio_mode.o)
+ .debug_line    0x000000000000c3ac      0x452 /home/sai-vdeal/Aries/Aries_test/build/bootloader/log/liblog.a(log_noos.o)
+ .debug_line    0x000000000000c7fe     0x17f7 /home/sai-vdeal/Aries/Aries_test/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .debug_line    0x000000000000dff5      0x697 /home/sai-vdeal/Aries/Aries_test/build/bootloader/soc/libsoc.a(cpu_util.o)
+ .debug_line    0x000000000000e68c     0x14c0 /home/sai-vdeal/Aries/Aries_test/build/bootloader/soc/libsoc.a(wdt_hal_iram.o)
+ .debug_line    0x000000000000fb4c      0x33b /home/sai-vdeal/Aries/Aries_test/build/bootloader/soc/libsoc.a(mpu_hal.o)
+ .debug_line    0x000000000000fe87      0x985 /home/sai-vdeal/Aries/Aries_test/build/bootloader/soc/libsoc.a(rtc_init.o)
+ .debug_line    0x000000000001080c      0xa3e /home/sai-vdeal/Aries/Aries_test/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
+ .debug_line    0x000000000001124a      0x950 /home/sai-vdeal/Aries/Aries_test/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .debug_line    0x0000000000011b9a     0x193e /home/sai-vdeal/Aries/Aries_test/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .debug_line    0x00000000000134d8      0x2e2 /home/sai-vdeal/.espressif/tools/xtensa-esp32-elf/esp-2019r2-8.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_bswapsi2.o)
+ .debug_line    0x00000000000137ba      0xa2b /home/sai-vdeal/.espressif/tools/xtensa-esp32-elf/esp-2019r2-8.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_udivdi3.o)
 
 .debug_str      0x0000000000000000     0xa406
  .debug_str     0x0000000000000000      0x9ec /home/sai-vdeal/Aries/Aries_test/build/bootloader/main/libmain.a(bootloader_start.o)
@@ -3498,9 +3498,9 @@ OUTPUT(/home/sai-vdeal/Aries/Aries_test/build/bootloader/bootloader.elf elf32-xt
                                        0x2d06 (size before relaxing)
  .debug_str     0x0000000000009cdb      0x433 /home/sai-vdeal/Aries/Aries_test/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                        0x482c (size before relaxing)
- .debug_str     0x000000000000a10e      0x21f /home/sai-vdeal/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_bswapsi2.o)
+ .debug_str     0x000000000000a10e      0x21f /home/sai-vdeal/.espressif/tools/xtensa-esp32-elf/esp-2019r2-8.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_bswapsi2.o)
                                         0x6df (size before relaxing)
- .debug_str     0x000000000000a32d       0xd9 /home/sai-vdeal/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_udivdi3.o)
+ .debug_str     0x000000000000a32d       0xd9 /home/sai-vdeal/.espressif/tools/xtensa-esp32-elf/esp-2019r2-8.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_udivdi3.o)
                                         0x759 (size before relaxing)
 
 .comment        0x0000000000000000       0x25
@@ -3529,8 +3529,8 @@ OUTPUT(/home/sai-vdeal/Aries/Aries_test/build/bootloader/bootloader.elf elf32-xt
  .comment       0x0000000000000025       0x26 /home/sai-vdeal/Aries/Aries_test/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
  .comment       0x0000000000000025       0x26 /home/sai-vdeal/Aries/Aries_test/build/bootloader/soc/libsoc.a(rtc_time.o)
  .comment       0x0000000000000025       0x26 /home/sai-vdeal/Aries/Aries_test/build/bootloader/soc/libsoc.a(rtc_clk.o)
- .comment       0x0000000000000025       0x26 /home/sai-vdeal/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_bswapsi2.o)
- .comment       0x0000000000000025       0x26 /home/sai-vdeal/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_udivdi3.o)
+ .comment       0x0000000000000025       0x26 /home/sai-vdeal/.espressif/tools/xtensa-esp32-elf/esp-2019r2-8.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_bswapsi2.o)
+ .comment       0x0000000000000025       0x26 /home/sai-vdeal/.espressif/tools/xtensa-esp32-elf/esp-2019r2-8.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_udivdi3.o)
 
 .xtensa.info    0x0000000000000000       0x38
  .xtensa.info   0x0000000000000000       0x38 /home/sai-vdeal/Aries/Aries_test/build/bootloader/main/libmain.a(bootloader_start.o)
@@ -3560,6 +3560,6 @@ OUTPUT(/home/sai-vdeal/Aries/Aries_test/build/bootloader/bootloader.elf elf32-xt
  .xtensa.info   0x0000000000000038        0x0 /home/sai-vdeal/Aries/Aries_test/build/bootloader/soc/libsoc.a(rtc_time.o)
  .xtensa.info   0x0000000000000038        0x0 /home/sai-vdeal/Aries/Aries_test/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .xtensa.info   0x0000000000000038        0x0 /home/sai-vdeal/Aries/Aries_test/build/bootloader/soc/libsoc.a(gpio_periph.o)
- .xtensa.info   0x0000000000000038        0x0 /home/sai-vdeal/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_bswapsi2.o)
- .xtensa.info   0x0000000000000038        0x0 /home/sai-vdeal/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_divdi3.o)
- .xtensa.info   0x0000000000000038        0x0 /home/sai-vdeal/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_udivdi3.o)
+ .xtensa.info   0x0000000000000038        0x0 /home/sai-vdeal/.espressif/tools/xtensa-esp32-elf/esp-2019r2-8.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_bswapsi2.o)
+ .xtensa.info   0x0000000000000038        0x0 /home/sai-vdeal/.espressif/tools/xtensa-esp32-elf/esp-2019r2-8.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_divdi3.o)
+ .xtensa.info   0x0000000000000038        0x0 /home/sai-vdeal/.espressif/tools/xtensa-esp32-elf/esp-2019r2-8.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_udivdi3.o)
