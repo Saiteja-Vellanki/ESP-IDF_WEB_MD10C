@@ -58,6 +58,12 @@ extern const uint8_t logo_end[]   asm("_binary_Aries_png_end");
 extern const uint8_t pressure_start[] asm("_binary_pressure_png_start");
 extern const uint8_t pressure_end[]   asm("_binary_pressure_png_end");
 
+static char grip_angle[2];
+static  char wrist_angle[2];
+static char wrist_yaw[2];
+static char elbow_angle[2];
+static char shoulder_angle[2];
+static  char base_angle[2];
 
 
 esp_err_t jquery_3_5_1_min_js_handler(httpd_req_t *req)
@@ -87,50 +93,6 @@ esp_err_t on_png_handler(httpd_req_t *req)
 }
 
 
-esp_err_t on_weight_handler(httpd_req_t *req)
-{
-
-        int data=1;
-        
-           for(int i=0; i<10; i++){
-
-                 data++;
-}
-          char strng[6];
-        itoa(data,strng,10);
-	printf("!!!weight data sending to the client on web!!!\r\n");
-
-	httpd_resp_set_type(req, "text/plain");
-
-	 httpd_resp_send(req, strng, strlen(strng));
-	return ESP_OK;
-}
-
-esp_err_t on_pressure_handler(httpd_req_t *req)
-{
-
-     const char* data="20";
-           
-	printf("!!! pressure data sending to the client on web!!!\r\n");
-
-	httpd_resp_set_type(req, "text/plain");
-
-	 httpd_resp_send(req, data, strlen(data));
-	return ESP_OK;
-}
-
-esp_err_t on_feedback_handler(httpd_req_t *req)
-{
-
-     const char* data="30";
-           
-	printf("!!! feedback data sending to the client on web!!!\r\n");
-
-	httpd_resp_set_type(req, "text/plain");
-
-	 httpd_resp_send(req, data, strlen(data));
-	return ESP_OK;
-}
 
 
 static void brushed_motor_forward_backward_unit_1(mcpwm_unit_t mcpwm_num, mcpwm_timer_t timer_num , float duty_cycle)
@@ -231,31 +193,35 @@ static esp_err_t hello_get_handler(httpd_req_t *req)
              if (httpd_query_key_value(buf, "grip",param, sizeof(param)) == ESP_OK) {
                 ESP_LOGI(TAG, "Found URL query parameter => GRIPPER=%s", param);
                // int gripangle=0;
+                 int angle_1;
                 float gripcount = atof(param);
                   brushed_motor_forward_backward_unit_1(MCPWM_UNIT_0, MCPWM_TIMER_0, gripcount);
-        
+                 angle_1 =(gripcount/100)*360;
+                  itoa(angle_1,grip_angle,10);
+                   ESP_LOGI(TAG, "gripper angle=%s", grip_angle);
             }
     
-          if (httpd_query_key_value(buf, "grip2",param, sizeof(param)) == ESP_OK) {
-                ESP_LOGI(TAG, "Found URL query parameter => GRIPPER_2=%s", param);
-                
-                int gripcount_2 = atoi(param);
-                 
-        
-            }
+          
 
             if (httpd_query_key_value(buf, "wrist", param, sizeof(param)) == ESP_OK) {
                 ESP_LOGI(TAG, "Found URL query parameter => WRIST_JOINT=%s", param);
                // int wristangle=0;
+                 int angle_2;
                 float wristcount = atof(param);
                 brushed_motor_forward_backward_unit_4(MCPWM_UNIT_0, MCPWM_TIMER_0, wristcount);
                 brushed_motor_forward_backward_unit_6(MCPWM_UNIT_0, MCPWM_TIMER_2, wristcount);
+                 angle_2 =(wristcount/100)*360;
+                  itoa(angle_2,wrist_angle,10);
+                  itoa(angle_2,wrist_yaw,10);
+                   ESP_LOGI(TAG, "wrist angle=%s", wrist_angle);
                 
             }
            
             if (httpd_query_key_value(buf, "wristyaw", param, sizeof(param)) == ESP_OK) {
                 ESP_LOGI(TAG, "Found URL query parameter => WRIST_YAW=%s", param);
                // int wristangle=0;
+                  int angle_3;
+                  int angle_4;
                 float wristcountyaw = atof(param);
                 float wristcountanti=atof(param);
                       float val = 100.00;
@@ -263,7 +229,12 @@ static esp_err_t hello_get_handler(httpd_req_t *req)
                       brushed_motor_forward_backward_unit_6(MCPWM_UNIT_0, MCPWM_TIMER_2, wristcountanti);
                      ESP_LOGI(TAG, "Found URL query parameter => WRIST_YAW=%f",  wristcountanti);
                      brushed_motor_forward_backward_unit_4(MCPWM_UNIT_0, MCPWM_TIMER_0, wristcountyaw);
-               
+                     angle_3 =(wristcountanti/100)*360;
+                     angle_4 =(wristcountyaw/100)*360;
+                  itoa(angle_3,wrist_yaw,10);
+                  itoa(angle_4,wrist_angle,10);
+                   ESP_LOGI(TAG, "wrist yaw =%s", wrist_yaw);
+                    ESP_LOGI(TAG, "wrist angle =%s", wrist_angle);
                 
             }
              
@@ -271,23 +242,37 @@ static esp_err_t hello_get_handler(httpd_req_t *req)
             if (httpd_query_key_value(buf, "elbow", param, sizeof(param)) == ESP_OK) {
                 ESP_LOGI(TAG, "Found URL query parameter => ELBOW_JOINT=%s", param);
               //  int elbowangle=0;
+                  int angle_5;
                 float elbowcount = atof(param);
                   brushed_motor_forward_backward_unit_2(MCPWM_UNIT_0, MCPWM_TIMER_1, elbowcount);
+                  angle_5 =(elbowcount/100)*360;
+                  itoa(angle_5,elbow_angle,10);
+                   ESP_LOGI(TAG, "elbow angle=%s", elbow_angle);
                 
             }  
             if (httpd_query_key_value(buf, "shoulder", param, sizeof(param)) == ESP_OK) {
    
                 ESP_LOGI(TAG, "Found URL query parameter => SHOULDER=%s", param);
                 //int shoulderangle=0;
+                 int angle_6;
                 float shouldercount = atof(param);
                   brushed_motor_forward_backward_unit_5(MCPWM_UNIT_0, MCPWM_TIMER_1, shouldercount);
+                  angle_6 =(shouldercount/100)*360;
+                  itoa(angle_6,shoulder_angle,10);
+                   ESP_LOGI(TAG, "shoulder angle=%s",shoulder_angle);
+                 
             }
 
             if (httpd_query_key_value(buf, "base", param, sizeof(param)) == ESP_OK) {
                 ESP_LOGI(TAG, "Found URL query parameter => BASE=%s", param);
                // int baseangle=0;
+                int angle_7;
                 float basecount = atof(param);
                  brushed_motor_forward_backward_unit_3(MCPWM_UNIT_0, MCPWM_TIMER_2, basecount);
+                 angle_7 =(basecount/100)*360;
+                  itoa(angle_7,base_angle,10);
+                   ESP_LOGI(TAG, "base angle=%s",base_angle);
+                  
                
             }
 
@@ -317,6 +302,120 @@ static esp_err_t hello_get_handler(httpd_req_t *req)
     }
     return ESP_OK;
 }
+
+esp_err_t on_weight_handler(httpd_req_t *req)
+{
+
+        int data=1;
+        
+           for(int i=0; i<10; i++){
+
+                 data++;
+}
+          char strng[6];
+        itoa(data,strng,10);
+	printf("!!!weight data sending to the client on web!!!\r\n");
+
+	httpd_resp_set_type(req, "text/plain");
+
+	 httpd_resp_send(req, strng, strlen(strng));
+	return ESP_OK;
+}
+
+esp_err_t on_pressure_handler(httpd_req_t *req)
+{
+
+     const char* data="20";
+           
+	printf("!!! pressure data sending to the client on web!!!\r\n");
+
+	httpd_resp_set_type(req, "text/plain");
+
+	 httpd_resp_send(req, data, strlen(data));
+	return ESP_OK;
+}
+
+esp_err_t on_feedback_handler_grip(httpd_req_t *req)
+{
+
+    
+           
+	printf("!!! feedback data sending to the client on web!!!\r\n");
+
+	httpd_resp_set_type(req, "text/plain");
+
+	 httpd_resp_send(req, grip_angle, strlen(grip_angle));
+	return ESP_OK;
+}
+
+esp_err_t on_feedback_handler_wrist(httpd_req_t *req)
+{
+
+    
+           
+	printf("!!! feedback data sending to the client on web!!!\r\n");
+
+	httpd_resp_set_type(req, "text/plain");
+
+	 httpd_resp_send(req, wrist_angle, strlen(wrist_angle));
+	return ESP_OK;
+}
+
+esp_err_t on_feedback_handler_wrist_yaw(httpd_req_t *req)
+{
+
+    
+           
+	printf("!!! feedback data sending to the client on web!!!\r\n");
+
+	httpd_resp_set_type(req, "text/plain");
+
+	 httpd_resp_send(req, wrist_yaw, strlen(wrist_yaw));
+	return ESP_OK;
+}
+
+esp_err_t on_feedback_handler_elbow(httpd_req_t *req)
+{
+
+    
+           
+	printf("!!! feedback data sending to the client on web!!!\r\n");
+
+	httpd_resp_set_type(req, "text/plain");
+
+	 httpd_resp_send(req, elbow_angle, strlen(elbow_angle));
+	return ESP_OK;
+}
+
+esp_err_t on_feedback_handler_shoulder(httpd_req_t *req)
+{
+
+     
+           
+	printf("!!! feedback data sending to the client on web!!!\r\n");
+
+	httpd_resp_set_type(req, "text/plain");
+
+	 httpd_resp_send(req, shoulder_angle, strlen(shoulder_angle));
+	return ESP_OK;
+}
+
+esp_err_t on_feedback_handler_base(httpd_req_t *req)
+{
+
+     
+           
+	printf("!!! feedback data sending to the client on web!!!\r\n");
+
+	httpd_resp_set_type(req, "text/plain");
+
+	 httpd_resp_send(req, base_angle, strlen(base_angle));
+	return ESP_OK;
+}
+
+
+
+
 
 
 httpd_uri_t on_png = {
@@ -358,20 +457,68 @@ httpd_uri_t on_pressure = {
 };
 
 
-httpd_uri_t on_feedback = {
-	.uri = "/feedbackread",
+httpd_uri_t on_feedback_grip = {
+	.uri = "/feedbackgrip",
 	.method = HTTP_GET,
-	.handler = on_feedback_handler,
+	.handler = on_feedback_handler_grip,
 	/* Let's pass response string in user
 	 * context to demonstrate it's usage */
 	.user_ctx = NULL
 };
 
+httpd_uri_t on_feedback_wrist = {
+	.uri = "/feedbackwrist",
+	.method = HTTP_GET,
+	.handler = on_feedback_handler_wrist,
+	/* Let's pass response string in user
+	 * context to demonstrate it's usage */
+	.user_ctx = NULL
+};
+
+httpd_uri_t on_feedback_wrist_yaw = {
+	.uri = "/feedbackwriyaw",
+	.method = HTTP_GET,
+	.handler = on_feedback_handler_wrist_yaw,
+	/* Let's pass response string in user
+	 * context to demonstrate it's usage */
+	.user_ctx = NULL
+};
+
+httpd_uri_t on_feedback_elbow = {
+	.uri = "/feedbackelbow",
+	.method = HTTP_GET,
+	.handler = on_feedback_handler_elbow,
+	/* Let's pass response string in user
+	 * context to demonstrate it's usage */
+	.user_ctx = NULL
+};
+
+httpd_uri_t on_feedback_shoulder = {
+	.uri = "/feedbackshoulder",
+	.method = HTTP_GET,
+	.handler = on_feedback_handler_shoulder,
+	/* Let's pass response string in user
+	 * context to demonstrate it's usage */
+	.user_ctx = NULL
+};
+
+httpd_uri_t on_feedback_base = {
+	.uri = "/feedbackbase",
+	.method = HTTP_GET,
+	.handler = on_feedback_handler_base,
+	/* Let's pass response string in user
+	 * context to demonstrate it's usage */
+	.user_ctx = NULL
+};
+
+
+
+
 static const httpd_uri_t hello = {
     .uri       = "/",
     .method    = HTTP_GET,
     .handler   = hello_get_handler,
-    .user_ctx  = "<!DOCTYPE html>\r\n<title> Aries <\/title><html>\r\n  <head><fieldset ><center>\r\n<img src=\"Aries.png\"><\/head>\r\n<body>\r\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\r\n  <link rel=\"icon\" href=\"data:,>\r\n  <style>\r\n    body {\r\n      text-align: center;\r\n      font-family: \"Trebuchet MS\", Arial;\r\n      margin-left:auto;\r\n      margin-right:auto;\r\n    }\r\n    .slider {\r\n      width: 300px;\r\n    }\r\n  <\/style>\r\n  <script src=\"jquery-3.5.1.min.js\"><\/script>\r\n<\/head>\r\n<body>\r\n  <h1 style=\"color:red;\">Robotic ARM Control<\/h1>\r\n  <p style=\"color:green;\">GRIPPER: <span id=\"GRIPP\"><\/span><\/p>\r\n  <input type=\"range\" min=\"0\" max=\"100\" step = 0.1 value =\"50\" class=\"slider\" id=\"GRIPPER\" oninput=\"grip(this.value)\"\/><br\/>\r\n  <p style=\"color:green;\">WRIST: <span id=\"WRIST\"><\/span><\/p>\r\n  <input type=\"range\" min=\"0\" max=\"100\" step = 0.1  value =\"50\" class=\"slider\" id=\"WRIST JOINT\" oninput=\"wrist(this.value)\"\/><br\/>\r\n  <p style=\"color:green;\">WRIST YAW 360: <span id=\"WRISTYAW\"><\/span><\/p>\r\n  <input type=\"range\" min=\"0\" max=\"100\" step = 0.1  value =\"50\" class=\"slider\" id=\"WRIST YAW 360\" oninput=\"wristyaw(this.value)\"\/><br\/>\r\n  <p style=\"color:green;\">ELBOW: <span id=\"ELBOW\"><\/span><\/p>\r\n  <input type=\"range\" min=\"0\" max=\"100\" step = 0.1  value =\"50\" class=\"slider\" id=\"ELBOW JOINT\" oninput=\"elbow(this.value)\"\/><br\/>\r\n  <p style=\"color:green;\">SHOULDER: <span id=\"SHOULDE\"><\/span><\/p>\r\n  <input type=\"range\" min=\"0\" max=\"100\" step = 0.1  value =\"50\" class=\"slider\" id=\"SHOULDER\" oninput=\"shoulder(this.value)\"\/><br\/>\r\n  <p style=\"color:green;\">BASE: <span id=\"BAS\"><\/span><\/p>\r\n  <input type=\"range\" min=\"0\" max=\"100\" step = 0.1  value =\"50\" class=\"slider\" id=\"BASE\" oninput=\"base(this.value)\"\/><br\/>\r\n\r\n <div class = \"displayobject\">\r\n       <h4>Weight: <span id=\"weight\">0<\/span>kg<\/h4>\r\n       <h4>Pressure: <span id=\"pressure\">0<\/span>hpa<\/h4>\r\n       <h4>Feedback pos: <span id=\"feedback\">0<\/span>&deg<\/h4><br>\r\n     <\/div>\r\n \r\n  <script>\r\n   \r\n    var slider1 = document.getElementById(\"GRIPPER\");\r\n    var servoP1 = document.getElementById(\"GRIPP\");\r\n    servoP1.innerHTML = slider1.value;\r\n    slider1.onchange = function() {\r\n      slider1.value = this.value;\r\n      servoP1.innerHTML = this.value;\r\n    }\r\n    function grip(pos) {\r\n      $.get(\"\/?grip=\" + pos + \"&\");\r\n      {Connection: close};\r\n    }\r\n    \r\n    var slider2 = document.getElementById(\"WRIST JOINT\");\r\n    var servoP2 = document.getElementById(\"WRIST\") ;\r\n    servoP2.innerHTML = slider2.value;\r\n    slider2.onchange = function() {\r\n      slider2.value = this.value;\r\n      servoP2.innerHTML = this.value;\r\n    }\r\n    function wrist(pos) {\r\n      $.get(\"\/?wrist=\" + pos + \"&\");\r\n      {Connection: close};\r\n    }\r\n    \r\n    var slider3 = document.getElementById(\"ELBOW JOINT\");\r\n    var servoP3 = document.getElementById(\"ELBOW\");\r\n    servoP3.innerHTML = slider3.value;\r\n    slider3.onchange = function() {\r\n      slider3.value = this.value;\r\n      servoP3.innerHTML = this.value;\r\n    }\r\n       function elbow(pos) {\r\n      $.get(\"\/?elbow=\" + pos + \"&\");\r\n      {Connection: close};\r\n    }\r\n   \r\n    var slider4 = document.getElementById(\"SHOULDER\");\r\n    var servoP4 = document.getElementById(\"SHOULDE\");\r\n    servoP4.innerHTML = slider4.value;\r\n    slider4.onchange = function() {\r\n      slider4.value = this.value;\r\n      servoP4.innerHTML = this.value;\r\n    }\r\n     function shoulder(pos) {\r\n      $.get(\"\/?shoulder=\" + pos + \"&\");\r\n      {Connection: close};\r\n    }\r\n    \r\n     var slider5 = document.getElementById(\"BASE\");\r\n    var servoP5 = document.getElementById(\"BAS\");\r\n    servoP5.innerHTML = slider5.value;\r\n    slider5.onchange = function() {\r\n      slider5.value = this.value;\r\n      servoP5.innerHTML = this.value;\r\n    }\r\n    function base(pos) {\r\n      $.get(\"\/?base=\" + pos + \"&\");\r\n      {Connection: close};\r\n    }\r\n     var slider6 = document.getElementById(\"WRIST YAW 360\");\r\n    var servoP6 = document.getElementById(\"WRISTYAW\");\r\n    servoP6.innerHTML = slider6.value;\r\n    slider6.onchange = function() {\r\n      slider6.value = this.value;\r\n      servoP6.innerHTML = this.value;\r\n    }\r\n    function wristyaw(pos) {\r\n      $.get(\"\/?wristyaw=\" + pos + \"&\");\r\n      {Connection: close};\r\n    }\r\n   \r\n  <\/script>\r\n<script>\r\n       setInterval(function() {getSensorData();}, 1000);  \r\n  \r\n       function getSensorData() {\r\n          var xhttp = new XMLHttpRequest();\r\n          xhttp.onreadystatechange = function() {\r\n          if (this.readyState == 4 && this.status == 200) {\r\n            document.getElementById(\"weight\").innerHTML = this.responseText;\r\n          }\r\n        };\r\n        xhttp.open(\"GET\", \"weightread\", true);\r\n        xhttp.send();\r\n       \r\n        var xhttp = new XMLHttpRequest();\r\n        xhttp.onreadystatechange = function() {\r\n          if (this.readyState == 4 && this.status == 200) {\r\n            document.getElementById(\"pressure\").innerHTML = this.responseText;\r\n          }\r\n        };\r\n        xhttp.open(\"GET\", \"pressureread\", true);\r\n        xhttp.send();\r\n        \r\n        var xhttp = new XMLHttpRequest();\r\n        xhttp.onreadystatechange = function() {\r\n          if (this.readyState == 4 && this.status == 200) {\r\n            document.getElementById(\"feedback\").innerHTML = this.responseText;}\r\n        };  \r\n        xhttp.open(\"GET\", \"feedbackread\", true);\r\n        xhttp.send(); \r\n      }\r\n    <\/script>\r\n<\/body>\r\n<\/html>\"\r\n\r\n\r\n\r\n"
+    .user_ctx  = "<!DOCTYPE html>\r\n<title> Aries <\/title><html>\r\n  <head><fieldset ><center>\r\n<img src=\"Aries.png\"><\/head>\r\n<body>\r\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\r\n  <link rel=\"icon\" href=\"data:,>\r\n  <style>\r\n    body {\r\n      text-align: center;\r\n      font-family: \"Trebuchet MS\", Arial;\r\n      margin-left:auto;\r\n      margin-right:auto;\r\n    }\r\n    .slider {\r\n      width: 300px;\r\n    }\r\n  <\/style>\r\n  <script src=\"jquery-3.5.1.min.js\"><\/script>\r\n<\/head>\r\n<body>\r\n  <h1 style=\"color:red;\">Robotic ARM Control<\/h1>\r\n  \r\n  <p style=\"color:green;\">GRIPPER: <span id=\"GRIPP\"><\/span><\/p>\r\n  <input type=\"range\" min=\"0\" max=\"100\" step = 0.1 value =\"50\" class=\"slider\" id=\"GRIPPER\" oninput=\"grip(this.value)\"\/><br\/>\r\n  <p style=\"color:green;\">WRIST: <span id=\"WRIST\"><\/span><\/p>\r\n  <input type=\"range\" min=\"0\" max=\"100\" step = 0.1  value =\"50\" class=\"slider\" id=\"WRIST JOINT\" oninput=\"wrist(this.value)\"\/><br\/>\r\n  <p style=\"color:green;\">WRIST YAW 360: <span id=\"WRISTYAW\"><\/span><\/p>\r\n  <input type=\"range\" min=\"0\" max=\"100\" step = 0.1  value =\"50\" class=\"slider\" id=\"WRIST YAW 360\" oninput=\"wristyaw(this.value)\"\/><br\/>\r\n  <p style=\"color:green;\">ELBOW: <span id=\"ELBOW\"><\/span><\/p>\r\n  <input type=\"range\" min=\"0\" max=\"100\" step = 0.1  value =\"50\" class=\"slider\" id=\"ELBOW JOINT\" oninput=\"elbow(this.value)\"\/><br\/>\r\n  <p style=\"color:green;\">SHOULDER: <span id=\"SHOULDE\"><\/span><\/p>\r\n  <input type=\"range\" min=\"0\" max=\"100\" step = 0.1  value =\"50\" class=\"slider\" id=\"SHOULDER\" oninput=\"shoulder(this.value)\"\/><br\/>\r\n  <p style=\"color:green;\">BASE: <span id=\"BAS\"><\/span><\/p>\r\n  <input type=\"range\" min=\"0\" max=\"100\" step = 0.1  value =\"50\" class=\"slider\" id=\"BASE\" oninput=\"base(this.value)\"\/><br\/>\r\n\r\n <div class = \"displayobject\">\r\n       <h4 >Weight: <span id=\"weight\">0<\/span>kg<\/h4>\r\n       <h4>Pressure: <span id=\"pressure\">0<\/span>hpa<\/h4>\r\n       <h4> Grip pos: <span id=\"feedback_grip\">0<\/span>&deg<\/h4>\r\n       <h4> Wrist pos: <span id=\"feedback_wrist\">0<\/span>&deg<\/h4>\r\n       <h4>WristYaw pos: <span id=\"feedback_wriyaw\">0<\/span>&deg<\/h4>\r\n       <h4>Elbow pos: <span id=\"feedback_elbow\">0<\/span>&deg<\/h4>\r\n       <h4>Shoulder pos: <span id=\"feedback_shoulder\">0<\/span>&deg<\/h4>\r\n       <h4>Base pos: <span id=\"feedback_base\">0<\/span>&deg<\/h4>\r\n     <\/div>\r\n \r\n  <script>\r\n   \r\n    var slider1 = document.getElementById(\"GRIPPER\");\r\n    var servoP1 = document.getElementById(\"GRIPP\");\r\n    servoP1.innerHTML = slider1.value;\r\n    slider1.onchange = function() {\r\n      slider1.value = this.value;\r\n      servoP1.innerHTML = this.value;\r\n    }\r\n    function grip(pos) {\r\n      $.get(\"\/?grip=\" + pos + \"&\");\r\n      {Connection: close};\r\n    }\r\n    \r\n    var slider2 = document.getElementById(\"WRIST JOINT\");\r\n    var servoP2 = document.getElementById(\"WRIST\") ;\r\n    servoP2.innerHTML = slider2.value;\r\n    slider2.onchange = function() {\r\n      slider2.value = this.value;\r\n      servoP2.innerHTML = this.value;\r\n    }\r\n    function wrist(pos) {\r\n      $.get(\"\/?wrist=\" + pos + \"&\");\r\n      {Connection: close};\r\n    }\r\n    \r\n    var slider3 = document.getElementById(\"ELBOW JOINT\");\r\n    var servoP3 = document.getElementById(\"ELBOW\");\r\n    servoP3.innerHTML = slider3.value;\r\n    slider3.onchange = function() {\r\n      slider3.value = this.value;\r\n      servoP3.innerHTML = this.value;\r\n    }\r\n       function elbow(pos) {\r\n      $.get(\"\/?elbow=\" + pos + \"&\");\r\n      {Connection: close};\r\n    }\r\n   \r\n    var slider4 = document.getElementById(\"SHOULDER\");\r\n    var servoP4 = document.getElementById(\"SHOULDE\");\r\n    servoP4.innerHTML = slider4.value;\r\n    slider4.onchange = function() {\r\n      slider4.value = this.value;\r\n      servoP4.innerHTML = this.value;\r\n    }\r\n     function shoulder(pos) {\r\n      $.get(\"\/?shoulder=\" + pos + \"&\");\r\n      {Connection: close};\r\n    }\r\n    \r\n     var slider5 = document.getElementById(\"BASE\");\r\n    var servoP5 = document.getElementById(\"BAS\");\r\n    servoP5.innerHTML = slider5.value;\r\n    slider5.onchange = function() {\r\n      slider5.value = this.value;\r\n      servoP5.innerHTML = this.value;\r\n    }\r\n    function base(pos) {\r\n      $.get(\"\/?base=\" + pos + \"&\");\r\n      {Connection: close};\r\n    }\r\n     var slider6 = document.getElementById(\"WRIST YAW 360\");\r\n    var servoP6 = document.getElementById(\"WRISTYAW\");\r\n    servoP6.innerHTML = slider6.value;\r\n    slider6.onchange = function() {\r\n      slider6.value = this.value;\r\n      servoP6.innerHTML = this.value;\r\n    }\r\n    function wristyaw(pos) {\r\n      $.get(\"\/?wristyaw=\" + pos + \"&\");\r\n      {Connection: close};\r\n    }\r\n   \r\n  <\/script>\r\n<script>\r\n       setInterval(function() {getSensorData();}, 1000);  \r\n  \r\n       function getSensorData() {\r\n          var xhttp = new XMLHttpRequest();\r\n          xhttp.onreadystatechange = function() {\r\n          if (this.readyState == 4 && this.status == 200) {\r\n            document.getElementById(\"weight\").innerHTML = this.responseText;\r\n          }\r\n        };\r\n        xhttp.open(\"GET\", \"weightread\", true);\r\n        xhttp.send();\r\n       \r\n        var xhttp = new XMLHttpRequest();\r\n        xhttp.onreadystatechange = function() {\r\n          if (this.readyState == 4 && this.status == 200) {\r\n            document.getElementById(\"pressure\").innerHTML = this.responseText;\r\n          }\r\n        };\r\n        xhttp.open(\"GET\", \"pressureread\", true);\r\n        xhttp.send();\r\n        \r\n        var xhttp = new XMLHttpRequest();\r\n        xhttp.onreadystatechange = function() {\r\n          if (this.readyState == 4 && this.status == 200) {\r\n            document.getElementById(\"feedback_grip\").innerHTML = this.responseText;\r\n            }\r\n        };  \r\n        xhttp.open(\"GET\", \"feedbackgrip\", true);\r\n        xhttp.send(); \r\n        \r\n        var xhttp = new XMLHttpRequest();\r\n        xhttp.onreadystatechange = function() {\r\n          if (this.readyState == 4 && this.status == 200) {\r\n            document.getElementById(\"feedback_wrist\").innerHTML = this.responseText;\r\n            }\r\n        };  \r\n        xhttp.open(\"GET\", \"feedbackwrist\", true);\r\n        xhttp.send(); \r\n        \r\n        var xhttp = new XMLHttpRequest();\r\n        xhttp.onreadystatechange = function() {\r\n          if (this.readyState == 4 && this.status == 200) {\r\n            document.getElementById(\"feedback_wriyaw\").innerHTML = this.responseText;\r\n            }\r\n        };  \r\n        xhttp.open(\"GET\", \"feedbackwriyaw\", true);\r\n        xhttp.send(); \r\n        \r\n        var xhttp = new XMLHttpRequest();\r\n        xhttp.onreadystatechange = function() {\r\n          if (this.readyState == 4 && this.status == 200) {\r\n            document.getElementById(\"feedback_elbow\").innerHTML = this.responseText;\r\n            }\r\n        };  \r\n        xhttp.open(\"GET\", \"feedbackelbow\", true);\r\n        xhttp.send(); \r\n        \r\n         var xhttp = new XMLHttpRequest();\r\n        xhttp.onreadystatechange = function() {\r\n          if (this.readyState == 4 && this.status == 200) {\r\n            document.getElementById(\"feedback_shoulder\").innerHTML = this.responseText;\r\n            }\r\n        };  \r\n        xhttp.open(\"GET\", \"feedbackshoulder\", true);\r\n        xhttp.send(); \r\n        \r\n        var xhttp = new XMLHttpRequest();\r\n        xhttp.onreadystatechange = function() {\r\n          if (this.readyState == 4 && this.status == 200) {\r\n            document.getElementById(\"feedback_base\").innerHTML = this.responseText;\r\n            }\r\n        };  \r\n        xhttp.open(\"GET\", \"feedbackbase\", true);\r\n        xhttp.send(); \r\n        \r\n      }\r\n    <\/script>\r\n<\/body>\r\n<\/html>\r\n\r\n\r\n\r\n"
 };
 
 
@@ -503,8 +650,13 @@ static httpd_handle_t start_webserver(void)
         httpd_register_uri_handler(server,&on_png);
         httpd_register_uri_handler(server, &jquery_3_5_1_min_js);
         httpd_register_uri_handler(server, &on_weight);
-         httpd_register_uri_handler(server, &on_pressure);
-          httpd_register_uri_handler(server, &on_feedback);
+        httpd_register_uri_handler(server, &on_pressure);
+        httpd_register_uri_handler(server, &on_feedback_grip);
+        httpd_register_uri_handler(server, &on_feedback_wrist);
+        httpd_register_uri_handler(server, &on_feedback_wrist_yaw);
+        httpd_register_uri_handler(server, &on_feedback_elbow);
+        httpd_register_uri_handler(server, &on_feedback_shoulder);
+        httpd_register_uri_handler(server, &on_feedback_base);
         httpd_register_uri_handler(server, &echo);
         httpd_register_uri_handler(server, &ctrl);
         return server;
