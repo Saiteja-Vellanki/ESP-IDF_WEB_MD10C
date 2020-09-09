@@ -44,7 +44,7 @@
 
 #define GPIO_CONFIG_DIR_6 33
 
-#define PWM_RELAY_SWITCH   5
+//#define PWM_RELAY_SWITCH   5
 
  
 
@@ -65,6 +65,12 @@ static char wrist_yaw[2];
 static char elbow_angle[2];
 static char shoulder_angle[2];
 static  char base_angle[2];
+
+
+
+ 
+
+
 
 
 esp_err_t jquery_3_5_1_min_js_handler(httpd_req_t *req)
@@ -142,6 +148,17 @@ static void brushed_motor_forward_backward_unit_6(mcpwm_unit_t mcpwm_num, mcpwm_
 
 
 
+static void motor_dir_pin_duty_cycle_init(void)
+{
+
+                brushed_motor_forward_backward_unit_1(MCPWM_UNIT_0, MCPWM_TIMER_0, 50.00);
+                brushed_motor_forward_backward_unit_2(MCPWM_UNIT_0, MCPWM_TIMER_1, 50.00);
+                brushed_motor_forward_backward_unit_3(MCPWM_UNIT_0, MCPWM_TIMER_2, 50.00);
+                brushed_motor_forward_backward_unit_4(MCPWM_UNIT_0, MCPWM_TIMER_0, 50.00);
+                brushed_motor_forward_backward_unit_5(MCPWM_UNIT_0, MCPWM_TIMER_1, 50.00);
+                brushed_motor_forward_backward_unit_6(MCPWM_UNIT_0, MCPWM_TIMER_2, 50.00);
+                 ESP_LOGI(TAG, "SET ALL DIR PIN VALUES TO 50 DUTY CYCLE");
+}
 
 
 /* An HTTP GET handler */
@@ -149,7 +166,7 @@ static esp_err_t hello_get_handler(httpd_req_t *req)
 {
     char*  buf;
     size_t buf_len;
-      gpio_set_level(PWM_RELAY_SWITCH, 1);
+     // gpio_set_level(PWM_RELAY_SWITCH, 1);
 
     /* Get header value string length and allocate memory for length + 1,
      * extra byte for null termination */
@@ -200,6 +217,7 @@ static esp_err_t hello_get_handler(httpd_req_t *req)
                  
                  
                   brushed_motor_forward_backward_unit_1(MCPWM_UNIT_0, MCPWM_TIMER_0, gripcount);
+                   
                  angle_1 =(gripcount/100)*360;
                   itoa(angle_1,grip_angle,10);
                    ESP_LOGI(TAG, "gripper angle=%s", grip_angle);
@@ -250,6 +268,7 @@ static esp_err_t hello_get_handler(httpd_req_t *req)
                   int angle_5;
                 float elbowcount = atof(param);
                   brushed_motor_forward_backward_unit_2(MCPWM_UNIT_0, MCPWM_TIMER_1, elbowcount);
+                   
                   angle_5 =(elbowcount/100)*360;
                   itoa(angle_5,elbow_angle,10);
                    ESP_LOGI(TAG, "elbow angle=%s", elbow_angle);
@@ -690,7 +709,7 @@ static void disconnect_handler(void* arg, esp_event_base_t event_base,
 {
     httpd_handle_t* server = (httpd_handle_t*) arg;
     if (*server) {
-       gpio_set_level(PWM_RELAY_SWITCH, 0);
+      // gpio_set_level(PWM_RELAY_SWITCH, 0);
         ESP_LOGI(TAG, "Stopping webserver");
         stop_webserver(*server);
         *server = NULL;
@@ -722,9 +741,9 @@ static void mcpwm_gpio_initialize(void)
     mcpwm_gpio_init(MCPWM_UNIT_0, MCPWM2A, GPIO_CONFIG_DIR_5);
     mcpwm_gpio_init(MCPWM_UNIT_0, MCPWM2B, GPIO_CONFIG_DIR_6);
 
-    gpio_pad_select_gpio(PWM_RELAY_SWITCH);
-   gpio_set_direction(PWM_RELAY_SWITCH, GPIO_MODE_OUTPUT);
-    gpio_set_level(PWM_RELAY_SWITCH, 0);
+    //gpio_pad_select_gpio(PWM_RELAY_SWITCH);
+  // gpio_set_direction(PWM_RELAY_SWITCH, GPIO_MODE_OUTPUT);
+    //gpio_set_level(PWM_RELAY_SWITCH, 0);
     
 }
 
@@ -757,6 +776,7 @@ void app_main(void)
     ESP_ERROR_CHECK(nvs_flash_init());
   // init_spiffs();
     mcpwm_control();
+    motor_dir_pin_duty_cycle_init();
     //ESP_ERROR_CHECK(esp_netif_init());
     
      tcpip_adapter_init();
