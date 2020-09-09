@@ -149,6 +149,7 @@ static esp_err_t hello_get_handler(httpd_req_t *req)
 {
     char*  buf;
     size_t buf_len;
+      gpio_set_level(PWM_RELAY_SWITCH, 1);
 
     /* Get header value string length and allocate memory for length + 1,
      * extra byte for null termination */
@@ -196,11 +197,14 @@ static esp_err_t hello_get_handler(httpd_req_t *req)
                // int gripangle=0;
                  int angle_1;
                 float gripcount = atof(param);
+                 
+                 
                   brushed_motor_forward_backward_unit_1(MCPWM_UNIT_0, MCPWM_TIMER_0, gripcount);
                  angle_1 =(gripcount/100)*360;
                   itoa(angle_1,grip_angle,10);
                    ESP_LOGI(TAG, "gripper angle=%s", grip_angle);
-            }
+}
+          
     
           
 
@@ -646,7 +650,7 @@ static httpd_handle_t start_webserver(void)
     ESP_LOGI(TAG, "Starting server on port: '%d'", config.server_port);
     if (httpd_start(&server, &config) == ESP_OK) {
         // Set URI handlers
-        gpio_set_level(PWM_RELAY_SWITCH, 1);
+        
         ESP_LOGI(TAG, "Registering URI handlers");
         httpd_register_uri_handler(server, &hello);
         httpd_register_uri_handler(server,&on_png);
@@ -676,8 +680,9 @@ static httpd_handle_t start_webserver(void)
 static void stop_webserver(httpd_handle_t server)
 {
     // Stop the httpd server
-     gpio_set_level(PWM_RELAY_SWITCH, 0);
+    
     httpd_stop(server);
+  
 
 }
 static void disconnect_handler(void* arg, esp_event_base_t event_base, 
@@ -685,10 +690,13 @@ static void disconnect_handler(void* arg, esp_event_base_t event_base,
 {
     httpd_handle_t* server = (httpd_handle_t*) arg;
     if (*server) {
+       gpio_set_level(PWM_RELAY_SWITCH, 0);
         ESP_LOGI(TAG, "Stopping webserver");
         stop_webserver(*server);
         *server = NULL;
+        
     }
+
 }
 
 static void connect_handler(void* arg, esp_event_base_t event_base, 
@@ -716,6 +724,7 @@ static void mcpwm_gpio_initialize(void)
 
     gpio_pad_select_gpio(PWM_RELAY_SWITCH);
    gpio_set_direction(PWM_RELAY_SWITCH, GPIO_MODE_OUTPUT);
+    gpio_set_level(PWM_RELAY_SWITCH, 0);
     
 }
 
