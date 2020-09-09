@@ -32,7 +32,7 @@
 //#define PWM_PIN_HIGH      15  
 //4,12,14,16,32,33
 
-#define GPIO_CONFIG_DIR_1 2
+#define GPIO_CONFIG_DIR_1 4
 
 #define GPIO_CONFIG_DIR_2 12
 
@@ -44,6 +44,7 @@
 
 #define GPIO_CONFIG_DIR_6 33
 
+#define PWM_RELAY_SWITCH   5
 
  
 
@@ -645,6 +646,7 @@ static httpd_handle_t start_webserver(void)
     ESP_LOGI(TAG, "Starting server on port: '%d'", config.server_port);
     if (httpd_start(&server, &config) == ESP_OK) {
         // Set URI handlers
+        gpio_set_level(PWM_RELAY_SWITCH, 1);
         ESP_LOGI(TAG, "Registering URI handlers");
         httpd_register_uri_handler(server, &hello);
         httpd_register_uri_handler(server,&on_png);
@@ -674,7 +676,9 @@ static httpd_handle_t start_webserver(void)
 static void stop_webserver(httpd_handle_t server)
 {
     // Stop the httpd server
+     gpio_set_level(PWM_RELAY_SWITCH, 0);
     httpd_stop(server);
+
 }
 static void disconnect_handler(void* arg, esp_event_base_t event_base, 
                                int32_t event_id, void* event_data)
@@ -710,8 +714,8 @@ static void mcpwm_gpio_initialize(void)
     mcpwm_gpio_init(MCPWM_UNIT_0, MCPWM2A, GPIO_CONFIG_DIR_5);
     mcpwm_gpio_init(MCPWM_UNIT_0, MCPWM2B, GPIO_CONFIG_DIR_6);
 
-   // gpio_pad_select_gpio(PWM_PIN_HIGH);
-   //gpio_set_direction(PWM_PIN_HIGH, GPIO_MODE_OUTPUT);
+    gpio_pad_select_gpio(PWM_RELAY_SWITCH);
+   gpio_set_direction(PWM_RELAY_SWITCH, GPIO_MODE_OUTPUT);
     
 }
 
