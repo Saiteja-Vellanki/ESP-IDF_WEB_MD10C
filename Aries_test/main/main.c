@@ -674,14 +674,14 @@ static httpd_handle_t start_webserver(void)
         httpd_register_uri_handler(server, &hello);
         httpd_register_uri_handler(server,&on_png);
         httpd_register_uri_handler(server, &jquery_3_5_1_min_js);
-        //httpd_register_uri_handler(server, &on_weight);
-        //httpd_register_uri_handler(server, &on_pressure);
-        //httpd_register_uri_handler(server, &on_feedback_grip);
-        //httpd_register_uri_handler(server, &on_feedback_wrist);
-        //httpd_register_uri_handler(server, &on_feedback_wrist_yaw);
-        //httpd_register_uri_handler(server, &on_feedback_elbow);
-        //httpd_register_uri_handler(server, &on_feedback_shoulder);
-        //httpd_register_uri_handler(server, &on_feedback_base);
+        httpd_register_uri_handler(server, &on_weight);
+        httpd_register_uri_handler(server, &on_pressure);
+        httpd_register_uri_handler(server, &on_feedback_grip);
+        httpd_register_uri_handler(server, &on_feedback_wrist);
+        httpd_register_uri_handler(server, &on_feedback_wrist_yaw);
+        httpd_register_uri_handler(server, &on_feedback_elbow);
+        httpd_register_uri_handler(server, &on_feedback_shoulder);
+        httpd_register_uri_handler(server, &on_feedback_base);
         httpd_register_uri_handler(server, &echo);
         httpd_register_uri_handler(server, &ctrl);
         return server;
@@ -710,6 +710,7 @@ static void disconnect_handler(void* arg, esp_event_base_t event_base,
     httpd_handle_t* server = (httpd_handle_t*) arg;
     if (*server) {
       // gpio_set_level(PWM_RELAY_SWITCH, 0);
+          motor_dir_pin_duty_cycle_init();
         ESP_LOGI(TAG, "Stopping webserver");
         stop_webserver(*server);
         *server = NULL;
