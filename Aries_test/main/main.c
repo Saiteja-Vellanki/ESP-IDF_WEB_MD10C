@@ -151,13 +151,13 @@ static void brushed_motor_forward_backward_unit_6(mcpwm_unit_t mcpwm_num, mcpwm_
 static void motor_dir_pin_duty_cycle_init(void)
 {
 
-                brushed_motor_forward_backward_unit_1(MCPWM_UNIT_0, MCPWM_TIMER_0, 50.00);
-                brushed_motor_forward_backward_unit_2(MCPWM_UNIT_0, MCPWM_TIMER_1, 50.00);
-                brushed_motor_forward_backward_unit_3(MCPWM_UNIT_0, MCPWM_TIMER_2, 50.00);
-                brushed_motor_forward_backward_unit_4(MCPWM_UNIT_0, MCPWM_TIMER_0, 50.00);
-                brushed_motor_forward_backward_unit_5(MCPWM_UNIT_0, MCPWM_TIMER_1, 50.00);
-                brushed_motor_forward_backward_unit_6(MCPWM_UNIT_0, MCPWM_TIMER_2, 50.00);
-                 ESP_LOGI(TAG, "SET ALL DIR PIN VALUES TO 50 DUTY CYCLE");
+                brushed_motor_forward_backward_unit_1(MCPWM_UNIT_0, MCPWM_TIMER_0, 0.00);
+                brushed_motor_forward_backward_unit_2(MCPWM_UNIT_0, MCPWM_TIMER_1, 0.00);
+                brushed_motor_forward_backward_unit_3(MCPWM_UNIT_0, MCPWM_TIMER_2, 0.00);
+                brushed_motor_forward_backward_unit_4(MCPWM_UNIT_0, MCPWM_TIMER_0, 0.00);
+                brushed_motor_forward_backward_unit_5(MCPWM_UNIT_0, MCPWM_TIMER_1, 0.00);
+                brushed_motor_forward_backward_unit_6(MCPWM_UNIT_0, MCPWM_TIMER_2, 0.00);
+                 ESP_LOGI(TAG, "SET ALL DIR PIN VALUES TO 0 DUTY CYCLE");
 }
 
 
@@ -214,15 +214,18 @@ static esp_err_t hello_get_handler(httpd_req_t *req)
                // int gripangle=0;
                  int angle_1;
                 float gripcount = atof(param);
-                 
-                 
+                 if(gripcount >=45 && gripcount<=55){
+                brushed_motor_forward_backward_unit_1(MCPWM_UNIT_0, MCPWM_TIMER_0, 0);
+
+}
+                 else{
                   brushed_motor_forward_backward_unit_1(MCPWM_UNIT_0, MCPWM_TIMER_0, gripcount);
                    
                  angle_1 =(gripcount/100)*360;
                   itoa(angle_1,grip_angle,10);
                    ESP_LOGI(TAG, "gripper angle=%s", grip_angle);
 }
-          
+          }
     
           
 
@@ -231,12 +234,19 @@ static esp_err_t hello_get_handler(httpd_req_t *req)
                // int wristangle=0;
                  int angle_2;
                 float wristcount = atof(param);
+                 if(wristcount >=45 && wristcount<=55){
+               
+                   brushed_motor_forward_backward_unit_4(MCPWM_UNIT_0, MCPWM_TIMER_0, 0);
+                   brushed_motor_forward_backward_unit_6(MCPWM_UNIT_0, MCPWM_TIMER_2, 0);
+                  }
+                else{
                 brushed_motor_forward_backward_unit_4(MCPWM_UNIT_0, MCPWM_TIMER_0, wristcount);
                 brushed_motor_forward_backward_unit_6(MCPWM_UNIT_0, MCPWM_TIMER_2, wristcount);
                  angle_2 =(wristcount/100)*360;
                   itoa(angle_2,wrist_angle,10);
                   itoa(angle_2,wrist_yaw,10);
                    ESP_LOGI(TAG, "wrist angle=%s", wrist_angle);
+}
                 
             }
            
@@ -249,16 +259,32 @@ static esp_err_t hello_get_handler(httpd_req_t *req)
                 float wristcountanti=atof(param);
                       float val = 100.00;
                       wristcountanti = val-wristcountanti;
+                      if(wristcountyaw >=45 && wristcountyaw <=55  ){
+                 brushed_motor_forward_backward_unit_4(MCPWM_UNIT_0, MCPWM_TIMER_0, 0);
+
+                    }
+                     else{
+                             brushed_motor_forward_backward_unit_4(MCPWM_UNIT_0, MCPWM_TIMER_0, wristcountyaw);
+                                angle_4 =(wristcountyaw/100)*360;
+                                 itoa(angle_4,wrist_angle,10);
+                                   ESP_LOGI(TAG, "wrist angle =%s", wrist_angle);
+                                       
+}
+                         if(wristcountanti >=45 && wristcountanti <=55  ){
+                   brushed_motor_forward_backward_unit_6(MCPWM_UNIT_0, MCPWM_TIMER_2, 0);
+
+}
+                          else{
                       brushed_motor_forward_backward_unit_6(MCPWM_UNIT_0, MCPWM_TIMER_2, wristcountanti);
                      ESP_LOGI(TAG, "Found URL query parameter => WRIST_YAW=%f",  wristcountanti);
-                     brushed_motor_forward_backward_unit_4(MCPWM_UNIT_0, MCPWM_TIMER_0, wristcountyaw);
+                    
                      angle_3 =(wristcountanti/100)*360;
-                     angle_4 =(wristcountyaw/100)*360;
+                    
                   itoa(angle_3,wrist_yaw,10);
-                  itoa(angle_4,wrist_angle,10);
-                   ESP_LOGI(TAG, "wrist yaw =%s", wrist_yaw);
-                    ESP_LOGI(TAG, "wrist angle =%s", wrist_angle);
-                
+                    ESP_LOGI(TAG, "wrist yaw =%s", wrist_yaw);       
+                 
+                   
+                }
             }
              
              
@@ -267,23 +293,34 @@ static esp_err_t hello_get_handler(httpd_req_t *req)
               //  int elbowangle=0;
                   int angle_5;
                 float elbowcount = atof(param);
+                 if(elbowcount >=45 && elbowcount<=55){
+                  brushed_motor_forward_backward_unit_2(MCPWM_UNIT_0, MCPWM_TIMER_1, 0);
+                   }
+                  else{
                   brushed_motor_forward_backward_unit_2(MCPWM_UNIT_0, MCPWM_TIMER_1, elbowcount);
-                   
                   angle_5 =(elbowcount/100)*360;
                   itoa(angle_5,elbow_angle,10);
                    ESP_LOGI(TAG, "elbow angle=%s", elbow_angle);
                 
             }  
+}
             if (httpd_query_key_value(buf, "shoulder", param, sizeof(param)) == ESP_OK) {
    
                 ESP_LOGI(TAG, "Found URL query parameter => SHOULDER=%s", param);
                 //int shoulderangle=0;
                  int angle_6;
                 float shouldercount = atof(param);
+                if(shouldercount >=45 && shouldercount <=55){
+
+                    brushed_motor_forward_backward_unit_5(MCPWM_UNIT_0, MCPWM_TIMER_1, 0);
+
+                   }
+     else{
                   brushed_motor_forward_backward_unit_5(MCPWM_UNIT_0, MCPWM_TIMER_1, shouldercount);
                   angle_6 =(shouldercount/100)*360;
                   itoa(angle_6,shoulder_angle,10);
                    ESP_LOGI(TAG, "shoulder angle=%s",shoulder_angle);
+}
                  
             }
 
@@ -292,6 +329,11 @@ static esp_err_t hello_get_handler(httpd_req_t *req)
                // int baseangle=0;
                 int angle_7;
                 float basecount = atof(param);
+                 if(basecount >=45 && basecount<=55){
+                  brushed_motor_forward_backward_unit_3(MCPWM_UNIT_0, MCPWM_TIMER_2,0);
+                 }
+     
+              else{
                  brushed_motor_forward_backward_unit_3(MCPWM_UNIT_0, MCPWM_TIMER_2, basecount);
                  angle_7 =(basecount/100)*360;
                   itoa(angle_7,base_angle,10);
@@ -299,7 +341,7 @@ static esp_err_t hello_get_handler(httpd_req_t *req)
                   
                
             }
-
+}
           
 
         }
