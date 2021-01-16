@@ -1,5 +1,4 @@
-# Aries_Solutions
-committed to Aries
+
 Brief Introdction
 control servo motor at desired angle using http servGPIO23. MDC. 9. GPIO18. MDIOer either wifi/ethernet
 connect servo motors : to this pins 
