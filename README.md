@@ -1,6 +1,6 @@
 
 Brief Introdction
-control servo motor at desired angle using http servGPIO23. MDC. 9. GPIO18. MDIOer either wifi/ethernet
+control servo motor at desired angle using http server either wifi/ethernet
 connect servo motors : to this pins 
 On esp32 board :----------------------> GIPO 32 (D32)
                                      -> GPIO 33 (D33)
@@ -8,6 +8,7 @@ On esp32 board :----------------------> GIPO 32 (D32)
                                      -> GPIO 12 (D12)
                                      -> GPIO 4   (D4)
                                      -> GPIO 16  (RX2)
+                                     
 defined macro definitions for set maximum angle for the motors ..
 user can easily configure the value ..\
 eg: #define MOTOR_GRIPPER_MAX_ANGLE      180 
